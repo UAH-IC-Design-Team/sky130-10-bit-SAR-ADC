@@ -108,18 +108,23 @@ N 1710 -410 1710 -360 {
 lab=#net6}
 N 1780 -400 1780 -380 {
 lab=clk64}
+N 390 -270 430 -270 {
+lab=clk}
+N 390 -240 430 -240 {
+lab=RST_PLS}
+N 2230 -410 2230 -380 {}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
-C {sky130_stdcells/dfrbp_1.sym} 210 -360 0 0 {name=x1 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrbp_1.sym} 210 -360 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/dfrbp_1.sym} 510 -360 0 0 {name=x2 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrbp_1.sym} 510 -360 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/dfrbp_1.sym} 790 -360 0 0 {name=x3 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrbp_1.sym} 790 -360 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {devices/lab_pin.sym} 70 -380 0 0 {name=l2 sig_type=std_logic lab=clk
 }
-C {sky130_stdcells/dfrbp_1.sym} 1060 -360 0 0 {name=x4 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrbp_1.sym} 1060 -360 0 0 {name=x4 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/xor2_1.sym} 2130 -380 0 0 {name=x5 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/xor2_1.sym} 2130 -380 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {devices/lab_pin.sym} 2230 -380 2 0 {name=l3 sig_type=std_logic lab=pulse
 }
@@ -169,7 +174,7 @@ write pulse_generator.raw
 .endc
 "}
 C {devices/noconn.sym} 2200 -380 3 0 {name=l15}
-C {sky130_stdcells/dfrbp_1.sym} 1920 -380 0 0 {name=x6 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrbp_1.sym} 1920 -380 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {devices/lab_pin.sym} 1830 -400 0 0 {name=l16 sig_type=std_logic lab=clk
 }
@@ -178,9 +183,9 @@ C {devices/lab_pin.sym} 1830 -360 0 0 {name=l17 sig_type=std_logic lab=RST_PLS
 C {devices/noconn.sym} 2010 -380 2 0 {name=l18}
 C {devices/lab_pin.sym} 2040 -430 0 0 {name=l19 sig_type=std_logic lab=delayed
 }
-C {sky130_stdcells/dfrbp_1.sym} 1340 -360 0 0 {name=x9 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrbp_1.sym} 1340 -360 0 0 {name=x9 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/dfrbp_1.sym} 1610 -360 0 0 {name=x10 VGND=GND VNB=GND VPB=VCC VPWR=VCC prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrbp_1.sym} 1610 -360 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {devices/lab_pin.sym} 1250 -340 0 0 {name=l26 sig_type=std_logic lab=RST_PLS
 }
@@ -191,4 +196,14 @@ C {devices/lab_pin.sym} 1230 -400 0 0 {name=l31 sig_type=std_logic lab=clk16
 C {devices/lab_pin.sym} 1500 -400 0 0 {name=l32 sig_type=std_logic lab=clk32
 }
 C {devices/lab_pin.sym} 1780 -400 0 0 {name=l33 sig_type=std_logic lab=clk64
+}
+C {devices/ipin.sym} 390 -270 0 0 {name=p1 lab=CLK
+}
+C {devices/ipin.sym} 390 -240 0 0 {name=p2 lab=RESET
+}
+C {devices/lab_pin.sym} 430 -270 2 0 {name=l20 sig_type=std_logic lab=clk
+}
+C {devices/lab_pin.sym} 430 -240 2 0 {name=l21 sig_type=std_logic lab=RST_PLS
+}
+C {devices/opin.sym} 2230 -410 0 0 {name=p3 lab=PULSE
 }
