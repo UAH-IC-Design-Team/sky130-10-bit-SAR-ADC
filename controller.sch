@@ -1658,7 +1658,6 @@ C {devices/lab_pin.sym} 3990 -990 0 0 {name=l153 sig_type=std_logic lab=SW11n
 }
 C {devices/lab_pin.sym} 4030 -990 2 0 {name=l154 sig_type=std_logic lab=Vcmp
 }
-C {sky130_stdcells/dfrbp_1.sym} 4240 -1740 3 0 {name=x61 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {devices/lab_pin.sym} 4290 -1480 2 0 {name=l155 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 4260 -1650 3 0 {name=l156 sig_type=std_logic lab=RESET
@@ -2053,4 +2052,6 @@ C {devices/lab_pin.sym} 4360 -1650 3 0 {name=l221 sig_type=std_logic lab=RESET
 
 }
 C {sky130_stdcells/inv_1.sym} 4340 -1540 3 0 {name=x133 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/dfrtp_1.sym} 4240 -1740 3 0 {name=x61 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
