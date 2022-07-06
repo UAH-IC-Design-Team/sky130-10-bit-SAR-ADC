@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {RESET is active LOW} 40 -300 0 0 0.4 0.4 {}
 N 90 -360 120 -360 {
 lab=#net1}
 N 90 -410 90 -360 {
@@ -108,11 +109,6 @@ N 1710 -410 1710 -360 {
 lab=#net6}
 N 1780 -400 1780 -380 {
 lab=clk64}
-N 390 -270 430 -270 {
-lab=clk}
-N 390 -240 430 -240 {
-lab=RST_PLS}
-N 2230 -410 2230 -380 {}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
 C {sky130_stdcells/dfrbp_1.sym} 210 -360 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
@@ -164,8 +160,8 @@ only_toplevel=true
 value="
 .options acct list
 .temp 25
-vvcc VCC 0 dc 1.8
-*vvss GND 0 0
+vvcc VDD 0 dc 1.8
+vvss VSS 0 0
 .control
 tran 0.1u 400u
 * plot a b+2 clk+4 reset_b+6 x+8 y+10 q+12 qlatch+14
@@ -197,13 +193,9 @@ C {devices/lab_pin.sym} 1500 -400 0 0 {name=l32 sig_type=std_logic lab=clk32
 }
 C {devices/lab_pin.sym} 1780 -400 0 0 {name=l33 sig_type=std_logic lab=clk64
 }
-C {devices/ipin.sym} 390 -270 0 0 {name=p1 lab=CLK
+C {devices/ipin.sym} 390 -270 0 0 {name=p1 lab=clk
 }
-C {devices/ipin.sym} 390 -240 0 0 {name=p2 lab=RESET
+C {devices/ipin.sym} 390 -240 0 0 {name=p2 lab=RST_PLS
 }
-C {devices/lab_pin.sym} 430 -270 2 0 {name=l20 sig_type=std_logic lab=clk
-}
-C {devices/lab_pin.sym} 430 -240 2 0 {name=l21 sig_type=std_logic lab=RST_PLS
-}
-C {devices/opin.sym} 2230 -410 0 0 {name=p3 lab=PULSE
+C {devices/opin.sym} 430 -270 0 0 {name=p3 lab=pulse
 }
