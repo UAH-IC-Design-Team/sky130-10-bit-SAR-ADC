@@ -3,6 +3,7 @@ K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
 }
+
 T {@symname} -117 -6 0 0 0.3 0.3 {}
 T {@name} 135 -42 0 0 0.2 0.2 {}
 L 4 -130 -30 130 -30 {}
@@ -24,6 +25,6 @@ T {clk_pulse} -125 -4 0 0 0.2 0.2 {}
 B 5 -152.5 17.5 -147.5 22.5 {name=reset_b dir=in }
 L 4 -150 20 -130 20 {}
 T {reset_b} -125 16 0 0 0.2 0.2 {}
-B 5 147.5 17.5 152.5 22.5 {name=cycle[0..31] dir=out }
+B 5 147.5 17.5 152.5 22.5 {name=cycle[31..0] dir=out }
 L 4 130 20 150 20 {}
-T {cycle[0..31]} 125 16 0 1 0.2 0.2 {}
+T {cycle[31..0]} 125 16 0 1 0.2 0.2 {}

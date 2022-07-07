@@ -667,7 +667,7 @@ C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip B
 }
 C {devices/ipin.sym} 110 -430 0 0 {name=p1 lab=clk_pulse
 }
-C {devices/opin.sym} 160 -400 0 0 {name=p2 lab=cycle[0..31]
+C {devices/opin.sym} 160 -400 0 0 {name=p2 lab=cycle[31..0]
 }
 C {devices/iopin.sym} 160 -430 0 0 {name=p3 lab=VSS
 }
