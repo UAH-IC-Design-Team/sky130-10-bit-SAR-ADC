@@ -52,13 +52,14 @@ N 1580 -340 1620 -340 {
 lab=#net3}
 N 750 -410 820 -410 {
 lab=#net4}
-N 650 -410 670 -410 {}
+N 650 -410 670 -410 {
+lab=cycle0}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
 C {sky130_stdcells/or4_2.sym} 1500 -530 0 0 {name=x95 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/or4_2.sym} 1500 -380 0 0 {name=x96 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/or4_2.sym} 1500 -230 0 0 {name=x97 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/or3_1.sym} 1680 -380 0 0 {name=x98 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 1760 -380 2 0 {name=l217 sig_type=std_logic lab=sample
+C {devices/lab_pin.sym} 1760 -380 2 0 {name=l217 sig_type=std_logic lab=sw_sample
 }
 C {devices/noconn.sym} 1750 -380 3 0 {name=l234}
 C {src/clock_pulse_delay_line/clock_pulse_delay_line.sym} 970 -240 0 0 {name=x1}
@@ -151,11 +152,9 @@ C {devices/ipin.sym} 130 -580 0 0 {name=p1 lab=clk
 }
 C {devices/opin.sym} 220 -580 0 0 {name=p2 lab=sw_n_sp[9..1]
 }
-C {devices/iopin.sym} 430 -540 0 0 {name=p3 lab=VDD
+C {devices/iopin.sym} 220 -620 0 0 {name=p4 lab=VSS
 }
-C {devices/iopin.sym} 430 -580 0 0 {name=p4 lab=VSS
-}
-C {devices/iopin.sym} 430 -540 0 0 {name=p5 lab=VDD
+C {devices/iopin.sym} 220 -660 0 0 {name=p5 lab=VDD
 }
 C {devices/ipin.sym} 130 -540 0 0 {name=p6 lab=reset
 }
@@ -171,7 +170,7 @@ C {devices/opin.sym} 220 -420 0 0 {name=p11 lab=bit[10..1]
 }
 C {devices/opin.sym} 220 -380 0 0 {name=p12 lab=done
 }
-C {devices/opin.sym} 220 -340 0 0 {name=p13 lab=sample
+C {devices/opin.sym} 220 -340 0 0 {name=p13 lab=sw_sample
 }
 C {sky130_stdcells/inv_1.sym} 710 -410 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
