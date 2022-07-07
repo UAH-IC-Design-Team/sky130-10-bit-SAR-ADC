@@ -35,9 +35,9 @@ lab=OUT_0}
 N 430 -200 450 -200 {
 lab=OUT_1}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
-C {sky130_stdcells/and2_0.sym} 370 -300 0 0 {name=x1 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and2_0.sym} 370 -200 0 0 {name=x2 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 280 -390 1 0 {name=x3 VGND=VGND VNB=VNB VPB=VPB VPWR=VPWR prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/and2_0.sym} 370 -300 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/and2_0.sym} 370 -200 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 280 -390 1 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {devices/ipin.sym} 240 -460 1 0 {name=p1 lab=S}
 C {devices/opin.sym} 450 -300 0 0 {name=p2 lab=OUT_0}
 C {devices/ipin.sym} 170 -260 0 0 {name=p3 lab=IN
