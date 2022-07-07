@@ -1494,7 +1494,6 @@ C {devices/lab_pin.sym} 1000 -1820 3 0 {name=l44 sig_type=std_logic lab=RESET
 }
 C {devices/lab_pin.sym} 940 -1560 0 0 {name=l45 sig_type=std_logic lab=clk_1.2
 }
-C {demux2.sym} 1390 -1370 1 1 {name=x24}
 C {devices/lab_pin.sym} 1070 -2050 2 0 {name=l46 sig_type=std_logic lab=SW1.2p
 }
 C {devices/lab_pin.sym} 970 -2050 2 0 {name=l47 sig_type=std_logic lab=SW1.2n}
@@ -1525,7 +1524,6 @@ C {devices/lab_pin.sym} 1400 -1060 0 0 {name=l61 sig_type=std_logic lab=SW2n
 }
 C {devices/lab_pin.sym} 1440 -1060 2 0 {name=l62 sig_type=std_logic lab=Vcmp
 }
-C {demux2.sym} 1580 -1370 1 1 {name=x30}
 C {devices/lab_pin.sym} 1640 -1640 2 0 {name=l63 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 1610 -1820 3 0 {name=l64 sig_type=std_logic lab=RESET
@@ -1550,7 +1548,6 @@ C {devices/lab_pin.sym} 1810 -1820 3 0 {name=l72 sig_type=std_logic lab=RESET
 }
 C {devices/lab_pin.sym} 1750 -1560 0 0 {name=l73 sig_type=std_logic lab=clk_4.5
 }
-C {demux2.sym} 2400 -1370 1 1 {name=x34}
 C {devices/lab_pin.sym} 1880 -2050 2 0 {name=l74 sig_type=std_logic lab=SW4.5p
 }
 C {devices/lab_pin.sym} 1780 -2050 2 0 {name=l75 sig_type=std_logic lab=SW4.5n
@@ -1583,7 +1580,6 @@ C {devices/lab_pin.sym} 2410 -1060 0 0 {name=l89 sig_type=std_logic lab=SW5n
 }
 C {devices/lab_pin.sym} 2450 -1060 2 0 {name=l90 sig_type=std_logic lab=Vcmp
 }
-C {demux2.sym} 2590 -1370 1 1 {name=x39}
 C {devices/lab_pin.sym} 2650 -1640 2 0 {name=l91 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 2620 -1820 3 0 {name=l92 sig_type=std_logic lab=RESET
@@ -1612,7 +1608,6 @@ C {devices/lab_pin.sym} 2290 -2050 2 0 {name=l102 sig_type=std_logic lab=SW4.7p
 }
 C {devices/lab_pin.sym} 2200 -2050 2 0 {name=l103 sig_type=std_logic lab=SW4.7n
 }
-C {demux2.sym} 2780 -1370 1 1 {name=x44}
 C {devices/lab_pin.sym} 2830 -1640 2 0 {name=l105 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 2810 -1820 3 0 {name=l106 sig_type=std_logic lab=RESET
@@ -1637,7 +1632,6 @@ C {devices/lab_pin.sym} 3020 -1820 3 0 {name=l114 sig_type=std_logic lab=RESET
 }
 C {devices/lab_pin.sym} 2960 -1560 0 0 {name=l115 sig_type=std_logic lab=clk_8.9
 }
-C {demux2.sym} 3610 -1370 1 1 {name=x49}
 C {devices/lab_pin.sym} 3090 -2050 2 0 {name=l116 sig_type=std_logic lab=SW8.9p
 }
 C {devices/lab_pin.sym} 2990 -2050 2 0 {name=l117 sig_type=std_logic lab=SW8.9n
@@ -1670,7 +1664,6 @@ C {devices/lab_pin.sym} 3620 -1060 0 0 {name=l131 sig_type=std_logic lab=SW9n
 }
 C {devices/lab_pin.sym} 3660 -1060 2 0 {name=l132 sig_type=std_logic lab=Vcmp
 }
-C {demux2.sym} 3800 -1370 1 1 {name=x54}
 C {devices/lab_pin.sym} 3850 -1650 2 0 {name=l133 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 3830 -1820 3 0 {name=l134 sig_type=std_logic lab=RESET
@@ -1699,7 +1692,6 @@ C {devices/lab_pin.sym} 3510 -2050 2 0 {name=l144 sig_type=std_logic lab=SW8.11p
 }
 C {devices/lab_pin.sym} 3410 -2050 2 0 {name=l145 sig_type=std_logic lab=SW8.11n
 }
-C {demux2.sym} 3990 -1370 1 1 {name=x59}
 C {devices/lab_pin.sym} 4050 -1650 2 0 {name=l147 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 4020 -1820 3 0 {name=l148 sig_type=std_logic lab=RESET
@@ -2143,3 +2135,11 @@ C {devices/lab_pin.sym} 4000 -1570 1 0 {name=l253 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 4020 -1570 1 0 {name=l254 sig_type=std_logic lab=VDD
 }
+C {src/demux2/demux2.sym} 1390 -1370 1 1 {name=x24}
+C {src/demux2/demux2.sym} 1580 -1370 1 1 {name=x30}
+C {src/demux2/demux2.sym} 2400 -1370 1 1 {name=x34}
+C {src/demux2/demux2.sym} 2590 -1370 1 1 {name=x39}
+C {src/demux2/demux2.sym} 2780 -1370 1 1 {name=x44}
+C {src/demux2/demux2.sym} 3610 -1370 1 1 {name=x49}
+C {src/demux2/demux2.sym} 3800 -1370 1 1 {name=x54}
+C {src/demux2/demux2.sym} 3990 -1370 1 1 {name=x59}
