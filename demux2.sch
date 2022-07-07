@@ -43,3 +43,7 @@ C {devices/opin.sym} 450 -300 0 0 {name=p2 lab=OUT_0}
 C {devices/ipin.sym} 170 -260 0 0 {name=p3 lab=IN
 }
 C {devices/opin.sym} 450 -200 0 0 {name=p4 lab=OUT_1}
+C {devices/iopin.sym} 40 -460 0 0 {name=p5 lab=VDD
+}
+C {devices/iopin.sym} 40 -430 0 0 {name=p6 lab=VSS
+}
