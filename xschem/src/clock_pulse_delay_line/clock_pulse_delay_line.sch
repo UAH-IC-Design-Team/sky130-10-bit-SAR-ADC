@@ -661,8 +661,6 @@ C {devices/lab_pin.sym} 6170 -170 0 0 {name=l41 sig_type=std_logic lab=cycle30
 }
 C {devices/lab_pin.sym} 6390 -170 0 0 {name=l267 sig_type=std_logic lab=cycle31
 }
-C {sky130_stdcells/buf_1.sym} 200 -110 0 0 {name=x101 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
-}
 C {devices/lab_pin.sym} 270 -110 2 0 {name=l268 sig_type=std_logic lab=cycle0
 }
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -972,4 +970,6 @@ C {devices/lab_pin.sym} 170 -160 2 0 {name=l42 sig_type=std_logic lab=reset_b
 C {devices/ipin.sym} 110 -400 0 0 {name=p6 lab=reset_b
 }
 C {devices/lab_pin.sym} 2790 -170 2 0 {name=l43 sig_type=std_logic lab=reset_b
+}
+C {sky130_stdcells/buf_12.sym} 200 -110 0 0 {name=x33 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
