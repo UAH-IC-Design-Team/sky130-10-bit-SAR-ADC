@@ -50,6 +50,9 @@ N 1580 -340 1580 -230 {
 lab=#net3}
 N 1580 -340 1620 -340 {
 lab=#net3}
+N 750 -410 820 -410 {
+lab=#net4}
+N 650 -410 670 -410 {}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
 C {sky130_stdcells/or4_2.sym} 1500 -530 0 0 {name=x95 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/or4_2.sym} 1500 -380 0 0 {name=x96 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
@@ -94,7 +97,7 @@ C {devices/lab_pin.sym} 1120 -220 2 0 {name=l16 sig_type=std_logic lab=cycle[31.
 }
 C {devices/lab_pin.sym} 820 -450 0 0 {name=l17 sig_type=std_logic lab=cycle[30..13]
 }
-C {devices/lab_pin.sym} 820 -410 0 0 {name=l18 sig_type=std_logic lab=cycle0
+C {devices/lab_pin.sym} 650 -410 0 0 {name=l18 sig_type=std_logic lab=cycle0
 }
 C {devices/lab_pin.sym} 820 -530 0 0 {name=l19 sig_type=std_logic lab=cycle31
 }
@@ -169,4 +172,6 @@ C {devices/opin.sym} 220 -420 0 0 {name=p11 lab=bit[10..1]
 C {devices/opin.sym} 220 -380 0 0 {name=p12 lab=done
 }
 C {devices/opin.sym} 220 -340 0 0 {name=p13 lab=sample
+}
+C {sky130_stdcells/inv_1.sym} 710 -410 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
