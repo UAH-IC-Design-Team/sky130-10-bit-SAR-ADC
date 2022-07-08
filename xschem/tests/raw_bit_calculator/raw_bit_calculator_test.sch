@@ -34,6 +34,16 @@ N 460 -510 530 -510 {
 lab=#net1}
 N 350 -510 380 -510 {
 lab=cycle0}
+N 830 -510 870 -510 {
+lab=sw_n_sp[9..1]}
+N 830 -490 870 -490 {
+lab=sw_n[8..1]}
+N 830 -470 870 -470 {
+lab=sw_p_sp[9..1]}
+N 830 -450 870 -450 {
+lab=sw_p[8..1]}
+N 830 -430 870 -430 {
+lab=bit13}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -110,8 +120,6 @@ C {devices/lab_pin.sym} 870 -340 2 0 {name=l23 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 870 -320 2 0 {name=l24 sig_type=std_logic lab=VSS
 }
-C {devices/noconn.sym} 850 -340 1 0 {name=l25}
-C {devices/noconn.sym} 850 -320 1 0 {name=l26}
 C {src/pulse_generator/pulse_generator.sym} 680 -340 0 0 {name=x3}
 C {devices/lab_pin.sym} 530 -340 0 0 {name=l20 sig_type=std_logic lab=reset_b
 }
@@ -121,15 +129,15 @@ C {devices/lab_pin.sym} 870 -550 2 0 {name=l9 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 870 -530 2 0 {name=l27 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 830 -510 2 0 {name=l28 sig_type=std_logic lab=sw_n_sp[9..1]
+C {devices/lab_pin.sym} 870 -510 2 0 {name=l28 sig_type=std_logic lab=sw_n_sp[9..1]
 }
-C {devices/lab_pin.sym} 830 -470 2 0 {name=l29 sig_type=std_logic lab=sw_p_sp[9..1]
+C {devices/lab_pin.sym} 870 -470 2 0 {name=l29 sig_type=std_logic lab=sw_p_sp[9..1]
 }
-C {devices/lab_pin.sym} 830 -490 2 0 {name=l30 sig_type=std_logic lab=sw_n[8..1]
+C {devices/lab_pin.sym} 870 -490 2 0 {name=l30 sig_type=std_logic lab=sw_n[8..1]
 }
-C {devices/lab_pin.sym} 830 -450 2 0 {name=l31 sig_type=std_logic lab=sw_p[8..1]
+C {devices/lab_pin.sym} 870 -450 2 0 {name=l31 sig_type=std_logic lab=sw_p[8..1]
 }
-C {devices/lab_pin.sym} 830 -430 2 0 {name=l32 sig_type=std_logic lab=bit13
+C {devices/lab_pin.sym} 870 -430 2 0 {name=l32 sig_type=std_logic lab=bit13
 }
 C {devices/lab_pin.sym} 350 -510 0 0 {name=l33 sig_type=std_logic lab=cycle0
 }
@@ -142,3 +150,8 @@ C {devices/lab_pin.sym} 530 -530 0 0 {name=l36 sig_type=std_logic lab=Vcmp
 }
 C {sky130_stdcells/inv_1.sym} 420 -510 0 0 {name=x4 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
+C {devices/noconn.sym} 850 -510 1 0 {name=l37}
+C {devices/noconn.sym} 850 -490 1 0 {name=l38}
+C {devices/noconn.sym} 850 -470 1 0 {name=l39}
+C {devices/noconn.sym} 850 -450 1 0 {name=l40}
+C {devices/noconn.sym} 850 -430 1 0 {name=l41}

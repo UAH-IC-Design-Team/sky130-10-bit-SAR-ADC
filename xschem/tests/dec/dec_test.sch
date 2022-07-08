@@ -48,26 +48,50 @@ value=".options acct list
 .temp 25
 *vvcc VDD 0 dc 1.8
 
+* * Create the input raw bits
+* v_ref1 r_bit1 0 dc 1.8
+* v_ref2 r_bit2 0 dc 0
+* v_ref3 r_bit3 0 dc 1.8
+* v_ref4 r_bit4 0 dc 0
+* v_ref5 r_bit5 0 dc 1.8
+* v_ref6 r_bit6 0 dc 0
+* v_ref7 r_bit7 0 dc 1.8
+* v_ref8 r_bit8 0 dc 0
+* v_ref9 r_bit9 0 dc 1.8
+* 
+* * Create the input raw bits for the split caps
+* v_ref_sp1 r_bit_sp1 0 dc 1.8
+* v_ref_sp2 r_bit_sp2 0 dc 0
+* v_ref_sp3 r_bit_sp3 0 dc 1.8
+* v_ref_sp4 r_bit_sp4 0 dc 0
+* v_ref_sp5 r_bit_sp5 0 dc 1.8
+* v_ref_sp6 r_bit_sp6 0 dc 0
+* v_ref_sp7 r_bit_sp7 0 dc 1.8
+* v_ref_sp8 r_bit_sp8 0 dc 0
+* v_ref_sp9 r_bit_sp9 0 dc 1.8
+
+
+
 * Create the input raw bits
 v_ref1 r_bit1 0 dc 1.8
-v_ref2 r_bit2 0 dc 0
+v_ref2 r_bit2 0 dc 1.8
 v_ref3 r_bit3 0 dc 1.8
-v_ref4 r_bit4 0 dc 0
+v_ref4 r_bit4 0 dc 1.8
 v_ref5 r_bit5 0 dc 1.8
-v_ref6 r_bit6 0 dc 0
+v_ref6 r_bit6 0 dc 1.8
 v_ref7 r_bit7 0 dc 1.8
-v_ref8 r_bit8 0 dc 0
+v_ref8 r_bit8 0 dc 1.8
 v_ref9 r_bit9 0 dc 1.8
 
 * Create the input raw bits for the split caps
 v_ref_sp1 r_bit_sp1 0 dc 1.8
-v_ref_sp2 r_bit_sp2 0 dc 0
+v_ref_sp2 r_bit_sp2 0 dc 1.8
 v_ref_sp3 r_bit_sp3 0 dc 1.8
-v_ref_sp4 r_bit_sp4 0 dc 0
+v_ref_sp4 r_bit_sp4 0 dc 1.8
 v_ref_sp5 r_bit_sp5 0 dc 1.8
-v_ref_sp6 r_bit_sp6 0 dc 0
+v_ref_sp6 r_bit_sp6 0 dc 1.8
 v_ref_sp7 r_bit_sp7 0 dc 1.8
-v_ref_sp8 r_bit_sp8 0 dc 0
+v_ref_sp8 r_bit_sp8 0 dc 1.8
 v_ref_sp9 r_bit_sp9 0 dc 1.8
 
 
