@@ -35,7 +35,7 @@ T {Notes on Timing:
 
 } 1040 -1240 0 0 0.4 0.4 {}
 N 1740 -380 1760 -380 {
-lab=sample}
+lab=sw_sample}
 N 1560 -380 1620 -380 {
 lab=#net1}
 N 1560 -530 1580 -530 {
@@ -62,7 +62,6 @@ C {sky130_stdcells/or3_1.sym} 1680 -380 0 0 {name=x98 VGND=VSS VNB=VSS VPB=VDD V
 C {devices/lab_pin.sym} 1760 -380 2 0 {name=l217 sig_type=std_logic lab=sw_sample
 }
 C {devices/noconn.sym} 1750 -380 3 0 {name=l234}
-C {src/clock_pulse_delay_line/clock_pulse_delay_line.sym} 970 -240 0 0 {name=x1}
 C {src/pulse_generator/pulse_generator.sym} 970 -130 0 0 {name=x2}
 C {src/dec/dec.sym} 970 -560 0 0 {name=x3}
 C {src/raw_bit_calculator/raw_bit_calculator.sym} 970 -390 0 0 {name=x4}
@@ -174,3 +173,4 @@ C {devices/opin.sym} 220 -340 0 0 {name=p13 lab=sw_sample
 }
 C {sky130_stdcells/inv_1.sym} 710 -410 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
+C {src/shifted_clock_generator/shifted_clock_generator.sym} 970 -240 0 0 {name=x1}

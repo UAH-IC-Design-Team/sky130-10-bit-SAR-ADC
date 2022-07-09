@@ -53,12 +53,11 @@ C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/clock_pulse_delay_line/clock_pulse_delay_line.sym} 580 -300 0 0 {name=x1}
 C {devices/lab_pin.sym} 760 -320 2 0 {name=l1 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 760 -300 2 0 {name=l2 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 760 -280 2 0 {name=l3 sig_type=std_logic lab=cycle[0..31]
+C {devices/lab_pin.sym} 760 -280 2 0 {name=l3 sig_type=std_logic lab=cycle[31..0]
 }
 C {devices/noconn.sym} 750 -280 3 0 {name=l4}
 C {devices/vsource.sym} 380 -140 0 0 {name=V1 value="PULSE 0 1.8V 10us 1ns 1ns 5us 10us"
@@ -82,3 +81,4 @@ C {devices/lab_pin.sym} 430 -300 0 0 {name=l12 sig_type=std_logic lab=clk_pulse
 }
 C {devices/lab_pin.sym} 430 -280 0 0 {name=l18 sig_type=std_logic lab=reset_b
 }
+C {src/shifted_clock_generator/shifted_clock_generator.sym} 580 -300 0 0 {name=x1}

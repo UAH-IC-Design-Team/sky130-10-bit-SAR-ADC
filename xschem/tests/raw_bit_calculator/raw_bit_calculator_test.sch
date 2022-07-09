@@ -87,7 +87,6 @@ C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/raw_bit_calculator/raw_bit_calculator.sym} 680 -490 0 0 {name=x1}
-C {src/clock_pulse_delay_line/clock_pulse_delay_line.sym} 680 -240 0 0 {name=x2}
 C {devices/lab_pin.sym} 860 -260 2 0 {name=l1 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 860 -240 2 0 {name=l2 sig_type=std_logic lab=VSS
@@ -155,3 +154,4 @@ C {devices/noconn.sym} 850 -490 1 0 {name=l38}
 C {devices/noconn.sym} 850 -470 1 0 {name=l39}
 C {devices/noconn.sym} 850 -450 1 0 {name=l40}
 C {devices/noconn.sym} 850 -430 1 0 {name=l41}
+C {src/shifted_clock_generator/shifted_clock_generator.sym} 680 -240 0 0 {name=x2}

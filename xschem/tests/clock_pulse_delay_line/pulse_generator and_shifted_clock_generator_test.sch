@@ -19,7 +19,7 @@ lab=GND}
 N 860 -110 860 -90 {
 lab=GND}
 N 730 -420 770 -420 {
-lab=Pulse}
+lab=clk_pulse}
 N 730 -400 770 -400 {
 lab=VDD}
 N 730 -380 770 -380 {
@@ -57,7 +57,6 @@ C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/clock_pulse_delay_line/clock_pulse_delay_line.sym} 580 -300 0 0 {name=x1}
 C {devices/lab_pin.sym} 760 -320 2 0 {name=l1 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 760 -300 2 0 {name=l2 sig_type=std_logic lab=VSS
@@ -95,3 +94,4 @@ C {devices/noconn.sym} 750 -380 1 0 {name=l26}
 C {src/pulse_generator/pulse_generator.sym} 580 -400 0 0 {name=x2}
 C {devices/lab_pin.sym} 430 -400 0 0 {name=l20 sig_type=std_logic lab=reset_b
 }
+C {src/shifted_clock_generator/shifted_clock_generator.sym} 580 -300 0 0 {name=x1}
