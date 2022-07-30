@@ -1,0 +1,77 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1659209976
+<< viali >>
+rect 70 820 120 860
+rect 170 840 205 874
+rect 170 760 205 794
+<< metal1 >>
+rect 180 1190 380 1400
+rect 500 1190 700 1400
+rect 980 1190 1180 1400
+rect 270 1090 350 1190
+rect -200 870 0 1000
+rect 750 940 950 1100
+rect 164 874 420 940
+rect 750 900 980 940
+rect -200 860 135 870
+rect -200 820 70 860
+rect 120 820 135 860
+rect -200 800 135 820
+rect 164 840 170 874
+rect 205 840 420 874
+rect 500 870 700 880
+rect 980 870 1180 880
+rect 164 794 420 840
+rect 700 820 930 860
+rect 164 760 170 794
+rect 205 760 420 794
+rect 164 740 420 760
+rect -200 540 0 740
+rect 730 660 930 820
+rect 270 550 350 650
+rect 440 560 500 620
+rect 700 560 980 620
+use sky130_fd_pr__res_generic_m1_MZR69S  R1
+timestamp 1659208328
+transform 1 0 600 0 1 717
+box -100 -157 100 157
+use sky130_fd_pr__res_generic_m1_MZR69S  R2
+timestamp 1659208328
+transform 1 0 600 0 1 1037
+box -100 -157 100 157
+use sky130_fd_pr__res_generic_m1_MZR69S  R3
+timestamp 1659208328
+transform 1 0 1080 0 1 717
+box -100 -157 100 157
+use sky130_fd_pr__res_generic_m1_MZR69S  R4
+timestamp 1659208328
+transform 1 0 1080 0 1 1037
+box -100 -157 100 157
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1649977179
+transform 1 0 348 0 1 598
+box -38 -48 130 592
+use sky130_fd_sc_hd__inv_1  x1 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1649977179
+transform 1 0 -2 0 1 598
+box -38 -48 314 592
+<< labels >>
+flabel metal1 180 1200 380 1400 0 FreeSans 1280 0 0 0 VDD
+port 0 nsew
+flabel metal1 220 740 420 940 0 FreeSans 1280 0 0 0 Done
+port 2 nsew
+flabel metal1 500 1200 700 1400 0 FreeSans 1280 0 0 0 V_in_p
+port 1 nsew
+flabel metal1 980 1200 1180 1400 0 FreeSans 1280 0 0 0 V_in_n
+port 4 nsew
+flabel metal1 -200 540 0 740 0 FreeSans 1280 0 0 0 VSS
+port 3 nsew
+flabel metal1 -200 800 0 1000 0 FreeSans 1280 0 0 0 Clk
+port 5 nsew
+flabel metal1 750 900 950 1100 0 FreeSans 1280 0 0 0 D_out1
+port 7 nsew
+flabel metal1 730 660 930 860 0 FreeSans 1280 0 0 0 D_out0
+port 6 nsew
+<< end >>

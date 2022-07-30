@@ -1,0 +1,19 @@
+* NGSPICE file created from sar-adc.ext - technology: sky130A
+
+.subckt sky130_fd_sc_hd__inv_1 A VGND VPWR Y VNB VPB
+X0 Y A VGND VNB sky130_fd_pr__nfet_01v8 ad=1.69e+11p pd=1.82e+06u as=1.69e+11p ps=1.82e+06u w=650000u l=150000u
+X1 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=2.6e+11p pd=2.52e+06u as=2.6e+11p ps=2.52e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__res_generic_m1_MZR69S m1_n100_100# m1_n100_n157#
+R0 m1_n100_n157# m1_n100_100# sky130_fd_pr__res_generic_m1 w=1e+06u l=1e+06u
+.ends
+
+.subckt sar-adc VDD V_in_p Done VSS V_in_n Clk D_out0 D_out1
+Xx1 Clk VSS VDD Done VSS VDD sky130_fd_sc_hd__inv_1
+XR1 D_out0 VSS sky130_fd_pr__res_generic_m1_MZR69S
+XR2 V_in_p D_out0 sky130_fd_pr__res_generic_m1_MZR69S
+XR3 D_out1 VSS sky130_fd_pr__res_generic_m1_MZR69S
+XR4 V_in_n D_out1 sky130_fd_pr__res_generic_m1_MZR69S
+.ends
+
