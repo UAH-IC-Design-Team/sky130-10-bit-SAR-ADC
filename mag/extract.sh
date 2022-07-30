@@ -1,4 +1,6 @@
 #!/bin/sh
+# This script extract the lvs spice netlist from magic
+# There is one commandline argument, the name of the file.
 
 magic  -noconsole -dnull << EOF
 load ./$1/$1.mag
