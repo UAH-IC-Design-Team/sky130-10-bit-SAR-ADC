@@ -13,7 +13,7 @@ N 380 -100 380 -80 {
 lab=GND}
 N 650 -100 650 -80 {
 lab=GND}
-N 950 -90 950 -70 {
+N 1080 -100 1080 -80 {
 lab=GND}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -29,12 +29,12 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
-tran 0.1u 400u
+tran 0.5u 400u
 *plot RST_PLS clk+2 Pulse+4
-plot done-4  sw_n_sp1 sw_n_sp2+2 sw_n_sp3+4 sw_n_sp4+6 sw_n_sp5+8 sw_n_sp6+10 sw_n_sp7+12 sw_n_sp8+14 sw_n_sp9+16
-plot done-4  sw_p_sp1 sw_p_sp2+2 sw_p_sp3+4 sw_p_sp4+6 sw_p_sp5+8 sw_p_sp6+10 sw_p_sp7+12 sw_p_sp8+14 sw_p_sp9+16
-plot done-4  sw_n1 sw_n2+2 sw_n3+4 sw_n4+6 sw_n5+8 sw_n6+10 sw_n7+12 sw_n8+14
-plot done-4  sw_p1 sw_p2+2 sw_p3+4 sw_p4+6 sw_p5+8 sw_p6+10 sw_p7+12 sw_p8+14 
+plot done-4  sw_n_sp1 sw_n_sp2+2 sw_n_sp3+4 sw_n_sp4+6 sw_n_sp5+8 sw_n_sp6+10 sw_n_sp7+12 sw_n_sp8+14 sw_n_sp9+16 Vcmp+18
+plot done-4  sw_p_sp1 sw_p_sp2+2 sw_p_sp3+4 sw_p_sp4+6 sw_p_sp5+8 sw_p_sp6+10 sw_p_sp7+12 sw_p_sp8+14 sw_p_sp9+16 Vcmp+18
+plot done-4  sw_n1 sw_n2+2 sw_n3+4 sw_n4+6 sw_n5+8 sw_n6+10 sw_n7+12 sw_n8+14 Vcmp+18
+plot done-4  sw_p1 sw_p2+2 sw_p3+4 sw_p4+6 sw_p5+8 sw_p6+10 sw_p7+12 sw_p8+14 Vcmp+18
 plot done-4 bit1 bit2+2 bit3+4 bit4+6 bit5+8 bit6+10 bit7+12 bit8+14 bit9+16 bit10+18
 plot clk reset_b+2 sw_sample+4
 write controller_test.raw
@@ -67,11 +67,6 @@ C {devices/lab_pin.sym} 380 -500 0 0 {name=l1 sig_type=std_logic lab=reset_b
 }
 C {devices/lab_pin.sym} 380 -520 0 0 {name=l2 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 950 -120 0 0 {name=V2 value=1.8V
-}
-C {devices/gnd.sym} 950 -70 0 0 {name=l34 lab=GND}
-C {devices/lab_pin.sym} 950 -150 0 0 {name=l35 sig_type=std_logic lab=Vcmp
-}
 C {devices/lab_pin.sym} 380 -480 0 0 {name=l3 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 680 -520 2 0 {name=l4 sig_type=std_logic lab=VDD
@@ -91,4 +86,9 @@ C {devices/lab_pin.sym} 680 -400 2 0 {name=l8 sig_type=std_logic lab=bit[10..1]
 C {devices/lab_pin.sym} 680 -380 2 0 {name=l9 sig_type=std_logic lab=done
 }
 C {devices/lab_pin.sym} 680 -360 2 0 {name=l12 sig_type=std_logic lab=sw_sample
+}
+C {devices/vsource.sym} 1080 -130 0 0 {name=V6 value="PULSE 0 1.8V 4us 1ns 1ns 10us 20us"
+}
+C {devices/gnd.sym} 1080 -80 0 0 {name=l18 lab=GND}
+C {devices/lab_pin.sym} 1080 -160 0 0 {name=l19 sig_type=std_logic lab=Vcmp
 }

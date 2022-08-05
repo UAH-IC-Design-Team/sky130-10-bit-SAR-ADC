@@ -33,13 +33,13 @@ lab=#net2}
 N 800 -340 820 -340 {
 lab=#net1}
 N 610 -490 620 -490 {
-lab=r_bit_sp1}
+lab=raw_bit2}
 N 620 -490 620 -470 {
-lab=r_bit_sp1}
+lab=raw_bit2}
 N 610 -510 660 -510 {
-lab=r_bit1}
+lab=raw_bit1}
 N 660 -510 660 -470 {
-lab=r_bit1}
+lab=raw_bit1}
 N 760 -340 800 -340 {
 lab=#net1}
 N 760 -480 760 -340 {
@@ -47,13 +47,13 @@ lab=#net1}
 N 700 -480 760 -480 {
 lab=#net1}
 N 860 -490 870 -490 {
-lab=r_bit_sp2}
+lab=raw_bit3}
 N 870 -490 870 -470 {
-lab=r_bit_sp2}
+lab=raw_bit3}
 N 860 -510 910 -510 {
-lab=r_bit2}
+lab=raw_bit1}
 N 910 -510 910 -470 {
-lab=r_bit2}
+lab=raw_bit1}
 N 1070 -340 1120 -340 {
 lab=#net4}
 N 1120 -350 1120 -340 {
@@ -97,13 +97,13 @@ lab=#net6}
 N 1300 -340 1320 -340 {
 lab=#net5}
 N 1110 -490 1120 -490 {
-lab=r_bit_sp3}
+lab=raw_bit5}
 N 1120 -490 1120 -470 {
-lab=r_bit_sp3}
+lab=raw_bit5}
 N 1110 -510 1160 -510 {
-lab=r_bit3}
+lab=raw_bit4}
 N 1160 -510 1160 -470 {
-lab=r_bit3}
+lab=raw_bit4}
 N 1260 -340 1300 -340 {
 lab=#net5}
 N 1260 -480 1260 -340 {
@@ -111,13 +111,13 @@ lab=#net5}
 N 1200 -480 1260 -480 {
 lab=#net5}
 N 1360 -490 1370 -490 {
-lab=r_bit_sp4}
+lab=raw_bit6}
 N 1370 -490 1370 -470 {
-lab=r_bit_sp4}
+lab=raw_bit6}
 N 1360 -510 1410 -510 {
-lab=r_bit4}
+lab=raw_bit4}
 N 1410 -510 1410 -470 {
-lab=r_bit4}
+lab=raw_bit4}
 N 1570 -340 1620 -340 {
 lab=#net8}
 N 1620 -350 1620 -340 {
@@ -161,13 +161,13 @@ lab=#net10}
 N 1800 -340 1820 -340 {
 lab=#net9}
 N 1610 -490 1620 -490 {
-lab=r_bit_sp5}
+lab=raw_bit7}
 N 1620 -490 1620 -470 {
-lab=r_bit_sp5}
+lab=raw_bit7}
 N 1610 -510 1660 -510 {
-lab=r_bit5}
+lab=raw_bit4}
 N 1660 -510 1660 -470 {
-lab=r_bit5}
+lab=raw_bit4}
 N 1760 -340 1800 -340 {
 lab=#net9}
 N 1760 -480 1760 -340 {
@@ -175,13 +175,13 @@ lab=#net9}
 N 1700 -480 1760 -480 {
 lab=#net9}
 N 1860 -490 1870 -490 {
-lab=r_bit_sp6}
+lab=raw_bit9}
 N 1870 -490 1870 -470 {
-lab=r_bit_sp6}
+lab=raw_bit9}
 N 1860 -510 1910 -510 {
-lab=r_bit6}
+lab=raw_bit8}
 N 1910 -510 1910 -470 {
-lab=r_bit6}
+lab=raw_bit8}
 N 2070 -340 2120 -340 {
 lab=#net12}
 N 2120 -350 2120 -340 {
@@ -225,13 +225,13 @@ lab=#net14}
 N 2300 -340 2320 -340 {
 lab=#net13}
 N 2110 -490 2120 -490 {
-lab=r_bit_sp7}
+lab=raw_bit10}
 N 2120 -490 2120 -470 {
-lab=r_bit_sp7}
+lab=raw_bit10}
 N 2110 -510 2160 -510 {
-lab=r_bit7}
+lab=raw_bit8}
 N 2160 -510 2160 -470 {
-lab=r_bit7}
+lab=raw_bit8}
 N 2260 -340 2300 -340 {
 lab=#net13}
 N 2260 -480 2260 -340 {
@@ -239,15 +239,15 @@ lab=#net13}
 N 2200 -480 2260 -480 {
 lab=#net13}
 N 2360 -490 2370 -490 {
-lab=r_bit_sp8}
+lab=raw_bit11}
 N 2370 -490 2370 -470 {
-lab=r_bit_sp8}
+lab=raw_bit11}
 N 2360 -510 2410 -510 {
-lab=r_bit8}
+lab=raw_bit8}
 N 2410 -510 2410 -470 {
-lab=r_bit8}
+lab=raw_bit8}
 N 2450 -480 2450 -470 {
-lab=r_bit_sp9}
+lab=raw_bit12}
 N 460 -310 470 -310 {
 lab=dump_bus}
 N 460 -310 460 -270 {
@@ -269,15 +269,15 @@ lab=dump_bus}
 N 2710 -270 2720 -270 {
 lab=dump_bus}
 N 2700 -250 2720 -250 {
-lab=r_bit9}
+lab=raw_bit13}
 N 2450 -490 2460 -490 {
-lab=r_bit_sp9}
+lab=raw_bit12}
 N 2450 -490 2450 -480 {
-lab=r_bit_sp9}
+lab=raw_bit12}
 N 2700 -350 2700 -250 {
-lab=r_bit9}
+lab=raw_bit13}
 N 2690 -350 2700 -350 {
-lab=r_bit9}
+lab=raw_bit13}
 N 590 -160 620 -160 {
 lab=done}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -360,7 +360,7 @@ C {devices/lab_pin.sym} 2900 -270 2 0 {name=l209 sig_type=std_logic lab=bit10
 }
 C {devices/lab_pin.sym} 2720 -230 0 0 {name=l210 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 2690 -350 0 0 {name=l212 sig_type=std_logic lab=r_bit9
+C {devices/lab_pin.sym} 2690 -350 0 0 {name=l212 sig_type=std_logic lab=raw_bit13
 }
 C {devices/lab_pin.sym} 510 -160 0 0 {name=l213 sig_type=std_logic lab=dump_bus
 }
@@ -368,41 +368,39 @@ C {sky130_stdcells/inv_1.sym} 550 -160 0 0 {name=x82 VGND=VSS VNB=VSS VPB=VDD VP
 C {devices/lab_pin.sym} 620 -160 2 0 {name=l214 sig_type=std_logic lab=done
 }
 C {devices/noconn.sym} 600 -160 3 0 {name=l236}
-C {devices/lab_pin.sym} 610 -490 0 0 {name=l168 sig_type=std_logic lab=r_bit_sp1
+C {devices/lab_pin.sym} 610 -490 0 0 {name=l168 sig_type=std_logic lab=raw_bit2
 }
-C {devices/lab_pin.sym} 860 -490 0 0 {name=l169 sig_type=std_logic lab=r_bit_sp2
+C {devices/lab_pin.sym} 860 -490 0 0 {name=l169 sig_type=std_logic lab=raw_bit3
 }
-C {devices/lab_pin.sym} 1110 -490 0 0 {name=l170 sig_type=std_logic lab=r_bit_sp3
+C {devices/lab_pin.sym} 1110 -490 0 0 {name=l170 sig_type=std_logic lab=raw_bit5
 }
-C {devices/lab_pin.sym} 1360 -490 0 0 {name=l171 sig_type=std_logic lab=r_bit_sp4
+C {devices/lab_pin.sym} 1360 -490 0 0 {name=l171 sig_type=std_logic lab=raw_bit6
 }
-C {devices/lab_pin.sym} 1610 -490 0 0 {name=l178 sig_type=std_logic lab=r_bit_sp5
+C {devices/lab_pin.sym} 1610 -490 0 0 {name=l178 sig_type=std_logic lab=raw_bit7
 }
-C {devices/lab_pin.sym} 1860 -490 0 0 {name=l179 sig_type=std_logic lab=r_bit_sp6
+C {devices/lab_pin.sym} 1860 -490 0 0 {name=l179 sig_type=std_logic lab=raw_bit9
 }
-C {devices/lab_pin.sym} 2110 -490 0 0 {name=l180 sig_type=std_logic lab=r_bit_sp7
+C {devices/lab_pin.sym} 2110 -490 0 0 {name=l180 sig_type=std_logic lab=raw_bit10
 }
-C {devices/lab_pin.sym} 2360 -490 0 0 {name=l181 sig_type=std_logic lab=r_bit_sp8
+C {devices/lab_pin.sym} 2360 -490 0 0 {name=l181 sig_type=std_logic lab=raw_bit11
 }
-C {devices/lab_pin.sym} 2460 -490 2 0 {name=l188 sig_type=std_logic lab=r_bit_sp9
+C {devices/lab_pin.sym} 2460 -490 2 0 {name=l188 sig_type=std_logic lab=raw_bit12
 }
-C {devices/lab_pin.sym} 610 -510 0 0 {name=l189 sig_type=std_logic lab=r_bit1
+C {devices/lab_pin.sym} 610 -510 0 0 {name=l189 sig_type=std_logic lab=raw_bit1
 }
-C {devices/lab_pin.sym} 860 -510 0 0 {name=l190 sig_type=std_logic lab=r_bit2
+C {devices/lab_pin.sym} 860 -510 0 0 {name=l190 sig_type=std_logic lab=raw_bit1
 }
-C {devices/lab_pin.sym} 1110 -510 0 0 {name=l191 sig_type=std_logic lab=r_bit3
+C {devices/lab_pin.sym} 1110 -510 0 0 {name=l191 sig_type=std_logic lab=raw_bit4
 }
-C {devices/lab_pin.sym} 1360 -510 0 0 {name=l198 sig_type=std_logic lab=r_bit4
+C {devices/lab_pin.sym} 1360 -510 0 0 {name=l198 sig_type=std_logic lab=raw_bit4
 }
-C {devices/lab_pin.sym} 1610 -510 0 0 {name=l199 sig_type=std_logic lab=r_bit5
+C {devices/lab_pin.sym} 1610 -510 0 0 {name=l199 sig_type=std_logic lab=raw_bit4
 }
-C {devices/lab_pin.sym} 1860 -510 0 0 {name=l200 sig_type=std_logic lab=r_bit6
+C {devices/lab_pin.sym} 1860 -510 0 0 {name=l200 sig_type=std_logic lab=raw_bit8
 }
-C {devices/lab_pin.sym} 2110 -510 0 0 {name=l201 sig_type=std_logic lab=r_bit7
+C {devices/lab_pin.sym} 2110 -510 0 0 {name=l201 sig_type=std_logic lab=raw_bit8
 }
-C {devices/lab_pin.sym} 2360 -510 0 0 {name=l211 sig_type=std_logic lab=r_bit8
-}
-C {devices/ipin.sym} 130 -350 0 0 {name=p1 lab=r_bit[9..1]
+C {devices/lab_pin.sym} 2360 -510 0 0 {name=l211 sig_type=std_logic lab=raw_bit8
 }
 C {devices/iopin.sym} 200 -350 0 0 {name=p2 lab=VDD
 }
@@ -410,11 +408,11 @@ C {devices/opin.sym} 200 -290 0 0 {name=p3 lab=bit[10..1]
 }
 C {devices/iopin.sym} 200 -320 0 0 {name=p5 lab=VSS
 }
-C {devices/ipin.sym} 130 -320 0 0 {name=p4 lab=r_bit_sp[9..1]
-}
 C {devices/ipin.sym} 130 -290 0 0 {name=p6 lab=reset_b
 }
 C {devices/ipin.sym} 130 -260 0 0 {name=p7 lab=dump_bus
 }
 C {devices/opin.sym} 200 -260 0 0 {name=p8 lab=done
+}
+C {devices/ipin.sym} 130 -320 0 0 {name=p9 lab=raw_bit[13..1]
 }
