@@ -8,7 +8,7 @@ N 50 -250 50 -230 {
 lab=GND}
 N 150 -250 150 -230 {
 lab=GND}
-N 610 -170 610 -150 {
+N 740 -170 740 -150 {
 lab=GND}
 N 720 -420 730 -420 {
 lab=VDD}
@@ -38,9 +38,10 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
-*tran 0.1u 100u
-dc V1 0 1.8V 0.1
-plot Clk-2 Vin_p-Vin_n Out_n Out_p
+tran 0.1u 200u
+*dc V1 0 1.8V 0.1
+plot Vin_p-Vin_n Out_p-Out_n Clk-4
+plot Vin_p-Vin_n x1.pre_amp_p-x1.pre_amp_n Clk-4
 write comparator_test.raw
 .endc
 "}
@@ -57,16 +58,16 @@ C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/comparator/comparator.sym} 570 -390 0 0 {name=x1}
-C {devices/vsource.sym} 450 -200 0 0 {name=V1 value=0
+C {devices/vsource.sym} 450 -200 0 0 {name=V1 value="PULSE -1.8V 1.8V 0 200us 1ns 1ns 200us"
 }
 C {devices/lab_pin.sym} 450 -230 0 0 {name=l2 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 450 -170 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
-C {devices/vsource.sym} 610 -200 0 0 {name=V2 value="PULSE 0 1.8V 10us 1ns 1ns 5us 10us"
+C {devices/vsource.sym} 740 -200 0 0 {name=V2 value="PULSE 0 1.8V 0us 1ns 1ns 5us 10us"
 }
-C {devices/gnd.sym} 610 -150 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} 610 -230 0 0 {name=l6 sig_type=std_logic lab=Clk
+C {devices/gnd.sym} 740 -150 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 740 -230 0 0 {name=l6 sig_type=std_logic lab=Clk
 }
 C {devices/lab_pin.sym} 730 -420 2 0 {name=l3 sig_type=std_logic lab=VDD
 }
@@ -82,3 +83,7 @@ C {devices/lab_pin.sym} 730 -380 2 0 {name=l10 sig_type=std_logic lab=Out_n
 }
 C {devices/lab_pin.sym} 730 -360 2 0 {name=l11 sig_type=std_logic lab=Out_p
 }
+C {devices/noconn.sym} 730 -360 3 0 {name=l12}
+C {devices/lab_pin.sym} 730 -380 2 0 {name=l18 sig_type=std_logic lab=Out_n
+}
+C {devices/noconn.sym} 730 -380 3 0 {name=l19}
