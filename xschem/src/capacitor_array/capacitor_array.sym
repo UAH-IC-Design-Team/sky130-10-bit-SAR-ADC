@@ -1,0 +1,33 @@
+v {xschem version=3.0.0 file_version=1.2 }
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname unit_cap_w=@unit_cap_w unit_cap_l=@unit_cap_l"
+template="name=x1 unit_cap_w=25 unit_cap_l=25"
+}
+V {}
+S {}
+E {}
+L 4 -130 -40 130 -40 {}
+L 4 -130 40 130 40 {}
+L 4 -130 -40 -130 40 {}
+L 4 130 -40 130 40 {}
+L 4 -150 -30 -130 -30 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -150 10 -130 10 {}
+L 4 -150 30 -130 30 {}
+L 7 130 -30 150 -30 {}
+L 7 130 -10 150 -10 {}
+B 5 147.5 -32.5 152.5 -27.5 {name=Vin_p dir=inout }
+B 5 -152.5 -32.5 -147.5 -27.5 {name=sw_sp_n[9..1] dir=in }
+B 5 -152.5 -12.5 -147.5 -7.5 {name=sw_sp_p[9..1] dir=in }
+B 5 147.5 -12.5 152.5 -7.5 {name=Vin_n dir=inout }
+B 5 -152.5 7.5 -147.5 12.5 {name=sw_p[8..1] dir=in }
+B 5 -152.5 27.5 -147.5 32.5 {name=sw_n[8..1] dir=in }
+T {@symname} -85.5 -6 0 0 0.3 0.3 {}
+T {@name} 135 -52 0 0 0.2 0.2 {}
+T {Vin_p} 125 -34 0 1 0.2 0.2 {}
+T {sw_sp_n[9..1]} -125 -34 0 0 0.2 0.2 {}
+T {sw_sp_p[9..1]} -125 -14 0 0 0.2 0.2 {}
+T {Vin_n} 125 -14 0 1 0.2 0.2 {}
+T {sw_p[8..1]} -125 6 0 0 0.2 0.2 {}
+T {sw_n[8..1]} -125 26 0 0 0.2 0.2 {}
