@@ -1,2 +1,9 @@
+/.idea/
+/precheck_results/
+*/tmp
+*/*/tmp
+/mpw_precheck/
+/caravel/
+
+.DS_STORE
 dummy_test.sch
-.DS_Store

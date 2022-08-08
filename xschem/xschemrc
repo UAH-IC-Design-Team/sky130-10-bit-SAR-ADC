@@ -83,9 +83,9 @@ set netlist_dir .
 #### variable controls hierarchical print
 #### default value: empty
 # set noprint_libs {}
->>>>>>> dev
 
 ###########################################################################
+>>>>>>> dev
 #### CHANGE DEFAULT [] WITH SOME OTHER CHARACTERS FOR BUSSED SIGNALS 
 #### IN SPICE NETLISTS (EXAMPLE: DATA[7] --> DATA<7>) 
 ###########################################################################
@@ -364,3 +364,4 @@ if {[info exists PDK_ROOT]} {
 set XSCHEM_START_WINDOW ${PDK_ROOT}/${PDK}/libs.tech/xschem/sky130_tests/top.sch
 append XSCHEM_LIBRARY_PATH :${PDK_ROOT}/${PDK}/libs.tech/xschem
 
+>>>>>>> dev
