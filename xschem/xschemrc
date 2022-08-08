@@ -85,7 +85,6 @@ set netlist_dir .
 # set noprint_libs {}
 
 ###########################################################################
->>>>>>> dev
 #### CHANGE DEFAULT [] WITH SOME OTHER CHARACTERS FOR BUSSED SIGNALS 
 #### IN SPICE NETLISTS (EXAMPLE: DATA[7] --> DATA<7>) 
 ###########################################################################
@@ -290,7 +289,6 @@ set to_pdf {ps2pdf -dAutoRotatePages=/None}
 #### set bespice wave listening port; default: not enabled
 set bespice_listen_port 2022
 
-
 ###########################################################################
 #### UTILE SPICE STIMULI DESCRIPTION LANGUAGE AND TRANSLATOR
 ###########################################################################
@@ -364,4 +362,4 @@ if {[info exists PDK_ROOT]} {
 set XSCHEM_START_WINDOW ${PDK_ROOT}/${PDK}/libs.tech/xschem/sky130_tests/top.sch
 append XSCHEM_LIBRARY_PATH :${PDK_ROOT}/${PDK}/libs.tech/xschem
 
->>>>>>> dev
+
