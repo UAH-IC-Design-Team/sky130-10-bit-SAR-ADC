@@ -25,12 +25,17 @@
 # /home/schippes/share/doc/xschem/pcb
 # /home/schippes/share/doc/xschem/rom8k
 
+#### Allow user environment to override the path to the PDK
+if {[catch {set PDKPATH $env(PDKPATH)}]} {
+    set PDKPATH "/usr/share/pdk/sky130A"
+}
 #### Flush any previous definition
 set XSCHEM_LIBRARY_PATH {}
 #### include devices/*.sym
 append XSCHEM_LIBRARY_PATH ${XSCHEM_SHAREDIR}/xschem_library
 #### include skywater libraries. Here i use [pwd]. This works if i start xschem from here.
 append XSCHEM_LIBRARY_PATH :$env(PWD)
+append XSCHEM_LIBRARY_PATH :$PDKPATH/libs.tech/xschem
 # append XSCHEM_LIBRARY_PATH :/mnt/sda7/home/schippes/pdks/sky130A/libs.tech/xschem
 #### add ~/.xschem/xschem_library (USER_CONF_DIR is normally ~/.xschem)
 append XSCHEM_LIBRARY_PATH :$USER_CONF_DIR/xschem_library 
@@ -61,6 +66,7 @@ set XSCHEM_START_WINDOW {sky130_tests/top.sch}
 ###########################################################################
 #### If unset $USER_CONF_DIR/simulations is assumed (normally ~/.xschem/simulations) 
 # set netlist_dir $env(HOME)/.xschem/simulations
+set netlist_dir .
 
 ###########################################################################
 #### NETLIST AND HIERARCHICAL PRINT EXCLUDE PATTERNS
@@ -77,6 +83,7 @@ set XSCHEM_START_WINDOW {sky130_tests/top.sch}
 #### variable controls hierarchical print
 #### default value: empty
 # set noprint_libs {}
+>>>>>>> dev
 
 ###########################################################################
 #### CHANGE DEFAULT [] WITH SOME OTHER CHARACTERS FOR BUSSED SIGNALS 
@@ -283,12 +290,21 @@ set to_pdf {ps2pdf -dAutoRotatePages=/None}
 #### set bespice wave listening port; default: not enabled
 set bespice_listen_port 2022
 
+
+###########################################################################
+#### UTILE SPICE STIMULI DESCRIPTION LANGUAGE AND TRANSLATOR
+###########################################################################
+#### default paths are set as shown here: 
+# set utile_gui_path ${XSCHEM_SHAREDIR}/utile/utile3
+# set utile_cmd_path ${XSCHEM_SHAREDIR}/utile/utile
+
 ###########################################################################
 #### TCL FILES TO LOAD AT STARTUP
 ###########################################################################
 #### list of tcl files to preload.
 # lappend tcl_files ${XSCHEM_SHAREDIR}/change_index.tcl
 lappend tcl_files ${XSCHEM_SHAREDIR}/ngspice_backannotate.tcl
+lappend tcl_files $PDKPATH/libs.tech/xschem/scripts/sky130_models.tcl
 
 ###########################################################################
 #### XSCHEM TOOLBAR
