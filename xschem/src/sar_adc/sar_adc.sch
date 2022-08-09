@@ -5,6 +5,7 @@ V {}
 S {}
 E {}
 T {RESET????} 80 -800 0 0 0.7 0.7 {}
+T {Is this needed? Or do we just use one side of the comparator?} 860 -320 0 0 0.4 0.4 {}
 N 400 -680 430 -680 {
 lab=V_in_p}
 N 400 -660 430 -660 {
@@ -58,7 +59,7 @@ lab=comp_out_n}
 N 730 -290 770 -290 {
 lab=Vcmp}
 N 390 -200 430 -200 {
-lab=Vcmp}
+lab=comp_out_p}
 N 730 -120 770 -120 {
 lab=Bit[10..1]}
 N 730 -80 770 -80 {
@@ -150,7 +151,7 @@ C {devices/lab_pin.sym} 390 -330 2 1 {name=l26 sig_type=std_logic lab=comp_out_p
 }
 C {devices/lab_pin.sym} 770 -290 2 0 {name=l27 sig_type=std_logic lab=Vcmp
 }
-C {devices/lab_pin.sym} 390 -200 0 0 {name=l28 sig_type=std_logic lab=Vcmp
+C {devices/lab_pin.sym} 390 -200 0 0 {name=l28 sig_type=std_logic lab=comp_out_p
 }
 C {devices/opin.sym} 40 -150 0 0 {name=p1 lab=Bit[10..1]
 }
