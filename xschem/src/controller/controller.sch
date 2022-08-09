@@ -34,25 +34,11 @@ T {Notes on Timing:
 32 | Total 
 
 } 1040 -1240 0 0 0.4 0.4 {}
-T {With the cycles the same period as the clock, this doesn't work...} 1370 -660 0 0 0.4 0.4 {}
-N 1740 -380 1760 -380 {
+T {With the cycles the same period as the clock, this doesn't work...} 1380 -770 0 0 0.4 0.4 {}
+N 2010 -430 2030 -430 {
 lab=sw_sample}
-N 1560 -380 1620 -380 {
-lab=#net1}
-N 1560 -530 1580 -530 {
-lab=#net2}
-N 1580 -530 1580 -420 {
-lab=#net2}
-N 1580 -420 1620 -420 {
-lab=#net2}
-N 1560 -230 1580 -230 {
-lab=#net3}
-N 1580 -340 1580 -230 {
-lab=#net3}
-N 1580 -340 1620 -340 {
-lab=#net3}
 N 750 -410 820 -410 {
-lab=#net4}
+lab=#net1}
 N 650 -410 670 -410 {
 lab=cycle0}
 N 880 -760 890 -760 {
@@ -63,14 +49,45 @@ N 880 -720 890 -720 {
 lab=reset}
 N 1070 -760 1090 -760 {
 lab=Vcmp_q}
+N 1620 -470 1630 -470 {
+lab=#net2}
+N 1620 -640 1620 -470 {
+lab=#net2}
+N 1570 -640 1620 -640 {
+lab=#net2}
+N 1610 -430 1630 -430 {
+lab=#net3}
+N 1610 -490 1610 -430 {
+lab=#net3}
+N 1570 -490 1610 -490 {
+lab=#net3}
+N 1620 -350 1630 -350 {
+lab=#net4}
+N 1620 -350 1620 -210 {
+lab=#net4}
+N 1570 -210 1620 -210 {
+lab=#net4}
+N 1570 -340 1610 -340 {
+lab=#net5}
+N 1610 -390 1610 -340 {
+lab=#net5}
+N 1610 -390 1630 -390 {
+lab=#net5}
+N 1820 -430 1830 -430 {
+lab=clk}
+N 1820 -410 1830 -410 {
+lab=#net6}
+N 1820 -390 1830 -390 {
+lab=reset}
+N 1750 -410 1820 -410 {
+lab=#net6}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
-C {sky130_stdcells/or4_2.sym} 1500 -530 0 0 {name=x95 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/or4_2.sym} 1500 -380 0 0 {name=x96 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/or4_2.sym} 1500 -230 0 0 {name=x97 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/or3_1.sym} 1680 -380 0 0 {name=x98 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {devices/lab_pin.sym} 1760 -380 2 0 {name=l217 sig_type=std_logic lab=sw_sample
+C {sky130_stdcells/or4_2.sym} 1510 -640 0 0 {name=x95 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/or4_2.sym} 1510 -490 0 0 {name=x96 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/or4_2.sym} 1510 -340 0 0 {name=x97 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {devices/lab_pin.sym} 2030 -430 2 0 {name=l217 sig_type=std_logic lab=sw_sample
 }
-C {devices/noconn.sym} 1750 -380 3 0 {name=l234}
+C {devices/noconn.sym} 2020 -430 3 0 {name=l234}
 C {src/pulse_generator/pulse_generator.sym} 970 -130 0 0 {name=x2}
 C {src/dec/dec.sym} 970 -560 0 0 {name=x3}
 C {src/raw_bit_calculator/raw_bit_calculator.sym} 970 -390 0 0 {name=x4}
@@ -126,29 +143,29 @@ C {devices/lab_pin.sym} 820 -220 0 0 {name=l26 sig_type=std_logic lab=reset
 }
 C {devices/lab_pin.sym} 820 -130 0 0 {name=l27 sig_type=std_logic lab=reset
 }
-C {devices/lab_pin.sym} 1440 -590 0 0 {name=l31 sig_type=std_logic lab=cycle1
+C {devices/lab_pin.sym} 1450 -700 0 0 {name=l31 sig_type=std_logic lab=cycle1
 }
-C {devices/lab_pin.sym} 1440 -550 0 0 {name=l32 sig_type=std_logic lab=cycle2
+C {devices/lab_pin.sym} 1450 -660 0 0 {name=l32 sig_type=std_logic lab=cycle2
 }
-C {devices/lab_pin.sym} 1440 -510 0 0 {name=l33 sig_type=std_logic lab=cycle3
+C {devices/lab_pin.sym} 1450 -620 0 0 {name=l33 sig_type=std_logic lab=cycle3
 }
-C {devices/lab_pin.sym} 1440 -470 0 0 {name=l34 sig_type=std_logic lab=cycle4
+C {devices/lab_pin.sym} 1450 -580 0 0 {name=l34 sig_type=std_logic lab=cycle4
 }
-C {devices/lab_pin.sym} 1440 -440 0 0 {name=l35 sig_type=std_logic lab=cycle5
+C {devices/lab_pin.sym} 1450 -550 0 0 {name=l35 sig_type=std_logic lab=cycle5
 }
-C {devices/lab_pin.sym} 1440 -400 0 0 {name=l36 sig_type=std_logic lab=cycle6
+C {devices/lab_pin.sym} 1450 -510 0 0 {name=l36 sig_type=std_logic lab=cycle6
 }
-C {devices/lab_pin.sym} 1440 -360 0 0 {name=l37 sig_type=std_logic lab=cycle7
+C {devices/lab_pin.sym} 1450 -470 0 0 {name=l37 sig_type=std_logic lab=cycle7
 }
-C {devices/lab_pin.sym} 1440 -320 0 0 {name=l38 sig_type=std_logic lab=cycle8
+C {devices/lab_pin.sym} 1450 -430 0 0 {name=l38 sig_type=std_logic lab=cycle8
 }
-C {devices/lab_pin.sym} 1440 -290 0 0 {name=l39 sig_type=std_logic lab=cycle9
+C {devices/lab_pin.sym} 1450 -400 0 0 {name=l39 sig_type=std_logic lab=cycle9
 }
-C {devices/lab_pin.sym} 1440 -250 0 0 {name=l40 sig_type=std_logic lab=cycle10
+C {devices/lab_pin.sym} 1450 -360 0 0 {name=l40 sig_type=std_logic lab=cycle10
 }
-C {devices/lab_pin.sym} 1440 -210 0 0 {name=l41 sig_type=std_logic lab=cycle11
+C {devices/lab_pin.sym} 1450 -320 0 0 {name=l41 sig_type=std_logic lab=cycle11
 }
-C {devices/lab_pin.sym} 1440 -170 0 0 {name=l42 sig_type=std_logic lab=cycle12
+C {devices/lab_pin.sym} 1450 -280 0 0 {name=l42 sig_type=std_logic lab=cycle12
 }
 C {devices/ipin.sym} 130 -580 0 0 {name=p1 lab=clk
 }
@@ -190,4 +207,19 @@ C {devices/lab_pin.sym} 880 -740 0 0 {name=l43 sig_type=std_logic lab=Vcmp
 C {devices/lab_pin.sym} 880 -760 0 0 {name=l44 sig_type=std_logic lab=clk
 }
 C {devices/lab_pin.sym} 1090 -760 2 0 {name=l45 sig_type=std_logic lab=Vcmp_q
+}
+C {devices/lab_pin.sym} 1450 -250 0 0 {name=l46 sig_type=std_logic lab=cycle13
+}
+C {devices/lab_pin.sym} 1450 -210 0 0 {name=l47 sig_type=std_logic lab=cycle14
+}
+C {devices/lab_pin.sym} 1450 -170 0 0 {name=l48 sig_type=std_logic lab=cycle15
+}
+C {sky130_stdcells/or4_2.sym} 1690 -410 0 0 {name=x8 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/dfrtn_1.sym} 1920 -410 0 0 {name=x9 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {devices/lab_pin.sym} 1820 -390 0 0 {name=l50 sig_type=std_logic lab=reset
+}
+C {devices/lab_pin.sym} 1820 -430 0 0 {name=l52 sig_type=std_logic lab=clk
+}
+C {sky130_stdcells/or3_2.sym} 1510 -210 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
