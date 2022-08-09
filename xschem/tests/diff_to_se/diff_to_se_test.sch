@@ -24,6 +24,12 @@ N 720 -380 730 -380 {
 lab=Out_n}
 N 720 -360 730 -360 {
 lab=Out_p}
+N 720 -480 720 -470 {
+lab=Vout}
+N 720 -470 880 -470 {
+lab=Vout}
+N 880 -410 880 -390 {
+lab=VSS}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -64,7 +70,7 @@ C {devices/lab_pin.sym} 450 -230 0 0 {name=l2 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 450 -170 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
-C {devices/vsource.sym} 740 -200 0 0 {name=V2 value="PULSE 0 1.8V 0us 1ns 1ns 5us 10us"
+C {devices/vsource.sym} 740 -200 0 0 {name=V2 value="PULSE 0 1.8V 0us 1ns 1ns 0.5us 1us"
 }
 C {devices/gnd.sym} 740 -150 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 740 -230 0 0 {name=l6 sig_type=std_logic lab=Clk
@@ -97,4 +103,12 @@ C {devices/lab_pin.sym} 720 -520 2 0 {name=l22 sig_type=std_logic lab=VDD
 C {devices/lab_pin.sym} 720 -500 2 0 {name=l23 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 720 -480 2 0 {name=l24 sig_type=std_logic lab=Vout
+}
+C {devices/lab_pin.sym} 880 -390 2 0 {name=l25 sig_type=std_logic lab=VSS
+}
+C {devices/res.sym} 880 -440 0 0 {name=R2
+value=300k
+footprint=1206
+device=resistor
+m=1
 }
