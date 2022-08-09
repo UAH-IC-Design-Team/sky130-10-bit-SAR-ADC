@@ -42,7 +42,7 @@ tran 0.1u 350u
 *plot RST_PLS clk+2 Pulse+4
 plot reset_b-6 clk-4 clk_pulse-2 cycle0 cycle1+2 cycle2+4 cycle3+6 cycle4+8 cycle5+10 cycle6+12 cycle7+14 cycle8+16 cycle9+18 cycle10+20 cycle11+22 cycle12+24 cycle13+26 cycle14+28 cycle15+30 cycle16+32 cycle17+34 cycle18+36 cycle19+38 cycle20+40 cycle21+42 cycle22+44  cycle23+46 cycle24+48 cycle25+50 cycle26+52 cycle27+54 cycle28+56 cycle29+58 cycle30+60 cycle31+62 
 
-write pulse_generator_and_delay_line.raw
+write pulse_generator_and_shifted_clock_generator_test.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
