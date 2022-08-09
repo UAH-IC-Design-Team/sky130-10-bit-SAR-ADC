@@ -34,6 +34,7 @@ T {Notes on Timing:
 32 | Total 
 
 } 1040 -1240 0 0 0.4 0.4 {}
+T {With the cycles the same period as the clock, this doesn't work...} 1370 -660 0 0 0.4 0.4 {}
 N 1740 -380 1760 -380 {
 lab=sw_sample}
 N 1560 -380 1620 -380 {
@@ -54,6 +55,14 @@ N 750 -410 820 -410 {
 lab=#net4}
 N 650 -410 670 -410 {
 lab=cycle0}
+N 880 -760 890 -760 {
+lab=clk}
+N 880 -740 890 -740 {
+lab=Vcmp}
+N 880 -720 890 -720 {
+lab=reset}
+N 1070 -760 1090 -760 {
+lab=Vcmp_q}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
 C {sky130_stdcells/or4_2.sym} 1500 -530 0 0 {name=x95 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {sky130_stdcells/or4_2.sym} 1500 -380 0 0 {name=x96 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
@@ -101,7 +110,7 @@ C {devices/lab_pin.sym} 650 -410 0 0 {name=l18 sig_type=std_logic lab=cycle0
 }
 C {devices/lab_pin.sym} 820 -550 0 0 {name=l19 sig_type=std_logic lab=cycle31
 }
-C {devices/lab_pin.sym} 820 -430 0 0 {name=l20 sig_type=std_logic lab=Vcmp
+C {devices/lab_pin.sym} 820 -430 0 0 {name=l20 sig_type=std_logic lab=Vcmp_q
 }
 C {devices/lab_pin.sym} 820 -260 0 0 {name=l21 sig_type=std_logic lab=clk
 }
@@ -171,4 +180,14 @@ C {src/shifted_clock_generator/shifted_clock_generator.sym} 970 -240 0 0 {name=x
 C {devices/lab_pin.sym} 1120 -450 2 0 {name=l29 sig_type=std_logic lab=raw_bit[13..1]
 }
 C {devices/lab_pin.sym} 820 -590 0 0 {name=l30 sig_type=std_logic lab=raw_bit[13..1]
+}
+C {sky130_stdcells/dfrtn_1.sym} 980 -740 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {devices/lab_pin.sym} 880 -720 0 0 {name=l28 sig_type=std_logic lab=reset
+}
+C {devices/lab_pin.sym} 880 -740 0 0 {name=l43 sig_type=std_logic lab=Vcmp
+}
+C {devices/lab_pin.sym} 880 -760 0 0 {name=l44 sig_type=std_logic lab=clk
+}
+C {devices/lab_pin.sym} 1090 -760 2 0 {name=l45 sig_type=std_logic lab=Vcmp_q
 }
