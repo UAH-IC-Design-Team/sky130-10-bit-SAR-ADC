@@ -13,7 +13,7 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 | dac | functional | dependent on the capacitor_array and capacitor_switch |
 | dec | complete | 😁 |
 | demux2 | complete | 😁 |
-| diff_to_se | inprogress | only ports are done; needs to convert from -1.8V/1.8V diff to 0/1.8V single ended |
+| diff_to_se | functional | simple difference amp...but is it needed? RN, it's bipassed. |
 | pulse_generator | complete | 😁 |
 | raw_bit_calculator | functional | needs verification with full design timing |
 | shifted_clock_generator | complete | 😁 |
