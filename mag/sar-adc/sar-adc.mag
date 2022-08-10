@@ -49,11 +49,11 @@ use sky130_fd_pr__res_generic_m1_MZR69S  R4
 timestamp 1659208328
 transform 1 0 1080 0 1 1037
 box -100 -157 100 157
-use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 $PDK_ROOT/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1649977179
 transform 1 0 348 0 1 598
 box -38 -48 130 592
-use sky130_fd_sc_hd__inv_1  x1 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__inv_1  x1 $PDK_ROOT/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1649977179
 transform 1 0 -2 0 1 598
 box -38 -48 314 592
