@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>SKY130 DRC runset</description>
+ <original-file/>
+ <generator>drc: script='/headless/.klayout/drc/sky130A_mr_2.drc'</generator>
+ <top-cell>sar-adc</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>dnwell.2</name>
+   <description>dnwell.2 : min. dnwell width : 3.0um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell.1</name>
+   <description>nwell.1 : min. nwell width : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell.2a</name>
+   <description>nwell.2a : min. nwell spacing (merged if less) : 1.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nwell.6</name>
+   <description>nwell.6 : min enclosure of nwellHole by dnwell : 1.03um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtp.1</name>
+   <description>hvtp.1 : min. hvtp width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtp.2</name>
+   <description>hvtp.2 : min. hvtp spacing : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtr.1</name>
+   <description>hvtr.1 : min. hvtr width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtr.2</name>
+   <description>hvtr.2 : min. hvtr spacing : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvtr.2_a</name>
+   <description>hvtr.2_a : hvtr must not overlap hvtp</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvtn.1a</name>
+   <description>lvtn.1a : min. lvtn width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>lvtn.2</name>
+   <description>lvtn.2 : min. lvtn spacing : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ncm.1</name>
+   <description>ncm.1 : min. ncm width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>ncm.2a</name>
+   <description>ncm.2a : min. ncm spacing : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>difftap.1</name>
+   <description>difftap.1 : min. diff width across areaid:ce : 0.15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>difftap.1_a</name>
+   <description>difftap.1_a : min. diff width in periphery : 0.15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>difftap.1_b</name>
+   <description>difftap.1_b : min. tap width across areaid:ce : 0.15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>difftap.1_c</name>
+   <description>difftap.1_c : min. tap width in periphery : 0.15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>difftap.3</name>
+   <description>difftap.3 : min. difftap spacing : 0.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>tunm.1</name>
+   <description>tunm.1 : min. tunm width : 0.41um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>tunm.2</name>
+   <description>tunm.2 : min. tunm spacing : 0.5um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly.1a</name>
+   <description>poly.1a : min. poly width : 0.15um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>poly.2</name>
+   <description>poly.2 : min. poly spacing : 0.21um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>rpm.1a</name>
+   <description>rpm.1a : min. rpm width : 1.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>rpm.2</name>
+   <description>rpm.2 : min. rpm spacing : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>urpm.1a</name>
+   <description>urpm.1a : min. rpm width : 1.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>urpm.2</name>
+   <description>urpm.2 : min. rpm spacing : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>npc.1</name>
+   <description>npc.1 : min. npc width : 0.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>npc.2</name>
+   <description>npc.2 : min. npc spacing, should be manually merged if less than : 0.27um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nsd.1</name>
+   <description>nsd.1 : min. nsdm width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>nsd.2</name>
+   <description>nsd.2 : min. nsdm spacing, should be manually merged if less than : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>psd.1</name>
+   <description>psd.1 : min. psdm width : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>psd.2</name>
+   <description>psd.2 : min. psdm spacing, should be manually merged if less than : 0.38um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.1</name>
+   <description>licon.1 : licon should be rectangle</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.1_a/b</name>
+   <description>licon.1_a/b : minimum/maximum width of licon : 0.17um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.13</name>
+   <description>licon.13 : min. difftap licon spacing to npc : 0.09um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.13_a</name>
+   <description>licon.13_a : licon of diffTap in periphery must not overlap npc</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>licon.17</name>
+   <description>licon.17 : Licons may not overlap both poly and (diff or tap)</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.1</name>
+   <description>capm.1 : min. capm width : 1.0um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.2a</name>
+   <description>capm.2a : min. capm spacing : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.2b</name>
+   <description>capm.2b : min. capm spacing : 1.2um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.2b_a</name>
+   <description>capm.2b_a : min. spacing of m3_bot_plate : 1.2um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.3</name>
+   <description>capm.3 : min. capm and m3 enclosure of m3 : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.3_a</name>
+   <description>capm.3_a : min. m3 enclosure of capm : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.4</name>
+   <description>capm.4 : min. capm enclosure of via3 : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.5</name>
+   <description>capm.5 : min. capm spacing to via3 : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>capm.11</name>
+   <description>capm.11 : Min spacing of capm and met3 not overlapping capm : 0.5um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.1</name>
+   <description>cap2m.1 : min. cap2m width : 1.0um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.2a</name>
+   <description>cap2m.2a : min. cap2m spacing : 0.84um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.2b</name>
+   <description>cap2m.2b : min. cap2m spacing : 1.2um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.2b_a</name>
+   <description>cap2m.2b_a : min. spacing of m4_bot_plate : 1.2um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.3</name>
+   <description>cap2m.3 : min. m4 enclosure of cap2m : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.3_a</name>
+   <description>cap2m.3_a : min. m4 enclosure of cap2m : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.4</name>
+   <description>cap2m.4 : min. cap2m enclosure of via4 : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.5</name>
+   <description>cap2m.5 : min. cap2m spacing to via4 : 0.14um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>cap2m.11</name>
+   <description>cap2m.11 : Min spacing of cap2m and met4 not overlapping cap2m : 0.5um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvi.1</name>
+   <description>hvi.1 : min. hvi width : 0.6um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvi.2a</name>
+   <description>hvi.2a : min. hvi spacing : 0.7um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvntm.1</name>
+   <description>hvntm.1 : min. hvntm width : 0.7um</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>hvntm.2</name>
+   <description>hvntm.2 : min. hvntm spacing : 0.7um</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>sar-adc</name>
+   <variant/>
+   <references>
+   </references>
+  </cell>
+  <cell>
+   <name>sky130_fd_sc_hd__tapvpwrvgnd_1</name>
+   <variant/>
+   <references>
+    <ref>
+     <parent>sar-adc</parent>
+     <trans>r0 *1 1.74,2.99</trans>
+    </ref>
+   </references>
+  </cell>
+  <cell>
+   <name>sky130_fd_sc_hd__inv_1</name>
+   <variant/>
+   <references>
+    <ref>
+     <parent>sar-adc</parent>
+     <trans>r0 *1 -0.01,2.99</trans>
+    </ref>
+   </references>
+  </cell>
+ </cells>
+ <items>
+  <item>
+   <tags/>
+   <category>'hvtp.2'</category>
+   <cell>sky130_fd_sc_hd__tapvpwrvgnd_1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (0,1.25;0,2.72)|(-0.37,2.72;-0.37,1.25)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'hvtp.2'</category>
+   <cell>sky130_fd_sc_hd__inv_1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (1.75,1.25;1.75,2.72)|(1.38,2.72;1.38,1.25)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'nsd.2'</category>
+   <cell>sky130_fd_sc_hd__tapvpwrvgnd_1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (0,-0.19;0,0.19)|(-0.37,0.277;-0.37,-0.19)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'nsd.2'</category>
+   <cell>sky130_fd_sc_hd__inv_1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (1.75,-0.19;1.75,0.19)|(1.38,0.277;1.38,-0.19)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'psd.2'</category>
+   <cell>sky130_fd_sc_hd__tapvpwrvgnd_1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (0,2.53;0,2.91)|(-0.37,2.91;-0.37,2.443)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'psd.2'</category>
+   <cell>sky130_fd_sc_hd__inv_1</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (1.75,2.53;1.75,2.91)|(1.38,2.91;1.38,2.443)</value>
+   </values>
+  </item>
+ </items>
+</report-database>
