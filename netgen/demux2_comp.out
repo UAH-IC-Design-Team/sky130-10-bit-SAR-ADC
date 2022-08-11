@@ -46,9 +46,9 @@ B                                          |B
 X                                          |X                                          
 VGND                                       |VGND                                       
 A                                          |A                                          
-(no matching pin)                          |a_40_47#                                   
 ---------------------------------------------------------------------------------------
-Cell pin lists for sky130_fd_sc_hd__and2_0 and sky130_fd_sc_hd__and2_0 altered to match.
+Cell pin lists are equivalent.
+Device classes sky130_fd_sc_hd__and2_0 and sky130_fd_sc_hd__and2_0 are equivalent.
 
 Subcircuit summary:
 Circuit 1: sky130_fd_sc_hd__inv_1          |Circuit 2: sky130_fd_sc_hd__inv_1          
@@ -80,7 +80,7 @@ Circuit 1: demux2                          |Circuit 2: demux2
 sky130_fd_sc_hd__and2_0 (2)                |sky130_fd_sc_hd__and2_0 (2)                
 sky130_fd_sc_hd__inv_1 (1)                 |sky130_fd_sc_hd__inv_1 (1)                 
 Number of devices: 3                       |Number of devices: 3                       
-Number of nets: 9                          |Number of nets: 9                          
+Number of nets: 7                          |Number of nets: 7                          
 ---------------------------------------------------------------------------------------
 Circuits match uniquely.
 Netlists match uniquely.
