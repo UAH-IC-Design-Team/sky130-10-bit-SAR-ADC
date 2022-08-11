@@ -59,4 +59,6 @@ start_all_tools:
 	cd ./xschem; xschem -b &
 
 
-
+.PHONY: get_devices_used
+get_devices_used:
+	cd ./xschem/src; grep --recursive --binary-files=without-match -h -o "sky130.*.sym" | sort --unique

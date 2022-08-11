@@ -45,4 +45,7 @@ Since Magic and Klayout have different DRC rules and solvers, a target in the ma
 
 To view the Klayout DRC errors, open gds file with the sky130 layer property file. Then go to Tools > Marker Browser and load the DRC marker xml file. 
 
+### Get all the devices used
+Use the `get_devices_used` Makefile target to see all of the devices used in the design.
+
 
