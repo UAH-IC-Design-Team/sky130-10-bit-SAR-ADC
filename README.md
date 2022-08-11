@@ -38,7 +38,7 @@ Please start Magic from the `./mag` directory to ensure that the `.magicrc` file
 There are all of the needed Layout Property files and drc files needed in the `./klayout` directory.
 
 ### LVS
-The Makefile has targets to extract and run lvs with the correct settings and file structure.
+The Makefile has targets to extract and run lvs with the correct settings and file structure. The comparison output is placed in `./netgen`.
 
 ### DRC
 Since Magic and Klayout have different DRC rules and solvers, a target in the make file has been provided to run the Klayout DRC check from the commandline and outputs the number of DRC errors. The associated drc marker log can be found in `./klayout/drc_reports`.
