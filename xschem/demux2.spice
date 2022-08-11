@@ -1,6 +1,11 @@
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sch
-.subckt demux2 S OUT_0 IN OUT_1 VDD VSS
-*.PININFO S:I OUT_0:O IN:I OUT_1:O VDD:B VSS:B
+**.subckt demux2 S OUT_0 IN OUT_1 VDD VSS
+*.ipin S
+*.opin OUT_0
+*.ipin IN
+*.opin OUT_1
+*.iopin VDD
+*.iopin VSS
 x1 net1 IN VSS VSS VDD VDD OUT_0 sky130_fd_sc_hd__and2_0
 x2 S IN VSS VSS VDD VDD OUT_1 sky130_fd_sc_hd__and2_0
 x3 S VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_1
@@ -8,5 +13,5 @@ x3 S VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_1
  .include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 **** end user architecture code
-.ends
+**.ends
 .end

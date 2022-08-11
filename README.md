@@ -24,12 +24,25 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 - **inprogress:** started, but not functional
 - **notstarted:** nothing done yet
 
-# Tools Notes
+# Tool Notes
 
-## Xschem
+### Xschem
+Please start Xschem from the `./xschem` to ensure that the `xschemrc` is sourced.
+
 There is a default test schematic template located `sky130-10-bit-SAR-ADC/xschem/tests/default_template_test.sch`.
 
-## Magic
-The `extract.sh` script will extract the lvs netlist from magic.
+### Magic
+Please start Magic from the `./mag` directory to ensure that the `.magicrc` file is sourced. 
+
+### Klayout
+There are all of the needed Layout Property files and drc files needed in the `./klayout` directory.
+
+### LVS
+The Makefile has targets to extract and run lvs with the correct settings and file structure.
+
+### DRC
+Since Magic and Klayout have different DRC rules and solvers, a target in the make file has been provided to run the Klayout DRC check from the commandline and outputs the number of DRC errors. The associated drc marker log can be found in `./klayout/drc_reports`.
+
+To view the Klayout DRC errors, open gds file with the sky130 layer property file. Then go to Tools > Marker Browser and load the DRC marker xml file. 
 
 
