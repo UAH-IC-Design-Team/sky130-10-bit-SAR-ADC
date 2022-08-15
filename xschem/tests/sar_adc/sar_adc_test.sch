@@ -29,6 +29,12 @@ N 450 -80 450 -60 {
 lab=GND}
 N 720 -80 720 -60 {
 lab=GND}
+N 250 -250 250 -230 {
+lab=GND}
+N 350 -150 350 -130 {
+lab=Vbias}
+N 340 -140 350 -140 {
+lab=Vbias}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -46,6 +52,7 @@ value=".options acct list
 tran 0.25u 40u
 *plot RST_PLS clk+2 Pulse+4
 plot Done-4 Vin_p-Vin_n-2 bits1 bits2+2 bits3+4 bits4+6 bits5+8 bits6+10 bits7+12 bits8+14 bits9+16 bits10+18
+plot x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2
 write sar_adc_test.raw
 .endc
 "}
@@ -62,9 +69,7 @@ C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/sar_adc/sar_adc.sym} 550 -350 0 0 {name=x1}
-C {devices/vsource.sym} 350 -100 0 0 {name=V2 value="0.7"
-}
-C {devices/lab_pin.sym} 350 -130 0 0 {name=l2 sig_type=std_logic lab=Vin_p
+C {devices/vsource.sym} 350 -100 0 0 {name=V2 value="0.1"
 }
 C {devices/lab_pin.sym} 350 -70 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
@@ -93,4 +98,15 @@ C {devices/vsource.sym} 720 -110 0 0 {name=V6 value="PULSE 1.8V 0 0.5us 1ns 1ns 
 }
 C {devices/gnd.sym} 720 -60 0 0 {name=l20 lab=GND}
 C {devices/lab_pin.sym} 720 -140 0 0 {name=l21 sig_type=std_logic lab=reset_b
+}
+C {devices/vsource.sym} 250 -280 0 0 {name=V1 value="0.9V"
+}
+C {devices/gnd.sym} 250 -230 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} 250 -310 0 0 {name=l6 sig_type=std_logic lab=Vbias
+}
+C {devices/vsource.sym} 350 -180 0 0 {name=V7 value="0.1"
+}
+C {devices/lab_pin.sym} 350 -210 0 0 {name=l22 sig_type=std_logic lab=Vin_p
+}
+C {devices/lab_pin.sym} 340 -140 0 0 {name=l2 sig_type=std_logic lab=Vbias
 }
