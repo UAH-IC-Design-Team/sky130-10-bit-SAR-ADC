@@ -35,7 +35,7 @@ value=".options acct list
 tran 0.1u 60u
 *plot RST_PLS clk+2 Pulse+4
 plot Vin Vout+2
-write capacitor_switch_test.raw
+write capacitor_switch8_test.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -50,7 +50,6 @@ C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/capacitor_switch/capacitor_switch.sym} 530 -320 0 0 {name=x1}
 C {devices/lab_pin.sym} 710 -340 2 0 {name=l1 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 710 -320 2 0 {name=l2 sig_type=std_logic lab=VSS
@@ -65,3 +64,4 @@ C {devices/gnd.sym} 420 -100 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 420 -180 0 0 {name=l6 sig_type=std_logic lab=Vin
 }
 C {devices/noconn.sym} 700 -300 3 0 {name=l7}
+C {src/capacitor_switch8/capacitor_switch8.sym} 530 -320 0 0 {name=x1}

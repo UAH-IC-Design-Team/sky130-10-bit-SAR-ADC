@@ -25,7 +25,7 @@ lab=Vin_n}
 N 700 -300 740 -300 {
 lab=VDD}
 N 700 -280 740 -280 {
-lab=VDD}
+lab=VSS}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -115,3 +115,9 @@ C {devices/lab_pin.sym} 740 -300 2 0 {name=l7 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 740 -280 2 0 {name=l8 sig_type=std_logic lab=VSS
 }
+C {devices/noconn.sym} 390 -300 1 0 {name=l9}
+C {devices/noconn.sym} 390 -280 1 0 {name=l10}
+C {devices/noconn.sym} 390 -260 1 0 {name=l11}
+C {devices/noconn.sym} 390 -240 1 0 {name=l12}
+C {devices/noconn.sym} 710 -260 1 0 {name=l18}
+C {devices/noconn.sym} 710 -240 1 0 {name=l19}
