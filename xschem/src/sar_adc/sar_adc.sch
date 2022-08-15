@@ -5,7 +5,6 @@ V {}
 S {}
 E {}
 T {RESET????} 80 -800 0 0 0.7 0.7 {}
-T {Is this needed? Or do we just use one side of the comparator?} 860 -320 0 0 0.4 0.4 {}
 N 400 -680 430 -680 {
 lab=V_in_p}
 N 400 -660 430 -660 {
@@ -44,20 +43,10 @@ N 730 -440 770 -440 {
 lab=VDD}
 N 730 -420 770 -420 {
 lab=VSS}
-N 730 -330 770 -330 {
-lab=VDD}
-N 730 -310 770 -310 {
-lab=VSS}
 N 730 -240 770 -240 {
 lab=VDD}
 N 730 -220 770 -220 {
 lab=VSS}
-N 390 -330 430 -330 {
-lab=comp_out_p}
-N 390 -310 430 -310 {
-lab=comp_out_n}
-N 730 -290 770 -290 {
-lab=Vcmp}
 N 390 -200 430 -200 {
 lab=comp_out_p}
 N 730 -120 770 -120 {
@@ -128,7 +117,6 @@ C {devices/lab_pin.sym} 390 -400 0 0 {name=l15 sig_type=std_logic lab=Clk
 }
 C {devices/lab_pin.sym} 390 -240 0 0 {name=l16 sig_type=std_logic lab=Clk
 }
-C {src/diff_to_se/diff_to_se.sym} 580 -310 0 0 {name=x5}
 C {devices/lab_pin.sym} 770 -400 2 0 {name=l17 sig_type=std_logic lab=comp_out_n
 }
 C {devices/lab_pin.sym} 770 -380 2 0 {name=l18 sig_type=std_logic lab=comp_out_p
@@ -137,19 +125,9 @@ C {devices/lab_pin.sym} 770 -440 2 0 {name=l19 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 770 -420 2 0 {name=l20 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 770 -330 2 0 {name=l21 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} 770 -310 2 0 {name=l22 sig_type=std_logic lab=VSS
-}
 C {devices/lab_pin.sym} 770 -240 2 0 {name=l23 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 770 -220 2 0 {name=l24 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 390 -310 2 1 {name=l25 sig_type=std_logic lab=comp_out_n
-}
-C {devices/lab_pin.sym} 390 -330 2 1 {name=l26 sig_type=std_logic lab=comp_out_p
-}
-C {devices/lab_pin.sym} 770 -290 2 0 {name=l27 sig_type=std_logic lab=Vcmp
 }
 C {devices/lab_pin.sym} 390 -200 0 0 {name=l28 sig_type=std_logic lab=comp_out_p
 }
