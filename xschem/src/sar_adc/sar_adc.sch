@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-T {RESET????} 80 -800 0 0 0.7 0.7 {}
 N 400 -680 430 -680 {
 lab=V_in_p}
 N 400 -660 430 -660 {
@@ -34,7 +33,7 @@ lab=Vsampled_n}
 N 390 -400 430 -400 {
 lab=Clk}
 N 390 -240 430 -240 {
-lab=Clk}
+lab=Controller_clk}
 N 730 -400 770 -400 {
 lab=comp_out_n}
 N 730 -380 770 -380 {
@@ -71,6 +70,19 @@ N 400 -530 430 -530 {
 lab=sw_n[8..1]}
 N 400 -510 430 -510 {
 lab=sw_p[8..1]}
+N 730 -340 770 -340 {
+lab=VSS}
+N 730 -320 770 -320 {
+lab=VDD}
+N 390 -340 430 -340 {
+lab=comp_out_p}
+N 390 -320 430 -320 {
+lab=comp_out_n}
+N 390 -300 430 -300 {
+lab=Clk}
+N 390 -280 430 -280 {
+lab=RESET}
+N 730 -300 770 -300 {}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/iopin.sym} 40 -320 0 0 {name=p4 lab=VDD
@@ -115,7 +127,7 @@ C {devices/lab_pin.sym} 390 -420 0 0 {name=l14 sig_type=std_logic lab=Vsampled_n
 }
 C {devices/lab_pin.sym} 390 -400 0 0 {name=l15 sig_type=std_logic lab=Clk
 }
-C {devices/lab_pin.sym} 390 -240 0 0 {name=l16 sig_type=std_logic lab=Clk
+C {devices/lab_pin.sym} 390 -240 0 0 {name=l16 sig_type=std_logic lab=Controller_clk
 }
 C {devices/lab_pin.sym} 770 -400 2 0 {name=l17 sig_type=std_logic lab=comp_out_n
 }
@@ -160,4 +172,19 @@ C {devices/lab_pin.sym} 400 -510 2 1 {name=l39 sig_type=std_logic lab=sw_p[8..1]
 C {devices/lab_pin.sym} 430 -220 0 0 {name=l40 sig_type=std_logic lab=RESET
 }
 C {devices/ipin.sym} 110 -270 0 0 {name=p2 lab=RESET
+}
+C {src/xor_clock_gen/xor_clock_gen.sym} 580 -310 0 0 {name=x5}
+C {devices/lab_pin.sym} 770 -340 2 0 {name=l21 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 770 -320 2 0 {name=l22 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 390 -320 0 0 {name=l25 sig_type=std_logic lab=comp_out_n
+}
+C {devices/lab_pin.sym} 390 -340 0 0 {name=l26 sig_type=std_logic lab=comp_out_p
+}
+C {devices/lab_pin.sym} 390 -300 0 0 {name=l27 sig_type=std_logic lab=Clk
+}
+C {devices/lab_pin.sym} 390 -280 0 0 {name=l41 sig_type=std_logic lab=RESET
+}
+C {devices/lab_pin.sym} 770 -300 2 0 {name=l42 sig_type=std_logic lab=Controller_clk
 }

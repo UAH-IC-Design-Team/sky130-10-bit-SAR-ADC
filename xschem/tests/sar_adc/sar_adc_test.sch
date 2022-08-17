@@ -69,7 +69,7 @@ C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/sar_adc/sar_adc.sym} 550 -350 0 0 {name=x1}
-C {devices/vsource.sym} 350 -100 0 0 {name=V2 value="0.1"
+C {devices/vsource.sym} 350 -100 0 0 {name=V2 value="0.7"
 }
 C {devices/lab_pin.sym} 350 -70 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
@@ -104,7 +104,7 @@ C {devices/vsource.sym} 250 -280 0 0 {name=V1 value="0.9V"
 C {devices/gnd.sym} 250 -230 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 250 -310 0 0 {name=l6 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 350 -180 0 0 {name=V7 value="0.1"
+C {devices/vsource.sym} 350 -180 0 0 {name=V7 value="0.7"
 }
 C {devices/lab_pin.sym} 350 -210 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
