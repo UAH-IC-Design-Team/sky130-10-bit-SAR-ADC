@@ -24,7 +24,7 @@ For all cap sw signals:
 - 1 => vdd
 - 0 => gnd
 
-} 70 -1230 0 0 0.4 0.4 {}
+} -20 -1420 0 0 0.4 0.4 {}
 T {Notes on Timing:
 01 | RESET
 12 | Sample
@@ -34,6 +34,7 @@ T {Notes on Timing:
 32 | Total 
 
 } 1040 -1240 0 0 0.4 0.4 {}
+T {AND the reset pin here?} 530 -370 0 0 0.4 0.4 {}
 N 2010 -430 2030 -430 {
 lab=sw_sample}
 N 750 -410 820 -410 {
@@ -118,8 +119,6 @@ C {devices/lab_pin.sym} 650 -410 0 0 {name=l18 sig_type=std_logic lab=cycle0
 }
 C {devices/lab_pin.sym} 820 -550 0 0 {name=l19 sig_type=std_logic lab=cycle31
 }
-C {devices/lab_pin.sym} 820 -680 0 0 {name=l20 sig_type=std_logic lab=Vcmp
-}
 C {devices/lab_pin.sym} 820 -260 0 0 {name=l21 sig_type=std_logic lab=clk
 }
 C {devices/lab_pin.sym} 820 -150 0 0 {name=l22 sig_type=std_logic lab=clk
@@ -182,8 +181,6 @@ C {devices/opin.sym} 220 -380 0 0 {name=p12 lab=done
 }
 C {devices/opin.sym} 220 -340 0 0 {name=p13 lab=sw_sample
 }
-C {sky130_stdcells/inv_1.sym} 710 -410 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
-}
 C {src/shifted_clock_generator/shifted_clock_generator.sym} 970 -240 0 0 {name=x1}
 C {devices/lab_pin.sym} 1120 -450 2 0 {name=l29 sig_type=std_logic lab=raw_bit[13..1]
 }
@@ -204,13 +201,7 @@ C {devices/lab_pin.sym} 1820 -430 0 0 {name=l52 sig_type=std_logic lab=clk
 }
 C {sky130_stdcells/or3_2.sym} 1510 -210 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/dfrtp_1.sym} 910 -680 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {devices/lab_pin.sym} 820 -430 0 0 {name=l45 sig_type=std_logic lab=Vcmp
 }
-C {devices/lab_pin.sym} 820 -660 0 0 {name=l28 sig_type=std_logic lab=reset
-}
-C {devices/lab_pin.sym} 820 -700 0 0 {name=l43 sig_type=std_logic lab=clk
-}
-C {devices/lab_pin.sym} 1000 -700 2 0 {name=l44 sig_type=std_logic lab=Vcmp_q
-}
-C {devices/lab_pin.sym} 820 -430 0 0 {name=l45 sig_type=std_logic lab=Vcmp_q
+C {sky130_stdcells/inv_16.sym} 710 -410 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }

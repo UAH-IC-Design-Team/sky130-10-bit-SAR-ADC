@@ -7,6 +7,9 @@ E {}
 T {Bit Calculations with CRS} 50 -1890 0 0 0.8 0.8 {}
 T {The Dff's for the split caps use RESET while the other caps use SET. 
 Thus when a reset is performed the capacitance is cut in half} 640 -1880 0 0 0.4 0.4 {}
+T {Do I need to figure out how to lock this for an extra half or + cycle?
+No, because the cycleX is has the same period as the clk which is half of the lockek Vcmp
+} -440 -710 0 0 0.4 0.4 {}
 N 180 -1800 180 -1750 {
 lab=sw_n_sp1}
 N 390 -1570 390 -1550 {
@@ -367,10 +370,8 @@ N 200 -1170 200 -1080 {
 lab=#net2}
 N 430 -1570 430 -1400 {
 lab=#net24}
-N 410 -1540 530 -1540 {
-lab=Vcmp}
 N 530 -1570 530 -1540 {
-lab=Vcmp}
+lab=#net24}
 N 410 -1280 410 -1250 {
 lab=#net25}
 N 410 -1170 410 -1090 {
@@ -811,6 +812,8 @@ N 3290 -750 3290 -710 {
 lab=#net57}
 N 1650 -730 1680 -730 {
 lab=cycle5}
+N 430 -1540 530 -1540 {
+lab=#net24}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/lab_pin.sym} 260 -1410 2 0 {name=l43 sig_type=std_logic lab=Vcmp

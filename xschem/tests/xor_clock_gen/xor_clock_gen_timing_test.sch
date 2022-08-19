@@ -33,17 +33,11 @@ lab=Gen_clk}
 N 1070 -420 1080 -420 {
 lab=Gen_clk}
 N 1070 -400 1080 -400 {
-lab=Vin_p}
+lab=V_q}
 N 1260 -420 1290 -420 {
 lab=Q}
-N 1060 -530 1080 -530 {
-lab=Gen_clk}
-N 1060 -510 1080 -510 {
-lab=Vin_p}
-N 1060 -490 1080 -490 {
-lab=reset_b}
-N 1260 -530 1300 -530 {
-lab=Q2}
+N 830 -380 850 -380 {
+lab=V_q}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -115,17 +109,9 @@ C {sky130_stdcells/dfxtp_1.sym} 1170 -410 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD 
 }
 C {devices/lab_pin.sym} 1070 -420 0 0 {name=l21 sig_type=std_logic lab=Gen_clk
 }
-C {devices/lab_pin.sym} 1070 -400 0 0 {name=l22 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 1070 -400 0 0 {name=l22 sig_type=std_logic lab=V_q
 }
 C {devices/lab_pin.sym} 1290 -420 2 0 {name=l23 sig_type=std_logic lab=Q
 }
-C {sky130_stdcells/dfrtp_1.sym} 1170 -510 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
-}
-C {devices/lab_pin.sym} 1060 -530 0 0 {name=l24 sig_type=std_logic lab=Gen_clk
-}
-C {devices/lab_pin.sym} 1060 -510 0 0 {name=l25 sig_type=std_logic lab=Vin_p
-}
-C {devices/lab_pin.sym} 1060 -490 0 0 {name=l26 sig_type=std_logic lab=reset_b
-}
-C {devices/lab_pin.sym} 1300 -530 2 0 {name=l27 sig_type=std_logic lab=Q2
+C {devices/lab_pin.sym} 850 -380 2 0 {name=l24 sig_type=std_logic lab=V_q
 }

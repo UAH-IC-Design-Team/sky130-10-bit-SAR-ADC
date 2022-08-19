@@ -33,11 +33,13 @@ lab=Gen_clk}
 N 1060 -440 1080 -440 {
 lab=Gen_clk}
 N 1060 -420 1080 -420 {
-lab=Vin_p}
+lab=Vin_q}
 N 1060 -400 1080 -400 {
 lab=reset_b}
 N 1260 -440 1300 -440 {
 lab=Q2}
+N 830 -380 850 -380 {
+lab=Vin_q}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -52,9 +54,9 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
-tran 0.1u 50u
+tran 0.8u 50u
 *plot RST_PLS clk+2 Pulse+4
-plot Vin_p-Vin_n clk reset_b-2 Gen_clk Q2+2
+plot Vin_p-Vin_n clk reset_b-2 Gen_clk Vin_q Q2+2
 write xor_clock_gen_test.raw
 .endc
 "}
@@ -109,9 +111,11 @@ C {sky130_stdcells/dfrtp_1.sym} 1170 -420 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD 
 }
 C {devices/lab_pin.sym} 1060 -440 0 0 {name=l24 sig_type=std_logic lab=Gen_clk
 }
-C {devices/lab_pin.sym} 1060 -420 0 0 {name=l25 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 1060 -420 0 0 {name=l25 sig_type=std_logic lab=Vin_q
 }
 C {devices/lab_pin.sym} 1060 -400 0 0 {name=l26 sig_type=std_logic lab=reset_b
 }
 C {devices/lab_pin.sym} 1300 -440 2 0 {name=l27 sig_type=std_logic lab=Q2
+}
+C {devices/lab_pin.sym} 850 -380 2 0 {name=l21 sig_type=std_logic lab=Vin_q
 }

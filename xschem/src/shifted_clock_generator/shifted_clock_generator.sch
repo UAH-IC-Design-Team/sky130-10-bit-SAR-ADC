@@ -4,6 +4,7 @@ K {}
 V {}
 S {}
 E {}
+T {need to add clk buffers here?} 640 -1200 0 0 0.4 0.4 {}
 N 2790 -480 2800 -480 {
 lab=clk}
 N 2800 -480 2800 -440 {
@@ -582,6 +583,9 @@ N 6240 -980 6240 -930 {
 lab=#net1}
 N 6260 -1140 6260 -1100 {
 lab=small_cycle1}
+N 90 -1160 90 -1130 {}
+N 270 -1160 270 -1140 {}
+N 450 -1170 450 -1140 {}
 C {devices/lab_pin.sym} 2790 -480 0 0 {name=l2 sig_type=std_logic lab=clk
 
 }
@@ -892,7 +896,7 @@ C {devices/lab_pin.sym} 110 -610 3 0 {name=l165 sig_type=std_logic lab=reset_b
 }
 C {sky130_stdcells/and2_0.sym} 90 -950 3 0 {name=x36 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 90 -1050 1 0 {name=l166 sig_type=std_logic lab=cycle0
+C {devices/lab_pin.sym} 90 -1160 1 0 {name=l166 sig_type=std_logic lab=cycle0
 }
 C {devices/lab_pin.sym} 90 -610 3 0 {name=l167 sig_type=std_logic lab=full_cycle0
 }
@@ -919,7 +923,7 @@ C {devices/lab_pin.sym} 290 -620 3 0 {name=l172 sig_type=std_logic lab=reset_b
 }
 C {sky130_stdcells/and2_0.sym} 270 -960 3 0 {name=x40 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 270 -1060 1 0 {name=l173 sig_type=std_logic lab=cycle1
+C {devices/lab_pin.sym} 270 -1160 1 0 {name=l173 sig_type=std_logic lab=cycle1
 }
 C {devices/lab_pin.sym} 270 -620 3 0 {name=l174 sig_type=std_logic lab=full_cycle1
 }
@@ -934,7 +938,7 @@ C {devices/lab_pin.sym} 470 -620 3 0 {name=l44 sig_type=std_logic lab=reset_b
 }
 C {sky130_stdcells/and2_0.sym} 450 -960 3 0 {name=x34 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 450 -1060 1 0 {name=l45 sig_type=std_logic lab=cycle2
+C {devices/lab_pin.sym} 450 -1170 1 0 {name=l45 sig_type=std_logic lab=cycle2
 }
 C {devices/lab_pin.sym} 450 -620 3 0 {name=l46 sig_type=std_logic lab=full_cycle2
 }
@@ -1374,4 +1378,10 @@ C {devices/lab_pin.sym} 6260 -1140 1 0 {name=l248 sig_type=std_logic lab=cycle31
 C {devices/lab_pin.sym} 6260 -700 3 0 {name=l249 sig_type=std_logic lab=full_cycle31
 }
 C {devices/lab_pin.sym} 6280 -980 3 0 {name=l250 sig_type=std_logic lab=full_cycle31
+}
+C {sky130_stdcells/clkbuf_4.sym} 90 -1090 3 0 {name=x97 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/clkbuf_4.sym} 270 -1100 3 0 {name=x98 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/clkbuf_4.sym} 450 -1100 3 0 {name=x99 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
