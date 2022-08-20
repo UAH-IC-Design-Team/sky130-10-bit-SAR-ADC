@@ -54,7 +54,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
-tran 0.8u 50u
+tran 0.01u 20u
 *plot RST_PLS clk+2 Pulse+4
 plot Vin_p-Vin_n clk reset_b-2 Gen_clk Vin_q Q2+2
 write xor_clock_gen_test.raw
