@@ -51,14 +51,6 @@ N 680 -360 700 -360 {
 lab=sw_sample}
 N 680 -590 700 -590 {
 lab=Vin_q}
-N 920 -650 930 -650 {
-lab=Vin_q}
-N 920 -650 920 -620 {
-lab=Vin_q}
-N 920 -530 930 -530 {
-lab=VSS}
-N 920 -560 920 -530 {
-lab=VSS}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -89,8 +81,7 @@ plot clk reset_b+2 x1.cycle0+4 x1.cycle1+6 x1.cycle2+8 x1.cycle16+10 x1.cycle17+
 
 plot reset_b-2 clk vin_p vin_n gen_clk
 
-plot x1.q_test1 x1.q_test2 x1.cycle3+2 x1.cycle2+4
-write controller_test2.raw
+write controller_test.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -175,10 +166,4 @@ C {devices/noconn.sym} 690 -400 1 0 {name=l39}
 C {devices/noconn.sym} 690 -380 1 0 {name=l40}
 C {devices/noconn.sym} 690 -360 1 0 {name=l41}
 C {devices/lab_pin.sym} 700 -590 2 0 {name=l42 sig_type=std_logic lab=Vin_q
-}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 920 -590 0 0 {name=C1 model=cap_mim_m3_1 W=25 L=25 MF=1 spiceprefix=X
-}
-C {devices/lab_pin.sym} 930 -530 2 0 {name=l43 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 930 -650 2 0 {name=l44 sig_type=std_logic lab=Vin_q
 }

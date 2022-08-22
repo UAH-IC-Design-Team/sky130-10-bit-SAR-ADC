@@ -5,7 +5,7 @@ V {}
 S {}
 E {}
 T {RESET is active LOW} 40 -300 0 0 0.4 0.4 {}
-T {This extra DFF is to shift the pulse to change on negative edges} 2240 -490 0 0 0.4 0.4 {}
+T {This extra DFF is to shift the pulse to change on negative edges} 1670 -560 0 0 0.4 0.4 {}
 N 90 -360 120 -360 {
 lab=#net1}
 N 90 -410 90 -360 {

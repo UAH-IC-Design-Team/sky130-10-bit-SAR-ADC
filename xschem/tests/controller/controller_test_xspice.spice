@@ -1,0 +1,94 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/tests/controller/controller_test.sch
+**.subckt controller_test
+**** begin user architecture code
+*vvcc VDD 0 dc 1.8
+*vvss VSS 0 0
+*plot RST_PLS clk+2 Pulse+4
+**** end user architecture code
+**.ends
+* expanding   symbol:  src/controller/controller.sym # of pins=12
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/controller/controller.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/controller/controller.sch
+*.ipin clk
+*.opin sw_n_sp9,sw_n_sp8,sw_n_sp7,sw_n_sp6,sw_n_sp5,sw_n_sp4,sw_n_sp3,sw_n_sp2,sw_n_sp1
+*.iopin VSS
+*.iopin VDD
+*.ipin reset
+*.ipin Vcmp
+*.opin sw_n8,sw_n7,sw_n6,sw_n5,sw_n4,sw_n3,sw_n2,sw_n1
+*.opin sw_p_sp9,sw_p_sp8,sw_p_sp7,sw_p_sp6,sw_p_sp5,sw_p_sp4,sw_p_sp3,sw_p_sp2,sw_p_sp1
+*.opin sw_p8,sw_p7,sw_p6,sw_p5,sw_p4,sw_p3,sw_p2,sw_p1
+*.opin bit10,bit9,bit8,bit7,bit6,bit5,bit4,bit3,bit2,bit1
+*.opin done
+*.opin sw_sample
+* expanding   symbol:  src/xor_clock_gen/xor_clock_gen.sym # of pins=8
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sch
+*.ipin Vin_p
+*.iopin VSS
+*.opin Gen_clk
+*.iopin VDD
+*.ipin Vin_n
+*.ipin Clk
+*.ipin Reset
+*.opin Vin_q
+* expanding   symbol:  src/pulse_generator/pulse_generator.sym # of pins=5
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/pulse_generator/pulse_generator.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/pulse_generator/pulse_generator.sch
+*.ipin clk
+*.ipin RST_PLS
+*.opin pulse
+*.iopin VDD
+*.iopin VSS
+* expanding   symbol:  src/dec/dec.sym # of pins=7
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sch
+*.iopin VDD
+*.opin bit10,bit9,bit8,bit7,bit6,bit5,bit4,bit3,bit2,bit1
+*.iopin VSS
+*.ipin reset_b
+*.ipin dump_bus
+*.opin done
+*.ipin
+*+ raw_bit13,raw_bit12,raw_bit11,raw_bit10,raw_bit9,raw_bit8,raw_bit7,raw_bit6,raw_bit5,raw_bit4,raw_bit3,raw_bit2,raw_bit1
+* expanding   symbol:  src/raw_bit_calculator/raw_bit_calculator.sym # of pins=10
+** sym_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sym
+** sch_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sch
+*.ipin
+*+ cycle13,cycle12,cycle11,cycle10,cycle9,cycle8,cycle7,cycle6,cycle5,cycle4,cycle3,cycle2,cycle1
+*.opin sw_n_sp9,sw_n_sp8,sw_n_sp7,sw_n_sp6,sw_n_sp5,sw_n_sp4,sw_n_sp3,sw_n_sp2,sw_n_sp1
+*.iopin VSS
+*.iopin VDD
+*.opin sw_n8,sw_n7,sw_n6,sw_n5,sw_n4,sw_n3,sw_n2,sw_n1
+*.opin sw_p_sp9,sw_p_sp8,sw_p_sp7,sw_p_sp6,sw_p_sp5,sw_p_sp4,sw_p_sp3,sw_p_sp2,sw_p_sp1
+*.opin sw_p8,sw_p7,sw_p6,sw_p5,sw_p4,sw_p3,sw_p2,sw_p1
+*.ipin Vcmp
+*.ipin RESET
+*.opin
+*+ raw_bit13,raw_bit12,raw_bit11,raw_bit10,raw_bit9,raw_bit8,raw_bit7,raw_bit6,raw_bit5,raw_bit4,raw_bit3,raw_bit2,raw_bit1
+* expanding   symbol:  src/shifted_clock_generator/shifted_clock_generator.sym # of pins=6
+** sym_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sym
+** sch_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sch
+*.ipin clk_pulse
+*.opin
+*+ cycle31,cycle30,cycle29,cycle28,cycle27,cycle26,cycle25,cycle24,cycle23,cycle22,cycle21,cycle20,cycle19,cycle18,cycle17,cycle16,cycle15,cycle14,cycle13,cycle12,cycle11,cycle10,cycle9,cycle8,cycle7,cycle6,cycle5,cycle4,cycle3,cycle2,cycle1,cycle0
+*.iopin VSS
+*.iopin VDD
+*.ipin clk
+*.ipin reset_b
+* expanding   symbol:  src/demux2/demux2.sym # of pins=6
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sch
+*.ipin S
+*.opin OUT_0
+*.ipin IN
+*.opin OUT_1
+*.iopin VDD
+*.iopin VSS
+
+.end

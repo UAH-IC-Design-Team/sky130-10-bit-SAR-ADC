@@ -80,7 +80,6 @@ C {sky130_stdcells/or4_2.sym} 1510 -340 0 0 {name=x97 VGND=VSS VNB=VSS VPB=VDD V
 C {devices/lab_pin.sym} 2030 -430 2 0 {name=l217 sig_type=std_logic lab=sw_sample
 }
 C {devices/noconn.sym} 2020 -430 3 0 {name=l234}
-C {src/pulse_generator/pulse_generator.sym} 970 -130 0 0 {name=x2}
 C {src/dec/dec.sym} 970 -560 0 0 {name=x3}
 C {src/raw_bit_calculator/raw_bit_calculator.sym} 970 -390 0 0 {name=x4}
 C {devices/lab_pin.sym} 1120 -590 2 0 {name=l2 sig_type=std_logic lab=VDD
@@ -89,15 +88,11 @@ C {devices/lab_pin.sym} 1120 -410 2 0 {name=l3 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 1120 -260 2 0 {name=l4 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 1120 -130 2 0 {name=l5 sig_type=std_logic lab=VDD
-}
 C {devices/lab_pin.sym} 1120 -570 2 0 {name=l6 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1120 -390 2 0 {name=l7 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1120 -240 2 0 {name=l8 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 1120 -110 2 0 {name=l9 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1120 -530 2 0 {name=l10 sig_type=std_logic lab=done
 }
@@ -121,17 +116,9 @@ C {devices/lab_pin.sym} 820 -550 0 0 {name=l19 sig_type=std_logic lab=cycle31
 }
 C {devices/lab_pin.sym} 820 -260 0 0 {name=l21 sig_type=std_logic lab=clk
 }
-C {devices/lab_pin.sym} 820 -150 0 0 {name=l22 sig_type=std_logic lab=clk
-}
-C {devices/lab_pin.sym} 1120 -150 2 0 {name=l23 sig_type=std_logic lab=clk_pulse
-}
-C {devices/lab_pin.sym} 820 -240 0 0 {name=l24 sig_type=std_logic lab=clk_pulse
-}
 C {devices/lab_pin.sym} 820 -570 0 0 {name=l25 sig_type=std_logic lab=reset
 }
-C {devices/lab_pin.sym} 820 -220 0 0 {name=l26 sig_type=std_logic lab=reset
-}
-C {devices/lab_pin.sym} 820 -130 0 0 {name=l27 sig_type=std_logic lab=reset
+C {devices/lab_pin.sym} 820 -240 0 0 {name=l26 sig_type=std_logic lab=reset
 }
 C {devices/lab_pin.sym} 1450 -700 0 0 {name=l31 sig_type=std_logic lab=cycle1
 }

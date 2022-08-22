@@ -1,0 +1,30 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sch
+.subckt demux2 a_S a_OUT_0 a_IN a_OUT_1 a_VDD a_VSS
+*.PININFO S:I OUT_0:O IN:I OUT_1:O VDD:B VSS:B
+**** begin user architecture code
+**** end user architecture code
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=10n fall_delay=10n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+AA2D1 [a_S] [S] todig_1v8
+AA2D2 [a_OUT_0] [OUT_0] todig_1v8
+AA2D3 [a_IN] [IN] todig_1v8
+AA2D4 [a_OUT_1] [OUT_1] todig_1v8
+AA2D5 [a_VDD] [VDD] todig_1v8
+AA2D6 [a_VSS] [VSS] todig_1v8
+
+.ends
+
+* sky130_fd_sc_hd__and2_0 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__inv_1 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+.end

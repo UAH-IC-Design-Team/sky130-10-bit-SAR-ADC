@@ -1,0 +1,72 @@
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/tests/xor_clock_gen/xor_clock_gen_test.sch
+**.subckt xor_clock_gen_test
+V3 VDD GND 1.8V
+V4 VSS GND 0
+x1 VSS Vin_p VDD Vin_n Gen_clk clk Vin_q reset_b xor_clock_gen
+V5 reset_b GND PULSE 1.8V 0 2us 1ns 1ns 2us 1s
+V1 clk GND PULSE 0 1.8V 10us 10ps 10ps 5us 10us
+V2 Vin_p GND PULSE 0 1.8V 10.1us 10ps 10ps 5us 20us
+V6 Vin_n GND PULSE 0 1.8V 20.1us 10ps 10ps 5us 20us
+x3 Gen_clk Vin_q reset_b VSS VSS VDD VDD Q2 sky130_fd_sc_hd__dfrtp_1
+**** begin user architecture code
+ .lib /foss/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+
+.options acct list
+.temp 25
+*vvcc VDD 0 dc 1.8
+*vvss VSS 0 0
+.control
+tran 0.01u 20u
+*plot RST_PLS clk+2 Pulse+4
+plot Vin_p-Vin_n clk reset_b-2 Gen_clk Vin_q Q2+2
+write xor_clock_gen_test.raw
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  src/xor_clock_gen/xor_clock_gen.sym # of pins=8
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sch
+.subckt xor_clock_gen  VSS Vin_p VDD Vin_n Gen_clk Clk Vin_q Reset
+*.ipin Vin_p
+*.iopin VSS
+*.opin Gen_clk
+*.iopin VDD
+*.ipin Vin_n
+*.ipin Clk
+*.ipin Reset
+*.opin Vin_q
+x1 Vin_p Vin_n VSS VSS VDD VDD net2 sky130_fd_sc_hd__xor2_1
+x14 net2 Vin_p Reset VSS VSS VDD VDD net1 sky130_fd_sc_hd__dfrtp_1
+x19 net10 VSS VSS VDD VDD Vin_q sky130_fd_sc_hd__buf_16
+x2 net2 VSS VSS VDD VDD net16 sky130_fd_sc_hd__clkdlybuf4s50_1
+x3 net3 VSS VSS VDD VDD net4 sky130_fd_sc_hd__clkdlybuf4s50_1
+x4 net4 VSS VSS VDD VDD net5 sky130_fd_sc_hd__clkdlybuf4s50_1
+x5 net5 VSS VSS VDD VDD net6 sky130_fd_sc_hd__clkdlybuf4s50_1
+x6 net6 VSS VSS VDD VDD net7 sky130_fd_sc_hd__clkdlybuf4s50_1
+x7 net7 VSS VSS VDD VDD net15 sky130_fd_sc_hd__clkdlybuf4s50_1
+x8 net8 VSS VSS VDD VDD Gen_clk sky130_fd_sc_hd__buf_16
+x9 net1 VSS VSS VDD VDD net9 sky130_fd_sc_hd__buf_4
+x10 net9 VSS VSS VDD VDD net10 sky130_fd_sc_hd__buf_8
+x11 net12 VSS VSS VDD VDD net11 sky130_fd_sc_hd__buf_4
+x12 net11 VSS VSS VDD VDD net8 sky130_fd_sc_hd__buf_8
+XC1 net12 VSS sky130_fd_pr__cap_mim_m3_1 W=25 L=25 MF=1 m=1
+x13 net15 VSS VSS VDD VDD net13 sky130_fd_sc_hd__clkdlybuf4s50_1
+x15 net13 VSS VSS VDD VDD net14 sky130_fd_sc_hd__clkdlybuf4s50_1
+x16 net14 VSS VSS VDD VDD net12 sky130_fd_sc_hd__clkdlybuf4s50_1
+x17 net16 VSS VSS VDD VDD net17 sky130_fd_sc_hd__clkdlybuf4s50_1
+x18 net17 VSS VSS VDD VDD net18 sky130_fd_sc_hd__clkdlybuf4s50_1
+x20 net18 VSS VSS VDD VDD net19 sky130_fd_sc_hd__clkdlybuf4s50_1
+x21 net19 VSS VSS VDD VDD net20 sky130_fd_sc_hd__clkdlybuf4s50_1
+x22 net20 VSS VSS VDD VDD net23 sky130_fd_sc_hd__clkdlybuf4s50_1
+x23 net23 VSS VSS VDD VDD net21 sky130_fd_sc_hd__clkdlybuf4s50_1
+x24 net21 VSS VSS VDD VDD net22 sky130_fd_sc_hd__clkdlybuf4s50_1
+x25 net22 VSS VSS VDD VDD net3 sky130_fd_sc_hd__clkdlybuf4s50_1
+.ends
+
+.GLOBAL GND
+.end

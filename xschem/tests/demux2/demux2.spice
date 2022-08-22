@@ -1,0 +1,4 @@
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/tests/demux2/demux2.sch
+**.subckt demux2
+**.ends
+.end

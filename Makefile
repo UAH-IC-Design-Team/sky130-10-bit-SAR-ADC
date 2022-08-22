@@ -36,7 +36,7 @@ extract_xschem_lvs:
 ifndef component
 	$(error component is not set)
 endif
-	cd ./xschem; xschem -n -s -q --no_x --tcl 'set top_subckt 1' ./src/$(component)/$(component).sch -o ./src/$(component)
+	cd ./xschem; xschem -n -s -q --no_x --tcl 'set top_subckt 1' ./src/$(component)/$(component).sch -o ./src/$(component)/
 
 
 # run lvs between xschem and magic
@@ -62,3 +62,12 @@ start_all_tools:
 .PHONY: get_devices_used
 get_devices_used:
 	cd ./xschem/src; grep --recursive --binary-files=without-match -h -o "sky130.*.sym" | sort --unique
+
+runXspice:
+	cd ./xschem; xschem -n -s -q --no_x  ./tests/$(component)/$(component)_test.sch -o ./tests/$(component)/
+	python ./util/spi2xspice.py /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib ./xschem/tests/$(component)/$(component)_test.spice ./xschem/tests/$(component)/$(component)_test_xspice.spice
+
+
+runXspice_src:
+	cd ./xschem; xschem -n -s -q --no_x --tcl 'set top_subckt 1' ./src/$(component)/$(component).sch -o ./src/$(component)/
+	python ./util/spi2xspice.py /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib ./xschem/src/$(component)/$(component).spice ./xschem/src/$(component)/$(component)_xspice.spice
