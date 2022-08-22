@@ -4,9 +4,9 @@ K {}
 V {}
 S {}
 E {}
-N 320 -380 330 -380 {
+N 320 -320 330 -320 {
 lab=Clk}
-N 410 -380 420 -380 {
+N 450 -300 460 -300 {
 lab=Done}
 N 620 -400 650 -400 {
 lab=V_in_p}
@@ -36,34 +36,34 @@ N 840 -220 870 -220 {
 lab=VSS}
 N 870 -240 870 -220 {
 lab=VSS}
+N 320 -280 330 -280 {
+lab=Reset}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
-C {devices/iopin.sym} 130 -450 0 0 {name=p1 lab=VDD
+C {devices/iopin.sym} 130 -460 0 0 {name=p1 lab=VDD
 }
 C {devices/ipin.sym} 200 -360 0 0 {name=p2 lab=V_in_p
 }
 C {devices/opin.sym} 130 -300 0 0 {name=p3 lab=Done
 }
-C {devices/iopin.sym} 130 -430 0 0 {name=p4 lab=VSS
+C {devices/iopin.sym} 130 -440 0 0 {name=p4 lab=VSS
 }
 C {devices/ipin.sym} 200 -340 0 0 {name=p5 lab=V_in_n
 }
-C {devices/ipin.sym} 200 -380 0 0 {name=p6 lab=Clk
+C {devices/ipin.sym} 200 -380 0 0 {name=p6 lab=Reset
 }
 C {devices/opin.sym} 130 -280 0 0 {name=p7 lab=D_out0
 }
 C {devices/opin.sym} 130 -260 0 0 {name=p8 lab=D_out1
-}
-C {sky130_stdcells/inv_1.sym} 370 -380 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_fd_pr/res_generic_m1.sym} 650 -270 0 0 {name=R1
 W=1
 L=1
 model=res_generic_m1
 mult=1}
-C {devices/lab_pin.sym} 320 -380 0 0 {name=l2 sig_type=std_logic lab=Clk
+C {devices/lab_pin.sym} 320 -320 0 0 {name=l2 sig_type=std_logic lab=Clk
 }
-C {devices/lab_pin.sym} 420 -380 2 0 {name=l3 sig_type=std_logic lab=Done
+C {devices/lab_pin.sym} 460 -300 2 0 {name=l3 sig_type=std_logic lab=Done
 }
 C {sky130_fd_pr/res_generic_m1.sym} 650 -350 0 0 {name=R2
 W=1
@@ -98,3 +98,9 @@ format="tcleval( @value )"
 value=".include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
+C {devices/ipin.sym} 200 -400 0 0 {name=p9 lab=Clk
+}
+C {sky130_stdcells/and2_0.sym} 390 -300 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {devices/lab_pin.sym} 320 -280 0 0 {name=l10 sig_type=std_logic lab=Reset
+}
