@@ -1,11 +1,11 @@
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/sar-adc/sar-adc.sch
-.subckt sar-adc VDD V_in_p Done VSS V_in_n Clk D_out0 D_out1
-*.PININFO VDD:B V_in_p:I Done:O VSS:B V_in_n:I Clk:I D_out0:O D_out1:O
-x1 Clk VSS VSS VDD VDD Done sky130_fd_sc_hd__inv_1
+.subckt sar-adc VDD V_in_p Done VSS V_in_n Reset D_out0 D_out1 Clk
+*.PININFO VDD:B V_in_p:I Done:O VSS:B V_in_n:I Reset:I D_out0:O D_out1:O Clk:I
 R1 VSS D_out0 sky130_fd_pr__res_generic_m1 W=1 L=1 m=1
 R2 D_out0 V_in_p sky130_fd_pr__res_generic_m1 W=1 L=1 m=1
 R3 VSS D_out1 sky130_fd_pr__res_generic_m1 W=1 L=1 m=1
 R4 D_out1 V_in_n sky130_fd_pr__res_generic_m1 W=1 L=1 m=1
+x2 Clk Reset VSS VSS VDD VDD Done sky130_fd_sc_hd__and2_0
 **** begin user architecture code
  .include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
