@@ -1,40 +1,50 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1660156670
+timestamp 1661303131
 << nwell >>
-rect 300 859 310 1180
+rect 100 869 120 1190
 << viali >>
-rect 70 820 116 860
-rect 170 840 205 874
-rect 170 760 205 794
+rect -30 990 20 1060
+rect -370 850 -310 990
+rect -200 830 -140 920
 << metal1 >>
-rect 180 1190 380 1400
-rect 500 1190 700 1400
-rect 980 1190 1180 1400
-rect 260 1090 350 1190
-rect -200 870 0 1000
-rect 750 940 950 1100
-rect 164 874 420 940
-rect 750 900 980 940
-rect -200 860 135 870
-rect -200 820 70 860
-rect 116 820 135 860
-rect -200 800 135 820
-rect 164 840 170 874
-rect 205 840 420 874
-rect 500 870 700 880
-rect 980 870 1180 880
-rect 164 794 420 840
-rect 700 820 930 860
-rect 164 760 170 794
-rect 205 760 420 794
-rect 164 740 420 760
-rect -200 540 0 740
-rect 730 660 930 820
-rect 260 550 350 650
-rect 440 560 500 620
+rect -130 1200 70 1410
+rect 250 1230 450 1430
+rect -630 1000 -430 1140
+rect 60 1100 160 1200
+rect -40 1060 30 1075
+rect -630 990 -290 1000
+rect -630 940 -370 990
+rect -390 850 -370 940
+rect -310 850 -290 990
+rect -40 990 -30 1060
+rect 20 990 30 1060
+rect -40 970 30 990
+rect 380 970 420 1230
+rect 500 1190 700 1420
+rect 980 1190 1180 1420
+rect -630 810 -430 850
+rect -390 840 -290 850
+rect -220 920 -120 950
+rect -40 930 420 970
+rect 740 930 940 1020
+rect 1220 930 1420 1020
+rect -220 830 -200 920
+rect -140 830 -120 920
+rect 700 880 940 930
+rect 1180 880 1420 930
+rect 500 870 940 880
+rect 980 870 1420 880
+rect -220 810 -120 830
+rect 700 820 940 870
+rect 1180 820 1420 870
+rect -630 750 -120 810
+rect -630 650 -430 750
+rect 60 560 160 660
+rect 250 560 500 660
 rect 700 560 980 620
+rect -130 350 70 560
 use sky130_fd_pr__res_generic_m1_MZR69S  R1
 timestamp 1659208328
 transform 1 0 600 0 1 717
@@ -53,27 +63,29 @@ transform 1 0 1080 0 1 1037
 box -100 -157 100 157
 use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1649977179
-transform 1 0 348 0 1 598
+transform 1 0 158 0 1 608
 box -38 -48 130 592
-use sky130_fd_sc_hd__inv_1  x1 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__and2_0  x2 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1649977179
-transform 1 0 -12 0 1 598
-box -38 -48 314 592
+transform 1 0 -392 0 1 608
+box -38 -48 498 592
 << labels >>
-flabel metal1 180 1200 380 1400 0 FreeSans 1280 0 0 0 VDD
-port 0 nsew
-flabel metal1 220 740 420 940 0 FreeSans 1280 0 0 0 Done
-port 2 nsew
-flabel metal1 500 1200 700 1400 0 FreeSans 1280 0 0 0 V_in_p
-port 1 nsew
-flabel metal1 980 1200 1180 1400 0 FreeSans 1280 0 0 0 V_in_n
-port 4 nsew
-flabel metal1 -200 540 0 740 0 FreeSans 1280 0 0 0 VSS
-port 3 nsew
-flabel metal1 -200 800 0 1000 0 FreeSans 1280 0 0 0 Clk
+flabel metal1 500 1220 700 1420 0 FreeSans 256 0 0 0 V_in_n
 port 5 nsew
-flabel metal1 750 900 950 1100 0 FreeSans 1280 0 0 0 D_out1
+flabel metal1 740 820 940 1020 0 FreeSans 256 0 0 0 D_out0
 port 7 nsew
-flabel metal1 730 660 930 860 0 FreeSans 1280 0 0 0 D_out0
+flabel metal1 980 1220 1180 1420 0 FreeSans 256 0 0 0 V_in_p
+port 2 nsew
+flabel metal1 -630 940 -430 1140 0 FreeSans 256 0 0 0 Clk
+port 9 nsew
+flabel metal1 -630 650 -430 850 0 FreeSans 256 0 0 0 Reset
 port 6 nsew
+flabel metal1 -130 1210 70 1410 0 FreeSans 256 0 0 0 VDD
+port 1 nsew
+flabel metal1 -130 350 70 550 0 FreeSans 256 0 0 0 VSS
+port 4 nsew
+flabel metal1 1220 820 1420 1020 0 FreeSans 256 0 0 0 D_out1
+port 8 nsew
+flabel metal1 250 1230 450 1430 0 FreeSans 256 0 0 0 Done
+port 3 nsew
 << end >>

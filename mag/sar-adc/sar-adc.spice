@@ -1,19 +1,23 @@
 * NGSPICE file created from sar-adc.ext - technology: sky130A
 
-.subckt sky130_fd_sc_hd__inv_1 A VGND VPWR Y VNB VPB
-X0 Y A VGND VNB sky130_fd_pr__nfet_01v8 ad=1.69e+11p pd=1.82e+06u as=1.69e+11p ps=1.82e+06u w=650000u l=150000u
-X1 Y A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=2.6e+11p pd=2.52e+06u as=2.6e+11p ps=2.52e+06u w=1e+06u l=150000u
-.ends
-
 .subckt sky130_fd_pr__res_generic_m1_MZR69S m1_n100_100# m1_n100_n157#
 R0 m1_n100_n157# m1_n100_100# sky130_fd_pr__res_generic_m1 w=1e+06u l=1e+06u
 .ends
 
-.subckt sar-adc VDD V_in_p Done VSS V_in_n Clk D_out0 D_out1
-Xx1 Clk VSS VDD Done VSS VDD sky130_fd_sc_hd__inv_1
+.subckt sky130_fd_sc_hd__and2_0 A B VGND VPWR X VNB VPB
+X0 VPWR B a_40_47# VPB sky130_fd_pr__pfet_01v8_hvt ad=4.795e+11p pd=3.89e+06u as=1.218e+11p ps=1.42e+06u w=420000u l=150000u
+X1 X a_40_47# VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=1.696e+11p pd=1.81e+06u as=0p ps=0u w=640000u l=150000u
+X2 VGND B a_123_47# VNB sky130_fd_pr__nfet_01v8 ad=1.932e+11p pd=1.76e+06u as=8.82e+10p ps=1.26e+06u w=420000u l=150000u
+X3 X a_40_47# VGND VNB sky130_fd_pr__nfet_01v8 ad=1.113e+11p pd=1.37e+06u as=0p ps=0u w=420000u l=150000u
+X4 a_123_47# A a_40_47# VNB sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=1.113e+11p ps=1.37e+06u w=420000u l=150000u
+X5 a_40_47# A VPWR VPB sky130_fd_pr__pfet_01v8_hvt ad=0p pd=0u as=0p ps=0u w=420000u l=150000u
+.ends
+
+.subckt sar-adc VDD V_in_p Done VSS V_in_n Reset D_out0 D_out1 Clk
 XR1 D_out0 VSS sky130_fd_pr__res_generic_m1_MZR69S
-XR2 V_in_p D_out0 sky130_fd_pr__res_generic_m1_MZR69S
+Xx2 Clk Reset VSS VDD Done VSS VDD sky130_fd_sc_hd__and2_0
+XR2 V_in_n D_out0 sky130_fd_pr__res_generic_m1_MZR69S
 XR3 D_out1 VSS sky130_fd_pr__res_generic_m1_MZR69S
-XR4 V_in_n D_out1 sky130_fd_pr__res_generic_m1_MZR69S
+XR4 V_in_p D_out1 sky130_fd_pr__res_generic_m1_MZR69S
 .ends
 

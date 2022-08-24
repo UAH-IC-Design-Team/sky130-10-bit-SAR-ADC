@@ -9,11 +9,11 @@ lab=Clk}
 N 450 -300 460 -300 {
 lab=Done}
 N 620 -400 650 -400 {
-lab=V_in_p}
+lab=V_in_n}
 N 650 -400 650 -390 {
-lab=V_in_p}
+lab=V_in_n}
 N 650 -390 650 -380 {
-lab=V_in_p}
+lab=V_in_n}
 N 650 -320 650 -300 {
 lab=D_out0}
 N 620 -310 650 -310 {
@@ -23,11 +23,11 @@ lab=VSS}
 N 650 -240 650 -220 {
 lab=VSS}
 N 840 -400 870 -400 {
-lab=V_in_n}
+lab=#net1}
 N 870 -400 870 -390 {
-lab=V_in_n}
+lab=#net1}
 N 870 -390 870 -380 {
-lab=V_in_n}
+lab=#net1}
 N 870 -320 870 -300 {
 lab=D_out1}
 N 840 -310 870 -310 {
@@ -70,7 +70,7 @@ W=1
 L=1
 model=res_generic_m1
 mult=1}
-C {devices/lab_pin.sym} 620 -400 0 0 {name=l4 sig_type=std_logic lab=V_in_p
+C {devices/lab_pin.sym} 840 -400 0 0 {name=l4 sig_type=std_logic lab=V_in_p
 }
 C {devices/lab_pin.sym} 620 -310 0 0 {name=l5 sig_type=std_logic lab=D_out0
 }
@@ -86,7 +86,7 @@ W=1
 L=1
 model=res_generic_m1
 mult=1}
-C {devices/lab_pin.sym} 840 -400 0 0 {name=l7 sig_type=std_logic lab=V_in_n
+C {devices/lab_pin.sym} 620 -400 0 0 {name=l7 sig_type=std_logic lab=V_in_n
 }
 C {devices/lab_pin.sym} 840 -310 0 0 {name=l8 sig_type=std_logic lab=D_out1
 }
