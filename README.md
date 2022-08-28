@@ -3,6 +3,10 @@
 
 This branch `moc-design` contains a moc up of the SAR ADC design; the purpose of this moc design is to test the workflow and precheck with a full pin list.   
 
+The `moc-design` in the caravan wrapper can be found in the [sscs-22-project-wrapper repository](https://github.com/UAH-IC-Design-Team/sscs-22-project-wrapper/tree/moc-design).
+
+
+
 
 
 
