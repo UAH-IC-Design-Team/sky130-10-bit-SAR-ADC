@@ -5,7 +5,7 @@ x1 net1 IN VSS VSS VDD VDD OUT_0 sky130_fd_sc_hd__and2_0
 x2 S IN VSS VSS VDD VDD OUT_1 sky130_fd_sc_hd__and2_0
 x3 S VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_1
 **** begin user architecture code
- .include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+* .include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 **** end user architecture code
 .ends

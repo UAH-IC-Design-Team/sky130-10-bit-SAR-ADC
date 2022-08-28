@@ -22,25 +22,6 @@
 *.opin bit10,bit9,bit8,bit7,bit6,bit5,bit4,bit3,bit2,bit1
 *.opin done
 *.opin sw_sample
-* expanding   symbol:  src/xor_clock_gen/xor_clock_gen.sym # of pins=8
-** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sym
-** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sch
-*.ipin Vin_p
-*.iopin VSS
-*.opin Gen_clk
-*.iopin VDD
-*.ipin Vin_n
-*.ipin Clk
-*.ipin Reset
-*.opin Vin_q
-* expanding   symbol:  src/pulse_generator/pulse_generator.sym # of pins=5
-** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/pulse_generator/pulse_generator.sym
-** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/pulse_generator/pulse_generator.sch
-*.ipin clk
-*.ipin RST_PLS
-*.opin pulse
-*.iopin VDD
-*.iopin VSS
 * expanding   symbol:  src/dec/dec.sym # of pins=7
 ** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sym
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sch
@@ -69,18 +50,17 @@
 *.ipin RESET
 *.opin
 *+ raw_bit13,raw_bit12,raw_bit11,raw_bit10,raw_bit9,raw_bit8,raw_bit7,raw_bit6,raw_bit5,raw_bit4,raw_bit3,raw_bit2,raw_bit1
-* expanding   symbol:  src/shifted_clock_generator/shifted_clock_generator.sym # of pins=6
+* expanding   symbol:  src/shifted_clock_generator/shifted_clock_generator.sym # of pins=5
 ** sym_path:
 *+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sym
 ** sch_path:
 *+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sch
-*.ipin clk_pulse
 *.opin
 *+ cycle31,cycle30,cycle29,cycle28,cycle27,cycle26,cycle25,cycle24,cycle23,cycle22,cycle21,cycle20,cycle19,cycle18,cycle17,cycle16,cycle15,cycle14,cycle13,cycle12,cycle11,cycle10,cycle9,cycle8,cycle7,cycle6,cycle5,cycle4,cycle3,cycle2,cycle1,cycle0
 *.iopin VSS
 *.iopin VDD
 *.ipin clk
-*.ipin reset_b
+*.ipin reset
 * expanding   symbol:  src/demux2/demux2.sym # of pins=6
 ** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sym
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sch

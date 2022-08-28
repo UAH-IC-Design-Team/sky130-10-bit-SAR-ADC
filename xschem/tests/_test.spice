@@ -1,0 +1,4 @@
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/tests//_test.sch
+**.subckt _test
+**.ends
+.end

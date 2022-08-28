@@ -1,105 +1,75 @@
-** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/tests/controller/controller_test.sch
-**.subckt controller_test
-V3 VDD GND 1.8V
-V4 VSS GND 0
-x1 VDD VSS sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2 sw_n_sp1 clk
-+ reset_b sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 Vin_p sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6 sw_p_sp5
-+ sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 bit10 bit9 bit8 bit7
-+ bit6 bit5 bit4 bit3 bit2 bit1 done sw_sample controller
-V1 clk GND PULSE 0 1.8V 10.015us 1ns 1ns 5us 10us
-V5 reset_b GND PULSE 1.8V 0 5us 1ns 1ns 5us 1s
-V8 Vin_p GND PULSE 0 1.8V 10us 1ns 1ns 5us 20us
-**** begin user architecture code
- .lib /foss/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
-.include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
-
-
-.options acct list
-.temp 25
-*vvcc VDD 0 dc 1.8
-*vvss VSS 0 0
-.control
-tran 0.8u 400u
-*plot RST_PLS clk+2 Pulse+4
-plot done-4  sw_n_sp1 sw_n_sp2+2 sw_n_sp3+4 sw_n_sp4+6 sw_n_sp5+8 sw_n_sp6+10 sw_n_sp7+12
-+ sw_n_sp8+14 sw_n_sp9+16 Vin_p+18 clk+20
-plot done-4  sw_p_sp1 sw_p_sp2+2 sw_p_sp3+4 sw_p_sp4+6 sw_p_sp5+8 sw_p_sp6+10 sw_p_sp7+12
-+ sw_p_sp8+14 sw_p_sp9+16 Vin_p+18 clk+20
-plot done-4  sw_n1 sw_n2+2 sw_n3+4 sw_n4+6 sw_n5+8 sw_n6+10 sw_n7+12 sw_n8+14 Vin_p+16 clk+18
-plot done-4  sw_p1 sw_p2+2 sw_p3+4 sw_p4+6 sw_p5+8 sw_p6+10 sw_p7+12 sw_p8+14 Vin_p+16 clk+18
-plot done-4 bit1 bit2+2 bit3+4 bit4+6 bit5+8 bit6+10 bit7+12 bit8+14 bit9+16 bit10+18
-
-plot done-4  sw_n_sp1 sw_n_sp2+2 sw_n_sp3+4 sw_n_sp4+6 sw_n_sp5+8 sw_n_sp6+10 sw_n_sp7+12
-+ sw_n_sp8+14 sw_n_sp9+16 Vin_q+18 clk+20 sw_n1 sw_n2+2 sw_n3+4 sw_n4+6 sw_n5+8 sw_n6+10 sw_n7+12 sw_n8+14
-
-plot done-4  sw_p_sp1 sw_p_sp2+2 sw_p_sp3+4 sw_p_sp4+6 sw_p_sp5+8 sw_p_sp6+10 sw_p_sp7+12
-+ sw_p_sp8+14 sw_p_sp9+16 Vin_q+18 clk+20 sw_p1 sw_p2+2 sw_p3+4 sw_p4+6 sw_p5+8 sw_p6+10 sw_p7+12 sw_p8+14
-
-plot clk reset_b+2 x1.cycle0+4 x1.cycle1+6 x1.cycle2+8 x1.cycle16+10 x1.cycle17+12 x1.cycle18+14
-+ sw_sample+16 vin_p+18
-
-plot reset_b-2 clk vin_p vin_n gen_clk
-
-write controller_test.raw
-.endc
-
-
-**** end user architecture code
-**.ends
-
-* expanding   symbol:  src/controller/controller.sym # of pins=12
-** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/controller/controller.sym
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/controller/controller.sch
-.subckt controller  VDD VSS sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2
-+ sw_n_sp1 clk reset sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 Vcmp sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6
-+ sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 bit10 bit9 bit8
-+ bit7 bit6 bit5 bit4 bit3 bit2 bit1 done sw_sample
-*.ipin clk
-*.opin sw_n_sp9,sw_n_sp8,sw_n_sp7,sw_n_sp6,sw_n_sp5,sw_n_sp4,sw_n_sp3,sw_n_sp2,sw_n_sp1
-*.iopin VSS
-*.iopin VDD
-*.ipin reset
-*.ipin Vcmp
-*.opin sw_n8,sw_n7,sw_n6,sw_n5,sw_n4,sw_n3,sw_n2,sw_n1
-*.opin sw_p_sp9,sw_p_sp8,sw_p_sp7,sw_p_sp6,sw_p_sp5,sw_p_sp4,sw_p_sp3,sw_p_sp2,sw_p_sp1
-*.opin sw_p8,sw_p7,sw_p6,sw_p5,sw_p4,sw_p3,sw_p2,sw_p1
-*.opin bit10,bit9,bit8,bit7,bit6,bit5,bit4,bit3,bit2,bit1
-*.opin done
-*.opin sw_sample
-x95 cycle1 cycle2 cycle3 cycle4 VSS VSS VDD VDD net2 sky130_fd_sc_hd__or4_2
-x96 cycle5 cycle6 cycle7 cycle8 VSS VSS VDD VDD net3 sky130_fd_sc_hd__or4_2
-x97 cycle9 cycle10 cycle11 cycle12 VSS VSS VDD VDD net5 sky130_fd_sc_hd__or4_2
-x3 VDD raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6 raw_bit5 raw_bit4
-+ raw_bit3 raw_bit2 raw_bit1 VSS reset bit10 bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1 done cycle31 dec
-x4 raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6 raw_bit5 raw_bit4
-+ raw_bit3 raw_bit2 raw_bit1 cycle30 cycle29 cycle28 cycle27 cycle26 cycle25 cycle24 cycle23 cycle22 cycle21
-+ cycle20 cycle19 cycle18 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 Vcmp net1 VDD VSS sw_n_sp9 sw_n_sp8
-+ sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2 sw_n_sp1 sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2
-+ sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 raw_bit_calculator
-x1 clk VDD VSS reset cycle31 cycle30 cycle29 cycle28 cycle27 cycle26 cycle25 cycle24 cycle23 cycle22
-+ cycle21 cycle20 cycle19 cycle18 cycle17 cycle16 cycle15 cycle14 cycle13 cycle12 cycle11 cycle10 cycle9
-+ cycle8 cycle7 cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 cycle0 shifted_clock_generator
-x8 net2 net3 net5 net4 VSS VSS VDD VDD net6 sky130_fd_sc_hd__or4_2
-x9 clk net6 reset VSS VSS VDD VDD sw_sample sky130_fd_sc_hd__dfrtn_1
-x10 cycle13 cycle14 cycle15 VSS VSS VDD VDD net4 sky130_fd_sc_hd__or3_2
-x6 cycle0 VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_16
-.ends
+.subckt controller a_clk a_sw_n_sp9 a_sw_n_sp8 a_sw_n_sp7 a_sw_n_sp6 a_sw_n_sp5 a_sw_n_sp4 a_sw_n_sp3 a_sw_n_sp2 a_sw_n_sp1 a_VSS a_VDD a_reset a_Vcmp a_sw_n8 a_sw_n7 a_sw_n6 a_sw_n5 a_sw_n4 a_sw_n3 a_sw_n2 a_sw_n1 a_sw_p_sp9 a_sw_p_sp8 a_sw_p_sp7 a_sw_p_sp6 a_sw_p_sp5 a_sw_p_sp4 a_sw_p_sp3 a_sw_p_sp2 a_sw_p_sp1 a_sw_p8 a_sw_p7 a_sw_p6 a_sw_p5 a_sw_p4 a_sw_p3 a_sw_p2 a_sw_p1 a_bit10 a_bit9 a_bit8 a_bit7 a_bit6 a_bit5 a_bit4 a_bit3 a_bit2 a_bit1 a_done a_sw_sample
+*.PININFO clk:I sw_n_sp_9..1_:O VSS:B VDD:B reset:I Vcmp:I sw_n_8..1_:O sw_p_sp_9..1_:O sw_p_8..1_:O
+*+ bit_10..1_:O done:O sw_sample:O
 
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=10n fall_delay=10n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+AA2D1 [a_clk] [clk] todig_1v8
+AA2D2 [a_sw_n_sp9] [sw_n_sp9] todig_1v8
+AA2D3 [a_sw_n_sp8] [sw_n_sp8] todig_1v8
+AA2D4 [a_sw_n_sp7] [sw_n_sp7] todig_1v8
+AA2D5 [a_sw_n_sp6] [sw_n_sp6] todig_1v8
+AA2D6 [a_sw_n_sp5] [sw_n_sp5] todig_1v8
+AA2D7 [a_sw_n_sp4] [sw_n_sp4] todig_1v8
+AA2D8 [a_sw_n_sp3] [sw_n_sp3] todig_1v8
+AA2D9 [a_sw_n_sp2] [sw_n_sp2] todig_1v8
+AA2D10 [a_sw_n_sp1] [sw_n_sp1] todig_1v8
+AA2D11 [a_VSS] [VSS] todig_1v8
+AA2D12 [a_VDD] [VDD] todig_1v8
+AA2D13 [a_reset] [reset] todig_1v8
+AA2D14 [a_Vcmp] [Vcmp] todig_1v8
+AA2D15 [a_sw_n8] [sw_n8] todig_1v8
+AA2D16 [a_sw_n7] [sw_n7] todig_1v8
+AA2D17 [a_sw_n6] [sw_n6] todig_1v8
+AA2D18 [a_sw_n5] [sw_n5] todig_1v8
+AA2D19 [a_sw_n4] [sw_n4] todig_1v8
+AA2D20 [a_sw_n3] [sw_n3] todig_1v8
+AA2D21 [a_sw_n2] [sw_n2] todig_1v8
+AA2D22 [a_sw_n1] [sw_n1] todig_1v8
+AA2D23 [a_sw_p_sp9] [sw_p_sp9] todig_1v8
+AA2D24 [a_sw_p_sp8] [sw_p_sp8] todig_1v8
+AA2D25 [a_sw_p_sp7] [sw_p_sp7] todig_1v8
+AA2D26 [a_sw_p_sp6] [sw_p_sp6] todig_1v8
+AA2D27 [a_sw_p_sp5] [sw_p_sp5] todig_1v8
+AA2D28 [a_sw_p_sp4] [sw_p_sp4] todig_1v8
+AA2D29 [a_sw_p_sp3] [sw_p_sp3] todig_1v8
+AA2D30 [a_sw_p_sp2] [sw_p_sp2] todig_1v8
+AA2D31 [a_sw_p_sp1] [sw_p_sp1] todig_1v8
+AA2D32 [a_sw_p8] [sw_p8] todig_1v8
+AA2D33 [a_sw_p7] [sw_p7] todig_1v8
+AA2D34 [a_sw_p6] [sw_p6] todig_1v8
+AA2D35 [a_sw_p5] [sw_p5] todig_1v8
+AA2D36 [a_sw_p4] [sw_p4] todig_1v8
+AA2D37 [a_sw_p3] [sw_p3] todig_1v8
+AA2D38 [a_sw_p2] [sw_p2] todig_1v8
+AA2D39 [a_sw_p1] [sw_p1] todig_1v8
+AA2D40 [a_bit10] [bit10] todig_1v8
+AA2D41 [a_bit9] [bit9] todig_1v8
+AA2D42 [a_bit8] [bit8] todig_1v8
+AA2D43 [a_bit7] [bit7] todig_1v8
+AA2D44 [a_bit6] [bit6] todig_1v8
+AA2D45 [a_bit5] [bit5] todig_1v8
+AA2D46 [a_bit4] [bit4] todig_1v8
+AA2D47 [a_bit3] [bit3] todig_1v8
+AA2D48 [a_bit2] [bit2] todig_1v8
+AA2D49 [a_bit1] [bit1] todig_1v8
+AA2D50 [a_done] [done] todig_1v8
+AA2D51 [a_sw_sample] [sw_sample] todig_1v8
+
+.ends
 
 * expanding   symbol:  src/dec/dec.sym # of pins=7
 ** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sym
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sch
-.subckt dec  VDD raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6
-+ raw_bit5 raw_bit4 raw_bit3 raw_bit2 raw_bit1 VSS reset_b bit10 bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1
-+ done dump_bus
-*.iopin VDD
-*.opin bit10,bit9,bit8,bit7,bit6,bit5,bit4,bit3,bit2,bit1
-*.iopin VSS
-*.ipin reset_b
-*.ipin dump_bus
-*.opin done
-*.ipin
-*+ raw_bit13,raw_bit12,raw_bit11,raw_bit10,raw_bit9,raw_bit8,raw_bit7,raw_bit6,raw_bit5,raw_bit4,raw_bit3,raw_bit2,raw_bit1
+.subckt dec  VDD raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6  raw_bit5 raw_bit4 raw_bit3 raw_bit2 raw_bit1 VSS reset_b bit10 bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1  done dump_bus
+*.PININFO VDD:B bit_10..1_:O VSS:B reset_b:I dump_bus:I done:O raw_bit_13..1_:I
 x62 raw_bit2 raw_bit1 net1 VSS VSS VDD VDD net16 net2 sky130_fd_sc_hd__fa_1
 x64 raw_bit3 raw_bit1 net4 VSS VSS VDD VDD net1 net3 sky130_fd_sc_hd__fa_1
 x67 dump_bus net2 reset_b VSS VSS VDD VDD bit2 sky130_fd_sc_hd__dfrtp_1
@@ -127,24 +97,9 @@ x82 dump_bus VSS VSS VDD VDD done sky130_fd_sc_hd__inv_1
 *+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sym
 ** sch_path:
 *+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sch
-.subckt raw_bit_calculator  raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7
-+ raw_bit6 raw_bit5 raw_bit4 raw_bit3 raw_bit2 raw_bit1 cycle13 cycle12 cycle11 cycle10 cycle9 cycle8 cycle7
-+ cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 Vcmp RESET VDD
-+ VSS sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2 sw_n_sp1 sw_n8 sw_n7 sw_n6
-+ sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2
-+ sw_p_sp1
-*.ipin
-*+ cycle13,cycle12,cycle11,cycle10,cycle9,cycle8,cycle7,cycle6,cycle5,cycle4,cycle3,cycle2,cycle1
-*.opin sw_n_sp9,sw_n_sp8,sw_n_sp7,sw_n_sp6,sw_n_sp5,sw_n_sp4,sw_n_sp3,sw_n_sp2,sw_n_sp1
-*.iopin VSS
-*.iopin VDD
-*.opin sw_n8,sw_n7,sw_n6,sw_n5,sw_n4,sw_n3,sw_n2,sw_n1
-*.opin sw_p_sp9,sw_p_sp8,sw_p_sp7,sw_p_sp6,sw_p_sp5,sw_p_sp4,sw_p_sp3,sw_p_sp2,sw_p_sp1
-*.opin sw_p8,sw_p7,sw_p6,sw_p5,sw_p4,sw_p3,sw_p2,sw_p1
-*.ipin Vcmp
-*.ipin RESET
-*.opin
-*+ raw_bit13,raw_bit12,raw_bit11,raw_bit10,raw_bit9,raw_bit8,raw_bit7,raw_bit6,raw_bit5,raw_bit4,raw_bit3,raw_bit2,raw_bit1
+.subckt raw_bit_calculator  raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7  raw_bit6 raw_bit5 raw_bit4 raw_bit3 raw_bit2 raw_bit1 cycle13 cycle12 cycle11 cycle10 cycle9 cycle8 cycle7  cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 Vcmp RESET VDD  VSS sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2 sw_n_sp1 sw_n8 sw_n7 sw_n6  sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2  sw_p_sp1
+*.PININFO cycle_13..1_:I sw_n_sp_9..1_:O VSS:B VDD:B sw_n_8..1_:O sw_p_sp_9..1_:O sw_p_8..1_:O
+*+ Vcmp:I RESET:I raw_bit_13..1_:O
 x29 raw_bit1 Vcmp VSS VSS VDD VDD net50 sky130_fd_sc_hd__xor2_1
 x31 raw_bit1 Vcmp VSS VSS VDD VDD net51 sky130_fd_sc_hd__xor2_1
 x37 raw_bit4 Vcmp VSS VSS VDD VDD net52 sky130_fd_sc_hd__xor2_1
@@ -249,15 +204,8 @@ x47 net49 RESET VSS VSS VDD VDD net46 sky130_fd_sc_hd__and2_0
 *+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sym
 ** sch_path:
 *+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sch
-.subckt shifted_clock_generator  clk VDD VSS reset cycle31 cycle30 cycle29 cycle28 cycle27 cycle26
-+ cycle25 cycle24 cycle23 cycle22 cycle21 cycle20 cycle19 cycle18 cycle17 cycle16 cycle15 cycle14 cycle13
-+ cycle12 cycle11 cycle10 cycle9 cycle8 cycle7 cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 cycle0
-*.opin
-*+ cycle31,cycle30,cycle29,cycle28,cycle27,cycle26,cycle25,cycle24,cycle23,cycle22,cycle21,cycle20,cycle19,cycle18,cycle17,cycle16,cycle15,cycle14,cycle13,cycle12,cycle11,cycle10,cycle9,cycle8,cycle7,cycle6,cycle5,cycle4,cycle3,cycle2,cycle1,cycle0
-*.iopin VSS
-*.iopin VDD
-*.ipin clk
-*.ipin reset
+.subckt shifted_clock_generator  clk VDD VSS reset cycle31 cycle30 cycle29 cycle28 cycle27 cycle26  cycle25 cycle24 cycle23 cycle22 cycle21 cycle20 cycle19 cycle18 cycle17 cycle16 cycle15 cycle14 cycle13  cycle12 cycle11 cycle10 cycle9 cycle8 cycle7 cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 cycle0
+*.PININFO cycle_31..0_:O VSS:B VDD:B clk:I reset:I
 x32 clk cycle0 reset_b VSS VSS VDD VDD cycle1 sky130_fd_sc_hd__dfrtp_1
 x1 clk cycle1 reset_b VSS VSS VDD VDD cycle2 sky130_fd_sc_hd__dfrtp_1
 x2 clk cycle2 reset_b VSS VSS VDD VDD cycle3 sky130_fd_sc_hd__dfrtp_1
@@ -301,16 +249,21 @@ x38 half_cycle cycle31 VSS VSS VDD VDD reset_cycle sky130_fd_sc_hd__nand2_1
 ** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sym
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sch
 .subckt demux2  S VDD VSS OUT_0 IN OUT_1
-*.ipin S
-*.opin OUT_0
-*.ipin IN
-*.opin OUT_1
-*.iopin VDD
-*.iopin VSS
+*.PININFO S:I OUT_0:O IN:I OUT_1:O VDD:B VSS:B
 x1 net1 IN VSS VSS VDD VDD OUT_0 sky130_fd_sc_hd__and2_0
 x2 S IN VSS VSS VDD VDD OUT_1 sky130_fd_sc_hd__and2_0
 x3 S VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_1
 .ends
 
-.GLOBAL GND
+
+* sky130_fd_sc_hd__or4_2 (A) | (B) | (C) | (D)
+.model d_lut_sky130_fd_sc_hd__or4_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111111111111111")
+* sky130_fd_sc_hd__dfrtn_1 IQ
+* sky130_fd_sc_hd__or3_2 (A) | (B) | (C)
+.model d_lut_sky130_fd_sc_hd__or3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01111111")
+* sky130_fd_sc_hd__inv_16 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
 .end

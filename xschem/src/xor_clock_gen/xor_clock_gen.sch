@@ -5,6 +5,7 @@ V {}
 S {}
 E {}
 T {Need to tune this a little better.} 660 -200 0 0 0.4 0.4 {}
+T {Try a 1x buffer here...} 2250 -350 0 0 0.4 0.4 {}
 N 420 -290 450 -290 {
 lab=Vin_p}
 N 420 -250 450 -250 {

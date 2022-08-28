@@ -3,6 +3,7 @@
 .subckt demux2 a_S a_OUT_0 a_IN a_OUT_1 a_VDD a_VSS
 *.PININFO S:I OUT_0:O IN:I OUT_1:O VDD:B VSS:B
 **** begin user architecture code
+* .include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 **** end user architecture code
 
 .model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=10n fall_delay=10n)

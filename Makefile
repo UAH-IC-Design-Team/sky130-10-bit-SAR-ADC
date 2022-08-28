@@ -69,5 +69,8 @@ runXspice:
 
 
 runXspice_src:
-	cd ./xschem; xschem -n -s -q --no_x --tcl 'set top_subckt 1' ./src/$(component)/$(component).sch -o ./src/$(component)/
+	# cd ./xschem; xschem -n -s -q --no_x --tcl 'set top_subckt 1' ./src/$(component)/$(component).sch -o ./src/$(component)/
 	python ./util/spi2xspice.py /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib ./xschem/src/$(component)/$(component).spice ./xschem/src/$(component)/$(component)_xspice.spice
+
+createXspice_lib:
+	python ./util/spi2xspice.py /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib ./util/xspice_sc_lib.spice
