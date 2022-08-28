@@ -241,6 +241,13 @@ def read_spice(filein, fileout, celldefs, debug, modelfile, timing):
     subcount = 0
     subfound = False
     for line in spilines:
+        # Check for a include file and read it.
+        # May need to do something about skipsub.
+        imatch = increx.match(line)
+        if imatch:
+            print("Include file found!")
+            read_spice_lib(imatch.group(1), celldefs, debug)
+            continue
         cmatch = comrex.match(line)
         if cmatch:
             continue
@@ -277,7 +284,8 @@ def read_spice(filein, fileout, celldefs, debug, modelfile, timing):
             # library cells from that include file.
             imatch = increx.match(line) if not skipsub else []
             if imatch:
-                read_spice_lib(imatch.group(1), celldefs, debug) 
+                # Don't bother doing anything...read in includes earlier.
+                # read_spice_lib(imatch.group(1), celldefs, debug) 
                 continue
 
             xmatch = xrex.match(line) if not skipsub else []
