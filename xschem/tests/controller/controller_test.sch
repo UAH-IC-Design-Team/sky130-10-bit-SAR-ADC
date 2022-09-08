@@ -47,7 +47,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
-tran 0.8u 400u
+tran 0.1u 400u
 *plot RST_PLS clk+2 Pulse+4
 plot done-4  sw_n_sp1 sw_n_sp2+2 sw_n_sp3+4 sw_n_sp4+6 sw_n_sp5+8 sw_n_sp6+10 sw_n_sp7+12 sw_n_sp8+14 sw_n_sp9+16 Vin_p+18 clk+20
 plot done-4  sw_p_sp1 sw_p_sp2+2 sw_p_sp3+4 sw_p_sp4+6 sw_p_sp5+8 sw_p_sp6+10 sw_p_sp7+12 sw_p_sp8+14 sw_p_sp9+16 Vin_p+18 clk+20
@@ -61,7 +61,7 @@ plot done-4  sw_p_sp1 sw_p_sp2+2 sw_p_sp3+4 sw_p_sp4+6 sw_p_sp5+8 sw_p_sp6+10 sw
 
 plot clk reset_b+2 x1.cycle0+4 x1.cycle1+6 x1.cycle2+8 x1.cycle16+10 x1.cycle17+12 x1.cycle18+14 sw_sample+16 vin_p+18
 
-plot reset_b-2 clk vin_p vin_n gen_clk
+plot reset_b-2 clk vin_p gen_clk
 
 write controller_test.raw
 .endc
@@ -79,7 +79,7 @@ C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/controller/controller.sym} 530 -440 0 0 {name=x1}
-C {devices/vsource.sym} 380 -130 0 0 {name=V1 value="PULSE 0 1.8V 10.015us 1ns 1ns 5us 10us"
+C {devices/vsource.sym} 380 -130 0 0 {name=V1 value="PULSE 0 1.8V 10.15us 1ns 1ns 5us 10us"
 }
 C {devices/gnd.sym} 380 -80 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 380 -160 0 0 {name=l6 sig_type=std_logic lab=clk

@@ -15,9 +15,9 @@ lab=VDD}
 N 720 -400 730 -400 {
 lab=VSS}
 N 410 -420 420 -420 {
-lab=Vin_p}
+lab=Vsampled_p}
 N 410 -400 420 -400 {
-lab=Vin_n}
+lab=Vsampled_n}
 N 410 -380 420 -380 {
 lab=Clk}
 N 720 -380 730 -380 {
@@ -46,6 +46,36 @@ N 1020 -350 1040 -350 {
 lab=Out_p}
 N 1020 -350 1020 -330 {
 lab=Out_p}
+N 390 -650 420 -650 {
+lab=Vin_p}
+N 390 -630 420 -630 {
+lab=Vin_n}
+N 390 -610 420 -610 {
+lab=VDD}
+N 720 -650 750 -650 {
+lab=VDD}
+N 720 -630 750 -630 {
+lab=VSS}
+N 720 -610 750 -610 {
+lab=Vsampled_p}
+N 720 -590 750 -590 {
+lab=Vsampled_n}
+N 720 -500 750 -500 {
+lab=Vsampled_p}
+N 720 -480 750 -480 {
+lab=Vsampled_n}
+N 720 -540 750 -540 {
+lab=VDD}
+N 720 -520 750 -520 {
+lab=VSS}
+N 390 -540 420 -540 {
+lab=sw_n_sp[9..1]}
+N 390 -520 420 -520 {
+lab=sw_p_sp[9..1]}
+N 390 -500 420 -500 {
+lab=sw_n[8..1]}
+N 390 -480 420 -480 {
+lab=sw_p[8..1]}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -59,12 +89,50 @@ value=".options acct list
 .temp 25
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
+
+v_sp_n1 sw_sp_n1 gnd 1.8V 
+v_sp_n2 sw_sp_n2 gnd 1.8V 
+v_sp_n3 sw_sp_n3 gnd 1.8V 
+v_sp_n4 sw_sp_n4 gnd 1.8V 
+v_sp_n5 sw_sp_n5 gnd 1.8V 
+v_sp_n6 sw_sp_n6 gnd 1.8V 
+v_sp_n7 sw_sp_n7 gnd 1.8V 
+v_sp_n8 sw_sp_n8 gnd 1.8V 
+v_sp_n9 sw_sp_n9 gnd 1.8V 
+
+v_n1 sw_n1 gnd 0 
+v_n2 sw_n2 gnd 0 
+v_n3 sw_n3 gnd 0 
+v_n4 sw_n4 gnd 0 
+v_n5 sw_n5 gnd 0 
+v_n6 sw_n6 gnd 0 
+v_n7 sw_n7 gnd 0 
+v_n8 sw_n8 gnd 0 
+
+v_sp_p1 sw_sp_p1 gnd 1.8V 
+v_sp_p2 sw_sp_p2 gnd 1.8V 
+v_sp_p3 sw_sp_p3 gnd 1.8V 
+v_sp_p4 sw_sp_p4 gnd 1.8V 
+v_sp_p5 sw_sp_p5 gnd 1.8V 
+v_sp_p6 sw_sp_p6 gnd 1.8V 
+v_sp_p7 sw_sp_p7 gnd 1.8V 
+v_sp_p8 sw_sp_p8 gnd 1.8V 
+v_sp_p9 sw_sp_p9 gnd 1.8V 
+
+v_p1 sw_p1 gnd 0 
+v_p2 sw_p2 gnd 0 
+v_p3 sw_p3 gnd 0 
+v_p4 sw_p4 gnd 0 
+v_p5 sw_p5 gnd 0 
+v_p6 sw_p6 gnd 0 
+v_p7 sw_p7 gnd 0 
+v_p8 sw_p8 gnd 0 
 .control
 tran 0.1u 200u
 *dc V1 0 1.8V 0.1
 plot Vin_p-Vin_n Out_p-Out_n Clk-4
 plot Vin_p-Vin_n x1.pre_amp_p-x1.pre_amp_n Clk-4
-write comparator_test.raw
+write comparator_dac_sw_test.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -93,9 +161,9 @@ C {devices/lab_pin.sym} 730 -420 2 0 {name=l3 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 730 -400 2 0 {name=l4 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 410 -420 0 0 {name=l7 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 410 -420 0 0 {name=l7 sig_type=std_logic lab=Vsampled_p
 }
-C {devices/lab_pin.sym} 410 -400 0 0 {name=l8 sig_type=std_logic lab=Vin_n
+C {devices/lab_pin.sym} 410 -400 0 0 {name=l8 sig_type=std_logic lab=Vsampled_n
 }
 C {devices/lab_pin.sym} 410 -380 0 0 {name=l9 sig_type=std_logic lab=Clk
 }
@@ -137,4 +205,36 @@ m=1
 C {devices/lab_pin.sym} 1030 -250 2 0 {name=l25 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1040 -350 2 0 {name=l26 sig_type=std_logic lab=Out_p
+}
+C {src/dac/dac.sym} 570 -510 0 0 {name=x3}
+C {src/bootstrapped_sampling_switch/bootstrapped_sampling_switch.sym} 570 -620 0 0 {name=x4}
+C {devices/lab_pin.sym} 390 -650 0 0 {name=l27 sig_type=std_logic lab=Vin_p
+}
+C {devices/lab_pin.sym} 390 -630 0 0 {name=l28 sig_type=std_logic lab=Vin_n
+}
+C {devices/lab_pin.sym} 750 -650 2 0 {name=l29 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 750 -630 2 0 {name=l30 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 750 -610 2 0 {name=l31 sig_type=std_logic lab=Vsampled_p
+}
+C {devices/lab_pin.sym} 750 -590 2 0 {name=l32 sig_type=std_logic lab=Vsampled_n
+}
+C {devices/lab_pin.sym} 750 -500 2 0 {name=l33 sig_type=std_logic lab=Vsampled_p
+}
+C {devices/lab_pin.sym} 750 -480 2 0 {name=l34 sig_type=std_logic lab=Vsampled_n
+}
+C {devices/lab_pin.sym} 750 -540 2 0 {name=l35 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 750 -520 2 0 {name=l36 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 390 -610 0 0 {name=l37 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 390 -540 2 1 {name=l38 sig_type=std_logic lab=sw_n_sp[9..1]
+}
+C {devices/lab_pin.sym} 390 -520 2 1 {name=l39 sig_type=std_logic lab=sw_p_sp[9..1]
+}
+C {devices/lab_pin.sym} 390 -500 2 1 {name=l40 sig_type=std_logic lab=sw_n[8..1]
+}
+C {devices/lab_pin.sym} 390 -480 2 1 {name=l41 sig_type=std_logic lab=sw_p[8..1]
 }

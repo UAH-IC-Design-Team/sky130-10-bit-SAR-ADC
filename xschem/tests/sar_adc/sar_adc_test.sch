@@ -49,7 +49,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
-tran 0.25u 40u
+tran 0.05u 400u
 *plot RST_PLS clk+2 Pulse+4
 plot Done-4 Vin_p-Vin_n-2 bits1 bits2+2 bits3+4 bits4+6 bits5+8 bits6+10 bits7+12 bits8+14 bits9+16 bits10+18
 plot x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2
@@ -89,12 +89,12 @@ C {devices/lab_pin.sym} 380 -320 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 380 -380 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 450 -110 0 0 {name=V5 value="PULSE 0 1.8V 1us 1ns 1ns 0.5us 1us"
+C {devices/vsource.sym} 450 -110 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
 }
 C {devices/gnd.sym} 450 -60 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 450 -140 0 0 {name=l19 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 720 -110 0 0 {name=V6 value="PULSE 1.8V 0 0.5us 1ns 1ns 0.5us 1s"
+C {devices/vsource.sym} 720 -110 0 0 {name=V6 value="PULSE 1.8V 0 5us 0.1ns 0.1ns 5us 1s"
 }
 C {devices/gnd.sym} 720 -60 0 0 {name=l20 lab=GND}
 C {devices/lab_pin.sym} 720 -140 0 0 {name=l21 sig_type=std_logic lab=reset_b

@@ -1,0 +1,362 @@
+.include /foss/pdk/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.subckt controller clk sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2
++ sw_n_sp1 VSS VDD reset Vcmp sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7
++ sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 bit10
++ bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1 done sw_sample
+
+*.PININFO clk:I sw_n_sp[9..1]:O VSS:B VDD:B reset:I Vcmp:I sw_n[8..1]:O sw_p_sp[9..1]:O sw_p[8..1]:O
+
+*+ bit[10..1]:O done:O sw_sample:O
+
+x95 cycle1 cycle2 cycle3 cycle4 vss vss vdd vdd net2  sky130_fd_sc_hd__or4_2
+
+x96 cycle5 cycle6 cycle7 cycle8 vss vss vdd vdd net3  sky130_fd_sc_hd__or4_2
+
+x97 cycle9 cycle10 cycle11 cycle12 vss vss vdd vdd net5  sky130_fd_sc_hd__or4_2
+
+x62_x3 raw_bit2 raw_bit1 x3_net1 vss vss vdd vdd x3_net16 x3_net2  sky130_fd_sc_hd__fa_1
+
+x64_x3 raw_bit3 raw_bit1 x3_net4 vss vss vdd vdd x3_net1 x3_net3  sky130_fd_sc_hd__fa_1
+
+x67_x3 cycle31 x3_net2 reset vss vss vdd vdd bit2  sky130_fd_sc_hd__dfrtp_1
+
+x68_x3 cycle31 x3_net3 reset vss vss vdd vdd bit3  sky130_fd_sc_hd__dfrtp_1
+
+x65_x3 raw_bit5 raw_bit4 x3_net5 vss vss vdd vdd x3_net4 x3_net6  sky130_fd_sc_hd__fa_1
+
+x69_x3 raw_bit6 raw_bit4 x3_net8 vss vss vdd vdd x3_net5 x3_net7  sky130_fd_sc_hd__fa_1
+
+x70_x3 cycle31 x3_net6 reset vss vss vdd vdd bit4  sky130_fd_sc_hd__dfrtp_1
+
+x71_x3 cycle31 x3_net7 reset vss vss vdd vdd bit5  sky130_fd_sc_hd__dfrtp_1
+
+x72_x3 raw_bit7 raw_bit4 x3_net9 vss vss vdd vdd x3_net8 x3_net10  sky130_fd_sc_hd__fa_1
+
+x73_x3 raw_bit9 raw_bit8 x3_net12 vss vss vdd vdd x3_net9 x3_net11  sky130_fd_sc_hd__fa_1
+
+x74_x3 cycle31 x3_net10 reset vss vss vdd vdd bit6  sky130_fd_sc_hd__dfrtp_1
+
+x75_x3 cycle31 x3_net11 reset vss vss vdd vdd bit7  sky130_fd_sc_hd__dfrtp_1
+
+x76_x3 raw_bit10 raw_bit8 x3_net13 vss vss vdd vdd x3_net12 x3_net14  sky130_fd_sc_hd__fa_1
+
+x77_x3 raw_bit11 raw_bit8 raw_bit12 vss vss vdd vdd x3_net13 x3_net15  sky130_fd_sc_hd__fa_1
+
+x78_x3 cycle31 x3_net14 reset vss vss vdd vdd bit8  sky130_fd_sc_hd__dfrtp_1
+
+x79_x3 cycle31 x3_net15 reset vss vss vdd vdd bit9  sky130_fd_sc_hd__dfrtp_1
+
+x80_x3 cycle31 x3_net16 reset vss vss vdd vdd bit1  sky130_fd_sc_hd__dfrtp_1
+
+x81_x3 cycle31 raw_bit13 reset vss vss vdd vdd bit10  sky130_fd_sc_hd__dfrtp_1
+
+x82_x3 cycle31 vss vss vdd vdd done  sky130_fd_sc_hd__inv_1
+
+x29_x4 raw_bit1 vcmp vss vss vdd vdd x4_net50  sky130_fd_sc_hd__xor2_1
+
+x31_x4 raw_bit1 vcmp vss vss vdd vdd x4_net51  sky130_fd_sc_hd__xor2_1
+
+x37_x4 raw_bit4 vcmp vss vss vdd vdd x4_net52  sky130_fd_sc_hd__xor2_1
+
+x40_x4 raw_bit4 vcmp vss vss vdd vdd x4_net53  sky130_fd_sc_hd__xor2_1
+
+x45_x4 raw_bit4 vcmp vss vss vdd vdd x4_net54  sky130_fd_sc_hd__xor2_1
+
+x100_x4 cycle18 x4_net10 x4_net22 vss vss vdd vdd sw_p_sp1  sky130_fd_sc_hd__dfrtp_1
+
+x99_x4 vcmp vss vss vdd vdd x4_net10  sky130_fd_sc_hd__inv_1
+
+x102_x4 cycle18 vcmp x4_net22 vss vss vdd vdd sw_n_sp1  sky130_fd_sc_hd__dfrtp_1
+
+x25_x4 cycle18 vcmp x4_net24 vss vss vdd vdd sw_n_sp2  sky130_fd_sc_hd__dfrtp_1
+
+x103_x4 vcmp vss vss vdd vdd x4_net11  sky130_fd_sc_hd__inv_1
+
+x104_x4 cycle18 x4_net11 x4_net24 vss vss vdd vdd sw_p_sp2  sky130_fd_sc_hd__dfrtp_1
+
+x21_x4 x4_net1 vcmp net1 vss vss vdd vdd sw_n1  sky130_fd_sc_hd__dfstp_1
+
+x22_x4 x4_net1 x4_net12 net1 vss vss vdd vdd sw_p1  sky130_fd_sc_hd__dfstp_1
+
+x105_x4 vcmp vss vss vdd vdd x4_net12  sky130_fd_sc_hd__inv_1
+
+x28_x4 x4_net3 vcmp net1 vss vss vdd vdd sw_n2  sky130_fd_sc_hd__dfstp_1
+
+x106_x4 x4_net3 x4_net13 net1 vss vss vdd vdd sw_p2  sky130_fd_sc_hd__dfstp_1
+
+x107_x4 vcmp vss vss vdd vdd x4_net13  sky130_fd_sc_hd__inv_1
+
+x109_x4 vcmp vss vss vdd vdd x4_net14  sky130_fd_sc_hd__inv_1
+
+x111_x4 vcmp vss vss vdd vdd x4_net15  sky130_fd_sc_hd__inv_1
+
+x27_x4 cycle21 vcmp x4_net26 vss vss vdd vdd sw_n_sp3  sky130_fd_sc_hd__dfrtp_1
+
+x35_x4 cycle21 x4_net14 x4_net26 vss vss vdd vdd sw_p_sp3  sky130_fd_sc_hd__dfrtp_1
+
+x41_x4 cycle21 vcmp x4_net27 vss vss vdd vdd sw_n_sp4  sky130_fd_sc_hd__dfrtp_1
+
+x108_x4 cycle21 x4_net15 x4_net27 vss vss vdd vdd sw_p_sp4  sky130_fd_sc_hd__dfrtp_1
+
+x110_x4 cycle21 vcmp x4_net28 vss vss vdd vdd sw_n_sp5  sky130_fd_sc_hd__dfrtp_1
+
+x112_x4 cycle21 x4_net16 x4_net28 vss vss vdd vdd sw_p_sp5  sky130_fd_sc_hd__dfrtp_1
+
+x113_x4 vcmp vss vss vdd vdd x4_net16  sky130_fd_sc_hd__inv_1
+
+x114_x4 x4_net5 x4_net17 net1 vss vss vdd vdd sw_p3  sky130_fd_sc_hd__dfstp_1
+
+x32_x4 x4_net5 vcmp net1 vss vss vdd vdd sw_n3  sky130_fd_sc_hd__dfstp_1
+
+x115_x4 vcmp vss vss vdd vdd x4_net17  sky130_fd_sc_hd__inv_1
+
+x38_x4 x4_net6 vcmp net1 vss vss vdd vdd sw_n4  sky130_fd_sc_hd__dfstp_1
+
+x116_x4 x4_net6 x4_net18 net1 vss vss vdd vdd sw_p4  sky130_fd_sc_hd__dfstp_1
+
+x117_x4 vcmp vss vss vdd vdd x4_net18  sky130_fd_sc_hd__inv_1
+
+x43_x4 x4_net7 vcmp net1 vss vss vdd vdd sw_n5  sky130_fd_sc_hd__dfstp_1
+
+x118_x4 x4_net7 x4_net19 net1 vss vss vdd vdd sw_p5  sky130_fd_sc_hd__dfstp_1
+
+x119_x4 vcmp vss vss vdd vdd x4_net19  sky130_fd_sc_hd__inv_1
+
+x132_x4 cycle29 x4_net20 net1 vss vss vdd vdd sw_p_sp9  sky130_fd_sc_hd__dfrtp_1
+
+x133_x4 vcmp vss vss vdd vdd x4_net20  sky130_fd_sc_hd__inv_1
+
+x61_x4 cycle29 vcmp net1 vss vss vdd vdd sw_n_sp9  sky130_fd_sc_hd__dfrtp_1
+
+x1_x4_x24 x4_x24_net1 cycle19 vss vss vdd vdd x4_net1  sky130_fd_sc_hd__and2_0
+
+x2_x4_x24 x4_net50 cycle19 vss vss vdd vdd x4_net2  sky130_fd_sc_hd__and2_0
+
+x3_x4_x24 x4_net50 vss vss vdd vdd x4_x24_net1  sky130_fd_sc_hd__inv_1
+
+x1_x4_x30 x4_x30_net1 cycle20 vss vss vdd vdd x4_net3  sky130_fd_sc_hd__and2_0
+
+x2_x4_x30 x4_net51 cycle20 vss vss vdd vdd x4_net4  sky130_fd_sc_hd__and2_0
+
+x3_x4_x30 x4_net51 vss vss vdd vdd x4_x30_net1  sky130_fd_sc_hd__inv_1
+
+x1_x4_x34 x4_x34_net1 cycle22 vss vss vdd vdd x4_net5  sky130_fd_sc_hd__and2_0
+
+x2_x4_x34 x4_net52 cycle22 vss vss vdd vdd x4_net21  sky130_fd_sc_hd__and2_0
+
+x3_x4_x34 x4_net52 vss vss vdd vdd x4_x34_net1  sky130_fd_sc_hd__inv_1
+
+x1_x4_x39 x4_x39_net1 cycle23 vss vss vdd vdd x4_net6  sky130_fd_sc_hd__and2_0
+
+x2_x4_x39 x4_net53 cycle23 vss vss vdd vdd x4_net8  sky130_fd_sc_hd__and2_0
+
+x3_x4_x39 x4_net53 vss vss vdd vdd x4_x39_net1  sky130_fd_sc_hd__inv_1
+
+x1_x4_x44 x4_x44_net1 cycle24 vss vss vdd vdd x4_net7  sky130_fd_sc_hd__and2_0
+
+x2_x4_x44 x4_net54 cycle24 vss vss vdd vdd x4_net9  sky130_fd_sc_hd__and2_0
+
+x3_x4_x44 x4_net54 vss vss vdd vdd x4_x44_net1  sky130_fd_sc_hd__inv_1
+
+x1_x4 x4_net2 vss vss vdd vdd x4_net23  sky130_fd_sc_hd__inv_1
+
+x2_x4 x4_net4 vss vss vdd vdd x4_net25  sky130_fd_sc_hd__inv_1
+
+x3_x4 cycle18 vcmp net1 vss vss vdd vdd raw_bit1  sky130_fd_sc_hd__dfrtp_4
+
+x4_x4 cycle19 vcmp net1 vss vss vdd vdd raw_bit2  sky130_fd_sc_hd__dfrtp_4
+
+x5_x4 cycle20 vcmp net1 vss vss vdd vdd raw_bit3  sky130_fd_sc_hd__dfrtp_4
+
+x6_x4 cycle21 vcmp net1 vss vss vdd vdd raw_bit4  sky130_fd_sc_hd__dfrtp_4
+
+x7_x4 cycle22 vcmp net1 vss vss vdd vdd raw_bit5  sky130_fd_sc_hd__dfrtp_4
+
+x8_x4 cycle23 vcmp net1 vss vss vdd vdd raw_bit6  sky130_fd_sc_hd__dfrtp_4
+
+x9_x4 cycle24 vcmp net1 vss vss vdd vdd raw_bit7  sky130_fd_sc_hd__dfrtp_4
+
+x10_x4 cycle25 vcmp net1 vss vss vdd vdd raw_bit8  sky130_fd_sc_hd__dfrtp_4
+
+x11_x4 cycle26 vcmp net1 vss vss vdd vdd raw_bit9  sky130_fd_sc_hd__dfrtp_4
+
+x12_x4 cycle27 vcmp net1 vss vss vdd vdd raw_bit10  sky130_fd_sc_hd__dfrtp_4
+
+x13_x4 cycle28 vcmp net1 vss vss vdd vdd raw_bit11  sky130_fd_sc_hd__dfrtp_4
+
+x14_x4 cycle29 vcmp net1 vss vss vdd vdd raw_bit12  sky130_fd_sc_hd__dfrtp_4
+
+x15_x4 cycle30 vcmp net1 vss vss vdd vdd raw_bit13  sky130_fd_sc_hd__dfrtp_4
+
+x18_x4 x4_net21 vss vss vdd vdd x4_net29  sky130_fd_sc_hd__inv_1
+
+x19_x4 x4_net8 vss vss vdd vdd x4_net30  sky130_fd_sc_hd__inv_1
+
+x20_x4 x4_net9 vss vss vdd vdd x4_net31  sky130_fd_sc_hd__inv_1
+
+x42_x4 raw_bit8 vcmp vss vss vdd vdd x4_net55  sky130_fd_sc_hd__xor2_1
+
+x62_x4 raw_bit8 vcmp vss vss vdd vdd x4_net56  sky130_fd_sc_hd__xor2_1
+
+x64_x4 raw_bit8 vcmp vss vss vdd vdd x4_net57  sky130_fd_sc_hd__xor2_1
+
+x65_x4 vcmp vss vss vdd vdd x4_net37  sky130_fd_sc_hd__inv_1
+
+x66_x4 vcmp vss vss vdd vdd x4_net38  sky130_fd_sc_hd__inv_1
+
+x67_x4 cycle25 vcmp x4_net44 vss vss vdd vdd sw_n_sp6  sky130_fd_sc_hd__dfrtp_1
+
+x68_x4 cycle25 x4_net37 x4_net44 vss vss vdd vdd sw_p_sp6  sky130_fd_sc_hd__dfrtp_1
+
+x69_x4 cycle25 vcmp x4_net45 vss vss vdd vdd sw_n_sp7  sky130_fd_sc_hd__dfrtp_1
+
+x70_x4 cycle25 x4_net38 x4_net45 vss vss vdd vdd sw_p_sp7  sky130_fd_sc_hd__dfrtp_1
+
+x71_x4 cycle25 vcmp x4_net46 vss vss vdd vdd sw_n_sp8  sky130_fd_sc_hd__dfrtp_1
+
+x72_x4 cycle25 x4_net39 x4_net46 vss vss vdd vdd sw_p_sp8  sky130_fd_sc_hd__dfrtp_1
+
+x73_x4 vcmp vss vss vdd vdd x4_net39  sky130_fd_sc_hd__inv_1
+
+x74_x4 x4_net32 x4_net40 net1 vss vss vdd vdd sw_p6  sky130_fd_sc_hd__dfstp_1
+
+x75_x4 x4_net32 vcmp net1 vss vss vdd vdd sw_n6  sky130_fd_sc_hd__dfstp_1
+
+x76_x4 vcmp vss vss vdd vdd x4_net40  sky130_fd_sc_hd__inv_1
+
+x77_x4 x4_net33 vcmp net1 vss vss vdd vdd sw_n7  sky130_fd_sc_hd__dfstp_1
+
+x78_x4 x4_net33 x4_net41 net1 vss vss vdd vdd sw_p7  sky130_fd_sc_hd__dfstp_1
+
+x79_x4 vcmp vss vss vdd vdd x4_net41  sky130_fd_sc_hd__inv_1
+
+x80_x4 x4_net34 vcmp net1 vss vss vdd vdd sw_n8  sky130_fd_sc_hd__dfstp_1
+
+x81_x4 x4_net34 x4_net42 net1 vss vss vdd vdd sw_p8  sky130_fd_sc_hd__dfstp_1
+
+x82_x4 vcmp vss vss vdd vdd x4_net42  sky130_fd_sc_hd__inv_1
+
+x1_x4_x83 x4_x83_net1 cycle26 vss vss vdd vdd x4_net32  sky130_fd_sc_hd__and2_0
+
+x2_x4_x83 x4_net55 cycle26 vss vss vdd vdd x4_net43  sky130_fd_sc_hd__and2_0
+
+x3_x4_x83 x4_net55 vss vss vdd vdd x4_x83_net1  sky130_fd_sc_hd__inv_1
+
+x1_x4_x84 x4_x84_net1 cycle27 vss vss vdd vdd x4_net33  sky130_fd_sc_hd__and2_0
+
+x2_x4_x84 x4_net56 cycle27 vss vss vdd vdd x4_net35  sky130_fd_sc_hd__and2_0
+
+x3_x4_x84 x4_net56 vss vss vdd vdd x4_x84_net1  sky130_fd_sc_hd__inv_1
+
+x1_x4_x85 x4_x85_net1 cycle28 vss vss vdd vdd x4_net34  sky130_fd_sc_hd__and2_0
+
+x2_x4_x85 x4_net57 cycle28 vss vss vdd vdd x4_net36  sky130_fd_sc_hd__and2_0
+
+x3_x4_x85 x4_net57 vss vss vdd vdd x4_x85_net1  sky130_fd_sc_hd__inv_1
+
+x88_x4 x4_net43 vss vss vdd vdd x4_net47  sky130_fd_sc_hd__inv_1
+
+x89_x4 x4_net35 vss vss vdd vdd x4_net48  sky130_fd_sc_hd__inv_1
+
+x90_x4 x4_net36 vss vss vdd vdd x4_net49  sky130_fd_sc_hd__inv_1
+
+x46_x4 x4_net23 net1 vss vss vdd vdd x4_net22  sky130_fd_sc_hd__and2_0
+
+x23_x4 x4_net25 net1 vss vss vdd vdd x4_net24  sky130_fd_sc_hd__and2_0
+
+x26_x4 x4_net29 net1 vss vss vdd vdd x4_net26  sky130_fd_sc_hd__and2_0
+
+x16_x4 x4_net30 net1 vss vss vdd vdd x4_net27  sky130_fd_sc_hd__and2_0
+
+x17_x4 x4_net31 net1 vss vss vdd vdd x4_net28  sky130_fd_sc_hd__and2_0
+
+x33_x4 x4_net47 net1 vss vss vdd vdd x4_net44  sky130_fd_sc_hd__and2_0
+
+x36_x4 x4_net48 net1 vss vss vdd vdd x4_net45  sky130_fd_sc_hd__and2_0
+
+x47_x4 x4_net49 net1 vss vss vdd vdd x4_net46  sky130_fd_sc_hd__and2_0
+
+x32_x1 clk cycle0 x1_reset_b vss vss vdd vdd cycle1  sky130_fd_sc_hd__dfrtp_1
+
+x1_x1 clk cycle1 x1_reset_b vss vss vdd vdd cycle2  sky130_fd_sc_hd__dfrtp_1
+
+x2_x1 clk cycle2 x1_reset_b vss vss vdd vdd cycle3  sky130_fd_sc_hd__dfrtp_1
+
+x3_x1 clk cycle3 x1_reset_b vss vss vdd vdd cycle4  sky130_fd_sc_hd__dfrtp_1
+
+x4_x1 clk cycle4 x1_reset_b vss vss vdd vdd cycle5  sky130_fd_sc_hd__dfrtp_1
+
+x5_x1 clk cycle5 x1_reset_b vss vss vdd vdd cycle6  sky130_fd_sc_hd__dfrtp_1
+
+x6_x1 clk cycle6 x1_reset_b vss vss vdd vdd cycle7  sky130_fd_sc_hd__dfrtp_1
+
+x7_x1 clk cycle7 x1_reset_b vss vss vdd vdd cycle8  sky130_fd_sc_hd__dfrtp_1
+
+x8_x1 clk cycle8 x1_reset_b vss vss vdd vdd cycle9  sky130_fd_sc_hd__dfrtp_1
+
+x9_x1 clk cycle9 x1_reset_b vss vss vdd vdd cycle10  sky130_fd_sc_hd__dfrtp_1
+
+x10_x1 clk cycle10 x1_reset_b vss vss vdd vdd cycle11  sky130_fd_sc_hd__dfrtp_1
+
+x11_x1 clk cycle11 x1_reset_b vss vss vdd vdd cycle12  sky130_fd_sc_hd__dfrtp_1
+
+x12_x1 clk cycle12 x1_reset_b vss vss vdd vdd cycle13  sky130_fd_sc_hd__dfrtp_1
+
+x13_x1 clk cycle13 x1_reset_b vss vss vdd vdd cycle14  sky130_fd_sc_hd__dfrtp_1
+
+x14_x1 clk cycle14 x1_reset_b vss vss vdd vdd cycle15  sky130_fd_sc_hd__dfrtp_1
+
+x15_x1 clk cycle15 x1_reset_b vss vss vdd vdd cycle16  sky130_fd_sc_hd__dfrtp_1
+
+x16_x1 clk cycle16 x1_reset_b vss vss vdd vdd cycle17  sky130_fd_sc_hd__dfrtp_1
+
+x17_x1 clk cycle17 x1_reset_b vss vss vdd vdd cycle18  sky130_fd_sc_hd__dfrtp_1
+
+x18_x1 clk cycle18 x1_reset_b vss vss vdd vdd cycle19  sky130_fd_sc_hd__dfrtp_1
+
+x19_x1 clk cycle19 x1_reset_b vss vss vdd vdd cycle20  sky130_fd_sc_hd__dfrtp_1
+
+x20_x1 clk cycle20 x1_reset_b vss vss vdd vdd cycle21  sky130_fd_sc_hd__dfrtp_1
+
+x21_x1 clk cycle21 x1_reset_b vss vss vdd vdd cycle22  sky130_fd_sc_hd__dfrtp_1
+
+x22_x1 clk cycle22 x1_reset_b vss vss vdd vdd cycle23  sky130_fd_sc_hd__dfrtp_1
+
+x23_x1 clk cycle23 x1_reset_b vss vss vdd vdd cycle24  sky130_fd_sc_hd__dfrtp_1
+
+x24_x1 clk cycle24 x1_reset_b vss vss vdd vdd cycle25  sky130_fd_sc_hd__dfrtp_1
+
+x25_x1 clk cycle25 x1_reset_b vss vss vdd vdd cycle26  sky130_fd_sc_hd__dfrtp_1
+
+x26_x1 clk cycle26 x1_reset_b vss vss vdd vdd cycle27  sky130_fd_sc_hd__dfrtp_1
+
+x27_x1 clk cycle27 x1_reset_b vss vss vdd vdd cycle28  sky130_fd_sc_hd__dfrtp_1
+
+x28_x1 clk cycle28 x1_reset_b vss vss vdd vdd cycle29  sky130_fd_sc_hd__dfrtp_1
+
+x29_x1 clk cycle29 x1_reset_b vss vss vdd vdd cycle30  sky130_fd_sc_hd__dfrtp_1
+
+x30_x1 clk cycle30 x1_reset_b vss vss vdd vdd cycle31  sky130_fd_sc_hd__dfrtp_1
+
+x31_x1 clk vdd x1_reset_b vss vss vdd vdd cycle0  sky130_fd_sc_hd__dfrtp_1
+
+x37_x1 x1_net1 vss vss vdd vdd x1_reset_b  sky130_fd_sc_hd__buf_16
+
+x35_x1 x1_reset_cycle reset vss vss vdd vdd x1_net1  sky130_fd_sc_hd__and2_4
+
+x33_x1 clk cycle31 x1_reset_b vss vss vdd vdd x1_half_cycle  sky130_fd_sc_hd__dfrtn_1
+
+x38_x1 x1_half_cycle cycle31 vss vss vdd vdd x1_reset_cycle  sky130_fd_sc_hd__nand2_1
+
+x8 net2 net3 net5 net4 vss vss vdd vdd net6  sky130_fd_sc_hd__or4_2
+
+x9 clk net6 reset vss vss vdd vdd sw_sample  sky130_fd_sc_hd__dfrtn_1
+
+x10 cycle13 cycle14 cycle15 vss vss vdd vdd net4  sky130_fd_sc_hd__or3_2
+
+x6 cycle0 vss vss vdd vdd net1  sky130_fd_sc_hd__inv_16
+
+.ends
+
+.end
+

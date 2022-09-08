@@ -131,9 +131,9 @@ lab=Pre_Amp_n}
 N 620 -660 620 -620 {
 lab=Pre_Amp_p}
 N 450 -730 450 -720 {
-lab=#net6}
+lab=Pre_Amp_n}
 N 620 -730 620 -720 {
-lab=#net7}
+lab=Pre_Amp_p}
 N 770 -640 770 -630 {
 lab=Pre_Amp_p}
 N 770 -570 770 -550 {
@@ -145,18 +145,23 @@ lab=VSS}
 N 260 -640 410 -640 {
 lab=Pre_Amp_n}
 N 870 -180 890 -180 {
-lab=#net8}
+lab=#net6}
 N 970 -180 990 -180 {
-lab=#net9}
+lab=#net7}
 N 1070 -180 1090 -180 {
 lab=Out_n}
 N 280 -180 300 -180 {
 lab=#net5}
 N 180 -180 200 -180 {
-lab=#net10}
+lab=#net8}
 N 80 -180 100 -180 {
-lab=#net11}
-N -20 -180 -0 -180 {}
+lab=#net9}
+N -20 -180 -0 -180 {
+lab=Out_p}
+N 450 -720 450 -660 {
+lab=Pre_Amp_n}
+N 620 -720 620 -660 {
+lab=Pre_Amp_p}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {sky130_fd_pr/pfet_01v8.sym} 600 -760 0 0 {name=M1
@@ -453,10 +458,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/vsource.sym} 620 -690 0 0 {name=V1 value=0
-}
-C {devices/vsource.sym} 450 -690 0 0 {name=V2 value=0
-}
 C {devices/lab_pin.sym} 450 -590 2 0 {name=l10 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 620 -590 0 0 {name=l11 sig_type=std_logic lab=VSS
@@ -469,13 +470,13 @@ C {sky130_fd_pr/cap_mim_m3_1.sym} 290 -600 0 0 {name=C2 model=cap_mim_m3_1 W=25 
 }
 C {devices/lab_pin.sym} 290 -550 2 0 {name=l26 sig_type=std_logic lab=VSS
 }
-C {sky130_stdcells/buf_1.sym} 830 -180 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VSS VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_1.sym} 830 -180 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/buf_4.sym} 930 -180 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/buf_8.sym} 1030 -180 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_1.sym} 240 -180 0 1 {name=x4 VGND=VSS VNB=VSS VPB=VSS VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_1.sym} 240 -180 0 1 {name=x4 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/buf_4.sym} 140 -180 0 1 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }

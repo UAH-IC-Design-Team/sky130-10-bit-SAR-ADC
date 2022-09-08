@@ -1,0 +1,195 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+** sch_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sch
+.subckt raw_bit_calculator a_cycle13 a_cycle12 a_cycle11 a_cycle10 a_cycle9 a_cycle8 a_cycle7 a_cycle6 a_cycle5 a_cycle4 a_cycle3 a_cycle2 a_cycle1 a_sw_n_sp9 a_sw_n_sp8 a_sw_n_sp7 a_sw_n_sp6 a_sw_n_sp5 a_sw_n_sp4 a_sw_n_sp3 a_sw_n_sp2 a_sw_n_sp1 a_VSS a_VDD a_sw_n8 a_sw_n7 a_sw_n6 a_sw_n5 a_sw_n4 a_sw_n3 a_sw_n2 a_sw_n1 a_sw_p_sp9 a_sw_p_sp8 a_sw_p_sp7 a_sw_p_sp6 a_sw_p_sp5 a_sw_p_sp4 a_sw_p_sp3 a_sw_p_sp2 a_sw_p_sp1 a_sw_p8 a_sw_p7 a_sw_p6 a_sw_p5 a_sw_p4 a_sw_p3 a_sw_p2 a_sw_p1 a_Vcmp a_RESET a_raw_bit13 a_raw_bit12 a_raw_bit11 a_raw_bit10 a_raw_bit9 a_raw_bit8 a_raw_bit7 a_raw_bit6 a_raw_bit5 a_raw_bit4 a_raw_bit3 a_raw_bit2 a_raw_bit1
+*.PININFO cycle_13..1_:I sw_n_sp_9..1_:O VSS:B VDD:B sw_n_8..1_:O sw_p_sp_9..1_:O sw_p_8..1_:O
+*+ Vcmp:I RESET:I raw_bit_13..1_:O
+A29 [raw_bit1 Vcmp] net50 d_lut_sky130_fd_sc_hd__xor2_1
+A31 [raw_bit1 Vcmp] net51 d_lut_sky130_fd_sc_hd__xor2_1
+A37 [raw_bit4 Vcmp] net52 d_lut_sky130_fd_sc_hd__xor2_1
+A40 [raw_bit4 Vcmp] net53 d_lut_sky130_fd_sc_hd__xor2_1
+A45 [raw_bit4 Vcmp] net54 d_lut_sky130_fd_sc_hd__xor2_1
+A100 net10 cycle1 NULL ~net22 NULL NULL ddflop
+A99 [Vcmp] net10 d_lut_sky130_fd_sc_hd__inv_1
+A102 Vcmp cycle1 NULL ~net22 NULL NULL ddflop
+A25 Vcmp cycle1 NULL ~net24 NULL NULL ddflop
+A103 [Vcmp] net11 d_lut_sky130_fd_sc_hd__inv_1
+A104 net11 cycle1 NULL ~net24 NULL NULL ddflop
+A21 Vcmp net1 ~RESET NULL NULL NULL ddflop
+A22 net12 net1 ~RESET NULL NULL NULL ddflop
+A105 [Vcmp] net12 d_lut_sky130_fd_sc_hd__inv_1
+A28 Vcmp net3 ~RESET NULL NULL NULL ddflop
+A106 net13 net3 ~RESET NULL NULL NULL ddflop
+A107 [Vcmp] net13 d_lut_sky130_fd_sc_hd__inv_1
+A109 [Vcmp] net14 d_lut_sky130_fd_sc_hd__inv_1
+A111 [Vcmp] net15 d_lut_sky130_fd_sc_hd__inv_1
+A27 Vcmp cycle4 NULL ~net26 NULL NULL ddflop
+A35 net14 cycle4 NULL ~net26 NULL NULL ddflop
+A41 Vcmp cycle4 NULL ~net27 NULL NULL ddflop
+A108 net15 cycle4 NULL ~net27 NULL NULL ddflop
+A110 Vcmp cycle4 NULL ~net28 NULL NULL ddflop
+A112 net16 cycle4 NULL ~net28 NULL NULL ddflop
+A113 [Vcmp] net16 d_lut_sky130_fd_sc_hd__inv_1
+A114 net17 net5 ~RESET NULL NULL NULL ddflop
+A32 Vcmp net5 ~RESET NULL NULL NULL ddflop
+A115 [Vcmp] net17 d_lut_sky130_fd_sc_hd__inv_1
+A38 Vcmp net6 ~RESET NULL NULL NULL ddflop
+A116 net18 net6 ~RESET NULL NULL NULL ddflop
+A117 [Vcmp] net18 d_lut_sky130_fd_sc_hd__inv_1
+A43 Vcmp net7 ~RESET NULL NULL NULL ddflop
+A118 net19 net7 ~RESET NULL NULL NULL ddflop
+A119 [Vcmp] net19 d_lut_sky130_fd_sc_hd__inv_1
+A132 net20 cycle12 NULL ~RESET NULL NULL ddflop
+A133 [Vcmp] net20 d_lut_sky130_fd_sc_hd__inv_1
+A61 Vcmp cycle12 NULL ~RESET NULL NULL ddflop
+A1 [net2] net23 d_lut_sky130_fd_sc_hd__inv_1
+A2 [net4] net25 d_lut_sky130_fd_sc_hd__inv_1
+A3 Vcmp cycle1 NULL ~RESET NULL NULL ddflop
+A4 Vcmp cycle2 NULL ~RESET NULL NULL ddflop
+A5 Vcmp cycle3 NULL ~RESET NULL NULL ddflop
+A6 Vcmp cycle4 NULL ~RESET NULL NULL ddflop
+A7 Vcmp cycle5 NULL ~RESET NULL NULL ddflop
+A8 Vcmp cycle6 NULL ~RESET NULL NULL ddflop
+A9 Vcmp cycle7 NULL ~RESET NULL NULL ddflop
+A10 Vcmp cycle8 NULL ~RESET NULL NULL ddflop
+A11 Vcmp cycle9 NULL ~RESET NULL NULL ddflop
+A12 Vcmp cycle10 NULL ~RESET NULL NULL ddflop
+A13 Vcmp cycle11 NULL ~RESET NULL NULL ddflop
+A14 Vcmp cycle12 NULL ~RESET NULL NULL ddflop
+A15 Vcmp cycle13 NULL ~RESET NULL NULL ddflop
+A18 [net21] net29 d_lut_sky130_fd_sc_hd__inv_1
+A19 [net8] net30 d_lut_sky130_fd_sc_hd__inv_1
+A20 [net9] net31 d_lut_sky130_fd_sc_hd__inv_1
+A42 [raw_bit8 Vcmp] net55 d_lut_sky130_fd_sc_hd__xor2_1
+A62 [raw_bit8 Vcmp] net56 d_lut_sky130_fd_sc_hd__xor2_1
+A64 [raw_bit8 Vcmp] net57 d_lut_sky130_fd_sc_hd__xor2_1
+A65 [Vcmp] net37 d_lut_sky130_fd_sc_hd__inv_1
+A66 [Vcmp] net38 d_lut_sky130_fd_sc_hd__inv_1
+A67 Vcmp cycle8 NULL ~net44 NULL NULL ddflop
+A68 net37 cycle8 NULL ~net44 NULL NULL ddflop
+A69 Vcmp cycle8 NULL ~net45 NULL NULL ddflop
+A70 net38 cycle8 NULL ~net45 NULL NULL ddflop
+A71 Vcmp cycle8 NULL ~net46 NULL NULL ddflop
+A72 net39 cycle8 NULL ~net46 NULL NULL ddflop
+A73 [Vcmp] net39 d_lut_sky130_fd_sc_hd__inv_1
+A74 net40 net32 ~RESET NULL NULL NULL ddflop
+A75 Vcmp net32 ~RESET NULL NULL NULL ddflop
+A76 [Vcmp] net40 d_lut_sky130_fd_sc_hd__inv_1
+A77 Vcmp net33 ~RESET NULL NULL NULL ddflop
+A78 net41 net33 ~RESET NULL NULL NULL ddflop
+A79 [Vcmp] net41 d_lut_sky130_fd_sc_hd__inv_1
+A80 Vcmp net34 ~RESET NULL NULL NULL ddflop
+A81 net42 net34 ~RESET NULL NULL NULL ddflop
+A82 [Vcmp] net42 d_lut_sky130_fd_sc_hd__inv_1
+A88 [net43] net47 d_lut_sky130_fd_sc_hd__inv_1
+A89 [net35] net48 d_lut_sky130_fd_sc_hd__inv_1
+A90 [net36] net49 d_lut_sky130_fd_sc_hd__inv_1
+A46 [net23 RESET] net22 d_lut_sky130_fd_sc_hd__and2_0
+A23 [net25 RESET] net24 d_lut_sky130_fd_sc_hd__and2_0
+A26 [net29 RESET] net26 d_lut_sky130_fd_sc_hd__and2_0
+A16 [net30 RESET] net27 d_lut_sky130_fd_sc_hd__and2_0
+A17 [net31 RESET] net28 d_lut_sky130_fd_sc_hd__and2_0
+A33 [net47 RESET] net44 d_lut_sky130_fd_sc_hd__and2_0
+A36 [net48 RESET] net45 d_lut_sky130_fd_sc_hd__and2_0
+A47 [net49 RESET] net46 d_lut_sky130_fd_sc_hd__and2_0
+**** begin user architecture code
+**** end user architecture code
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=10n fall_delay=10n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+AA2D1 [a_cycle13] [cycle13] todig_1v8
+AA2D2 [a_cycle12] [cycle12] todig_1v8
+AA2D3 [a_cycle11] [cycle11] todig_1v8
+AA2D4 [a_cycle10] [cycle10] todig_1v8
+AA2D5 [a_cycle9] [cycle9] todig_1v8
+AA2D6 [a_cycle8] [cycle8] todig_1v8
+AA2D7 [a_cycle7] [cycle7] todig_1v8
+AA2D8 [a_cycle6] [cycle6] todig_1v8
+AA2D9 [a_cycle5] [cycle5] todig_1v8
+AA2D10 [a_cycle4] [cycle4] todig_1v8
+AA2D11 [a_cycle3] [cycle3] todig_1v8
+AA2D12 [a_cycle2] [cycle2] todig_1v8
+AA2D13 [a_cycle1] [cycle1] todig_1v8
+AA2D14 [a_sw_n_sp9] [sw_n_sp9] todig_1v8
+AA2D15 [a_sw_n_sp8] [sw_n_sp8] todig_1v8
+AA2D16 [a_sw_n_sp7] [sw_n_sp7] todig_1v8
+AA2D17 [a_sw_n_sp6] [sw_n_sp6] todig_1v8
+AA2D18 [a_sw_n_sp5] [sw_n_sp5] todig_1v8
+AA2D19 [a_sw_n_sp4] [sw_n_sp4] todig_1v8
+AA2D20 [a_sw_n_sp3] [sw_n_sp3] todig_1v8
+AA2D21 [a_sw_n_sp2] [sw_n_sp2] todig_1v8
+AA2D22 [a_sw_n_sp1] [sw_n_sp1] todig_1v8
+AA2D23 [a_VSS] [VSS] todig_1v8
+AA2D24 [a_VDD] [VDD] todig_1v8
+AA2D25 [a_sw_n8] [sw_n8] todig_1v8
+AA2D26 [a_sw_n7] [sw_n7] todig_1v8
+AA2D27 [a_sw_n6] [sw_n6] todig_1v8
+AA2D28 [a_sw_n5] [sw_n5] todig_1v8
+AA2D29 [a_sw_n4] [sw_n4] todig_1v8
+AA2D30 [a_sw_n3] [sw_n3] todig_1v8
+AA2D31 [a_sw_n2] [sw_n2] todig_1v8
+AA2D32 [a_sw_n1] [sw_n1] todig_1v8
+AA2D33 [a_sw_p_sp9] [sw_p_sp9] todig_1v8
+AA2D34 [a_sw_p_sp8] [sw_p_sp8] todig_1v8
+AA2D35 [a_sw_p_sp7] [sw_p_sp7] todig_1v8
+AA2D36 [a_sw_p_sp6] [sw_p_sp6] todig_1v8
+AA2D37 [a_sw_p_sp5] [sw_p_sp5] todig_1v8
+AA2D38 [a_sw_p_sp4] [sw_p_sp4] todig_1v8
+AA2D39 [a_sw_p_sp3] [sw_p_sp3] todig_1v8
+AA2D40 [a_sw_p_sp2] [sw_p_sp2] todig_1v8
+AA2D41 [a_sw_p_sp1] [sw_p_sp1] todig_1v8
+AA2D42 [a_sw_p8] [sw_p8] todig_1v8
+AA2D43 [a_sw_p7] [sw_p7] todig_1v8
+AA2D44 [a_sw_p6] [sw_p6] todig_1v8
+AA2D45 [a_sw_p5] [sw_p5] todig_1v8
+AA2D46 [a_sw_p4] [sw_p4] todig_1v8
+AA2D47 [a_sw_p3] [sw_p3] todig_1v8
+AA2D48 [a_sw_p2] [sw_p2] todig_1v8
+AA2D49 [a_sw_p1] [sw_p1] todig_1v8
+AA2D50 [a_Vcmp] [Vcmp] todig_1v8
+AA2D51 [a_RESET] [RESET] todig_1v8
+AA2D52 [a_raw_bit13] [raw_bit13] todig_1v8
+AA2D53 [a_raw_bit12] [raw_bit12] todig_1v8
+AA2D54 [a_raw_bit11] [raw_bit11] todig_1v8
+AA2D55 [a_raw_bit10] [raw_bit10] todig_1v8
+AA2D56 [a_raw_bit9] [raw_bit9] todig_1v8
+AA2D57 [a_raw_bit8] [raw_bit8] todig_1v8
+AA2D58 [a_raw_bit7] [raw_bit7] todig_1v8
+AA2D59 [a_raw_bit6] [raw_bit6] todig_1v8
+AA2D60 [a_raw_bit5] [raw_bit5] todig_1v8
+AA2D61 [a_raw_bit4] [raw_bit4] todig_1v8
+AA2D62 [a_raw_bit3] [raw_bit3] todig_1v8
+AA2D63 [a_raw_bit2] [raw_bit2] todig_1v8
+AA2D64 [a_raw_bit1] [raw_bit1] todig_1v8
+
+.ends
+
+* expanding   symbol:  src/demux2/demux2.sym # of pins=6
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sch
+.subckt demux2  S VDD VSS OUT_0 IN OUT_1
+*.PININFO S:I OUT_0:O IN:I OUT_1:O VDD:B VSS:B
+x1 net1 IN VSS VSS VDD VDD OUT_0 sky130_fd_sc_hd__and2_0
+x2 S IN VSS VSS VDD VDD OUT_1 sky130_fd_sc_hd__and2_0
+x3 S VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_1
+.ends
+
+
+* sky130_fd_sc_hd__xor2_1 (A&!B) | (!A&B)
+.model d_lut_sky130_fd_sc_hd__xor2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0110")
+* sky130_fd_sc_hd__dfrtp_1 IQ
+* sky130_fd_sc_hd__inv_1 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__dfstp_1 IQ
+* sky130_fd_sc_hd__dfrtp_4 IQ
+* sky130_fd_sc_hd__and2_0 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+.end

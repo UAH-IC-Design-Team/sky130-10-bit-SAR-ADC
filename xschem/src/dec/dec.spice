@@ -1,0 +1,26 @@
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sch
+.subckt dec VDD bit10 bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1 VSS reset_b dump_bus done
++ raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6 raw_bit5 raw_bit4 raw_bit3
++ raw_bit2 raw_bit1
+*.PININFO VDD:B bit[10..1]:O VSS:B reset_b:I dump_bus:I done:O raw_bit[13..1]:I
+x62 raw_bit2 raw_bit1 net1 VSS VSS VDD VDD net16 net2 sky130_fd_sc_hd__fa_1
+x64 raw_bit3 raw_bit1 net4 VSS VSS VDD VDD net1 net3 sky130_fd_sc_hd__fa_1
+x67 dump_bus net2 reset_b VSS VSS VDD VDD bit2 sky130_fd_sc_hd__dfrtp_1
+x68 dump_bus net3 reset_b VSS VSS VDD VDD bit3 sky130_fd_sc_hd__dfrtp_1
+x65 raw_bit5 raw_bit4 net5 VSS VSS VDD VDD net4 net6 sky130_fd_sc_hd__fa_1
+x69 raw_bit6 raw_bit4 net8 VSS VSS VDD VDD net5 net7 sky130_fd_sc_hd__fa_1
+x70 dump_bus net6 reset_b VSS VSS VDD VDD bit4 sky130_fd_sc_hd__dfrtp_1
+x71 dump_bus net7 reset_b VSS VSS VDD VDD bit5 sky130_fd_sc_hd__dfrtp_1
+x72 raw_bit7 raw_bit4 net9 VSS VSS VDD VDD net8 net10 sky130_fd_sc_hd__fa_1
+x73 raw_bit9 raw_bit8 net12 VSS VSS VDD VDD net9 net11 sky130_fd_sc_hd__fa_1
+x74 dump_bus net10 reset_b VSS VSS VDD VDD bit6 sky130_fd_sc_hd__dfrtp_1
+x75 dump_bus net11 reset_b VSS VSS VDD VDD bit7 sky130_fd_sc_hd__dfrtp_1
+x76 raw_bit10 raw_bit8 net13 VSS VSS VDD VDD net12 net14 sky130_fd_sc_hd__fa_1
+x77 raw_bit11 raw_bit8 raw_bit12 VSS VSS VDD VDD net13 net15 sky130_fd_sc_hd__fa_1
+x78 dump_bus net14 reset_b VSS VSS VDD VDD bit8 sky130_fd_sc_hd__dfrtp_1
+x79 dump_bus net15 reset_b VSS VSS VDD VDD bit9 sky130_fd_sc_hd__dfrtp_1
+x80 dump_bus net16 reset_b VSS VSS VDD VDD bit1 sky130_fd_sc_hd__dfrtp_1
+x81 dump_bus raw_bit13 reset_b VSS VSS VDD VDD bit10 sky130_fd_sc_hd__dfrtp_1
+x82 dump_bus VSS VSS VDD VDD done sky130_fd_sc_hd__inv_1
+.ends
+.end

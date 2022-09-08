@@ -38,8 +38,6 @@ N 730 -400 760 -400 {
 lab=comp_out_n}
 N 730 -380 760 -380 {
 lab=comp_out_p}
-N 730 -440 760 -440 {
-lab=VDD}
 N 730 -420 760 -420 {
 lab=VSS}
 N 730 -240 760 -240 {
@@ -88,6 +86,7 @@ N 730 -280 760 -280 {
 lab=Vcomp_q}
 N 400 -220 430 -220 {
 lab=RESET}
+N 730 -440 760 -440 {}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/iopin.sym} 40 -320 0 0 {name=p4 lab=VDD

@@ -58,14 +58,14 @@ C {devices/lab_pin.sym} 760 -300 2 0 {name=l2 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 760 -280 2 0 {name=l3 sig_type=std_logic lab=cycle[31..0]
 }
 C {devices/noconn.sym} 750 -280 3 0 {name=l4}
-C {devices/vsource.sym} 380 -140 0 0 {name=V1 value="PULSE 0 1.8V 10us 1ns 1ns 5us 10us"
+C {devices/vsource.sym} 380 -140 0 0 {name=V1 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
 }
 C {devices/gnd.sym} 380 -90 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 380 -170 0 0 {name=l6 sig_type=std_logic lab=clk
 }
 C {devices/lab_pin.sym} 430 -320 0 0 {name=l7 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 860 -140 0 0 {name=V5 value="PULSE 1.8V 0 5us 1ns 1ns 5us 1s"
+C {devices/vsource.sym} 860 -140 0 0 {name=V5 value="PULSE 1.8V 0 5us 0.1ns 0.1ns 5us 1s"
 }
 C {devices/gnd.sym} 860 -90 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 860 -170 0 0 {name=l11 sig_type=std_logic lab=reset_b

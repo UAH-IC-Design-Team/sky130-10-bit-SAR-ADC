@@ -32,6 +32,22 @@ N 710 -110 710 -90 {
 lab=Vbias}
 N 700 -100 710 -100 {
 lab=Vbias}
+N 900 -240 910 -240 {
+lab=VSS}
+N 910 -260 910 -240 {
+lab=VSS}
+N 980 -240 990 -240 {
+lab=VSS}
+N 990 -260 990 -240 {
+lab=VSS}
+N 990 -350 1010 -350 {
+lab=Vout_p}
+N 990 -350 990 -320 {
+lab=Vout_p}
+N 910 -350 920 -350 {
+lab=Vout_n}
+N 910 -350 910 -320 {
+lab=Vout_n}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -53,7 +69,7 @@ plot Vout_p-Vout_n clk-4
 plot Vout_p Vout_n clk-4
 plot x1.net4-x1.net3
 plot x1.net9-x1.net8
-write bootstrapped_sampling_switch_test.raw
+write bootstrapped_sampling_switch_load_test.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -73,20 +89,18 @@ C {devices/lab_pin.sym} 720 -380 2 0 {name=l1 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 720 -360 2 0 {name=l2 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} 430 -140 0 0 {name=V1 value="PULSE 0 1.8V 0 1ns 1ns 5us 10us"
+C {devices/vsource.sym} 430 -140 0 0 {name=V1 value="PULSE 1.8V 0 0 1ns 1ns 5us 10s"
 }
 C {devices/gnd.sym} 430 -90 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 430 -170 0 0 {name=l4 sig_type=std_logic lab=Clk
 }
-C {devices/vsource.sym} 710 -140 0 0 {name=V2 value="PULSE -0.9V 0.9V 0 100us 1ns 5us 200us"
+C {devices/vsource.sym} 710 -140 0 0 {name=V2 value="PULSE -0.9V 0.9V 10us 100us 1ns 5us 200us"
 }
 C {devices/lab_pin.sym} 710 -170 0 0 {name=l6 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 390 -380 0 0 {name=l7 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 390 -360 0 0 {name=l8 sig_type=std_logic lab=Vin_n
-}
-C {devices/lab_pin.sym} 390 -340 0 0 {name=l9 sig_type=std_logic lab=Clk
 }
 C {devices/lab_pin.sym} 720 -340 2 0 {name=l10 sig_type=std_logic lab=Vout_p
 }
@@ -99,9 +113,33 @@ C {devices/vsource.sym} 240 -280 0 0 {name=V5 value="0.9V"
 C {devices/gnd.sym} 240 -230 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} 240 -310 0 0 {name=l20 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 710 -60 0 0 {name=V6 value="PULSE -0.9V 0.9V 0 100us 1ns 5us 200us"
+C {devices/vsource.sym} 710 -60 0 0 {name=V6 value="PULSE -0.9V 0.9V 10us 100us 1ns 5us 200us"
 }
 C {devices/lab_pin.sym} 710 -30 0 0 {name=l22 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 700 -100 0 0 {name=l5 sig_type=std_logic lab=Vbias
+}
+C {devices/res.sym} 910 -290 0 0 {name=R1
+value=100k
+footprint=1206
+device=resistor
+m=1
+}
+C {devices/res.sym} 990 -290 0 0 {name=R2
+value=100k
+footprint=1206
+device=resistor
+m=1
+}
+C {devices/lab_pin.sym} 900 -240 0 0 {name=l21 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 980 -240 0 0 {name=l23 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 1010 -350 2 0 {name=l24 sig_type=std_logic lab=Vout_p
+}
+C {devices/lab_pin.sym} 920 -350 2 0 {name=l25 sig_type=std_logic lab=Vout_n
+}
+C {devices/lab_pin.sym} 50 -310 0 0 {name=l9 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 390 -340 0 0 {name=l26 sig_type=std_logic lab=Clk
 }

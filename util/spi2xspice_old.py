@@ -241,6 +241,13 @@ def read_spice(filein, fileout, celldefs, debug, modelfile, timing):
     subcount = 0
     subfound = False
     for line in spilines:
+        # Check for a include file and read it.
+        # May need to do something about skipsub.
+        imatch = increx.match(line)
+        if imatch:
+            print("Include file found!")
+            read_spice_lib(imatch.group(1), celldefs, debug)
+            continue
         cmatch = comrex.match(line)
         if cmatch:
             continue
@@ -277,7 +284,8 @@ def read_spice(filein, fileout, celldefs, debug, modelfile, timing):
             # library cells from that include file.
             imatch = increx.match(line) if not skipsub else []
             if imatch:
-                read_spice_lib(imatch.group(1), celldefs, debug) 
+                # Don't bother doing anything...read in includes earlier.
+                # read_spice_lib(imatch.group(1), celldefs, debug) 
                 continue
 
             xmatch = xrex.match(line) if not skipsub else []
@@ -415,8 +423,6 @@ def read_spice(filein, fileout, celldefs, debug, modelfile, timing):
                             if 'funcpos' in cellrec:
                                 if cellrec['funcpos'] == function:
                                     dq = pins[i]
-                        elif debug:
-                            print('Pin ' + subpin + ' not in pin list of ' + instname)
 
                     print('A' + instname + ' ' + ddata + ' ' + dclk + ' ' + dset + ' ' + dreset + ' ' + dq + ' ' + dqbar + ' ddflop', file=ofile)
 
@@ -607,7 +613,6 @@ def read_spice(filein, fileout, celldefs, debug, modelfile, timing):
 
                         # Write d_dff, d_dlatch, d_pullup, and d_pulldown models
                         print(".model ddflop d_dff(ic=0 rise_delay=" + time + " fall_delay=" + time + ")", file=ofile)
-                        print(".model dlatch d_dlatch(ic=0 rise_delay=" + time + " fall_delay=" + time + ")", file=ofile)
                         print(".model dzero d_pulldown(load=" + cload + ")", file=ofile)
                         print(".model done d_pullup(load=" + cload + ")", file=ofile)
                         print("", file=ofile)
@@ -758,7 +763,7 @@ def read_liberty(filein, debug):
                 
             pmatch = pinrex.match(line)
             if pmatch:
-                pinname = pmatch.group(1).strip('"')
+                pinname = pmatch.group(1)
                 if debug:
                     print("Found input pin " + pinname)
                 cellrec['inputs'].append(pinname)
@@ -767,7 +772,7 @@ def read_liberty(filein, debug):
 
             bmatch = busrex.match(line)
             if bmatch:
-                pinname = bmatch.group(1).strip('"')
+                pinname = bmatch.group(1)
                 if debug:
                     print("Found input bus " + pinname)
                 cellrec['inputs'].append(pinname)
@@ -779,8 +784,8 @@ def read_liberty(filein, debug):
                 if debug:
                     print("Found latch");
                 cellrec['type'] = 'latch'
-                cellrec['funcpos'] = lmatch.group(1).strip('"')
-                cellrec['funcneg'] = lmatch.group(2).strip('"')
+                cellrec['funcpos'] = lmatch.group(1)
+                cellrec['funcneg'] = lmatch.group(2)
                 continue
 
             lmatch = lat2rex.match(line)
@@ -788,7 +793,7 @@ def read_liberty(filein, debug):
                 if debug:
                     print("Found latch");
                 cellrec['type'] = 'latch'
-                cellrec['funcpos'] = lmatch.group(1).strip('"')
+                cellrec['funcpos'] = lmatch.group(1)
                 continue
 
             rmatch = ff2rex.match(line)
@@ -796,17 +801,17 @@ def read_liberty(filein, debug):
                 if debug:
                     print("Found flop");
                 cellrec['type'] = 'flop'
-                cellrec['funcpos'] = rmatch.group(1).strip('"')
-                cellrec['funcneg'] = rmatch.group(2).strip('"')
+                cellrec['funcpos'] = rmatch.group(1)
+                cellrec['funcneg'] = rmatch.group(2)
                 continue
-            else:
-                rmatch = ff1rex.match(line)
-                if rmatch:
-                    if debug:
-                        print("Found flop");
-                    cellrec['type'] = 'flop'
-                    cellrec['funcpos'] = rmatch.group(1).strip('"')
-                    continue
+
+            rmatch = ff1rex.match(line)
+            if rmatch:
+                if debug:
+                    print("Found flop");
+                cellrec['type'] = 'flop'
+                cellrec['funcpos'] = rmatch.group(1)
+                continue
 
             fmatch = funcrex.match(line)
             if fmatch:
