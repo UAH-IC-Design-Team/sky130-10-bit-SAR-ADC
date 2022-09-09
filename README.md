@@ -4,7 +4,7 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 # Status
 | Component | Status | TODO |
 | :--- | :--- | :--- | 
-| sar_adc | inprogress | dependant on everything else. Reset??? |
+| sar_adc | inprogress | dependant on everything else.  |
 | bootstrapped_sampling_switch | functional | w/l need to be tuned |
 | capacitor_array | functional | unit capacitor has not been chosen |
 | capacitor_switch | functional | w/l need to be tuned |
@@ -13,9 +13,9 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 | dac | functional | dependent on the capacitor_array and capacitor_switch |
 | dec | complete | 😁 |
 | demux2 | complete | 😁 |
-| pulse_generator | complete | 😁 |
 | raw_bit_calculator | functional | needs verification with full design timing |
-| shifted_clock_generator | complete | 😁 |
+| shifted_clock_generator | functional | needs clock tree |
+| xor_clock_gen | functional | needs prop delay to be tuned a little |
 
 ### Lexicon
 - **complete:** fully functional and optimized.
@@ -47,4 +47,5 @@ To view the Klayout DRC errors, open gds file with the sky130 layer property fil
 ### Get all the devices used
 Use the `get_devices_used` Makefile target to see all of the devices used in the design.
 
-
+### Xspice
+Xspice simulations are not currently functional. Some work neeeds to be done on modifying a flattened schematic netlist and there are odities with Q and dflops. 

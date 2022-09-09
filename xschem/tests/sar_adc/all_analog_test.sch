@@ -63,8 +63,6 @@ N 800 -450 830 -450 {
 lab=VDD}
 N 470 -450 500 -450 {
 lab=Vsampled_p}
-N 1010 -80 1010 -60 {
-lab=GND}
 N 800 -650 830 -650 {
 lab=Vsampled_p}
 N 800 -630 830 -630 {
@@ -81,29 +79,29 @@ N 470 -650 500 -650 {
 lab=sw_n[8..1]}
 N 470 -630 500 -630 {
 lab=sw_p[8..1]}
-N 480 -920 510 -920 {
+N 470 -910 500 -910 {
 lab=Controller_clk}
-N 810 -920 840 -920 {
+N 800 -910 830 -910 {
 lab=VDD}
-N 810 -900 840 -900 {
+N 800 -890 830 -890 {
 lab=VSS}
-N 480 -880 510 -880 {
+N 470 -870 500 -870 {
 lab=Vcomp_q}
-N 810 -800 840 -800 {
+N 800 -790 830 -790 {
 lab=bits[10..1]}
-N 810 -760 840 -760 {
+N 800 -750 830 -750 {
 lab=sw_sample}
-N 810 -780 840 -780 {
+N 800 -770 830 -770 {
 lab=Done}
-N 810 -880 840 -880 {
+N 800 -870 830 -870 {
 lab=sw_n_sp[9..1]}
-N 810 -860 840 -860 {
+N 800 -850 830 -850 {
 lab=sw_n[8..1]}
-N 810 -840 840 -840 {
+N 800 -830 830 -830 {
 lab=sw_p_sp[9..1]}
-N 810 -820 840 -820 {
+N 800 -810 830 -810 {
 lab=sw_p[8..1]}
-N 480 -900 510 -900 {
+N 470 -890 500 -890 {
 lab=reset_b}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -116,6 +114,8 @@ C {devices/code.sym} 150 -160 0 0 {name=SPICE
 only_toplevel=true
 value=".options acct list
 .temp 25
+
+.ic v(Vsampled_p)=0.9V v(Vsampled_n)=0.9V
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 
@@ -254,11 +254,6 @@ C {devices/lab_pin.sym} 830 -290 2 0 {name=l52 sig_type=std_logic lab=Vcomp_q
 }
 C {devices/lab_pin.sym} 470 -290 0 0 {name=l3 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 1010 -110 0 0 {name=V8 value="PULSE 1.8V 0 10us 0.1ns 0.1ns 5us 1s"
-}
-C {devices/gnd.sym} 1010 -60 0 0 {name=l4 lab=GND}
-C {devices/lab_pin.sym} 1010 -140 0 0 {name=l7 sig_type=std_logic lab=sw_sample
-}
 C {src/dac/dac.sym} 650 -660 0 0 {name=x3}
 C {devices/lab_pin.sym} 830 -650 2 0 {name=l9 sig_type=std_logic lab=Vsampled_p
 }
@@ -276,28 +271,28 @@ C {devices/lab_pin.sym} 470 -650 2 1 {name=l30 sig_type=std_logic lab=sw_n[8..1]
 }
 C {devices/lab_pin.sym} 470 -630 2 1 {name=l31 sig_type=std_logic lab=sw_p[8..1]
 }
-C {src/controller/controller.sym} 660 -840 0 0 {name=x1}
-C {devices/lab_pin.sym} 480 -920 0 0 {name=l32 sig_type=std_logic lab=Controller_clk
+C {src/controller/controller.sym} 650 -830 0 0 {name=x1}
+C {devices/lab_pin.sym} 470 -910 0 0 {name=l32 sig_type=std_logic lab=Controller_clk
 }
-C {devices/lab_pin.sym} 840 -920 2 0 {name=l41 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 830 -910 2 0 {name=l41 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 840 -900 2 0 {name=l42 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 830 -890 2 0 {name=l42 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 480 -880 0 0 {name=l43 sig_type=std_logic lab=Vcomp_q
+C {devices/lab_pin.sym} 470 -870 0 0 {name=l43 sig_type=std_logic lab=Vcomp_q
 }
-C {devices/lab_pin.sym} 840 -800 2 0 {name=l44 sig_type=std_logic lab=bits[10..1]
+C {devices/lab_pin.sym} 830 -790 2 0 {name=l44 sig_type=std_logic lab=bits[10..1]
 }
-C {devices/lab_pin.sym} 840 -760 2 0 {name=l50 sig_type=std_logic lab=sw_sample
+C {devices/lab_pin.sym} 830 -750 2 0 {name=l50 sig_type=std_logic lab=sw_sample
 }
-C {devices/lab_pin.sym} 840 -780 2 0 {name=l53 sig_type=std_logic lab=Done
+C {devices/lab_pin.sym} 830 -770 2 0 {name=l53 sig_type=std_logic lab=Done
 }
-C {devices/lab_pin.sym} 840 -880 2 0 {name=l54 sig_type=std_logic lab=sw_n_sp[9..1]
+C {devices/lab_pin.sym} 830 -870 2 0 {name=l54 sig_type=std_logic lab=sw_n_sp[9..1]
 }
-C {devices/lab_pin.sym} 840 -840 2 0 {name=l55 sig_type=std_logic lab=sw_p_sp[9..1]
+C {devices/lab_pin.sym} 830 -830 2 0 {name=l55 sig_type=std_logic lab=sw_p_sp[9..1]
 }
-C {devices/lab_pin.sym} 840 -860 2 0 {name=l56 sig_type=std_logic lab=sw_n[8..1]
+C {devices/lab_pin.sym} 830 -850 2 0 {name=l56 sig_type=std_logic lab=sw_n[8..1]
 }
-C {devices/lab_pin.sym} 840 -820 2 0 {name=l57 sig_type=std_logic lab=sw_p[8..1]
+C {devices/lab_pin.sym} 830 -810 2 0 {name=l57 sig_type=std_logic lab=sw_p[8..1]
 }
-C {devices/lab_pin.sym} 480 -900 0 0 {name=l58 sig_type=std_logic lab=reset_b
+C {devices/lab_pin.sym} 470 -890 0 0 {name=l58 sig_type=std_logic lab=reset_b
 }

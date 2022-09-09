@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-T {This reset is active LOW!!!} 650 -170 0 0 0.4 0.4 {}
+T {This reset is active LOW!!!} 650 -190 0 0 0.4 0.4 {}
 N 50 -250 50 -230 {
 lab=GND}
 N 150 -250 150 -230 {
@@ -25,9 +25,9 @@ N 380 -320 400 -320 {
 lab=Vin_n}
 N 380 -380 400 -380 {
 lab=reset_b}
-N 450 -80 450 -60 {
+N 450 -100 450 -80 {
 lab=GND}
-N 720 -80 720 -60 {
+N 720 -100 720 -80 {
 lab=GND}
 N 250 -250 250 -230 {
 lab=GND}
@@ -48,6 +48,7 @@ value=".options acct list
 .temp 25
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
+.ic v(x1.vsampled_p)=0.9V v(x1.vsampled_n)=0.9V
 .control
 tran 0.05u 400u
 *plot RST_PLS clk+2 Pulse+4
@@ -89,15 +90,15 @@ C {devices/lab_pin.sym} 380 -320 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 380 -380 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 450 -110 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
+C {devices/vsource.sym} 450 -130 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
 }
-C {devices/gnd.sym} 450 -60 0 0 {name=l18 lab=GND}
-C {devices/lab_pin.sym} 450 -140 0 0 {name=l19 sig_type=std_logic lab=clk
+C {devices/gnd.sym} 450 -80 0 0 {name=l18 lab=GND}
+C {devices/lab_pin.sym} 450 -160 0 0 {name=l19 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 720 -110 0 0 {name=V6 value="PULSE 1.8V 0 5us 0.1ns 0.1ns 5us 1s"
+C {devices/vsource.sym} 720 -130 0 0 {name=V6 value="PULSE 1.8V 0 5us 0.1ns 0.1ns 5us 1s"
 }
-C {devices/gnd.sym} 720 -60 0 0 {name=l20 lab=GND}
-C {devices/lab_pin.sym} 720 -140 0 0 {name=l21 sig_type=std_logic lab=reset_b
+C {devices/gnd.sym} 720 -80 0 0 {name=l20 lab=GND}
+C {devices/lab_pin.sym} 720 -160 0 0 {name=l21 sig_type=std_logic lab=reset_b
 }
 C {devices/vsource.sym} 250 -280 0 0 {name=V1 value="0.9V"
 }

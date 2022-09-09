@@ -34,13 +34,16 @@ T {Notes on Timing:
 32 | Total 
 
 } 1040 -1240 0 0 0.4 0.4 {}
-T {AND the reset pin here?} 530 -370 0 0 0.4 0.4 {}
+T {AND the reset pin here?} 500 -290 0 0 0.4 0.4 {}
 N 1570 -370 1610 -370 {
 lab=cycle1}
 N 1570 -330 1610 -330 {
 lab=cycle17}
 N 1730 -350 1750 -350 {
 lab=sw_sample}
+N 590 -390 610 -390 {}
+N 590 -430 610 -430 {}
+N 730 -410 820 -410 {}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
 C {devices/lab_pin.sym} 1750 -350 2 0 {name=l217 sig_type=std_logic lab=sw_sample
 }
@@ -74,7 +77,7 @@ C {devices/lab_pin.sym} 1120 -220 2 0 {name=l16 sig_type=std_logic lab=cycle[31.
 }
 C {devices/lab_pin.sym} 820 -450 0 0 {name=l17 sig_type=std_logic lab=cycle[30..18]
 }
-C {devices/lab_pin.sym} 820 -410 0 0 {name=l18 sig_type=std_logic lab=cycle0
+C {devices/lab_pin.sym} 590 -430 0 0 {name=l18 sig_type=std_logic lab=cycle0
 }
 C {devices/lab_pin.sym} 820 -550 0 0 {name=l19 sig_type=std_logic lab=cycle31
 }
@@ -120,4 +123,8 @@ C {devices/lab_pin.sym} 820 -430 0 0 {name=l45 sig_type=std_logic lab=Vcmp
 C {devices/lab_pin.sym} 1570 -330 0 0 {name=l5 sig_type=std_logic lab=cycle17
 }
 C {sky130_stdcells/xor2_4.sym} 1670 -350 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/and2_1.sym} 670 -410 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {devices/lab_pin.sym} 590 -390 0 0 {name=l9 sig_type=std_logic lab=reset
 }
