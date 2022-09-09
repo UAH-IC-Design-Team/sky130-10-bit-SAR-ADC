@@ -1,0 +1,1164 @@
+* XSpice library created from liberty sources by spi2xspice.py
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=10n fall_delay=10n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+* sky130_fd_sc_hd__a2111o_1 (A1&A2) | (B1) | (C1) | (D1)
+.model d_lut_sky130_fd_sc_hd__a2111o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00011111111111111111111111111111")
+* sky130_fd_sc_hd__a2111o_2 (A1&A2) | (B1) | (C1) | (D1)
+.model d_lut_sky130_fd_sc_hd__a2111o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00011111111111111111111111111111")
+* sky130_fd_sc_hd__a2111o_4 (A1&A2) | (B1) | (C1) | (D1)
+.model d_lut_sky130_fd_sc_hd__a2111o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00011111111111111111111111111111")
+* sky130_fd_sc_hd__a2111oi_0 (!A1&!B1&!C1&!D1) | (!A2&!B1&!C1&!D1)
+.model d_lut_sky130_fd_sc_hd__a2111oi_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000000000000000000000000000")
+* sky130_fd_sc_hd__a2111oi_1 (!A1&!B1&!C1&!D1) | (!A2&!B1&!C1&!D1)
+.model d_lut_sky130_fd_sc_hd__a2111oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000000000000000000000000000")
+* sky130_fd_sc_hd__a2111oi_2 (!A1&!B1&!C1&!D1) | (!A2&!B1&!C1&!D1)
+.model d_lut_sky130_fd_sc_hd__a2111oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000000000000000000000000000")
+* sky130_fd_sc_hd__a2111oi_4 (!A1&!B1&!C1&!D1) | (!A2&!B1&!C1&!D1)
+.model d_lut_sky130_fd_sc_hd__a2111oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000000000000000000000000000")
+* sky130_fd_sc_hd__a211o_1 (A1&A2) | (B1) | (C1)
+.model d_lut_sky130_fd_sc_hd__a211o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001111111111111")
+* sky130_fd_sc_hd__a211o_2 (A1&A2) | (B1) | (C1)
+.model d_lut_sky130_fd_sc_hd__a211o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001111111111111")
+* sky130_fd_sc_hd__a211o_4 (A1&A2) | (B1) | (C1)
+.model d_lut_sky130_fd_sc_hd__a211o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001111111111111")
+* sky130_fd_sc_hd__a211oi_1 (!A1&!B1&!C1) | (!A2&!B1&!C1)
+.model d_lut_sky130_fd_sc_hd__a211oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110000000000000")
+* sky130_fd_sc_hd__a211oi_2 (!A1&!B1&!C1) | (!A2&!B1&!C1)
+.model d_lut_sky130_fd_sc_hd__a211oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110000000000000")
+* sky130_fd_sc_hd__a211oi_4 (!A1&!B1&!C1) | (!A2&!B1&!C1)
+.model d_lut_sky130_fd_sc_hd__a211oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110000000000000")
+* sky130_fd_sc_hd__a21bo_1 (A1&A2) | (!B1_N)
+.model d_lut_sky130_fd_sc_hd__a21bo_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11110001")
+* sky130_fd_sc_hd__a21bo_2 (A1&A2) | (!B1_N)
+.model d_lut_sky130_fd_sc_hd__a21bo_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11110001")
+* sky130_fd_sc_hd__a21bo_4 (A1&A2) | (!B1_N)
+.model d_lut_sky130_fd_sc_hd__a21bo_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11110001")
+* sky130_fd_sc_hd__a21boi_0 (!A1&B1_N) | (!A2&B1_N)
+.model d_lut_sky130_fd_sc_hd__a21boi_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00001110")
+* sky130_fd_sc_hd__a21boi_1 (!A1&B1_N) | (!A2&B1_N)
+.model d_lut_sky130_fd_sc_hd__a21boi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00001110")
+* sky130_fd_sc_hd__a21boi_2 (!A1&B1_N) | (!A2&B1_N)
+.model d_lut_sky130_fd_sc_hd__a21boi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00001110")
+* sky130_fd_sc_hd__a21boi_4 (!A1&B1_N) | (!A2&B1_N)
+.model d_lut_sky130_fd_sc_hd__a21boi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00001110")
+* sky130_fd_sc_hd__a21o_1 (A1&A2) | (B1)
+.model d_lut_sky130_fd_sc_hd__a21o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00011111")
+* sky130_fd_sc_hd__a21o_2 (A1&A2) | (B1)
+.model d_lut_sky130_fd_sc_hd__a21o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00011111")
+* sky130_fd_sc_hd__a21o_4 (A1&A2) | (B1)
+.model d_lut_sky130_fd_sc_hd__a21o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00011111")
+* sky130_fd_sc_hd__a21oi_1 (!A1&!B1) | (!A2&!B1)
+.model d_lut_sky130_fd_sc_hd__a21oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000")
+* sky130_fd_sc_hd__a21oi_2 (!A1&!B1) | (!A2&!B1)
+.model d_lut_sky130_fd_sc_hd__a21oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000")
+* sky130_fd_sc_hd__a21oi_4 (!A1&!B1) | (!A2&!B1)
+.model d_lut_sky130_fd_sc_hd__a21oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11100000")
+* sky130_fd_sc_hd__a221o_1 (B1&B2) | (A1&A2) | (C1)
+.model d_lut_sky130_fd_sc_hd__a221o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00010001000111111111111111111111")
+* sky130_fd_sc_hd__a221o_2 (B1&B2) | (A1&A2) | (C1)
+.model d_lut_sky130_fd_sc_hd__a221o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00010001000111111111111111111111")
+* sky130_fd_sc_hd__a221o_4 (B1&B2) | (A1&A2) | (C1)
+.model d_lut_sky130_fd_sc_hd__a221o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00010001000111111111111111111111")
+* sky130_fd_sc_hd__a221oi_1 (!A1&!B1&!C1) | (!A1&!B2&!C1) | (!A2&!B1&!C1) | (!A2&!B2&!C1)
+.model d_lut_sky130_fd_sc_hd__a221oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11101110111000000000000000000000")
+* sky130_fd_sc_hd__a221oi_2 (!A1&!B1&!C1) | (!A1&!B2&!C1) | (!A2&!B1&!C1) | (!A2&!B2&!C1)
+.model d_lut_sky130_fd_sc_hd__a221oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11101110111000000000000000000000")
+* sky130_fd_sc_hd__a221oi_4 (!A1&!B1&!C1) | (!A1&!B2&!C1) | (!A2&!B1&!C1) | (!A2&!B2&!C1)
+.model d_lut_sky130_fd_sc_hd__a221oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11101110111000000000000000000000")
+* sky130_fd_sc_hd__a222oi_1 (!A1&!B1&!C1) | (!A1&!B1&!C2) | (!A1&!B2&!C1) | (!A2&!B1&!C1) | (!A1&!B2&!C2) | (!A2&!B1&!C2) | (!A2&!B2&!C1) | (!A2&!B2&!C2)
+.model d_lut_sky130_fd_sc_hd__a222oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110111011100000111011101110000011101110111000000000000000000000")
+* sky130_fd_sc_hd__a22o_1 (B1&B2) | (A1&A2)
+.model d_lut_sky130_fd_sc_hd__a22o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001000100011111")
+* sky130_fd_sc_hd__a22o_2 (B1&B2) | (A1&A2)
+.model d_lut_sky130_fd_sc_hd__a22o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001000100011111")
+* sky130_fd_sc_hd__a22o_4 (B1&B2) | (A1&A2)
+.model d_lut_sky130_fd_sc_hd__a22o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001000100011111")
+* sky130_fd_sc_hd__a22oi_1 (!A1&!B1) | (!A1&!B2) | (!A2&!B1) | (!A2&!B2)
+.model d_lut_sky130_fd_sc_hd__a22oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110111011100000")
+* sky130_fd_sc_hd__a22oi_2 (!A1&!B1) | (!A1&!B2) | (!A2&!B1) | (!A2&!B2)
+.model d_lut_sky130_fd_sc_hd__a22oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110111011100000")
+* sky130_fd_sc_hd__a22oi_4 (!A1&!B1) | (!A1&!B2) | (!A2&!B1) | (!A2&!B2)
+.model d_lut_sky130_fd_sc_hd__a22oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110111011100000")
+* sky130_fd_sc_hd__a2bb2o_1 (B1&B2) | (!A1_N&!A2_N)
+.model d_lut_sky130_fd_sc_hd__a2bb2o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000100010001111")
+* sky130_fd_sc_hd__a2bb2o_2 (B1&B2) | (!A1_N&!A2_N)
+.model d_lut_sky130_fd_sc_hd__a2bb2o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000100010001111")
+* sky130_fd_sc_hd__a2bb2o_4 (B1&B2) | (!A1_N&!A2_N)
+.model d_lut_sky130_fd_sc_hd__a2bb2o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000100010001111")
+* sky130_fd_sc_hd__a2bb2oi_1 (A1_N&!B1) | (A1_N&!B2) | (A2_N&!B1) | (A2_N&!B2)
+.model d_lut_sky130_fd_sc_hd__a2bb2oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111011101110000")
+* sky130_fd_sc_hd__a2bb2oi_2 (A1_N&!B1) | (A1_N&!B2) | (A2_N&!B1) | (A2_N&!B2)
+.model d_lut_sky130_fd_sc_hd__a2bb2oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111011101110000")
+* sky130_fd_sc_hd__a2bb2oi_4 (A1_N&!B1) | (A1_N&!B2) | (A2_N&!B1) | (A2_N&!B2)
+.model d_lut_sky130_fd_sc_hd__a2bb2oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111011101110000")
+* sky130_fd_sc_hd__a311o_1 (A1&A2&A3) | (B1) | (C1)
+.model d_lut_sky130_fd_sc_hd__a311o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001111111111111111111111111")
+* sky130_fd_sc_hd__a311o_2 (A1&A2&A3) | (B1) | (C1)
+.model d_lut_sky130_fd_sc_hd__a311o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001111111111111111111111111")
+* sky130_fd_sc_hd__a311o_4 (A1&A2&A3) | (B1) | (C1)
+.model d_lut_sky130_fd_sc_hd__a311o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001111111111111111111111111")
+* sky130_fd_sc_hd__a311oi_1 (!A1&!B1&!C1) | (!A2&!B1&!C1) | (!A3&!B1&!C1)
+.model d_lut_sky130_fd_sc_hd__a311oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110000000000000000000000000")
+* sky130_fd_sc_hd__a311oi_2 (!A1&!B1&!C1) | (!A2&!B1&!C1) | (!A3&!B1&!C1)
+.model d_lut_sky130_fd_sc_hd__a311oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110000000000000000000000000")
+* sky130_fd_sc_hd__a311oi_4 (!A1&!B1&!C1) | (!A2&!B1&!C1) | (!A3&!B1&!C1)
+.model d_lut_sky130_fd_sc_hd__a311oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110000000000000000000000000")
+* sky130_fd_sc_hd__a31o_1 (A1&A2&A3) | (B1)
+.model d_lut_sky130_fd_sc_hd__a31o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000111111111")
+* sky130_fd_sc_hd__a31o_2 (A1&A2&A3) | (B1)
+.model d_lut_sky130_fd_sc_hd__a31o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000111111111")
+* sky130_fd_sc_hd__a31o_4 (A1&A2&A3) | (B1)
+.model d_lut_sky130_fd_sc_hd__a31o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000111111111")
+* sky130_fd_sc_hd__a31oi_1 (!A1&!B1) | (!A2&!B1) | (!A3&!B1)
+.model d_lut_sky130_fd_sc_hd__a31oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111000000000")
+* sky130_fd_sc_hd__a31oi_2 (!A1&!B1) | (!A2&!B1) | (!A3&!B1)
+.model d_lut_sky130_fd_sc_hd__a31oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111000000000")
+* sky130_fd_sc_hd__a31oi_4 (!A1&!B1) | (!A2&!B1) | (!A3&!B1)
+.model d_lut_sky130_fd_sc_hd__a31oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111000000000")
+* sky130_fd_sc_hd__a32o_1 (A1&A2&A3) | (B1&B2)
+.model d_lut_sky130_fd_sc_hd__a32o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001000000010000000111111111")
+* sky130_fd_sc_hd__a32o_2 (A1&A2&A3) | (B1&B2)
+.model d_lut_sky130_fd_sc_hd__a32o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001000000010000000111111111")
+* sky130_fd_sc_hd__a32o_4 (A1&A2&A3) | (B1&B2)
+.model d_lut_sky130_fd_sc_hd__a32o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001000000010000000111111111")
+* sky130_fd_sc_hd__a32oi_1 (!A1&!B1) | (!A1&!B2) | (!A2&!B1) | (!A3&!B1) | (!A2&!B2) | (!A3&!B2)
+.model d_lut_sky130_fd_sc_hd__a32oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110111111101111111000000000")
+* sky130_fd_sc_hd__a32oi_2 (!A1&!B1) | (!A1&!B2) | (!A2&!B1) | (!A3&!B1) | (!A2&!B2) | (!A3&!B2)
+.model d_lut_sky130_fd_sc_hd__a32oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110111111101111111000000000")
+* sky130_fd_sc_hd__a32oi_4 (!A1&!B1) | (!A1&!B2) | (!A2&!B1) | (!A3&!B1) | (!A2&!B2) | (!A3&!B2)
+.model d_lut_sky130_fd_sc_hd__a32oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110111111101111111000000000")
+* sky130_fd_sc_hd__a41o_1 (A1&A2&A3&A4) | (B1)
+.model d_lut_sky130_fd_sc_hd__a41o_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000011111111111111111")
+* sky130_fd_sc_hd__a41o_2 (A1&A2&A3&A4) | (B1)
+.model d_lut_sky130_fd_sc_hd__a41o_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000011111111111111111")
+* sky130_fd_sc_hd__a41o_4 (A1&A2&A3&A4) | (B1)
+.model d_lut_sky130_fd_sc_hd__a41o_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000011111111111111111")
+* sky130_fd_sc_hd__a41oi_1 (!A1&!B1) | (!A2&!B1) | (!A3&!B1) | (!A4&!B1)
+.model d_lut_sky130_fd_sc_hd__a41oi_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111100000000000000000")
+* sky130_fd_sc_hd__a41oi_2 (!A1&!B1) | (!A2&!B1) | (!A3&!B1) | (!A4&!B1)
+.model d_lut_sky130_fd_sc_hd__a41oi_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111100000000000000000")
+* sky130_fd_sc_hd__a41oi_4 (!A1&!B1) | (!A2&!B1) | (!A3&!B1) | (!A4&!B1)
+.model d_lut_sky130_fd_sc_hd__a41oi_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111100000000000000000")
+* sky130_fd_sc_hd__and2_0 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__and2_1 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__and2_2 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__and2_4 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__and2b_1 (!A_N&B)
+.model d_lut_sky130_fd_sc_hd__and2b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0010")
+* sky130_fd_sc_hd__and2b_2 (!A_N&B)
+.model d_lut_sky130_fd_sc_hd__and2b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0010")
+* sky130_fd_sc_hd__and2b_4 (!A_N&B)
+.model d_lut_sky130_fd_sc_hd__and2b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0010")
+* sky130_fd_sc_hd__and3_1 (A&B&C)
+.model d_lut_sky130_fd_sc_hd__and3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001")
+* sky130_fd_sc_hd__and3_2 (A&B&C)
+.model d_lut_sky130_fd_sc_hd__and3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001")
+* sky130_fd_sc_hd__and3_4 (A&B&C)
+.model d_lut_sky130_fd_sc_hd__and3_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000001")
+* sky130_fd_sc_hd__and3b_1 (!A_N&B&C)
+.model d_lut_sky130_fd_sc_hd__and3b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000010")
+* sky130_fd_sc_hd__and3b_2 (!A_N&B&C)
+.model d_lut_sky130_fd_sc_hd__and3b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000010")
+* sky130_fd_sc_hd__and3b_4 (!A_N&B&C)
+.model d_lut_sky130_fd_sc_hd__and3b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000010")
+* sky130_fd_sc_hd__and4_1 (A&B&C&D)
+.model d_lut_sky130_fd_sc_hd__and4_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000001")
+* sky130_fd_sc_hd__and4_2 (A&B&C&D)
+.model d_lut_sky130_fd_sc_hd__and4_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000001")
+* sky130_fd_sc_hd__and4_4 (A&B&C&D)
+.model d_lut_sky130_fd_sc_hd__and4_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000001")
+* sky130_fd_sc_hd__and4b_1 (!A_N&B&C&D)
+.model d_lut_sky130_fd_sc_hd__and4b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000010")
+* sky130_fd_sc_hd__and4b_2 (!A_N&B&C&D)
+.model d_lut_sky130_fd_sc_hd__and4b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000010")
+* sky130_fd_sc_hd__and4b_4 (!A_N&B&C&D)
+.model d_lut_sky130_fd_sc_hd__and4b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000010")
+* sky130_fd_sc_hd__and4bb_1 (!A_N&!B_N&C&D)
+.model d_lut_sky130_fd_sc_hd__and4bb_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000001000")
+* sky130_fd_sc_hd__and4bb_2 (!A_N&!B_N&C&D)
+.model d_lut_sky130_fd_sc_hd__and4bb_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000001000")
+* sky130_fd_sc_hd__and4bb_4 (!A_N&!B_N&C&D)
+.model d_lut_sky130_fd_sc_hd__and4bb_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000001000")
+* sky130_fd_sc_hd__buf_1 (A)
+.model d_lut_sky130_fd_sc_hd__buf_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__buf_12 (A)
+.model d_lut_sky130_fd_sc_hd__buf_12 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__buf_16 (A)
+.model d_lut_sky130_fd_sc_hd__buf_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__buf_2 (A)
+.model d_lut_sky130_fd_sc_hd__buf_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__buf_4 (A)
+.model d_lut_sky130_fd_sc_hd__buf_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__buf_6 (A)
+.model d_lut_sky130_fd_sc_hd__buf_6 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__buf_8 (A)
+.model d_lut_sky130_fd_sc_hd__buf_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__bufbuf_16 (A)
+.model d_lut_sky130_fd_sc_hd__bufbuf_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__bufbuf_8 (A)
+.model d_lut_sky130_fd_sc_hd__bufbuf_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__bufinv_16 (!A)
+.model d_lut_sky130_fd_sc_hd__bufinv_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__bufinv_8 (!A)
+.model d_lut_sky130_fd_sc_hd__bufinv_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__clkbuf_1 (A)
+.model d_lut_sky130_fd_sc_hd__clkbuf_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkbuf_16 (A)
+.model d_lut_sky130_fd_sc_hd__clkbuf_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkbuf_2 (A)
+.model d_lut_sky130_fd_sc_hd__clkbuf_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkbuf_4 (A)
+.model d_lut_sky130_fd_sc_hd__clkbuf_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkbuf_8 (A)
+.model d_lut_sky130_fd_sc_hd__clkbuf_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s15_1 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s15_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s15_2 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s15_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s18_1 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s18_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s18_2 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s18_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s25_1 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s25_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s25_2 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s25_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s50_1 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s50_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkdlybuf4s50_2 (A)
+.model d_lut_sky130_fd_sc_hd__clkdlybuf4s50_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__clkinv_1 (!A)
+.model d_lut_sky130_fd_sc_hd__clkinv_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__clkinv_16 (!A)
+.model d_lut_sky130_fd_sc_hd__clkinv_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__clkinv_2 (!A)
+.model d_lut_sky130_fd_sc_hd__clkinv_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__clkinv_4 (!A)
+.model d_lut_sky130_fd_sc_hd__clkinv_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__clkinv_8 (!A)
+.model d_lut_sky130_fd_sc_hd__clkinv_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__clkinvlp_2 (!A)
+.model d_lut_sky130_fd_sc_hd__clkinvlp_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__clkinvlp_4 (!A)
+.model d_lut_sky130_fd_sc_hd__clkinvlp_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__conb_1 1
+* sky130_fd_sc_hd__decap_12 (no function)
+* sky130_fd_sc_hd__decap_3 (no function)
+* sky130_fd_sc_hd__decap_4 (no function)
+* sky130_fd_sc_hd__decap_6 (no function)
+* sky130_fd_sc_hd__decap_8 (no function)
+* sky130_fd_sc_hd__dfbbn_1 IQ
+* sky130_fd_sc_hd__dfbbn_2 IQ
+* sky130_fd_sc_hd__dfbbp_1 IQ
+* sky130_fd_sc_hd__dfrbp_1 IQ
+* sky130_fd_sc_hd__dfrbp_2 IQ
+* sky130_fd_sc_hd__dfrtn_1 IQ
+* sky130_fd_sc_hd__dfrtp_1 IQ
+* sky130_fd_sc_hd__dfrtp_2 IQ
+* sky130_fd_sc_hd__dfrtp_4 IQ
+* sky130_fd_sc_hd__dfsbp_1 IQ
+* sky130_fd_sc_hd__dfsbp_2 IQ
+* sky130_fd_sc_hd__dfstp_1 IQ
+* sky130_fd_sc_hd__dfstp_2 IQ
+* sky130_fd_sc_hd__dfstp_4 IQ
+* sky130_fd_sc_hd__dfxbp_1 IQ
+* sky130_fd_sc_hd__dfxbp_2 IQ
+* sky130_fd_sc_hd__dfxtp_1 IQ
+* sky130_fd_sc_hd__dfxtp_2 IQ
+* sky130_fd_sc_hd__dfxtp_4 IQ
+* sky130_fd_sc_hd__diode_2 (no function)
+* sky130_fd_sc_hd__dlclkp_1 (no function)
+* sky130_fd_sc_hd__dlclkp_2 (no function)
+* sky130_fd_sc_hd__dlclkp_4 (no function)
+* sky130_fd_sc_hd__dlrbn_1 IQ
+* sky130_fd_sc_hd__dlrbn_2 IQ
+* sky130_fd_sc_hd__dlrbp_1 IQ
+* sky130_fd_sc_hd__dlrbp_2 IQ
+* sky130_fd_sc_hd__dlrtn_1 IQ
+* sky130_fd_sc_hd__dlrtn_2 IQ
+* sky130_fd_sc_hd__dlrtn_4 IQ
+* sky130_fd_sc_hd__dlrtp_1 IQ
+* sky130_fd_sc_hd__dlrtp_2 IQ
+* sky130_fd_sc_hd__dlrtp_4 IQ
+* sky130_fd_sc_hd__dlxbn_1 IQ
+* sky130_fd_sc_hd__dlxbn_2 IQ
+* sky130_fd_sc_hd__dlxbp_1 IQ
+* sky130_fd_sc_hd__dlxtn_1 IQ
+* sky130_fd_sc_hd__dlxtn_2 IQ
+* sky130_fd_sc_hd__dlxtn_4 IQ
+* sky130_fd_sc_hd__dlxtp_1 IQ
+* sky130_fd_sc_hd__dlygate4sd1_1 (A)
+.model d_lut_sky130_fd_sc_hd__dlygate4sd1_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__dlygate4sd2_1 (A)
+.model d_lut_sky130_fd_sc_hd__dlygate4sd2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__dlygate4sd3_1 (A)
+.model d_lut_sky130_fd_sc_hd__dlygate4sd3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__dlymetal6s2s_1 (A)
+.model d_lut_sky130_fd_sc_hd__dlymetal6s2s_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__dlymetal6s4s_1 (A)
+.model d_lut_sky130_fd_sc_hd__dlymetal6s4s_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__dlymetal6s6s_1 (A)
+.model d_lut_sky130_fd_sc_hd__dlymetal6s6s_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__ebufn_1 (A)
+.model d_lut_sky130_fd_sc_hd__ebufn_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0Z0Z")
+* sky130_fd_sc_hd__ebufn_2 (A)
+.model d_lut_sky130_fd_sc_hd__ebufn_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0Z0Z")
+* sky130_fd_sc_hd__ebufn_4 (A)
+.model d_lut_sky130_fd_sc_hd__ebufn_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0Z0Z")
+* sky130_fd_sc_hd__ebufn_8 (A)
+.model d_lut_sky130_fd_sc_hd__ebufn_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0Z0Z")
+* sky130_fd_sc_hd__edfxbp_1 IQ
+* sky130_fd_sc_hd__edfxtp_1 IQ
+* sky130_fd_sc_hd__einvn_0 (!A)
+.model d_lut_sky130_fd_sc_hd__einvn_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1Z1Z")
+* sky130_fd_sc_hd__einvn_1 (!A)
+.model d_lut_sky130_fd_sc_hd__einvn_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1Z1Z")
+* sky130_fd_sc_hd__einvn_2 (!A)
+.model d_lut_sky130_fd_sc_hd__einvn_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1Z1Z")
+* sky130_fd_sc_hd__einvn_4 (!A)
+.model d_lut_sky130_fd_sc_hd__einvn_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1Z1Z")
+* sky130_fd_sc_hd__einvn_8 (!A)
+.model d_lut_sky130_fd_sc_hd__einvn_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1Z1Z")
+* sky130_fd_sc_hd__einvp_1 (!A)
+.model d_lut_sky130_fd_sc_hd__einvp_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "Z0Z0")
+* sky130_fd_sc_hd__einvp_2 (!A)
+.model d_lut_sky130_fd_sc_hd__einvp_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "Z0Z0")
+* sky130_fd_sc_hd__einvp_4 (!A)
+.model d_lut_sky130_fd_sc_hd__einvp_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "Z0Z0")
+* sky130_fd_sc_hd__einvp_8 (!A)
+.model d_lut_sky130_fd_sc_hd__einvp_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "Z0Z0")
+* sky130_fd_sc_hd__fa_1 (A&B) | (A&CIN) | (B&CIN)
+.model d_genlut_sky130_fd_sc_hd__fa_1 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "0001011101101001")
+* sky130_fd_sc_hd__fa_2 (A&B) | (A&CIN) | (B&CIN)
+.model d_genlut_sky130_fd_sc_hd__fa_2 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "0001011101101001")
+* sky130_fd_sc_hd__fa_4 (A&B) | (A&CIN) | (B&CIN)
+.model d_genlut_sky130_fd_sc_hd__fa_4 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "0001011101101001")
+* sky130_fd_sc_hd__fah_1 (A&B) | (A&CI) | (B&CI)
+.model d_genlut_sky130_fd_sc_hd__fah_1 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "0001011101101001")
+* sky130_fd_sc_hd__fahcin_1 (A&!CIN) | (A&B) | (B&!CIN)
+.model d_genlut_sky130_fd_sc_hd__fahcin_1 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "0111000110010110")
+* sky130_fd_sc_hd__fahcon_1 (!A&!CI) | (!A&!B) | (!B&!CI)
+.model d_genlut_sky130_fd_sc_hd__fahcon_1 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "1110100001101001")
+* sky130_fd_sc_hd__ha_1 (A&B)
+.model d_genlut_sky130_fd_sc_hd__ha_1 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p]
++ input_delay=[1n 1n]
++ table_values "00010110")
+* sky130_fd_sc_hd__ha_2 (A&B)
+.model d_genlut_sky130_fd_sc_hd__ha_2 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p]
++ input_delay=[1n 1n]
++ table_values "00010110")
+* sky130_fd_sc_hd__ha_4 (A&B)
+.model d_genlut_sky130_fd_sc_hd__ha_4 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p]
++ input_delay=[1n 1n]
++ table_values "00010110")
+* sky130_fd_sc_hd__inv_1 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__inv_12 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_12 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__inv_16 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__inv_2 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__inv_4 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__inv_6 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_6 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__inv_8 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__lpflow_bleeder_1 (no function)
+* sky130_fd_sc_hd__lpflow_clkbufkapwr_1 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkbufkapwr_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_clkbufkapwr_16 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkbufkapwr_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_clkbufkapwr_2 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkbufkapwr_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_clkbufkapwr_4 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkbufkapwr_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_clkbufkapwr_8 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkbufkapwr_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_clkinvkapwr_1 (!A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkinvkapwr_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__lpflow_clkinvkapwr_16 (!A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkinvkapwr_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__lpflow_clkinvkapwr_2 (!A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkinvkapwr_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__lpflow_clkinvkapwr_4 (!A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkinvkapwr_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__lpflow_clkinvkapwr_8 (!A)
+.model d_lut_sky130_fd_sc_hd__lpflow_clkinvkapwr_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__lpflow_decapkapwr_12 (no function)
+* sky130_fd_sc_hd__lpflow_decapkapwr_3 (no function)
+* sky130_fd_sc_hd__lpflow_decapkapwr_4 (no function)
+* sky130_fd_sc_hd__lpflow_decapkapwr_6 (no function)
+* sky130_fd_sc_hd__lpflow_decapkapwr_8 (no function)
+* sky130_fd_sc_hd__lpflow_inputiso0n_1 (SLEEP_B&A)
+.model d_lut_sky130_fd_sc_hd__lpflow_inputiso0n_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__lpflow_inputiso0p_1 (!SLEEP&A)
+.model d_lut_sky130_fd_sc_hd__lpflow_inputiso0p_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0100")
+* sky130_fd_sc_hd__lpflow_inputiso1n_1 (A) | (!SLEEP_B)
+.model d_lut_sky130_fd_sc_hd__lpflow_inputiso1n_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1101")
+* sky130_fd_sc_hd__lpflow_inputiso1p_1 (A) | (SLEEP)
+.model d_lut_sky130_fd_sc_hd__lpflow_inputiso1p_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111")
+* sky130_fd_sc_hd__lpflow_inputisolatch_1 IQ
+* sky130_fd_sc_hd__lpflow_isobufsrc_1 (A&!SLEEP)
+.model d_lut_sky130_fd_sc_hd__lpflow_isobufsrc_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0100")
+* sky130_fd_sc_hd__lpflow_isobufsrc_16 (A&!SLEEP)
+.model d_lut_sky130_fd_sc_hd__lpflow_isobufsrc_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0100")
+* sky130_fd_sc_hd__lpflow_isobufsrc_2 (A&!SLEEP)
+.model d_lut_sky130_fd_sc_hd__lpflow_isobufsrc_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0100")
+* sky130_fd_sc_hd__lpflow_isobufsrc_4 (A&!SLEEP)
+.model d_lut_sky130_fd_sc_hd__lpflow_isobufsrc_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0100")
+* sky130_fd_sc_hd__lpflow_isobufsrc_8 (A&!SLEEP)
+.model d_lut_sky130_fd_sc_hd__lpflow_isobufsrc_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0100")
+* sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 (A&!SLEEP)
+.model d_lut_sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0100")
+* sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 (A)
+.model d_lut_sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__macro_sparecell 0
+* sky130_fd_sc_hd__maj3_1 (A&B) | (A&C) | (B&C)
+.model d_lut_sky130_fd_sc_hd__maj3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00010111")
+* sky130_fd_sc_hd__maj3_2 (A&B) | (A&C) | (B&C)
+.model d_lut_sky130_fd_sc_hd__maj3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00010111")
+* sky130_fd_sc_hd__maj3_4 (A&B) | (A&C) | (B&C)
+.model d_lut_sky130_fd_sc_hd__maj3_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00010111")
+* sky130_fd_sc_hd__mux2_1 (A0&!S) | (A1&S)
+.model d_lut_sky130_fd_sc_hd__mux2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01010011")
+* sky130_fd_sc_hd__mux2_2 (A0&!S) | (A1&S)
+.model d_lut_sky130_fd_sc_hd__mux2_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01010011")
+* sky130_fd_sc_hd__mux2_4 (A0&!S) | (A1&S)
+.model d_lut_sky130_fd_sc_hd__mux2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01010011")
+* sky130_fd_sc_hd__mux2_8 (A0&!S) | (A1&S)
+.model d_lut_sky130_fd_sc_hd__mux2_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01010011")
+* sky130_fd_sc_hd__mux2i_1 (!A0&!S) | (!A1&S)
+.model d_lut_sky130_fd_sc_hd__mux2i_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10101100")
+* sky130_fd_sc_hd__mux2i_2 (!A0&!S) | (!A1&S)
+.model d_lut_sky130_fd_sc_hd__mux2i_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10101100")
+* sky130_fd_sc_hd__mux2i_4 (!A0&!S) | (!A1&S)
+.model d_lut_sky130_fd_sc_hd__mux2i_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10101100")
+* sky130_fd_sc_hd__mux4_1 (A0&!S0&!S1) | (A1&S0&!S1) | (A2&!S0&S1) | (A3&S0&S1)
+.model d_lut_sky130_fd_sc_hd__mux4_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0101010101010101001100110011001100001111000011110000000011111111")
+* sky130_fd_sc_hd__mux4_2 (A0&!S0&!S1) | (A1&S0&!S1) | (A2&!S0&S1) | (A3&S0&S1)
+.model d_lut_sky130_fd_sc_hd__mux4_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0101010101010101001100110011001100001111000011110000000011111111")
+* sky130_fd_sc_hd__mux4_4 (A0&!S0&!S1) | (A1&S0&!S1) | (A2&!S0&S1) | (A3&S0&S1)
+.model d_lut_sky130_fd_sc_hd__mux4_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0101010101010101001100110011001100001111000011110000000011111111")
+* sky130_fd_sc_hd__nand2_1 (!A) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110")
+* sky130_fd_sc_hd__nand2_2 (!A) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110")
+* sky130_fd_sc_hd__nand2_4 (!A) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110")
+* sky130_fd_sc_hd__nand2_8 (!A) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110")
+* sky130_fd_sc_hd__nand2b_1 (A_N) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1101")
+* sky130_fd_sc_hd__nand2b_2 (A_N) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1101")
+* sky130_fd_sc_hd__nand2b_4 (A_N) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1101")
+* sky130_fd_sc_hd__nand3_1 (!A) | (!B) | (!C)
+.model d_lut_sky130_fd_sc_hd__nand3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110")
+* sky130_fd_sc_hd__nand3_2 (!A) | (!B) | (!C)
+.model d_lut_sky130_fd_sc_hd__nand3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110")
+* sky130_fd_sc_hd__nand3_4 (!A) | (!B) | (!C)
+.model d_lut_sky130_fd_sc_hd__nand3_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111110")
+* sky130_fd_sc_hd__nand3b_1 (A_N) | (!B) | (!C)
+.model d_lut_sky130_fd_sc_hd__nand3b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111101")
+* sky130_fd_sc_hd__nand3b_2 (A_N) | (!B) | (!C)
+.model d_lut_sky130_fd_sc_hd__nand3b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111101")
+* sky130_fd_sc_hd__nand3b_4 (A_N) | (!B) | (!C)
+.model d_lut_sky130_fd_sc_hd__nand3b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111101")
+* sky130_fd_sc_hd__nand4_1 (!A) | (!B) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111110")
+* sky130_fd_sc_hd__nand4_2 (!A) | (!B) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111110")
+* sky130_fd_sc_hd__nand4_4 (!A) | (!B) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111110")
+* sky130_fd_sc_hd__nand4b_1 (A_N) | (!B) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111101")
+* sky130_fd_sc_hd__nand4b_2 (A_N) | (!B) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111101")
+* sky130_fd_sc_hd__nand4b_4 (A_N) | (!B) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111101")
+* sky130_fd_sc_hd__nand4bb_1 (A_N) | (B_N) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4bb_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111110111")
+* sky130_fd_sc_hd__nand4bb_2 (A_N) | (B_N) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4bb_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111110111")
+* sky130_fd_sc_hd__nand4bb_4 (A_N) | (B_N) | (!C) | (!D)
+.model d_lut_sky130_fd_sc_hd__nand4bb_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111110111")
+* sky130_fd_sc_hd__nor2_1 (!A&!B)
+.model d_lut_sky130_fd_sc_hd__nor2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000")
+* sky130_fd_sc_hd__nor2_2 (!A&!B)
+.model d_lut_sky130_fd_sc_hd__nor2_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000")
+* sky130_fd_sc_hd__nor2_4 (!A&!B)
+.model d_lut_sky130_fd_sc_hd__nor2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000")
+* sky130_fd_sc_hd__nor2_8 (!A&!B)
+.model d_lut_sky130_fd_sc_hd__nor2_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000")
+* sky130_fd_sc_hd__nor2b_1 (!A&B_N)
+.model d_lut_sky130_fd_sc_hd__nor2b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0010")
+* sky130_fd_sc_hd__nor2b_2 (!A&B_N)
+.model d_lut_sky130_fd_sc_hd__nor2b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0010")
+* sky130_fd_sc_hd__nor2b_4 (!A&B_N)
+.model d_lut_sky130_fd_sc_hd__nor2b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0010")
+* sky130_fd_sc_hd__nor3_1 (!A&!B&!C)
+.model d_lut_sky130_fd_sc_hd__nor3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10000000")
+* sky130_fd_sc_hd__nor3_2 (!A&!B&!C)
+.model d_lut_sky130_fd_sc_hd__nor3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10000000")
+* sky130_fd_sc_hd__nor3_4 (!A&!B&!C)
+.model d_lut_sky130_fd_sc_hd__nor3_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10000000")
+* sky130_fd_sc_hd__nor3b_1 (!A&!B&C_N)
+.model d_lut_sky130_fd_sc_hd__nor3b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00001000")
+* sky130_fd_sc_hd__nor3b_2 (!A&!B&C_N)
+.model d_lut_sky130_fd_sc_hd__nor3b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00001000")
+* sky130_fd_sc_hd__nor3b_4 (!A&!B&C_N)
+.model d_lut_sky130_fd_sc_hd__nor3b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00001000")
+* sky130_fd_sc_hd__nor4_1 (!A&!B&!C&!D)
+.model d_lut_sky130_fd_sc_hd__nor4_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000000000000000")
+* sky130_fd_sc_hd__nor4_2 (!A&!B&!C&!D)
+.model d_lut_sky130_fd_sc_hd__nor4_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000000000000000")
+* sky130_fd_sc_hd__nor4_4 (!A&!B&!C&!D)
+.model d_lut_sky130_fd_sc_hd__nor4_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1000000000000000")
+* sky130_fd_sc_hd__nor4b_1 (!A&!B&!C&D_N)
+.model d_lut_sky130_fd_sc_hd__nor4b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000010000000")
+* sky130_fd_sc_hd__nor4b_2 (!A&!B&!C&D_N)
+.model d_lut_sky130_fd_sc_hd__nor4b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000010000000")
+* sky130_fd_sc_hd__nor4b_4 (!A&!B&!C&D_N)
+.model d_lut_sky130_fd_sc_hd__nor4b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000010000000")
+* sky130_fd_sc_hd__nor4bb_1 (!A&!B&C_N&D_N)
+.model d_lut_sky130_fd_sc_hd__nor4bb_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000001000")
+* sky130_fd_sc_hd__nor4bb_2 (!A&!B&C_N&D_N)
+.model d_lut_sky130_fd_sc_hd__nor4bb_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000001000")
+* sky130_fd_sc_hd__nor4bb_4 (!A&!B&C_N&D_N)
+.model d_lut_sky130_fd_sc_hd__nor4bb_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000001000")
+* sky130_fd_sc_hd__o2111a_1 (A1&B1&C1&D1) | (A2&B1&C1&D1)
+.model d_lut_sky130_fd_sc_hd__o2111a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000000000000111")
+* sky130_fd_sc_hd__o2111a_2 (A1&B1&C1&D1) | (A2&B1&C1&D1)
+.model d_lut_sky130_fd_sc_hd__o2111a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000000000000111")
+* sky130_fd_sc_hd__o2111a_4 (A1&B1&C1&D1) | (A2&B1&C1&D1)
+.model d_lut_sky130_fd_sc_hd__o2111a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000000000000111")
+* sky130_fd_sc_hd__o2111ai_1 (!A1&!A2) | (!B1) | (!C1) | (!D1)
+.model d_lut_sky130_fd_sc_hd__o2111ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111111111111000")
+* sky130_fd_sc_hd__o2111ai_2 (!A1&!A2) | (!B1) | (!C1) | (!D1)
+.model d_lut_sky130_fd_sc_hd__o2111ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111111111111000")
+* sky130_fd_sc_hd__o2111ai_4 (!A1&!A2) | (!B1) | (!C1) | (!D1)
+.model d_lut_sky130_fd_sc_hd__o2111ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111111111111000")
+* sky130_fd_sc_hd__o211a_1 (A1&B1&C1) | (A2&B1&C1)
+.model d_lut_sky130_fd_sc_hd__o211a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000111")
+* sky130_fd_sc_hd__o211a_2 (A1&B1&C1) | (A2&B1&C1)
+.model d_lut_sky130_fd_sc_hd__o211a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000111")
+* sky130_fd_sc_hd__o211a_4 (A1&B1&C1) | (A2&B1&C1)
+.model d_lut_sky130_fd_sc_hd__o211a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000000000111")
+* sky130_fd_sc_hd__o211ai_1 (!A1&!A2) | (!B1) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o211ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111000")
+* sky130_fd_sc_hd__o211ai_2 (!A1&!A2) | (!B1) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o211ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111000")
+* sky130_fd_sc_hd__o211ai_4 (!A1&!A2) | (!B1) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o211ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111111000")
+* sky130_fd_sc_hd__o21a_1 (A1&B1) | (A2&B1)
+.model d_lut_sky130_fd_sc_hd__o21a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000111")
+* sky130_fd_sc_hd__o21a_2 (A1&B1) | (A2&B1)
+.model d_lut_sky130_fd_sc_hd__o21a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000111")
+* sky130_fd_sc_hd__o21a_4 (A1&B1) | (A2&B1)
+.model d_lut_sky130_fd_sc_hd__o21a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000111")
+* sky130_fd_sc_hd__o21ai_0 (!A1&!A2) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o21ai_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111000")
+* sky130_fd_sc_hd__o21ai_1 (!A1&!A2) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o21ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111000")
+* sky130_fd_sc_hd__o21ai_2 (!A1&!A2) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o21ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111000")
+* sky130_fd_sc_hd__o21ai_4 (!A1&!A2) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o21ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111000")
+* sky130_fd_sc_hd__o21ba_1 (A1&!B1_N) | (A2&!B1_N)
+.model d_lut_sky130_fd_sc_hd__o21ba_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01110000")
+* sky130_fd_sc_hd__o21ba_2 (A1&!B1_N) | (A2&!B1_N)
+.model d_lut_sky130_fd_sc_hd__o21ba_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01110000")
+* sky130_fd_sc_hd__o21ba_4 (A1&!B1_N) | (A2&!B1_N)
+.model d_lut_sky130_fd_sc_hd__o21ba_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01110000")
+* sky130_fd_sc_hd__o21bai_1 (!A1&!A2) | (B1_N)
+.model d_lut_sky130_fd_sc_hd__o21bai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10001111")
+* sky130_fd_sc_hd__o21bai_2 (!A1&!A2) | (B1_N)
+.model d_lut_sky130_fd_sc_hd__o21bai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10001111")
+* sky130_fd_sc_hd__o21bai_4 (!A1&!A2) | (B1_N)
+.model d_lut_sky130_fd_sc_hd__o21bai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10001111")
+* sky130_fd_sc_hd__o221a_1 (A1&B1&C1) | (A2&B1&C1) | (A1&B2&C1) | (A2&B2&C1)
+.model d_lut_sky130_fd_sc_hd__o221a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000011101110111")
+* sky130_fd_sc_hd__o221a_2 (A1&B1&C1) | (A2&B1&C1) | (A1&B2&C1) | (A2&B2&C1)
+.model d_lut_sky130_fd_sc_hd__o221a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000011101110111")
+* sky130_fd_sc_hd__o221a_4 (A1&B1&C1) | (A2&B1&C1) | (A1&B2&C1) | (A2&B2&C1)
+.model d_lut_sky130_fd_sc_hd__o221a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000011101110111")
+* sky130_fd_sc_hd__o221ai_1 (!B1&!B2) | (!A1&!A2) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o221ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111100010001000")
+* sky130_fd_sc_hd__o221ai_2 (!B1&!B2) | (!A1&!A2) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o221ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111100010001000")
+* sky130_fd_sc_hd__o221ai_4 (!B1&!B2) | (!A1&!A2) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o221ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111100010001000")
+* sky130_fd_sc_hd__o22a_1 (A1&B1) | (A2&B1) | (A1&B2) | (A2&B2)
+.model d_lut_sky130_fd_sc_hd__o22a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000011101110111")
+* sky130_fd_sc_hd__o22a_2 (A1&B1) | (A2&B1) | (A1&B2) | (A2&B2)
+.model d_lut_sky130_fd_sc_hd__o22a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000011101110111")
+* sky130_fd_sc_hd__o22a_4 (A1&B1) | (A2&B1) | (A1&B2) | (A2&B2)
+.model d_lut_sky130_fd_sc_hd__o22a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000011101110111")
+* sky130_fd_sc_hd__o22ai_1 (!B1&!B2) | (!A1&!A2)
+.model d_lut_sky130_fd_sc_hd__o22ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111100010001000")
+* sky130_fd_sc_hd__o22ai_2 (!B1&!B2) | (!A1&!A2)
+.model d_lut_sky130_fd_sc_hd__o22ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111100010001000")
+* sky130_fd_sc_hd__o22ai_4 (!B1&!B2) | (!A1&!A2)
+.model d_lut_sky130_fd_sc_hd__o22ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111100010001000")
+* sky130_fd_sc_hd__o2bb2a_1 (!A1_N&B1) | (!A2_N&B1) | (!A1_N&B2) | (!A2_N&B2)
+.model d_lut_sky130_fd_sc_hd__o2bb2a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000111011101110")
+* sky130_fd_sc_hd__o2bb2a_2 (!A1_N&B1) | (!A2_N&B1) | (!A1_N&B2) | (!A2_N&B2)
+.model d_lut_sky130_fd_sc_hd__o2bb2a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000111011101110")
+* sky130_fd_sc_hd__o2bb2a_4 (!A1_N&B1) | (!A2_N&B1) | (!A1_N&B2) | (!A2_N&B2)
+.model d_lut_sky130_fd_sc_hd__o2bb2a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000111011101110")
+* sky130_fd_sc_hd__o2bb2ai_1 (!B1&!B2) | (A1_N&A2_N)
+.model d_lut_sky130_fd_sc_hd__o2bb2ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111000100010001")
+* sky130_fd_sc_hd__o2bb2ai_2 (!B1&!B2) | (A1_N&A2_N)
+.model d_lut_sky130_fd_sc_hd__o2bb2ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111000100010001")
+* sky130_fd_sc_hd__o2bb2ai_4 (!B1&!B2) | (A1_N&A2_N)
+.model d_lut_sky130_fd_sc_hd__o2bb2ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111000100010001")
+* sky130_fd_sc_hd__o311a_1 (A1&B1&C1) | (A2&B1&C1) | (A3&B1&C1)
+.model d_lut_sky130_fd_sc_hd__o311a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000000001111111")
+* sky130_fd_sc_hd__o311a_2 (A1&B1&C1) | (A2&B1&C1) | (A3&B1&C1)
+.model d_lut_sky130_fd_sc_hd__o311a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000000001111111")
+* sky130_fd_sc_hd__o311a_4 (A1&B1&C1) | (A2&B1&C1) | (A3&B1&C1)
+.model d_lut_sky130_fd_sc_hd__o311a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000000000001111111")
+* sky130_fd_sc_hd__o311ai_0 (!A1&!A2&!A3) | (!B1) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o311ai_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111111110000000")
+* sky130_fd_sc_hd__o311ai_1 (!A1&!A2&!A3) | (!B1) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o311ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111111110000000")
+* sky130_fd_sc_hd__o311ai_2 (!A1&!A2&!A3) | (!B1) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o311ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111111110000000")
+* sky130_fd_sc_hd__o311ai_4 (!A1&!A2&!A3) | (!B1) | (!C1)
+.model d_lut_sky130_fd_sc_hd__o311ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111111111110000000")
+* sky130_fd_sc_hd__o31a_1 (A1&B1) | (A2&B1) | (A3&B1)
+.model d_lut_sky130_fd_sc_hd__o31a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000001111111")
+* sky130_fd_sc_hd__o31a_2 (A1&B1) | (A2&B1) | (A3&B1)
+.model d_lut_sky130_fd_sc_hd__o31a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000001111111")
+* sky130_fd_sc_hd__o31a_4 (A1&B1) | (A2&B1) | (A3&B1)
+.model d_lut_sky130_fd_sc_hd__o31a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0000000001111111")
+* sky130_fd_sc_hd__o31ai_1 (!A1&!A2&!A3) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o31ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111110000000")
+* sky130_fd_sc_hd__o31ai_2 (!A1&!A2&!A3) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o31ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111110000000")
+* sky130_fd_sc_hd__o31ai_4 (!A1&!A2&!A3) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o31ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111110000000")
+* sky130_fd_sc_hd__o32a_1 (A1&B1) | (A1&B2) | (A2&B1) | (A3&B1) | (A2&B2) | (A3&B2)
+.model d_lut_sky130_fd_sc_hd__o32a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000011111110111111101111111")
+* sky130_fd_sc_hd__o32a_2 (A1&B1) | (A1&B2) | (A2&B1) | (A3&B1) | (A2&B2) | (A3&B2)
+.model d_lut_sky130_fd_sc_hd__o32a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000011111110111111101111111")
+* sky130_fd_sc_hd__o32a_4 (A1&B1) | (A1&B2) | (A2&B1) | (A3&B1) | (A2&B2) | (A3&B2)
+.model d_lut_sky130_fd_sc_hd__o32a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000011111110111111101111111")
+* sky130_fd_sc_hd__o32ai_1 (!A1&!A2&!A3) | (!B1&!B2)
+.model d_lut_sky130_fd_sc_hd__o32ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111100000001000000010000000")
+* sky130_fd_sc_hd__o32ai_2 (!A1&!A2&!A3) | (!B1&!B2)
+.model d_lut_sky130_fd_sc_hd__o32ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111100000001000000010000000")
+* sky130_fd_sc_hd__o32ai_4 (!A1&!A2&!A3) | (!B1&!B2)
+.model d_lut_sky130_fd_sc_hd__o32ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111100000001000000010000000")
+* sky130_fd_sc_hd__o41a_1 (A1&B1) | (A2&B1) | (A3&B1) | (A4&B1)
+.model d_lut_sky130_fd_sc_hd__o41a_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000111111111111111")
+* sky130_fd_sc_hd__o41a_2 (A1&B1) | (A2&B1) | (A3&B1) | (A4&B1)
+.model d_lut_sky130_fd_sc_hd__o41a_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000111111111111111")
+* sky130_fd_sc_hd__o41a_4 (A1&B1) | (A2&B1) | (A3&B1) | (A4&B1)
+.model d_lut_sky130_fd_sc_hd__o41a_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "00000000000000000111111111111111")
+* sky130_fd_sc_hd__o41ai_1 (!A1&!A2&!A3&!A4) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o41ai_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111000000000000000")
+* sky130_fd_sc_hd__o41ai_2 (!A1&!A2&!A3&!A4) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o41ai_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111000000000000000")
+* sky130_fd_sc_hd__o41ai_4 (!A1&!A2&!A3&!A4) | (!B1)
+.model d_lut_sky130_fd_sc_hd__o41ai_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11111111111111111000000000000000")
+* sky130_fd_sc_hd__or2_0 (A) | (B)
+.model d_lut_sky130_fd_sc_hd__or2_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111")
+* sky130_fd_sc_hd__or2_1 (A) | (B)
+.model d_lut_sky130_fd_sc_hd__or2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111")
+* sky130_fd_sc_hd__or2_2 (A) | (B)
+.model d_lut_sky130_fd_sc_hd__or2_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111")
+* sky130_fd_sc_hd__or2_4 (A) | (B)
+.model d_lut_sky130_fd_sc_hd__or2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111")
+* sky130_fd_sc_hd__or2b_1 (A) | (!B_N)
+.model d_lut_sky130_fd_sc_hd__or2b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1101")
+* sky130_fd_sc_hd__or2b_2 (A) | (!B_N)
+.model d_lut_sky130_fd_sc_hd__or2b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1101")
+* sky130_fd_sc_hd__or2b_4 (A) | (!B_N)
+.model d_lut_sky130_fd_sc_hd__or2b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1101")
+* sky130_fd_sc_hd__or3_1 (A) | (B) | (C)
+.model d_lut_sky130_fd_sc_hd__or3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01111111")
+* sky130_fd_sc_hd__or3_2 (A) | (B) | (C)
+.model d_lut_sky130_fd_sc_hd__or3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01111111")
+* sky130_fd_sc_hd__or3_4 (A) | (B) | (C)
+.model d_lut_sky130_fd_sc_hd__or3_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01111111")
+* sky130_fd_sc_hd__or3b_1 (A) | (B) | (!C_N)
+.model d_lut_sky130_fd_sc_hd__or3b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11110111")
+* sky130_fd_sc_hd__or3b_2 (A) | (B) | (!C_N)
+.model d_lut_sky130_fd_sc_hd__or3b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11110111")
+* sky130_fd_sc_hd__or3b_4 (A) | (B) | (!C_N)
+.model d_lut_sky130_fd_sc_hd__or3b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "11110111")
+* sky130_fd_sc_hd__or4_1 (A) | (B) | (C) | (D)
+.model d_lut_sky130_fd_sc_hd__or4_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111111111111111")
+* sky130_fd_sc_hd__or4_2 (A) | (B) | (C) | (D)
+.model d_lut_sky130_fd_sc_hd__or4_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111111111111111")
+* sky130_fd_sc_hd__or4_4 (A) | (B) | (C) | (D)
+.model d_lut_sky130_fd_sc_hd__or4_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111111111111111")
+* sky130_fd_sc_hd__or4b_1 (A) | (B) | (C) | (!D_N)
+.model d_lut_sky130_fd_sc_hd__or4b_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111101111111")
+* sky130_fd_sc_hd__or4b_2 (A) | (B) | (C) | (!D_N)
+.model d_lut_sky130_fd_sc_hd__or4b_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111101111111")
+* sky130_fd_sc_hd__or4b_4 (A) | (B) | (C) | (!D_N)
+.model d_lut_sky130_fd_sc_hd__or4b_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111101111111")
+* sky130_fd_sc_hd__or4bb_1 (A) | (B) | (!C_N) | (!D_N)
+.model d_lut_sky130_fd_sc_hd__or4bb_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111110111")
+* sky130_fd_sc_hd__or4bb_2 (A) | (B) | (!C_N) | (!D_N)
+.model d_lut_sky130_fd_sc_hd__or4bb_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111110111")
+* sky130_fd_sc_hd__or4bb_4 (A) | (B) | (!C_N) | (!D_N)
+.model d_lut_sky130_fd_sc_hd__or4bb_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1111111111110111")
+* sky130_fd_sc_hd__probe_p_8 (A)
+.model d_lut_sky130_fd_sc_hd__probe_p_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__probec_p_8 (A)
+.model d_lut_sky130_fd_sc_hd__probec_p_8 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__sdfbbn_1 IQ
+* sky130_fd_sc_hd__sdfbbn_2 IQ
+* sky130_fd_sc_hd__sdfbbp_1 IQ
+* sky130_fd_sc_hd__sdfrbp_1 IQ
+* sky130_fd_sc_hd__sdfrbp_2 IQ
+* sky130_fd_sc_hd__sdfrtn_1 IQ
+* sky130_fd_sc_hd__sdfrtp_1 IQ
+* sky130_fd_sc_hd__sdfrtp_2 IQ
+* sky130_fd_sc_hd__sdfrtp_4 IQ
+* sky130_fd_sc_hd__sdfsbp_1 IQ
+* sky130_fd_sc_hd__sdfsbp_2 IQ
+* sky130_fd_sc_hd__sdfstp_1 IQ
+* sky130_fd_sc_hd__sdfstp_2 IQ
+* sky130_fd_sc_hd__sdfstp_4 IQ
+* sky130_fd_sc_hd__sdfxbp_1 IQ
+* sky130_fd_sc_hd__sdfxbp_2 IQ
+* sky130_fd_sc_hd__sdfxtp_1 IQ
+* sky130_fd_sc_hd__sdfxtp_2 IQ
+* sky130_fd_sc_hd__sdfxtp_4 IQ
+* sky130_fd_sc_hd__sdlclkp_1 (no function)
+* sky130_fd_sc_hd__sdlclkp_2 (no function)
+* sky130_fd_sc_hd__sdlclkp_4 (no function)
+* sky130_fd_sc_hd__sedfxbp_1 IQ
+* sky130_fd_sc_hd__sedfxbp_2 IQ
+* sky130_fd_sc_hd__sedfxtp_1 IQ
+* sky130_fd_sc_hd__sedfxtp_2 IQ
+* sky130_fd_sc_hd__sedfxtp_4 IQ
+* sky130_fd_sc_hd__xnor2_1 (!A&!B) | (A&B)
+.model d_lut_sky130_fd_sc_hd__xnor2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1001")
+* sky130_fd_sc_hd__xnor2_2 (!A&!B) | (A&B)
+.model d_lut_sky130_fd_sc_hd__xnor2_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1001")
+* sky130_fd_sc_hd__xnor2_4 (!A&!B) | (A&B)
+.model d_lut_sky130_fd_sc_hd__xnor2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1001")
+* sky130_fd_sc_hd__xnor3_1 (!A&!B&!C) | (A&B&!C) | (A&!B&C) | (!A&B&C)
+.model d_lut_sky130_fd_sc_hd__xnor3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10010110")
+* sky130_fd_sc_hd__xnor3_2 (!A&!B&!C) | (A&B&!C) | (A&!B&C) | (!A&B&C)
+.model d_lut_sky130_fd_sc_hd__xnor3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10010110")
+* sky130_fd_sc_hd__xnor3_4 (!A&!B&!C) | (A&B&!C) | (A&!B&C) | (!A&B&C)
+.model d_lut_sky130_fd_sc_hd__xnor3_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10010110")
+* sky130_fd_sc_hd__xor2_1 (A&!B) | (!A&B)
+.model d_lut_sky130_fd_sc_hd__xor2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0110")
+* sky130_fd_sc_hd__xor2_2 (A&!B) | (!A&B)
+.model d_lut_sky130_fd_sc_hd__xor2_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0110")
+* sky130_fd_sc_hd__xor2_4 (A&!B) | (!A&B)
+.model d_lut_sky130_fd_sc_hd__xor2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0110")
+* sky130_fd_sc_hd__xor3_1 (A&!B&!C) | (!A&B&!C) | (!A&!B&C) | (A&B&C)
+.model d_lut_sky130_fd_sc_hd__xor3_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01101001")
+* sky130_fd_sc_hd__xor3_2 (A&!B&!C) | (!A&B&!C) | (!A&!B&C) | (A&B&C)
+.model d_lut_sky130_fd_sc_hd__xor3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01101001")
+* sky130_fd_sc_hd__xor3_4 (A&!B&!C) | (!A&B&!C) | (!A&!B&C) | (A&B&C)
+.model d_lut_sky130_fd_sc_hd__xor3_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01101001")
+.end

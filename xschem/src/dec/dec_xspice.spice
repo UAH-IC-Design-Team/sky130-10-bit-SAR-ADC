@@ -1,0 +1,55 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sch
+.subckt dec a_VDD a_bit10 a_bit9 a_bit8 a_bit7 a_bit6 a_bit5 a_bit4 a_bit3 a_bit2 a_bit1 a_VSS a_reset_b a_dump_bus a_done a_raw_bit13 a_raw_bit12 a_raw_bit11 a_raw_bit10 a_raw_bit9 a_raw_bit8 a_raw_bit7 a_raw_bit6 a_raw_bit5 a_raw_bit4 a_raw_bit3 a_raw_bit2 a_raw_bit1
+*.PININFO VDD:B bit_10..1_:O VSS:B reset_b:I dump_bus:I done:O raw_bit_13..1_:I
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=10n fall_delay=10n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+AA2D1 [a_VDD] [VDD] todig_1v8
+AA2D2 [a_bit10] [bit10] todig_1v8
+AA2D3 [a_bit9] [bit9] todig_1v8
+AA2D4 [a_bit8] [bit8] todig_1v8
+AA2D5 [a_bit7] [bit7] todig_1v8
+AA2D6 [a_bit6] [bit6] todig_1v8
+AA2D7 [a_bit5] [bit5] todig_1v8
+AA2D8 [a_bit4] [bit4] todig_1v8
+AA2D9 [a_bit3] [bit3] todig_1v8
+AA2D10 [a_bit2] [bit2] todig_1v8
+AA2D11 [a_bit1] [bit1] todig_1v8
+AA2D12 [a_VSS] [VSS] todig_1v8
+AA2D13 [a_reset_b] [reset_b] todig_1v8
+AA2D14 [a_dump_bus] [dump_bus] todig_1v8
+AA2D15 [a_done] [done] todig_1v8
+AA2D16 [a_raw_bit13] [raw_bit13] todig_1v8
+AA2D17 [a_raw_bit12] [raw_bit12] todig_1v8
+AA2D18 [a_raw_bit11] [raw_bit11] todig_1v8
+AA2D19 [a_raw_bit10] [raw_bit10] todig_1v8
+AA2D20 [a_raw_bit9] [raw_bit9] todig_1v8
+AA2D21 [a_raw_bit8] [raw_bit8] todig_1v8
+AA2D22 [a_raw_bit7] [raw_bit7] todig_1v8
+AA2D23 [a_raw_bit6] [raw_bit6] todig_1v8
+AA2D24 [a_raw_bit5] [raw_bit5] todig_1v8
+AA2D25 [a_raw_bit4] [raw_bit4] todig_1v8
+AA2D26 [a_raw_bit3] [raw_bit3] todig_1v8
+AA2D27 [a_raw_bit2] [raw_bit2] todig_1v8
+AA2D28 [a_raw_bit1] [raw_bit1] todig_1v8
+
+.ends
+
+* sky130_fd_sc_hd__fa_1 (A&B) | (A&CIN) | (B&CIN)
+.model d_genlut_sky130_fd_sc_hd__fa_1 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "0001011101101001")
+* sky130_fd_sc_hd__dfrtp_1 IQ
+* sky130_fd_sc_hd__inv_1 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+.end

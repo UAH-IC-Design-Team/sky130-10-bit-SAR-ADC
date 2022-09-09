@@ -1,0 +1,332 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: ** sch_path: /foss/designs/sky130-10-bit-sar-adc/xschem/tests/controller/controller_test.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+binary raw file "controller_test.raw"
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Warning: v8: no DC value, transient time 0 value used
+Warning: v5: no DC value, transient time 0 value used
+Warning: v1: no DC value, transient time 0 value used
+No. of Data Columns : 13127  
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   3.1623E-06 Note: One successful gmin step
+Trying gmin =   5.6234E-07 Note: One successful gmin step
+Trying gmin =   5.6234E-08 Note: One successful gmin step
+Trying gmin =   5.6234E-09 Note: One successful gmin step
+Trying gmin =   5.6234E-10 Note: One successful gmin step
+Trying gmin =   5.6234E-11 Note: One successful gmin step
+Trying gmin =   5.6234E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   3.1623E-06 Note: One successful gmin step
+Trying gmin =   5.6234E-07 Note: One successful gmin step
+Trying gmin =   5.6234E-08 Note: One successful gmin step
+Trying gmin =   5.6234E-09 Note: One successful gmin step
+Trying gmin =   5.6234E-10 Note: One successful gmin step
+Trying gmin =   5.6234E-11 Note: One successful gmin step
+Trying gmin =   5.6234E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: True gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+vss                                          0
+x1.cycle1                          2.67658e-09
+x1.cycle4                          2.67658e-09
+x1.net1                            2.67658e-09
+x1.cycle2                          2.67658e-09
+x1.cycle3                          2.67658e-09
+x1.cycle5                          2.67658e-09
+x1.cycle8                          2.67658e-09
+x1.net2                            2.67658e-09
+x1.cycle6                          2.67658e-09
+x1.cycle7                          2.67658e-09
+x1.cycle9                          2.67658e-09
+x1.cycle12                         2.67658e-09
+x1.net4                            2.67658e-09
+x1.cycle10                         2.67658e-09
+x1.cycle11                         2.67658e-09
+x1.raw_bit2                        2.67658e-09
+x1.raw_bit1                        2.67658e-09
+x1.x3.net1                         2.67658e-09
+x1.x3.net2                         2.67658e-09
+x1.x3.net16                        2.67658e-09
+x1.raw_bit3                        2.67658e-09
+x1.x3.net4                         2.67658e-09
+x1.x3.net3                         2.67658e-09
+bit2                               2.67658e-09
+reset_b                                    1.8
+x1.cycle31                         2.67658e-09
+bit3                               2.67658e-09
+x1.raw_bit5                        2.67658e-09
+x1.raw_bit4                        2.67658e-09
+x1.x3.net5                         2.67658e-09
+x1.x3.net6                         2.67658e-09
+x1.raw_bit6                        2.67658e-09
+x1.x3.net8                         2.67658e-09
+x1.x3.net7                         2.67658e-09
+bit4                               2.67658e-09
+bit5                               2.67658e-09
+x1.raw_bit7                        2.67658e-09
+x1.x3.net9                         2.67658e-09
+x1.x3.net10                        2.67658e-09
+x1.raw_bit9                        2.67658e-09
+x1.raw_bit8                        2.67658e-09
+x1.x3.net12                        2.67658e-09
+x1.x3.net11                        2.67658e-09
+bit6                               2.67658e-09
+bit7                               2.67658e-09
+x1.raw_bit10                       2.67658e-09
+x1.x3.net13                        2.67658e-09
+x1.x3.net14                        2.67658e-09
+x1.raw_bit11                       2.67658e-09
+x1.raw_bit12                       2.67658e-09
+x1.x3.net15                        2.67658e-09
+bit8                               2.67658e-09
+bit9                               2.67658e-09
+bit1                               2.67658e-09
+x1.raw_bit13                       2.67658e-09
+bit10                              2.67658e-09
+done                                       1.8
+vin_p                                        0
+x1.x4.net58                        2.67658e-09
+x1.x4.net62                        2.67658e-09
+x1.x4.net52                        2.67658e-09
+x1.x4.net53                        2.67658e-09
+x1.x4.net54                        2.67658e-09
+x1.x4.net11                                1.8
+sw_p_sp1                           2.67658e-09
+x1.x4.net23                        5.23066e-09
+x1.cycle18                         2.67658e-09
+sw_n_sp1                           2.67658e-09
+sw_n_sp2                           2.67658e-09
+x1.x4.net25                        5.23066e-09
+x1.x4.net12                                1.8
+sw_p_sp2                           2.67658e-09
+x1.cycle0                          2.67658e-09
+sw_n1                                      1.8
+x1.x4.net1                         5.23066e-09
+x1.x4.net13                                1.8
+sw_p1                                      1.8
+sw_n2                                      1.8
+x1.x4.net4                         5.23066e-09
+x1.x4.net14                                1.8
+sw_p2                                      1.8
+x1.x4.net15                                1.8
+x1.x4.net16                                1.8
+sw_n_sp3                           2.67658e-09
+x1.x4.net27                        5.23066e-09
+x1.cycle21                         2.67658e-09
+sw_p_sp3                           2.67658e-09
+sw_n_sp4                           2.67658e-09
+x1.x4.net28                        5.23066e-09
+sw_p_sp4                           2.67658e-09
+sw_n_sp5                           2.67658e-09
+x1.x4.net29                        5.23066e-09
+x1.x4.net17                                1.8
+sw_p_sp5                           2.67658e-09
+x1.x4.net18                                1.8
+sw_p3                                      1.8
+x1.x4.net6                         5.23066e-09
+sw_n3                                      1.8
+sw_n4                                      1.8
+x1.x4.net7                         5.23066e-09
+x1.x4.net19                                1.8
+sw_p4                                      1.8
+sw_n5                                      1.8
+x1.x4.net8                         5.23066e-09
+x1.x4.net20                                1.8
+sw_p5                                      1.8
+x1.x4.net21                                1.8
+sw_p_sp9                           2.67658e-09
+x1.cycle29                         2.67658e-09
+sw_n_sp9                           2.67658e-09
+x1.x4.net3                         4.90093e-09
+x1.x4.x24.net1                             1.8
+x1.x4.net51                        2.67658e-09
+x1.x4.net2                         5.23066e-09
+x1.x4.net60                        4.90093e-09
+x1.x4.x30.net1                             1.8
+x1.x4.net61                        2.67658e-09
+x1.x4.net5                         5.23066e-09
+x1.x4.net64                        4.90093e-09
+x1.x4.x34.net1                             1.8
+x1.x4.net65                        2.67658e-09
+x1.x4.net22                        5.23066e-09
+x1.x4.net67                        4.90093e-09
+x1.x4.x39.net1                             1.8
+x1.x4.net68                        2.67658e-09
+x1.x4.net9                         5.23066e-09
+x1.x4.net70                        4.90093e-09
+x1.x4.x44.net1                             1.8
+x1.x4.net71                        2.67658e-09
+x1.x4.net10                        5.23066e-09
+x1.x4.net24                                1.8
+x1.x4.net26                                1.8
+x1.cycle19                         2.67658e-09
+x1.cycle20                         2.67658e-09
+x1.cycle22                         2.67658e-09
+x1.cycle23                         2.67658e-09
+x1.cycle24                         2.67658e-09
+x1.cycle25                         2.67658e-09
+x1.cycle26                         2.67658e-09
+x1.cycle27                         2.67658e-09
+x1.cycle28                         2.67658e-09
+x1.cycle30                         2.67658e-09
+x1.x4.net30                                1.8
+x1.x4.net31                                1.8
+x1.x4.net32                                1.8
+x1.x4.net55                        2.67658e-09
+x1.x4.net56                        2.67658e-09
+x1.x4.net57                        2.67658e-09
+x1.x4.net38                                1.8
+x1.x4.net39                                1.8
+sw_n_sp6                           2.67658e-09
+x1.x4.net45                        5.23066e-09
+sw_p_sp6                           2.67658e-09
+sw_n_sp7                           2.67658e-09
+x1.x4.net46                        5.23066e-09
+sw_p_sp7                           2.67658e-09
+sw_n_sp8                           2.67658e-09
+x1.x4.net47                        5.23066e-09
+x1.x4.net40                                1.8
+sw_p_sp8                           2.67658e-09
+x1.x4.net41                                1.8
+sw_p6                                      1.8
+x1.x4.net33                        5.23066e-09
+sw_n6                                      1.8
+sw_n7                                      1.8
+x1.x4.net34                        5.23066e-09
+x1.x4.net42                                1.8
+sw_p7                                      1.8
+sw_n8                                      1.8
+x1.x4.net35                        5.23066e-09
+x1.x4.net43                                1.8
+sw_p8                                      1.8
+x1.x4.net73                        4.90093e-09
+x1.x4.x83.net1                             1.8
+x1.x4.net74                        2.67658e-09
+x1.x4.net44                        5.23066e-09
+x1.x4.net76                        4.90093e-09
+x1.x4.x84.net1                             1.8
+x1.x4.net77                        2.67658e-09
+x1.x4.net36                        5.23066e-09
+x1.x4.net79                        4.90093e-09
+x1.x4.x85.net1                             1.8
+x1.x4.net80                        2.67658e-09
+x1.x4.net37                        5.23066e-09
+x1.x4.net48                                1.8
+x1.x4.net49                                1.8
+x1.x4.net50                                1.8
+x1.x4.net59                        4.90093e-09
+x1.x4.net63                        4.90093e-09
+x1.x4.net66                        4.90093e-09
+x1.x4.net69                        4.90093e-09
+x1.x4.net72                        4.90093e-09
+x1.x4.net75                        4.90093e-09
+x1.x4.net78                        4.90093e-09
+x1.x4.net81                        4.90093e-09
+x1.x1.reset_b                              1.8
+clk                                          0
+x1.cycle13                         2.67658e-09
+x1.cycle14                         2.67658e-09
+x1.cycle15                         2.67658e-09
+x1.cycle16                         2.67658e-09
+x1.cycle17                         2.67658e-09
+x1.x1.net1                                 1.8
+x1.x1.reset_cycle                          1.8
+x1.x1.net5                         4.90093e-09
+x1.x1.net6                         4.90093e-09
+x1.x1.half_cycle                   2.67658e-09
+x1.x1.net11                        4.90093e-09
+x1.x1.net4                         4.90093e-09
+x1.x1.net3                         4.90093e-09
+x1.x1.net2                         4.90093e-09
+x1.x1.net10                        4.90093e-09
+x1.x1.net9                         4.90093e-09
+x1.x1.net8                         4.90093e-09
+x1.x1.net7                         4.90093e-09
+x1.net3                            2.67658e-09
+x1.net5                            2.67658e-09
+sw_sample                                  1.8
+v8#branch                                    0
+v5#branch                                    0
+v1#branch                                    0
+v4#branch                          4.00646e-09
+v3#branch                         -4.01094e-09
+
+
+No. of Data Rows : 5888
+.options: no listing, rawfile was generated.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+.plot line ignored since rawfile was produced.
+Total elapsed time (seconds) = 160.581 
+Total DRAM available = 1988.562 MB.
+DRAM currently available =  207.539 MB.
+Maximum ngspice program size =  682.363 MB.
+Current ngspice program size =  664.586 MB.
+
+Shared ngspice pages =    7.402 MB.
+Text (code) pages =    4.020 MB.
+Stack = 0 bytes.
+Library pages =  665.926 MB.
+
+Number of lines in the deck = 808728
+Netlist loading time = 15.269
+Subckt and Param expansion time = 4.569
+Netlist parsing time = 1.656
+
+Nominal temperature = 27
+Operating temperature = 25
+Total iterations = 22035
+Transient iterations = 21547
+Circuit Equations = 13127
+Circuit original non-zeroes = 92111
+Circuit fill-in non-zeroes = 4036
+Circuit total non-zeroes = 96147
+Transient timepoints = 5923
+Accepted timepoints = 5888
+Rejected timepoints = 35
+Total analysis time (seconds) = 140.652
+Matrix load time = 65.31
+Matrix synchronize time = 0
+Matrix reorder time = 1.238
+Matrix factor time = 16.64
+Matrix solve time = 7.103
+Transient analysis time = 136.398
+Transient load time = 63.652
+Transient sync time = 0
+Transient factor time = 16.265
+Transient solve time = 6.932
+Transient trunc time = 3.719
+Transient iterations for the last time point = 0
+AC analysis time = 0
+AC load time = 0
+AC sync time = 0
+AC factor time = 0
+AC solve time = 0
+

@@ -1,0 +1,282 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+.subckt controller a_clk a_sw_n_sp9 a_sw_n_sp8 a_sw_n_sp7 a_sw_n_sp6 a_sw_n_sp5 a_sw_n_sp4 a_sw_n_sp3 a_sw_n_sp2 a_sw_n_sp1 a_VSS a_VDD a_reset a_Vcmp a_sw_n8 a_sw_n7 a_sw_n6 a_sw_n5 a_sw_n4 a_sw_n3 a_sw_n2 a_sw_n1 a_sw_p_sp9 a_sw_p_sp8 a_sw_p_sp7 a_sw_p_sp6 a_sw_p_sp5 a_sw_p_sp4 a_sw_p_sp3 a_sw_p_sp2 a_sw_p_sp1 a_sw_p8 a_sw_p7 a_sw_p6 a_sw_p5 a_sw_p4 a_sw_p3 a_sw_p2 a_sw_p1 a_bit10 a_bit9 a_bit8 a_bit7 a_bit6 a_bit5 a_bit4 a_bit3 a_bit2 a_bit1 a_done a_sw_sample
+*.PININFO clk:I sw_n_sp_9..1_:O VSS:B VDD:B reset:I Vcmp:I sw_n_8..1_:O sw_p_sp_9..1_:O sw_p_8..1_:O
+*+ bit_10..1_:O done:O sw_sample:O
+A95 [cycle1 cycle2 cycle3 cycle4] net2 d_lut_sky130_fd_sc_hd__or4_2
+A96 [cycle5 cycle6 cycle7 cycle8] net3 d_lut_sky130_fd_sc_hd__or4_2
+A97 [cycle9 cycle10 cycle11 cycle12] net5 d_lut_sky130_fd_sc_hd__or4_2
+A62_x3 [raw_bit2 raw_bit1 x3_net1] [x3_net16 x3_net2] d_genlut_sky130_fd_sc_hd__fa_1
+A64_x3 [raw_bit3 raw_bit1 x3_net4] [x3_net1 x3_net3] d_genlut_sky130_fd_sc_hd__fa_1
+A67_x3 x3_net2 cycle31 NULL ~reset bit2 NULL ddflop
+A68_x3 x3_net3 cycle31 NULL ~reset bit3 NULL ddflop
+A65_x3 [raw_bit5 raw_bit4 x3_net5] [x3_net4 x3_net6] d_genlut_sky130_fd_sc_hd__fa_1
+A69_x3 [raw_bit6 raw_bit4 x3_net8] [x3_net5 x3_net7] d_genlut_sky130_fd_sc_hd__fa_1
+A70_x3 x3_net6 cycle31 NULL ~reset bit4 NULL ddflop
+A71_x3 x3_net7 cycle31 NULL ~reset bit5 NULL ddflop
+A72_x3 [raw_bit7 raw_bit4 x3_net9] [x3_net8 x3_net10] d_genlut_sky130_fd_sc_hd__fa_1
+A73_x3 [raw_bit9 raw_bit8 x3_net12] [x3_net9 x3_net11] d_genlut_sky130_fd_sc_hd__fa_1
+A74_x3 x3_net10 cycle31 NULL ~reset bit6 NULL ddflop
+A75_x3 x3_net11 cycle31 NULL ~reset bit7 NULL ddflop
+A76_x3 [raw_bit10 raw_bit8 x3_net13] [x3_net12 x3_net14] d_genlut_sky130_fd_sc_hd__fa_1
+A77_x3 [raw_bit11 raw_bit8 raw_bit12] [x3_net13 x3_net15] d_genlut_sky130_fd_sc_hd__fa_1
+A78_x3 x3_net14 cycle31 NULL ~reset bit8 NULL ddflop
+A79_x3 x3_net15 cycle31 NULL ~reset bit9 NULL ddflop
+A80_x3 x3_net16 cycle31 NULL ~reset bit1 NULL ddflop
+A81_x3 raw_bit13 cycle31 NULL ~reset bit10 NULL ddflop
+A82_x3 [cycle31] done d_lut_sky130_fd_sc_hd__inv_1
+A29_x4 [raw_bit1 vcmp] x4_net50 d_lut_sky130_fd_sc_hd__xor2_1
+A31_x4 [raw_bit1 vcmp] x4_net51 d_lut_sky130_fd_sc_hd__xor2_1
+A37_x4 [raw_bit4 vcmp] x4_net52 d_lut_sky130_fd_sc_hd__xor2_1
+A40_x4 [raw_bit4 vcmp] x4_net53 d_lut_sky130_fd_sc_hd__xor2_1
+A45_x4 [raw_bit4 vcmp] x4_net54 d_lut_sky130_fd_sc_hd__xor2_1
+A100_x4 x4_net10 cycle18 NULL ~x4_net22 sw_p_sp1 NULL ddflop
+A99_x4 [vcmp] x4_net10 d_lut_sky130_fd_sc_hd__inv_1
+A102_x4 vcmp cycle18 NULL ~x4_net22 sw_n_sp1 NULL ddflop
+A25_x4 vcmp cycle18 NULL ~x4_net24 sw_n_sp2 NULL ddflop
+A103_x4 [vcmp] x4_net11 d_lut_sky130_fd_sc_hd__inv_1
+A104_x4 x4_net11 cycle18 NULL ~x4_net24 sw_p_sp2 NULL ddflop
+A21_x4 vcmp x4_net1 ~net1 NULL sw_n1 NULL ddflop
+A22_x4 x4_net12 x4_net1 ~net1 NULL sw_p1 NULL ddflop
+A105_x4 [vcmp] x4_net12 d_lut_sky130_fd_sc_hd__inv_1
+A28_x4 vcmp x4_net3 ~net1 NULL sw_n2 NULL ddflop
+A106_x4 x4_net13 x4_net3 ~net1 NULL sw_p2 NULL ddflop
+A107_x4 [vcmp] x4_net13 d_lut_sky130_fd_sc_hd__inv_1
+A109_x4 [vcmp] x4_net14 d_lut_sky130_fd_sc_hd__inv_1
+A111_x4 [vcmp] x4_net15 d_lut_sky130_fd_sc_hd__inv_1
+A27_x4 vcmp cycle21 NULL ~x4_net26 sw_n_sp3 NULL ddflop
+A35_x4 x4_net14 cycle21 NULL ~x4_net26 sw_p_sp3 NULL ddflop
+A41_x4 vcmp cycle21 NULL ~x4_net27 sw_n_sp4 NULL ddflop
+A108_x4 x4_net15 cycle21 NULL ~x4_net27 sw_p_sp4 NULL ddflop
+A110_x4 vcmp cycle21 NULL ~x4_net28 sw_n_sp5 NULL ddflop
+A112_x4 x4_net16 cycle21 NULL ~x4_net28 sw_p_sp5 NULL ddflop
+A113_x4 [vcmp] x4_net16 d_lut_sky130_fd_sc_hd__inv_1
+A114_x4 x4_net17 x4_net5 ~net1 NULL sw_p3 NULL ddflop
+A32_x4 vcmp x4_net5 ~net1 NULL sw_n3 NULL ddflop
+A115_x4 [vcmp] x4_net17 d_lut_sky130_fd_sc_hd__inv_1
+A38_x4 vcmp x4_net6 ~net1 NULL sw_n4 NULL ddflop
+A116_x4 x4_net18 x4_net6 ~net1 NULL sw_p4 NULL ddflop
+A117_x4 [vcmp] x4_net18 d_lut_sky130_fd_sc_hd__inv_1
+A43_x4 vcmp x4_net7 ~net1 NULL sw_n5 NULL ddflop
+A118_x4 x4_net19 x4_net7 ~net1 NULL sw_p5 NULL ddflop
+A119_x4 [vcmp] x4_net19 d_lut_sky130_fd_sc_hd__inv_1
+A132_x4 x4_net20 cycle29 NULL ~net1 sw_p_sp9 NULL ddflop
+A133_x4 [vcmp] x4_net20 d_lut_sky130_fd_sc_hd__inv_1
+A61_x4 vcmp cycle29 NULL ~net1 sw_n_sp9 NULL ddflop
+A1_x4_x24 [x4_x24_net1 cycle19] x4_net1 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x24 [x4_net50 cycle19] x4_net2 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x24 [x4_net50] x4_x24_net1 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4_x30 [x4_x30_net1 cycle20] x4_net3 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x30 [x4_net51 cycle20] x4_net4 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x30 [x4_net51] x4_x30_net1 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4_x34 [x4_x34_net1 cycle22] x4_net5 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x34 [x4_net52 cycle22] x4_net21 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x34 [x4_net52] x4_x34_net1 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4_x39 [x4_x39_net1 cycle23] x4_net6 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x39 [x4_net53 cycle23] x4_net8 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x39 [x4_net53] x4_x39_net1 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4_x44 [x4_x44_net1 cycle24] x4_net7 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x44 [x4_net54 cycle24] x4_net9 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x44 [x4_net54] x4_x44_net1 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4 [x4_net2] x4_net23 d_lut_sky130_fd_sc_hd__inv_1
+A2_x4 [x4_net4] x4_net25 d_lut_sky130_fd_sc_hd__inv_1
+A3_x4 vcmp cycle18 NULL ~net1 raw_bit1 NULL ddflop
+A4_x4 vcmp cycle19 NULL ~net1 raw_bit2 NULL ddflop
+A5_x4 vcmp cycle20 NULL ~net1 raw_bit3 NULL ddflop
+A6_x4 vcmp cycle21 NULL ~net1 raw_bit4 NULL ddflop
+A7_x4 vcmp cycle22 NULL ~net1 raw_bit5 NULL ddflop
+A8_x4 vcmp cycle23 NULL ~net1 raw_bit6 NULL ddflop
+A9_x4 vcmp cycle24 NULL ~net1 raw_bit7 NULL ddflop
+A10_x4 vcmp cycle25 NULL ~net1 raw_bit8 NULL ddflop
+A11_x4 vcmp cycle26 NULL ~net1 raw_bit9 NULL ddflop
+A12_x4 vcmp cycle27 NULL ~net1 raw_bit10 NULL ddflop
+A13_x4 vcmp cycle28 NULL ~net1 raw_bit11 NULL ddflop
+A14_x4 vcmp cycle29 NULL ~net1 raw_bit12 NULL ddflop
+A15_x4 vcmp cycle30 NULL ~net1 raw_bit13 NULL ddflop
+A18_x4 [x4_net21] x4_net29 d_lut_sky130_fd_sc_hd__inv_1
+A19_x4 [x4_net8] x4_net30 d_lut_sky130_fd_sc_hd__inv_1
+A20_x4 [x4_net9] x4_net31 d_lut_sky130_fd_sc_hd__inv_1
+A42_x4 [raw_bit8 vcmp] x4_net55 d_lut_sky130_fd_sc_hd__xor2_1
+A62_x4 [raw_bit8 vcmp] x4_net56 d_lut_sky130_fd_sc_hd__xor2_1
+A64_x4 [raw_bit8 vcmp] x4_net57 d_lut_sky130_fd_sc_hd__xor2_1
+A65_x4 [vcmp] x4_net37 d_lut_sky130_fd_sc_hd__inv_1
+A66_x4 [vcmp] x4_net38 d_lut_sky130_fd_sc_hd__inv_1
+A67_x4 vcmp cycle25 NULL ~x4_net44 sw_n_sp6 NULL ddflop
+A68_x4 x4_net37 cycle25 NULL ~x4_net44 sw_p_sp6 NULL ddflop
+A69_x4 vcmp cycle25 NULL ~x4_net45 sw_n_sp7 NULL ddflop
+A70_x4 x4_net38 cycle25 NULL ~x4_net45 sw_p_sp7 NULL ddflop
+A71_x4 vcmp cycle25 NULL ~x4_net46 sw_n_sp8 NULL ddflop
+A72_x4 x4_net39 cycle25 NULL ~x4_net46 sw_p_sp8 NULL ddflop
+A73_x4 [vcmp] x4_net39 d_lut_sky130_fd_sc_hd__inv_1
+A74_x4 x4_net40 x4_net32 ~net1 NULL sw_p6 NULL ddflop
+A75_x4 vcmp x4_net32 ~net1 NULL sw_n6 NULL ddflop
+A76_x4 [vcmp] x4_net40 d_lut_sky130_fd_sc_hd__inv_1
+A77_x4 vcmp x4_net33 ~net1 NULL sw_n7 NULL ddflop
+A78_x4 x4_net41 x4_net33 ~net1 NULL sw_p7 NULL ddflop
+A79_x4 [vcmp] x4_net41 d_lut_sky130_fd_sc_hd__inv_1
+A80_x4 vcmp x4_net34 ~net1 NULL sw_n8 NULL ddflop
+A81_x4 x4_net42 x4_net34 ~net1 NULL sw_p8 NULL ddflop
+A82_x4 [vcmp] x4_net42 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4_x83 [x4_x83_net1 cycle26] x4_net32 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x83 [x4_net55 cycle26] x4_net43 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x83 [x4_net55] x4_x83_net1 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4_x84 [x4_x84_net1 cycle27] x4_net33 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x84 [x4_net56 cycle27] x4_net35 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x84 [x4_net56] x4_x84_net1 d_lut_sky130_fd_sc_hd__inv_1
+A1_x4_x85 [x4_x85_net1 cycle28] x4_net34 d_lut_sky130_fd_sc_hd__and2_0
+A2_x4_x85 [x4_net57 cycle28] x4_net36 d_lut_sky130_fd_sc_hd__and2_0
+A3_x4_x85 [x4_net57] x4_x85_net1 d_lut_sky130_fd_sc_hd__inv_1
+A88_x4 [x4_net43] x4_net47 d_lut_sky130_fd_sc_hd__inv_1
+A89_x4 [x4_net35] x4_net48 d_lut_sky130_fd_sc_hd__inv_1
+A90_x4 [x4_net36] x4_net49 d_lut_sky130_fd_sc_hd__inv_1
+A46_x4 [x4_net23 net1] x4_net22 d_lut_sky130_fd_sc_hd__and2_0
+A23_x4 [x4_net25 net1] x4_net24 d_lut_sky130_fd_sc_hd__and2_0
+A26_x4 [x4_net29 net1] x4_net26 d_lut_sky130_fd_sc_hd__and2_0
+A16_x4 [x4_net30 net1] x4_net27 d_lut_sky130_fd_sc_hd__and2_0
+A17_x4 [x4_net31 net1] x4_net28 d_lut_sky130_fd_sc_hd__and2_0
+A33_x4 [x4_net47 net1] x4_net44 d_lut_sky130_fd_sc_hd__and2_0
+A36_x4 [x4_net48 net1] x4_net45 d_lut_sky130_fd_sc_hd__and2_0
+A47_x4 [x4_net49 net1] x4_net46 d_lut_sky130_fd_sc_hd__and2_0
+A32_x1 cycle0 clk NULL ~x1_reset_b cycle1 NULL ddflop
+A1_x1 cycle1 clk NULL ~x1_reset_b cycle2 NULL ddflop
+A2_x1 cycle2 clk NULL ~x1_reset_b cycle3 NULL ddflop
+A3_x1 cycle3 clk NULL ~x1_reset_b cycle4 NULL ddflop
+A4_x1 cycle4 clk NULL ~x1_reset_b cycle5 NULL ddflop
+A5_x1 cycle5 clk NULL ~x1_reset_b cycle6 NULL ddflop
+A6_x1 cycle6 clk NULL ~x1_reset_b cycle7 NULL ddflop
+A7_x1 cycle7 clk NULL ~x1_reset_b cycle8 NULL ddflop
+A8_x1 cycle8 clk NULL ~x1_reset_b cycle9 NULL ddflop
+A9_x1 cycle9 clk NULL ~x1_reset_b cycle10 NULL ddflop
+A10_x1 cycle10 clk NULL ~x1_reset_b cycle11 NULL ddflop
+A11_x1 cycle11 clk NULL ~x1_reset_b cycle12 NULL ddflop
+A12_x1 cycle12 clk NULL ~x1_reset_b cycle13 NULL ddflop
+A13_x1 cycle13 clk NULL ~x1_reset_b cycle14 NULL ddflop
+A14_x1 cycle14 clk NULL ~x1_reset_b cycle15 NULL ddflop
+A15_x1 cycle15 clk NULL ~x1_reset_b cycle16 NULL ddflop
+A16_x1 cycle16 clk NULL ~x1_reset_b cycle17 NULL ddflop
+A17_x1 cycle17 clk NULL ~x1_reset_b cycle18 NULL ddflop
+A18_x1 cycle18 clk NULL ~x1_reset_b cycle19 NULL ddflop
+A19_x1 cycle19 clk NULL ~x1_reset_b cycle20 NULL ddflop
+A20_x1 cycle20 clk NULL ~x1_reset_b cycle21 NULL ddflop
+A21_x1 cycle21 clk NULL ~x1_reset_b cycle22 NULL ddflop
+A22_x1 cycle22 clk NULL ~x1_reset_b cycle23 NULL ddflop
+A23_x1 cycle23 clk NULL ~x1_reset_b cycle24 NULL ddflop
+A24_x1 cycle24 clk NULL ~x1_reset_b cycle25 NULL ddflop
+A25_x1 cycle25 clk NULL ~x1_reset_b cycle26 NULL ddflop
+A26_x1 cycle26 clk NULL ~x1_reset_b cycle27 NULL ddflop
+A27_x1 cycle27 clk NULL ~x1_reset_b cycle28 NULL ddflop
+A28_x1 cycle28 clk NULL ~x1_reset_b cycle29 NULL ddflop
+A29_x1 cycle29 clk NULL ~x1_reset_b cycle30 NULL ddflop
+A30_x1 cycle30 clk NULL ~x1_reset_b cycle31 NULL ddflop
+A31_x1 vdd clk NULL ~x1_reset_b cycle0 NULL ddflop
+A37_x1 [x1_net1] x1_reset_b d_lut_sky130_fd_sc_hd__buf_16
+A35_x1 [x1_reset_cycle reset] x1_net1 d_lut_sky130_fd_sc_hd__and2_4
+A33_x1 cycle31 ~clk NULL ~x1_reset_b x1_half_cycle NULL ddflop
+A38_x1 [x1_half_cycle cycle31] x1_reset_cycle d_lut_sky130_fd_sc_hd__nand2_1
+A8 [net2 net3 net5 net4] net6 d_lut_sky130_fd_sc_hd__or4_2
+A9 net6 ~clk NULL ~reset sw_sample NULL ddflop
+A10 [cycle13 cycle14 cycle15] net4 d_lut_sky130_fd_sc_hd__or3_2
+A6 [cycle0] net1 d_lut_sky130_fd_sc_hd__inv_16
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=10n fall_delay=10n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=1n fall_delay=1n)
+.model dlatch d_dlatch(ic=0 rise_delay=1n fall_delay=1n)
+.model dzero d_pulldown(load=1p)
+.model done d_pullup(load=1p)
+
+AA2D1 [a_clk] [clk] todig_1v8
+AD2A1 [sw_n_sp9] [a_sw_n_sp9] toana_1v8
+AD2A2 [sw_n_sp8] [a_sw_n_sp8] toana_1v8
+AD2A3 [sw_n_sp7] [a_sw_n_sp7] toana_1v8
+AD2A4 [sw_n_sp6] [a_sw_n_sp6] toana_1v8
+AD2A5 [sw_n_sp5] [a_sw_n_sp5] toana_1v8
+AD2A6 [sw_n_sp4] [a_sw_n_sp4] toana_1v8
+AD2A7 [sw_n_sp3] [a_sw_n_sp3] toana_1v8
+AD2A8 [sw_n_sp2] [a_sw_n_sp2] toana_1v8
+AD2A9 [sw_n_sp1] [a_sw_n_sp1] toana_1v8
+AA2D2 [a_VSS] [VSS] todig_1v8
+AA2D3 [a_VDD] [VDD] todig_1v8
+AA2D4 [a_reset] [reset] todig_1v8
+AA2D5 [a_Vcmp] [Vcmp] todig_1v8
+AD2A10 [sw_n8] [a_sw_n8] toana_1v8
+AD2A11 [sw_n7] [a_sw_n7] toana_1v8
+AD2A12 [sw_n6] [a_sw_n6] toana_1v8
+AD2A13 [sw_n5] [a_sw_n5] toana_1v8
+AD2A14 [sw_n4] [a_sw_n4] toana_1v8
+AD2A15 [sw_n3] [a_sw_n3] toana_1v8
+AD2A16 [sw_n2] [a_sw_n2] toana_1v8
+AD2A17 [sw_n1] [a_sw_n1] toana_1v8
+AD2A18 [sw_p_sp9] [a_sw_p_sp9] toana_1v8
+AD2A19 [sw_p_sp8] [a_sw_p_sp8] toana_1v8
+AD2A20 [sw_p_sp7] [a_sw_p_sp7] toana_1v8
+AD2A21 [sw_p_sp6] [a_sw_p_sp6] toana_1v8
+AD2A22 [sw_p_sp5] [a_sw_p_sp5] toana_1v8
+AD2A23 [sw_p_sp4] [a_sw_p_sp4] toana_1v8
+AD2A24 [sw_p_sp3] [a_sw_p_sp3] toana_1v8
+AD2A25 [sw_p_sp2] [a_sw_p_sp2] toana_1v8
+AD2A26 [sw_p_sp1] [a_sw_p_sp1] toana_1v8
+AD2A27 [sw_p8] [a_sw_p8] toana_1v8
+AD2A28 [sw_p7] [a_sw_p7] toana_1v8
+AD2A29 [sw_p6] [a_sw_p6] toana_1v8
+AD2A30 [sw_p5] [a_sw_p5] toana_1v8
+AD2A31 [sw_p4] [a_sw_p4] toana_1v8
+AD2A32 [sw_p3] [a_sw_p3] toana_1v8
+AD2A33 [sw_p2] [a_sw_p2] toana_1v8
+AD2A34 [sw_p1] [a_sw_p1] toana_1v8
+AD2A35 [bit10] [a_bit10] toana_1v8
+AD2A36 [bit9] [a_bit9] toana_1v8
+AD2A37 [bit8] [a_bit8] toana_1v8
+AD2A38 [bit7] [a_bit7] toana_1v8
+AD2A39 [bit6] [a_bit6] toana_1v8
+AD2A40 [bit5] [a_bit5] toana_1v8
+AD2A41 [bit4] [a_bit4] toana_1v8
+AD2A42 [bit3] [a_bit3] toana_1v8
+AD2A43 [bit2] [a_bit2] toana_1v8
+AD2A44 [bit1] [a_bit1] toana_1v8
+AD2A45 [done] [a_done] toana_1v8
+AD2A46 [sw_sample] [a_sw_sample] toana_1v8
+
+.ends
+
+
+
+* sky130_fd_sc_hd__or4_2 (A) | (B) | (C) | (D)
+.model d_lut_sky130_fd_sc_hd__or4_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0111111111111111")
+* sky130_fd_sc_hd__fa_1 (A&B) | (A&CIN) | (B&CIN)
+.model d_genlut_sky130_fd_sc_hd__fa_1 d_genlut (
++ rise_delay=[50n 50n]
++ fall_delay=[50n 50n]
++ input_load=[1p 1p 1p]
++ input_delay=[1n 1n 1n]
++ table_values "0001011101101001")
+* sky130_fd_sc_hd__dfrtp_1 IQ
+* sky130_fd_sc_hd__inv_1 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+* sky130_fd_sc_hd__xor2_1 (A&!B) | (!A&B)
+.model d_lut_sky130_fd_sc_hd__xor2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0110")
+* sky130_fd_sc_hd__dfstp_1 IQ
+* sky130_fd_sc_hd__and2_0 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_0 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__dfrtp_4 IQ
+* sky130_fd_sc_hd__buf_16 (A)
+.model d_lut_sky130_fd_sc_hd__buf_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01")
+* sky130_fd_sc_hd__and2_4 (A&B)
+.model d_lut_sky130_fd_sc_hd__and2_4 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "0001")
+* sky130_fd_sc_hd__dfrtn_1 IQ
+* sky130_fd_sc_hd__nand2_1 (!A) | (!B)
+.model d_lut_sky130_fd_sc_hd__nand2_1 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "1110")
+* sky130_fd_sc_hd__or3_2 (A) | (B) | (C)
+.model d_lut_sky130_fd_sc_hd__or3_2 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "01111111")
+* sky130_fd_sc_hd__inv_16 (!A)
+.model d_lut_sky130_fd_sc_hd__inv_16 d_lut (rise_delay=1n fall_delay=1n input_load=1p
++ table_values "10")
+.end

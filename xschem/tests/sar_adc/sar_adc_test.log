@@ -1,0 +1,601 @@
+
+Note: Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Circuit: ** sch_path: /foss/designs/sky130-10-bit-sar-adc/xschem/tests/sar_adc/sar_adc_test.sch
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Warning: v6: no DC value, transient time 0 value used
+Warning: v5: no DC value, transient time 0 value used
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Warning: Further gmin increment
+Trying gmin =   5.6234E-05 Note: One successful gmin step
+Trying gmin =   3.1623E-05 Warning: Further gmin increment
+Trying gmin =   4.8697E-05 Note: One successful gmin step
+Trying gmin =   4.2170E-05 Note: One successful gmin step
+Trying gmin =   3.9242E-05 Note: One successful gmin step
+Trying gmin =   3.7855E-05 Note: One successful gmin step
+Trying gmin =   3.5866E-05 Note: One successful gmin step
+Trying gmin =   3.3077E-05 Warning: Further gmin increment
+Trying gmin =   3.5148E-05 Note: One successful gmin step
+Trying gmin =   3.4097E-05 Note: One successful gmin step
+Trying gmin =   3.2579E-05 Warning: Further gmin increment
+Trying gmin =   3.3711E-05 Note: One successful gmin step
+Trying gmin =   3.3140E-05 Warning: Further gmin increment
+Trying gmin =   3.3567E-05 Note: One successful gmin step
+Trying gmin =   3.3353E-05 Note: One successful gmin step
+Trying gmin =   3.3034E-05 Warning: Further gmin increment
+Trying gmin =   3.3273E-05 Warning: Further gmin increment
+Trying gmin =   3.3333E-05 Note: One successful gmin step
+Trying gmin =   3.3303E-05 Note: One successful gmin step
+Trying gmin =   3.3258E-05 Note: One successful gmin step
+Trying gmin =   3.3191E-05 Note: One successful gmin step
+Trying gmin =   3.3090E-05 Note: One successful gmin step
+Trying gmin =   3.2940E-05 Note: One successful gmin step
+Trying gmin =   3.2715E-05 Note: One successful gmin step
+Trying gmin =   3.2381E-05 Note: One successful gmin step
+Trying gmin =   3.1887E-05 Note: One successful gmin step
+Trying gmin =   3.1159E-05 Note: One successful gmin step
+Trying gmin =   3.0099E-05 Note: One successful gmin step
+Trying gmin =   2.8576E-05 Note: One successful gmin step
+Trying gmin =   2.7130E-05 Note: One successful gmin step
+Trying gmin =   2.5097E-05 Note: One successful gmin step
+Trying gmin =   2.2330E-05 Note: One successful gmin step
+Trying gmin =   1.8740E-05 Note: One successful gmin step
+Trying gmin =   1.4408E-05 Note: One successful gmin step
+Trying gmin =   9.7134E-06 Note: One successful gmin step
+Trying gmin =   5.3765E-06 Note: One successful gmin step
+Trying gmin =   2.2141E-06 Note: One successful gmin step
+Trying gmin =   5.8512E-07 Note: One successful gmin step
+Trying gmin =   7.9491E-08 Note: One successful gmin step
+Trying gmin =   7.9491E-09 Note: One successful gmin step
+Trying gmin =   7.9491E-10 Note: One successful gmin step
+Trying gmin =   7.9491E-11 Note: One successful gmin step
+Trying gmin =   7.9491E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Warning: Dynamic gmin stepping failed
+Note: Starting true gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Warning: Further gmin increment
+Trying gmin =   5.6234E-05 Note: One successful gmin step
+Trying gmin =   2.3714E-05 Warning: Further gmin increment
+Trying gmin =   4.5316E-05 Note: One successful gmin step
+Trying gmin =   3.2781E-05 Note: One successful gmin step
+Trying gmin =   2.3714E-05 Note: One successful gmin step
+Trying gmin =   1.4590E-05 Note: One successful gmin step
+Trying gmin =   7.0414E-06 Note: One successful gmin step
+Trying gmin =   2.3607E-06 Note: One successful gmin step
+Trying gmin =   4.5828E-07 Note: One successful gmin step
+Trying gmin =   4.5828E-08 Note: One successful gmin step
+Trying gmin =   4.5828E-09 Note: One successful gmin step
+Trying gmin =   4.5828E-10 Note: One successful gmin step
+Trying gmin =   4.5828E-11 Note: One successful gmin step
+Trying gmin =   4.5828E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: True gmin stepping completed
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+vss                                          0
+x1.x1.cycle1                       2.67658e-09
+x1.x1.cycle4                       2.67658e-09
+x1.x1.net1                         2.67658e-09
+x1.x1.cycle2                       2.67658e-09
+x1.x1.cycle3                       2.67658e-09
+x1.x1.cycle5                       2.67658e-09
+x1.x1.cycle8                       2.67658e-09
+x1.x1.net2                         2.67658e-09
+x1.x1.cycle6                       2.67658e-09
+x1.x1.cycle7                       2.67658e-09
+x1.x1.cycle9                       2.67658e-09
+x1.x1.cycle12                      2.67658e-09
+x1.x1.net4                         2.67658e-09
+x1.x1.cycle10                      2.67658e-09
+x1.x1.cycle11                      2.67658e-09
+x1.x1.raw_bit2                     2.67658e-09
+x1.x1.raw_bit1                     2.67658e-09
+x1.x1.x3.net1                      2.67658e-09
+x1.x1.x3.net2                      2.67658e-09
+x1.x1.x3.net16                     2.67658e-09
+x1.x1.raw_bit3                     2.67658e-09
+x1.x1.x3.net4                      2.67658e-09
+x1.x1.x3.net3                      2.67658e-09
+bits2                              2.67658e-09
+reset_b                                    1.8
+x1.x1.cycle31                      2.67658e-09
+bits3                              2.67658e-09
+x1.x1.raw_bit5                     2.67658e-09
+x1.x1.raw_bit4                     2.67658e-09
+x1.x1.x3.net5                      2.67658e-09
+x1.x1.x3.net6                      2.67658e-09
+x1.x1.raw_bit6                     2.67658e-09
+x1.x1.x3.net8                      2.67658e-09
+x1.x1.x3.net7                      2.67658e-09
+bits4                              2.67658e-09
+bits5                              2.67658e-09
+x1.x1.raw_bit7                     2.67658e-09
+x1.x1.x3.net9                      2.67658e-09
+x1.x1.x3.net10                     2.67658e-09
+x1.x1.raw_bit9                     2.67658e-09
+x1.x1.raw_bit8                     2.67658e-09
+x1.x1.x3.net12                     2.67658e-09
+x1.x1.x3.net11                     2.67658e-09
+bits6                              2.67658e-09
+bits7                              2.67658e-09
+x1.x1.raw_bit10                    2.67658e-09
+x1.x1.x3.net13                     2.67658e-09
+x1.x1.x3.net14                     2.67658e-09
+x1.x1.raw_bit11                    2.67658e-09
+x1.x1.raw_bit12                    2.67658e-09
+x1.x1.x3.net15                     2.67658e-09
+bits8                              2.67658e-09
+bits9                              2.67658e-09
+bits1                              2.67658e-09
+x1.x1.raw_bit13                    2.67658e-09
+bits10                             2.67658e-09
+done                                       1.8
+x1.vcomp_q                         2.67658e-09
+x1.x1.x4.net58                     2.67658e-09
+x1.x1.x4.net62                     2.67658e-09
+x1.x1.x4.net52                     2.67658e-09
+x1.x1.x4.net53                     2.67658e-09
+x1.x1.x4.net54                     2.67658e-09
+x1.x1.x4.net11                             1.8
+x1.sw_p_sp1                        2.67658e-09
+x1.x1.x4.net23                     5.23066e-09
+x1.x1.cycle18                      2.67658e-09
+x1.sw_n_sp1                        2.67658e-09
+x1.sw_n_sp2                        2.67658e-09
+x1.x1.x4.net25                     5.23066e-09
+x1.x1.x4.net12                             1.8
+x1.sw_p_sp2                        2.67658e-09
+x1.x1.cycle0                       2.67658e-09
+x1.sw_n1                                   1.8
+x1.x1.x4.net1                      5.23066e-09
+x1.x1.x4.net13                             1.8
+x1.sw_p1                                   1.8
+x1.sw_n2                                   1.8
+x1.x1.x4.net4                      5.23066e-09
+x1.x1.x4.net14                             1.8
+x1.sw_p2                                   1.8
+x1.x1.x4.net15                             1.8
+x1.x1.x4.net16                             1.8
+x1.sw_n_sp3                        2.67658e-09
+x1.x1.x4.net27                     5.23066e-09
+x1.x1.cycle21                      2.67658e-09
+x1.sw_p_sp3                        2.67658e-09
+x1.sw_n_sp4                        2.67658e-09
+x1.x1.x4.net28                     5.23066e-09
+x1.sw_p_sp4                        2.67658e-09
+x1.sw_n_sp5                        2.67658e-09
+x1.x1.x4.net29                     5.23066e-09
+x1.x1.x4.net17                             1.8
+x1.sw_p_sp5                        2.67658e-09
+x1.x1.x4.net18                             1.8
+x1.sw_p3                                   1.8
+x1.x1.x4.net6                      5.23066e-09
+x1.sw_n3                                   1.8
+x1.sw_n4                                   1.8
+x1.x1.x4.net7                      5.23066e-09
+x1.x1.x4.net19                             1.8
+x1.sw_p4                                   1.8
+x1.sw_n5                                   1.8
+x1.x1.x4.net8                      5.23066e-09
+x1.x1.x4.net20                             1.8
+x1.sw_p5                                   1.8
+x1.x1.x4.net21                             1.8
+x1.sw_p_sp9                        2.67658e-09
+x1.x1.cycle29                      2.67658e-09
+x1.sw_n_sp9                        2.67658e-09
+x1.x1.x4.net3                      4.90093e-09
+x1.x1.x4.x24.net1                          1.8
+x1.x1.x4.net51                     2.67658e-09
+x1.x1.x4.net2                      5.23066e-09
+x1.x1.x4.net60                     4.90093e-09
+x1.x1.x4.x30.net1                          1.8
+x1.x1.x4.net61                     2.67658e-09
+x1.x1.x4.net5                      5.23066e-09
+x1.x1.x4.net64                     4.90093e-09
+x1.x1.x4.x34.net1                          1.8
+x1.x1.x4.net65                     2.67658e-09
+x1.x1.x4.net22                     5.23066e-09
+x1.x1.x4.net67                     4.90093e-09
+x1.x1.x4.x39.net1                          1.8
+x1.x1.x4.net68                     2.67658e-09
+x1.x1.x4.net9                      5.23066e-09
+x1.x1.x4.net70                     4.90093e-09
+x1.x1.x4.x44.net1                          1.8
+x1.x1.x4.net71                     2.67658e-09
+x1.x1.x4.net10                     5.23066e-09
+x1.x1.x4.net24                             1.8
+x1.x1.x4.net26                             1.8
+x1.x1.cycle19                      2.67658e-09
+x1.x1.cycle20                      2.67658e-09
+x1.x1.cycle22                      2.67658e-09
+x1.x1.cycle23                      2.67658e-09
+x1.x1.cycle24                      2.67658e-09
+x1.x1.cycle25                      2.67658e-09
+x1.x1.cycle26                      2.67658e-09
+x1.x1.cycle27                      2.67658e-09
+x1.x1.cycle28                      2.67658e-09
+x1.x1.cycle30                      2.67658e-09
+x1.x1.x4.net30                             1.8
+x1.x1.x4.net31                             1.8
+x1.x1.x4.net32                             1.8
+x1.x1.x4.net55                     2.67658e-09
+x1.x1.x4.net56                     2.67658e-09
+x1.x1.x4.net57                     2.67658e-09
+x1.x1.x4.net38                             1.8
+x1.x1.x4.net39                             1.8
+x1.sw_n_sp6                        2.67658e-09
+x1.x1.x4.net45                     5.23066e-09
+x1.sw_p_sp6                        2.67658e-09
+x1.sw_n_sp7                        2.67658e-09
+x1.x1.x4.net46                     5.23066e-09
+x1.sw_p_sp7                        2.67658e-09
+x1.sw_n_sp8                        2.67658e-09
+x1.x1.x4.net47                     5.23066e-09
+x1.x1.x4.net40                             1.8
+x1.sw_p_sp8                        2.67658e-09
+x1.x1.x4.net41                             1.8
+x1.sw_p6                                   1.8
+x1.x1.x4.net33                     5.23066e-09
+x1.sw_n6                                   1.8
+x1.sw_n7                                   1.8
+x1.x1.x4.net34                     5.23066e-09
+x1.x1.x4.net42                             1.8
+x1.sw_p7                                   1.8
+x1.sw_n8                                   1.8
+x1.x1.x4.net35                     5.23066e-09
+x1.x1.x4.net43                             1.8
+x1.sw_p8                                   1.8
+x1.x1.x4.net73                     4.90093e-09
+x1.x1.x4.x83.net1                          1.8
+x1.x1.x4.net74                     2.67658e-09
+x1.x1.x4.net44                     5.23066e-09
+x1.x1.x4.net76                     4.90093e-09
+x1.x1.x4.x84.net1                          1.8
+x1.x1.x4.net77                     2.67658e-09
+x1.x1.x4.net36                     5.23066e-09
+x1.x1.x4.net79                     4.90093e-09
+x1.x1.x4.x85.net1                          1.8
+x1.x1.x4.net80                     2.67658e-09
+x1.x1.x4.net37                     5.23066e-09
+x1.x1.x4.net48                             1.8
+x1.x1.x4.net49                             1.8
+x1.x1.x4.net50                             1.8
+x1.x1.x4.net59                     4.90093e-09
+x1.x1.x4.net63                     4.90093e-09
+x1.x1.x4.net66                     4.90093e-09
+x1.x1.x4.net69                     4.90093e-09
+x1.x1.x4.net72                     4.90093e-09
+x1.x1.x4.net75                     4.90093e-09
+x1.x1.x4.net78                     4.90093e-09
+x1.x1.x4.net81                     4.90093e-09
+x1.x1.x1.reset_b                           1.8
+x1.controller_clk                  2.67658e-09
+x1.x1.cycle13                      2.67658e-09
+x1.x1.cycle14                      2.67658e-09
+x1.x1.cycle15                      2.67658e-09
+x1.x1.cycle16                      2.67658e-09
+x1.x1.cycle17                      2.67658e-09
+x1.x1.x1.net1                              1.8
+x1.x1.x1.reset_cycle                       1.8
+x1.x1.x1.net5                      4.90093e-09
+x1.x1.x1.net6                      4.90093e-09
+x1.x1.x1.half_cycle                  0.0214821
+x1.x1.x1.net11                     4.90093e-09
+x1.x1.x1.net4                      4.90093e-09
+x1.x1.x1.net3                      4.90093e-09
+x1.x1.x1.net2                      4.90093e-09
+x1.x1.x1.net10                     4.90093e-09
+x1.x1.x1.net9                      4.90093e-09
+x1.x1.x1.net8                      4.90093e-09
+x1.x1.x1.net7                      4.90093e-09
+x1.x1.net3                         2.67658e-09
+x1.x1.net5                         2.67658e-09
+x1.sw_sample                         0.0214821
+x1.x2.pre_amp_p                        1.67014
+x1.x2.clk_n                                1.8
+x1.x2.pre_amp_n                        1.64717
+x1.vsampled_p                        0.0325419
+x1.x2.net1                           0.0970996
+x1.vsampled_n                       0.00954812
+x1.x2.net3                                 1.8
+x1.x2.net5                         2.22323e-06
+x1.x2.net2                             1.79999
+x1.x2.net4                         1.51699e-06
+clk                                          0
+x1.x2.xc1.a                                  0
+x1.x2.xc1.b1                                 0
+x1.x2.xc2.a                                  0
+x1.x2.xc2.b1                                 0
+x1.x2.net6                         2.57049e-09
+x1.x2.net7                         2.67658e-09
+x1.comp_out_n                      2.67658e-09
+x1.x2.net8                         2.57049e-09
+x1.x2.net9                         2.67658e-09
+x1.comp_out_p                      2.67658e-09
+x1.x3.x1.xc1.a                     1.32841e-07
+x1.x3.x1.xc1.b1                    1.32841e-07
+x1.x3.cap_sp_n1                    1.32841e-07
+x1.x3.x1.xc2.a                     1.32841e-07
+x1.x3.x1.xc2.b1                    1.32841e-07
+x1.x3.cap_sp_n2                    1.32841e-07
+x1.x3.x1.xc3.a                             1.8
+x1.x3.x1.xc3.b1                            1.8
+x1.x3.cap_n1                               1.8
+x1.x3.x1.xc4.a                             1.8
+x1.x3.x1.xc4.b1                            1.8
+x1.x3.cap_n2                               1.8
+x1.x3.x1.xc5.a                     1.32841e-07
+x1.x3.x1.xc5.b1                    1.32841e-07
+x1.x3.cap_sp_n3                    1.32841e-07
+x1.x3.x1.xc6.a                     1.32841e-07
+x1.x3.x1.xc6.b1                    1.32841e-07
+x1.x3.cap_sp_n4                    1.32841e-07
+x1.x3.x1.xc7.a                     1.32841e-07
+x1.x3.x1.xc7.b1                    1.32841e-07
+x1.x3.cap_sp_n5                    1.32841e-07
+x1.x3.x1.xc8.a                             1.8
+x1.x3.x1.xc8.b1                            1.8
+x1.x3.cap_n3                               1.8
+x1.x3.x1.xc9.a                             1.8
+x1.x3.x1.xc9.b1                            1.8
+x1.x3.cap_n4                               1.8
+x1.x3.x1.xc10.a                            1.8
+x1.x3.x1.xc10.b1                           1.8
+x1.x3.cap_n5                               1.8
+x1.x3.x1.xc11.a                    1.32841e-07
+x1.x3.x1.xc11.b1                   1.32841e-07
+x1.x3.cap_sp_n6                    1.32841e-07
+x1.x3.x1.xc12.a                    1.32841e-07
+x1.x3.x1.xc12.b1                   1.32841e-07
+x1.x3.cap_sp_n7                    1.32841e-07
+x1.x3.x1.xc13.a                    1.32841e-07
+x1.x3.x1.xc13.b1                   1.32841e-07
+x1.x3.cap_sp_n8                    1.32841e-07
+x1.x3.x1.xc14.a                            1.8
+x1.x3.x1.xc14.b1                           1.8
+x1.x3.cap_n6                               1.8
+x1.x3.x1.xc15.a                            1.8
+x1.x3.x1.xc15.b1                           1.8
+x1.x3.cap_n7                               1.8
+x1.x3.x1.xc16.a                            1.8
+x1.x3.x1.xc16.b1                           1.8
+x1.x3.cap_n8                               1.8
+x1.x3.x1.xc17.a                    1.32841e-07
+x1.x3.x1.xc17.b1                   1.32841e-07
+x1.x3.cap_sp_n9                    1.32841e-07
+x1.x3.x1.xc18.a                    1.32841e-07
+x1.x3.x1.xc18.b1                   1.32841e-07
+x1.x3.cap_sp_p1                    1.32841e-07
+x1.x3.x1.xc19.a                    1.32841e-07
+x1.x3.x1.xc19.b1                   1.32841e-07
+x1.x3.cap_sp_p2                    1.32841e-07
+x1.x3.x1.xc20.a                            1.8
+x1.x3.x1.xc20.b1                           1.8
+x1.x3.cap_p1                               1.8
+x1.x3.x1.xc21.a                            1.8
+x1.x3.x1.xc21.b1                           1.8
+x1.x3.cap_p2                               1.8
+x1.x3.x1.xc22.a                    1.32841e-07
+x1.x3.x1.xc22.b1                   1.32841e-07
+x1.x3.cap_sp_p3                    1.32841e-07
+x1.x3.x1.xc23.a                    1.32841e-07
+x1.x3.x1.xc23.b1                   1.32841e-07
+x1.x3.cap_sp_p4                    1.32841e-07
+x1.x3.x1.xc24.a                    1.32841e-07
+x1.x3.x1.xc24.b1                   1.32841e-07
+x1.x3.cap_sp_p5                    1.32841e-07
+x1.x3.x1.xc25.a                            1.8
+x1.x3.x1.xc25.b1                           1.8
+x1.x3.cap_p3                               1.8
+x1.x3.x1.xc26.a                            1.8
+x1.x3.x1.xc26.b1                           1.8
+x1.x3.cap_p4                               1.8
+x1.x3.x1.xc27.a                            1.8
+x1.x3.x1.xc27.b1                           1.8
+x1.x3.cap_p5                               1.8
+x1.x3.x1.xc28.a                    1.32841e-07
+x1.x3.x1.xc28.b1                   1.32841e-07
+x1.x3.cap_sp_p6                    1.32841e-07
+x1.x3.x1.xc29.a                    1.32841e-07
+x1.x3.x1.xc29.b1                   1.32841e-07
+x1.x3.cap_sp_p7                    1.32841e-07
+x1.x3.x1.xc30.a                    1.32841e-07
+x1.x3.x1.xc30.b1                   1.32841e-07
+x1.x3.cap_sp_p8                    1.32841e-07
+x1.x3.x1.xc31.a                            1.8
+x1.x3.x1.xc31.b1                           1.8
+x1.x3.cap_p6                               1.8
+x1.x3.x1.xc32.a                            1.8
+x1.x3.x1.xc32.b1                           1.8
+x1.x3.cap_p7                               1.8
+x1.x3.x1.xc33.a                            1.8
+x1.x3.x1.xc33.b1                           1.8
+x1.x3.cap_p8                               1.8
+x1.x3.x1.xc34.a                    1.32841e-07
+x1.x3.x1.xc34.b1                   1.32841e-07
+x1.x3.cap_sp_p9                    1.32841e-07
+x1.x3.x36.net1                             1.8
+x1.x3.x36.net2                     1.32841e-07
+x1.x3.x36.net3                             1.8
+x1.x3.x37.net1                             1.8
+x1.x3.x37.net2                     1.32841e-07
+x1.x3.x37.net3                             1.8
+x1.x3.x38.net1                             1.8
+x1.x3.x39.net1                             1.8
+x1.x3.x2.net1                              1.8
+x1.x3.x2.net2                      1.32841e-07
+x1.x3.x2.net3                              1.8
+x1.x3.x3.net1                              1.8
+x1.x3.x3.net2                      1.32841e-07
+x1.x3.x3.net3                              1.8
+x1.x3.x4.net1                              1.8
+x1.x3.x4.net2                      1.32841e-07
+x1.x3.x4.net3                              1.8
+x1.x3.x5.net1                      1.32841e-07
+x1.x3.x5.net2                              1.8
+x1.x3.x5.net3                      1.32841e-07
+x1.x3.x6.net1                      1.32841e-07
+x1.x3.x6.net2                              1.8
+x1.x3.x6.net3                      1.32841e-07
+x1.x3.x7.net1                      1.32841e-07
+x1.x3.x7.net2                              1.8
+x1.x3.x7.net3                      1.32841e-07
+x1.x3.x8.net1                      1.32841e-07
+x1.x3.x8.net2                              1.8
+x1.x3.x8.net3                      1.32841e-07
+x1.x3.x9.net1                              1.8
+x1.x3.x9.net2                      1.32841e-07
+x1.x3.x9.net3                              1.8
+x1.x3.x10.net1                             1.8
+x1.x3.x10.net2                     1.32841e-07
+x1.x3.x10.net3                             1.8
+x1.x3.x11.net1                             1.8
+x1.x3.x11.net2                     1.32841e-07
+x1.x3.x11.net3                             1.8
+x1.x3.x12.net1                     1.32841e-07
+x1.x3.x12.net2                             1.8
+x1.x3.x12.net3                     1.32841e-07
+x1.x3.x13.net1                     1.32841e-07
+x1.x3.x13.net2                             1.8
+x1.x3.x13.net3                     1.32841e-07
+x1.x3.x14.net1                     1.32841e-07
+x1.x3.x14.net2                             1.8
+x1.x3.x14.net3                     1.32841e-07
+x1.x3.x15.net1                     1.32841e-07
+x1.x3.x15.net2                             1.8
+x1.x3.x15.net3                     1.32841e-07
+x1.x3.x16.net1                             1.8
+x1.x3.x17.net1                             1.8
+x1.x3.x18.net1                             1.8
+x1.x3.x19.net1                     1.32841e-07
+x1.x3.x20.net1                     1.32841e-07
+x1.x3.x21.net1                     1.32841e-07
+x1.x3.x22.net1                     1.32841e-07
+x1.x3.x23.net1                             1.8
+x1.x3.x24.net1                             1.8
+x1.x3.x25.net1                             1.8
+x1.x3.x26.net1                             1.8
+x1.x3.x28.net1                             1.8
+x1.x3.x29.net1                     1.32841e-07
+x1.x3.x30.net1                     1.32841e-07
+x1.x3.x27.net1                     1.32841e-07
+x1.x3.x31.net1                     1.32841e-07
+x1.x4.net3                         4.18808e-11
+x1.x4.clk_n                                1.8
+x1.x4.net1                                 1.8
+x1.x4.net2                                 1.8
+x1.x4.xc1.a                        4.18808e-11
+x1.x4.xc1.b1                       4.18808e-11
+x1.x4.net4                         1.78402e-07
+vin_p                                      1.6
+x1.x4.net5                         1.18935e-07
+x1.x4.net8                          3.3539e-11
+x1.x4.net6                                 1.8
+x1.x4.net7                                 1.8
+x1.x4.xc2.a                         3.3539e-11
+x1.x4.xc2.b1                        3.3539e-11
+x1.x4.net9                         1.78402e-07
+vin_n                                      0.2
+x1.x4.net10                        1.18935e-07
+x1.x5.net2                         2.67658e-09
+x1.x5.net1                         2.67658e-09
+x1.x5.net10                        2.67658e-09
+x1.x5.net16                        4.90093e-09
+x1.x5.net3                         4.90093e-09
+x1.x5.net4                         4.90093e-09
+x1.x5.net5                         4.90093e-09
+x1.x5.net6                         4.90093e-09
+x1.x5.net7                         4.90093e-09
+x1.x5.net15                        4.90093e-09
+x1.x5.net8                         2.67658e-09
+x1.x5.net9                         2.67658e-09
+x1.x5.net11                        2.67658e-09
+x1.x5.net12                        4.90093e-09
+x1.x5.xc1.a                                  0
+x1.x5.xc1.b1                                 0
+x1.x5.net13                        4.90093e-09
+x1.x5.net14                        4.90093e-09
+x1.x5.net17                        4.90093e-09
+x1.x5.net18                        4.90093e-09
+x1.x5.net19                        4.90093e-09
+x1.x5.net20                        4.90093e-09
+x1.x5.net23                        4.90093e-09
+x1.x5.net21                        4.90093e-09
+x1.x5.net22                        4.90093e-09
+vbias                                      0.9
+v7#branch                         -1.24302e-10
+v1#branch                         -1.40312e-10
+v6#branch                                    0
+v5#branch                                    0
+v2#branch                          1.60096e-11
+v4#branch                          3.38857e-05
+v3#branch                         -3.38857e-05
+
+
+No. of Data Rows : 4028
+binary raw file "./sar_adc_test.raw"
+Doing analysis at TEMP = 25.000000 and TNOM = 27.000000
+
+Warning: v6: no DC value, transient time 0 value used
+Warning: v5: no DC value, transient time 0 value used
+Total elapsed time (seconds) = 106.284 
+Total DRAM available = 1988.562 MB.
+DRAM currently available =  661.707 MB.
+Maximum ngspice program size =  857.418 MB.
+Current ngspice program size =  728.090 MB.
+
+Shared ngspice pages =    7.922 MB.
+Text (code) pages =    4.020 MB.
+Stack = 0 bytes.
+Library pages =  840.926 MB.
+
+Number of lines in the deck = 918354
+Netlist loading time = 15.269
+Subckt and Param expansion time = 5.985
+Netlist parsing time = 2.079
+
+Nominal temperature = 27
+Operating temperature = 25
+Total iterations = 14537
+Transient iterations = 12867
+Circuit Equations = 15819
+Circuit original non-zeroes = 109270
+Circuit fill-in non-zeroes = 0
+Circuit total non-zeroes = 109270
+Transient timepoints = 4303
+Accepted timepoints = 4028
+Rejected timepoints = 275
+Total analysis time (seconds) = 85.005
+Matrix load time = 42.972
+Matrix synchronize time = 0
+Matrix reorder time = 5.374
+Matrix factor time = 14.624
+Matrix solve time = 5.775
+Transient analysis time = 68.624
+Transient load time = 36.941
+Transient sync time = 0
+Transient factor time = 12.94
+Transient solve time = 5.152
+Transient trunc time = 3.102
+Transient iterations for the last time point = 0
+AC analysis time = 0
+AC load time = 0
+AC sync time = 0
+AC factor time = 0
+AC solve time = 0
+

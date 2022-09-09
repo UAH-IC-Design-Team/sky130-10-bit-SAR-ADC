@@ -50,7 +50,9 @@ tran 0.1u 100u
 *plot RST_PLS clk+2 Pulse+4
 plot Vin_p-Vin_n Vout_p-Vout_n clk-4
 plot Vout_p-Vout_n clk-4
+plot Vout_p Vout_n clk-4
 plot x1.net4-x1.net3
+plot x1.net9-x1.net8
 write bootstrapped_sampling_switch_test.raw
 .endc
 "}

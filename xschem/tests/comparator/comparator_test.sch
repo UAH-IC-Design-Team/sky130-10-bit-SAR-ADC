@@ -30,6 +30,22 @@ N 450 -170 450 -150 {
 lab=Vbias}
 N 440 -160 450 -160 {
 lab=Vbias}
+N 890 -280 890 -260 {
+lab=VSS}
+N 890 -260 900 -260 {
+lab=VSS}
+N 890 -360 910 -360 {
+lab=Out_n}
+N 890 -360 890 -340 {
+lab=Out_n}
+N 1020 -270 1020 -250 {
+lab=VSS}
+N 1020 -250 1030 -250 {
+lab=VSS}
+N 1020 -350 1040 -350 {
+lab=Out_p}
+N 1020 -350 1020 -330 {
+lab=Out_p}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -101,4 +117,24 @@ C {devices/gnd.sym} 240 -230 0 0 {name=l1 lab=GND}
 C {devices/lab_pin.sym} 240 -310 0 0 {name=l20 sig_type=std_logic lab=Vbias
 }
 C {devices/lab_pin.sym} 440 -160 0 0 {name=l22 sig_type=std_logic lab=Vbias
+}
+C {devices/res.sym} 890 -310 0 0 {name=R1
+value=100k
+footprint=1206
+device=resistor
+m=1
+}
+C {devices/lab_pin.sym} 900 -260 2 0 {name=l23 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 910 -360 2 0 {name=l24 sig_type=std_logic lab=Out_n
+}
+C {devices/res.sym} 1020 -300 0 0 {name=R2
+value=100k
+footprint=1206
+device=resistor
+m=1
+}
+C {devices/lab_pin.sym} 1030 -250 2 0 {name=l25 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 1040 -350 2 0 {name=l26 sig_type=std_logic lab=Out_p
 }

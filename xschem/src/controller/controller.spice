@@ -1,0 +1,226 @@
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/controller/controller.sch
+.subckt controller clk sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2
++ sw_n_sp1 VSS VDD reset Vcmp sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7
++ sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 bit10
++ bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1 done sw_sample
+*.PININFO clk:I sw_n_sp[9..1]:O VSS:B VDD:B reset:I Vcmp:I sw_n[8..1]:O sw_p_sp[9..1]:O sw_p[8..1]:O
+*+ bit[10..1]:O done:O sw_sample:O
+x95 cycle1 cycle2 cycle3 cycle4 VSS VSS VDD VDD net2 sky130_fd_sc_hd__or4_2
+x96 cycle5 cycle6 cycle7 cycle8 VSS VSS VDD VDD net3 sky130_fd_sc_hd__or4_2
+x97 cycle9 cycle10 cycle11 cycle12 VSS VSS VDD VDD net5 sky130_fd_sc_hd__or4_2
+x3 VDD raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6 raw_bit5 raw_bit4
++ raw_bit3 raw_bit2 raw_bit1 VSS reset bit10 bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1 done cycle31 dec
+x4 raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6 raw_bit5 raw_bit4
++ raw_bit3 raw_bit2 raw_bit1 cycle30 cycle29 cycle28 cycle27 cycle26 cycle25 cycle24 cycle23 cycle22 cycle21
++ cycle20 cycle19 cycle18 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 Vcmp net1 VDD VSS sw_n_sp9 sw_n_sp8
++ sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2 sw_n_sp1 sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2
++ sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 raw_bit_calculator
+x1 clk VDD VSS reset cycle31 cycle30 cycle29 cycle28 cycle27 cycle26 cycle25 cycle24 cycle23 cycle22
++ cycle21 cycle20 cycle19 cycle18 cycle17 cycle16 cycle15 cycle14 cycle13 cycle12 cycle11 cycle10 cycle9
++ cycle8 cycle7 cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 cycle0 shifted_clock_generator
+x8 net2 net3 net5 net4 VSS VSS VDD VDD net6 sky130_fd_sc_hd__or4_2
+x9 clk net6 reset VSS VSS VDD VDD sw_sample sky130_fd_sc_hd__dfrtn_1
+x10 cycle13 cycle14 cycle15 VSS VSS VDD VDD net4 sky130_fd_sc_hd__or3_2
+x6 cycle0 VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_16
+.ends
+
+* expanding   symbol:  src/dec/dec.sym # of pins=7
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sch
+.subckt dec  VDD raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6
++ raw_bit5 raw_bit4 raw_bit3 raw_bit2 raw_bit1 VSS reset_b bit10 bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1
++ done dump_bus
+*.PININFO VDD:B bit[10..1]:O VSS:B reset_b:I dump_bus:I done:O raw_bit[13..1]:I
+x62 raw_bit2 raw_bit1 net1 VSS VSS VDD VDD net16 net2 sky130_fd_sc_hd__fa_1
+x64 raw_bit3 raw_bit1 net4 VSS VSS VDD VDD net1 net3 sky130_fd_sc_hd__fa_1
+x67 dump_bus net2 reset_b VSS VSS VDD VDD bit2 sky130_fd_sc_hd__dfrtp_1
+x68 dump_bus net3 reset_b VSS VSS VDD VDD bit3 sky130_fd_sc_hd__dfrtp_1
+x65 raw_bit5 raw_bit4 net5 VSS VSS VDD VDD net4 net6 sky130_fd_sc_hd__fa_1
+x69 raw_bit6 raw_bit4 net8 VSS VSS VDD VDD net5 net7 sky130_fd_sc_hd__fa_1
+x70 dump_bus net6 reset_b VSS VSS VDD VDD bit4 sky130_fd_sc_hd__dfrtp_1
+x71 dump_bus net7 reset_b VSS VSS VDD VDD bit5 sky130_fd_sc_hd__dfrtp_1
+x72 raw_bit7 raw_bit4 net9 VSS VSS VDD VDD net8 net10 sky130_fd_sc_hd__fa_1
+x73 raw_bit9 raw_bit8 net12 VSS VSS VDD VDD net9 net11 sky130_fd_sc_hd__fa_1
+x74 dump_bus net10 reset_b VSS VSS VDD VDD bit6 sky130_fd_sc_hd__dfrtp_1
+x75 dump_bus net11 reset_b VSS VSS VDD VDD bit7 sky130_fd_sc_hd__dfrtp_1
+x76 raw_bit10 raw_bit8 net13 VSS VSS VDD VDD net12 net14 sky130_fd_sc_hd__fa_1
+x77 raw_bit11 raw_bit8 raw_bit12 VSS VSS VDD VDD net13 net15 sky130_fd_sc_hd__fa_1
+x78 dump_bus net14 reset_b VSS VSS VDD VDD bit8 sky130_fd_sc_hd__dfrtp_1
+x79 dump_bus net15 reset_b VSS VSS VDD VDD bit9 sky130_fd_sc_hd__dfrtp_1
+x80 dump_bus net16 reset_b VSS VSS VDD VDD bit1 sky130_fd_sc_hd__dfrtp_1
+x81 dump_bus raw_bit13 reset_b VSS VSS VDD VDD bit10 sky130_fd_sc_hd__dfrtp_1
+x82 dump_bus VSS VSS VDD VDD done sky130_fd_sc_hd__inv_1
+.ends
+
+
+* expanding   symbol:  src/raw_bit_calculator/raw_bit_calculator.sym # of pins=10
+** sym_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sym
+** sch_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sch
+.subckt raw_bit_calculator  raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7
++ raw_bit6 raw_bit5 raw_bit4 raw_bit3 raw_bit2 raw_bit1 cycle13 cycle12 cycle11 cycle10 cycle9 cycle8 cycle7
++ cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 Vcmp RESET VDD
++ VSS sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2 sw_n_sp1 sw_n8 sw_n7 sw_n6
++ sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2
++ sw_p_sp1
+*.PININFO cycle[13..1]:I sw_n_sp[9..1]:O VSS:B VDD:B sw_n[8..1]:O sw_p_sp[9..1]:O sw_p[8..1]:O
+*+ Vcmp:I RESET:I raw_bit[13..1]:O
+x29 raw_bit1 Vcmp VSS VSS VDD VDD net50 sky130_fd_sc_hd__xor2_1
+x31 raw_bit1 Vcmp VSS VSS VDD VDD net51 sky130_fd_sc_hd__xor2_1
+x37 raw_bit4 Vcmp VSS VSS VDD VDD net52 sky130_fd_sc_hd__xor2_1
+x40 raw_bit4 Vcmp VSS VSS VDD VDD net53 sky130_fd_sc_hd__xor2_1
+x45 raw_bit4 Vcmp VSS VSS VDD VDD net54 sky130_fd_sc_hd__xor2_1
+x100 cycle1 net10 net22 VSS VSS VDD VDD sw_p_sp1 sky130_fd_sc_hd__dfrtp_1
+x99 Vcmp VSS VSS VDD VDD net10 sky130_fd_sc_hd__inv_1
+x102 cycle1 Vcmp net22 VSS VSS VDD VDD sw_n_sp1 sky130_fd_sc_hd__dfrtp_1
+x25 cycle1 Vcmp net24 VSS VSS VDD VDD sw_n_sp2 sky130_fd_sc_hd__dfrtp_1
+x103 Vcmp VSS VSS VDD VDD net11 sky130_fd_sc_hd__inv_1
+x104 cycle1 net11 net24 VSS VSS VDD VDD sw_p_sp2 sky130_fd_sc_hd__dfrtp_1
+x21 net1 Vcmp RESET VSS VSS VDD VDD sw_n1 sky130_fd_sc_hd__dfstp_1
+x22 net1 net12 RESET VSS VSS VDD VDD sw_p1 sky130_fd_sc_hd__dfstp_1
+x105 Vcmp VSS VSS VDD VDD net12 sky130_fd_sc_hd__inv_1
+x28 net3 Vcmp RESET VSS VSS VDD VDD sw_n2 sky130_fd_sc_hd__dfstp_1
+x106 net3 net13 RESET VSS VSS VDD VDD sw_p2 sky130_fd_sc_hd__dfstp_1
+x107 Vcmp VSS VSS VDD VDD net13 sky130_fd_sc_hd__inv_1
+x109 Vcmp VSS VSS VDD VDD net14 sky130_fd_sc_hd__inv_1
+x111 Vcmp VSS VSS VDD VDD net15 sky130_fd_sc_hd__inv_1
+x27 cycle4 Vcmp net26 VSS VSS VDD VDD sw_n_sp3 sky130_fd_sc_hd__dfrtp_1
+x35 cycle4 net14 net26 VSS VSS VDD VDD sw_p_sp3 sky130_fd_sc_hd__dfrtp_1
+x41 cycle4 Vcmp net27 VSS VSS VDD VDD sw_n_sp4 sky130_fd_sc_hd__dfrtp_1
+x108 cycle4 net15 net27 VSS VSS VDD VDD sw_p_sp4 sky130_fd_sc_hd__dfrtp_1
+x110 cycle4 Vcmp net28 VSS VSS VDD VDD sw_n_sp5 sky130_fd_sc_hd__dfrtp_1
+x112 cycle4 net16 net28 VSS VSS VDD VDD sw_p_sp5 sky130_fd_sc_hd__dfrtp_1
+x113 Vcmp VSS VSS VDD VDD net16 sky130_fd_sc_hd__inv_1
+x114 net5 net17 RESET VSS VSS VDD VDD sw_p3 sky130_fd_sc_hd__dfstp_1
+x32 net5 Vcmp RESET VSS VSS VDD VDD sw_n3 sky130_fd_sc_hd__dfstp_1
+x115 Vcmp VSS VSS VDD VDD net17 sky130_fd_sc_hd__inv_1
+x38 net6 Vcmp RESET VSS VSS VDD VDD sw_n4 sky130_fd_sc_hd__dfstp_1
+x116 net6 net18 RESET VSS VSS VDD VDD sw_p4 sky130_fd_sc_hd__dfstp_1
+x117 Vcmp VSS VSS VDD VDD net18 sky130_fd_sc_hd__inv_1
+x43 net7 Vcmp RESET VSS VSS VDD VDD sw_n5 sky130_fd_sc_hd__dfstp_1
+x118 net7 net19 RESET VSS VSS VDD VDD sw_p5 sky130_fd_sc_hd__dfstp_1
+x119 Vcmp VSS VSS VDD VDD net19 sky130_fd_sc_hd__inv_1
+x132 cycle12 net20 RESET VSS VSS VDD VDD sw_p_sp9 sky130_fd_sc_hd__dfrtp_1
+x133 Vcmp VSS VSS VDD VDD net20 sky130_fd_sc_hd__inv_1
+x61 cycle12 Vcmp RESET VSS VSS VDD VDD sw_n_sp9 sky130_fd_sc_hd__dfrtp_1
+x24 net50 VDD VSS net1 cycle2 net2 demux2
+x30 net51 VDD VSS net3 cycle3 net4 demux2
+x34 net52 VDD VSS net5 cycle5 net21 demux2
+x39 net53 VDD VSS net6 cycle6 net8 demux2
+x44 net54 VDD VSS net7 cycle7 net9 demux2
+x1 net2 VSS VSS VDD VDD net23 sky130_fd_sc_hd__inv_1
+x2 net4 VSS VSS VDD VDD net25 sky130_fd_sc_hd__inv_1
+x3 cycle1 Vcmp RESET VSS VSS VDD VDD raw_bit1 sky130_fd_sc_hd__dfrtp_4
+x4 cycle2 Vcmp RESET VSS VSS VDD VDD raw_bit2 sky130_fd_sc_hd__dfrtp_4
+x5 cycle3 Vcmp RESET VSS VSS VDD VDD raw_bit3 sky130_fd_sc_hd__dfrtp_4
+x6 cycle4 Vcmp RESET VSS VSS VDD VDD raw_bit4 sky130_fd_sc_hd__dfrtp_4
+x7 cycle5 Vcmp RESET VSS VSS VDD VDD raw_bit5 sky130_fd_sc_hd__dfrtp_4
+x8 cycle6 Vcmp RESET VSS VSS VDD VDD raw_bit6 sky130_fd_sc_hd__dfrtp_4
+x9 cycle7 Vcmp RESET VSS VSS VDD VDD raw_bit7 sky130_fd_sc_hd__dfrtp_4
+x10 cycle8 Vcmp RESET VSS VSS VDD VDD raw_bit8 sky130_fd_sc_hd__dfrtp_4
+x11 cycle9 Vcmp RESET VSS VSS VDD VDD raw_bit9 sky130_fd_sc_hd__dfrtp_4
+x12 cycle10 Vcmp RESET VSS VSS VDD VDD raw_bit10 sky130_fd_sc_hd__dfrtp_4
+x13 cycle11 Vcmp RESET VSS VSS VDD VDD raw_bit11 sky130_fd_sc_hd__dfrtp_4
+x14 cycle12 Vcmp RESET VSS VSS VDD VDD raw_bit12 sky130_fd_sc_hd__dfrtp_4
+x15 cycle13 Vcmp RESET VSS VSS VDD VDD raw_bit13 sky130_fd_sc_hd__dfrtp_4
+x18 net21 VSS VSS VDD VDD net29 sky130_fd_sc_hd__inv_1
+x19 net8 VSS VSS VDD VDD net30 sky130_fd_sc_hd__inv_1
+x20 net9 VSS VSS VDD VDD net31 sky130_fd_sc_hd__inv_1
+x42 raw_bit8 Vcmp VSS VSS VDD VDD net55 sky130_fd_sc_hd__xor2_1
+x62 raw_bit8 Vcmp VSS VSS VDD VDD net56 sky130_fd_sc_hd__xor2_1
+x64 raw_bit8 Vcmp VSS VSS VDD VDD net57 sky130_fd_sc_hd__xor2_1
+x65 Vcmp VSS VSS VDD VDD net37 sky130_fd_sc_hd__inv_1
+x66 Vcmp VSS VSS VDD VDD net38 sky130_fd_sc_hd__inv_1
+x67 cycle8 Vcmp net44 VSS VSS VDD VDD sw_n_sp6 sky130_fd_sc_hd__dfrtp_1
+x68 cycle8 net37 net44 VSS VSS VDD VDD sw_p_sp6 sky130_fd_sc_hd__dfrtp_1
+x69 cycle8 Vcmp net45 VSS VSS VDD VDD sw_n_sp7 sky130_fd_sc_hd__dfrtp_1
+x70 cycle8 net38 net45 VSS VSS VDD VDD sw_p_sp7 sky130_fd_sc_hd__dfrtp_1
+x71 cycle8 Vcmp net46 VSS VSS VDD VDD sw_n_sp8 sky130_fd_sc_hd__dfrtp_1
+x72 cycle8 net39 net46 VSS VSS VDD VDD sw_p_sp8 sky130_fd_sc_hd__dfrtp_1
+x73 Vcmp VSS VSS VDD VDD net39 sky130_fd_sc_hd__inv_1
+x74 net32 net40 RESET VSS VSS VDD VDD sw_p6 sky130_fd_sc_hd__dfstp_1
+x75 net32 Vcmp RESET VSS VSS VDD VDD sw_n6 sky130_fd_sc_hd__dfstp_1
+x76 Vcmp VSS VSS VDD VDD net40 sky130_fd_sc_hd__inv_1
+x77 net33 Vcmp RESET VSS VSS VDD VDD sw_n7 sky130_fd_sc_hd__dfstp_1
+x78 net33 net41 RESET VSS VSS VDD VDD sw_p7 sky130_fd_sc_hd__dfstp_1
+x79 Vcmp VSS VSS VDD VDD net41 sky130_fd_sc_hd__inv_1
+x80 net34 Vcmp RESET VSS VSS VDD VDD sw_n8 sky130_fd_sc_hd__dfstp_1
+x81 net34 net42 RESET VSS VSS VDD VDD sw_p8 sky130_fd_sc_hd__dfstp_1
+x82 Vcmp VSS VSS VDD VDD net42 sky130_fd_sc_hd__inv_1
+x83 net55 VDD VSS net32 cycle9 net43 demux2
+x84 net56 VDD VSS net33 cycle10 net35 demux2
+x85 net57 VDD VSS net34 cycle11 net36 demux2
+x88 net43 VSS VSS VDD VDD net47 sky130_fd_sc_hd__inv_1
+x89 net35 VSS VSS VDD VDD net48 sky130_fd_sc_hd__inv_1
+x90 net36 VSS VSS VDD VDD net49 sky130_fd_sc_hd__inv_1
+x46 net23 RESET VSS VSS VDD VDD net22 sky130_fd_sc_hd__and2_0
+x23 net25 RESET VSS VSS VDD VDD net24 sky130_fd_sc_hd__and2_0
+x26 net29 RESET VSS VSS VDD VDD net26 sky130_fd_sc_hd__and2_0
+x16 net30 RESET VSS VSS VDD VDD net27 sky130_fd_sc_hd__and2_0
+x17 net31 RESET VSS VSS VDD VDD net28 sky130_fd_sc_hd__and2_0
+x33 net47 RESET VSS VSS VDD VDD net44 sky130_fd_sc_hd__and2_0
+x36 net48 RESET VSS VSS VDD VDD net45 sky130_fd_sc_hd__and2_0
+x47 net49 RESET VSS VSS VDD VDD net46 sky130_fd_sc_hd__and2_0
+.ends
+
+
+* expanding   symbol:  src/shifted_clock_generator/shifted_clock_generator.sym # of pins=5
+** sym_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sym
+** sch_path:
+*+ /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sch
+.subckt shifted_clock_generator  clk VDD VSS reset cycle31 cycle30 cycle29 cycle28 cycle27 cycle26
++ cycle25 cycle24 cycle23 cycle22 cycle21 cycle20 cycle19 cycle18 cycle17 cycle16 cycle15 cycle14 cycle13
++ cycle12 cycle11 cycle10 cycle9 cycle8 cycle7 cycle6 cycle5 cycle4 cycle3 cycle2 cycle1 cycle0
+*.PININFO cycle[31..0]:O VSS:B VDD:B clk:I reset:I
+x32 clk cycle0 reset_b VSS VSS VDD VDD cycle1 sky130_fd_sc_hd__dfrtp_1
+x1 clk cycle1 reset_b VSS VSS VDD VDD cycle2 sky130_fd_sc_hd__dfrtp_1
+x2 clk cycle2 reset_b VSS VSS VDD VDD cycle3 sky130_fd_sc_hd__dfrtp_1
+x3 clk cycle3 reset_b VSS VSS VDD VDD cycle4 sky130_fd_sc_hd__dfrtp_1
+x4 clk cycle4 reset_b VSS VSS VDD VDD cycle5 sky130_fd_sc_hd__dfrtp_1
+x5 clk cycle5 reset_b VSS VSS VDD VDD cycle6 sky130_fd_sc_hd__dfrtp_1
+x6 clk cycle6 reset_b VSS VSS VDD VDD cycle7 sky130_fd_sc_hd__dfrtp_1
+x7 clk cycle7 reset_b VSS VSS VDD VDD cycle8 sky130_fd_sc_hd__dfrtp_1
+x8 clk cycle8 reset_b VSS VSS VDD VDD cycle9 sky130_fd_sc_hd__dfrtp_1
+x9 clk cycle9 reset_b VSS VSS VDD VDD cycle10 sky130_fd_sc_hd__dfrtp_1
+x10 clk cycle10 reset_b VSS VSS VDD VDD cycle11 sky130_fd_sc_hd__dfrtp_1
+x11 clk cycle11 reset_b VSS VSS VDD VDD cycle12 sky130_fd_sc_hd__dfrtp_1
+x12 clk cycle12 reset_b VSS VSS VDD VDD cycle13 sky130_fd_sc_hd__dfrtp_1
+x13 clk cycle13 reset_b VSS VSS VDD VDD cycle14 sky130_fd_sc_hd__dfrtp_1
+x14 clk cycle14 reset_b VSS VSS VDD VDD cycle15 sky130_fd_sc_hd__dfrtp_1
+x15 clk cycle15 reset_b VSS VSS VDD VDD cycle16 sky130_fd_sc_hd__dfrtp_1
+x16 clk cycle16 reset_b VSS VSS VDD VDD cycle17 sky130_fd_sc_hd__dfrtp_1
+x17 clk cycle17 reset_b VSS VSS VDD VDD cycle18 sky130_fd_sc_hd__dfrtp_1
+x18 clk cycle18 reset_b VSS VSS VDD VDD cycle19 sky130_fd_sc_hd__dfrtp_1
+x19 clk cycle19 reset_b VSS VSS VDD VDD cycle20 sky130_fd_sc_hd__dfrtp_1
+x20 clk cycle20 reset_b VSS VSS VDD VDD cycle21 sky130_fd_sc_hd__dfrtp_1
+x21 clk cycle21 reset_b VSS VSS VDD VDD cycle22 sky130_fd_sc_hd__dfrtp_1
+x22 clk cycle22 reset_b VSS VSS VDD VDD cycle23 sky130_fd_sc_hd__dfrtp_1
+x23 clk cycle23 reset_b VSS VSS VDD VDD cycle24 sky130_fd_sc_hd__dfrtp_1
+x24 clk cycle24 reset_b VSS VSS VDD VDD cycle25 sky130_fd_sc_hd__dfrtp_1
+x25 clk cycle25 reset_b VSS VSS VDD VDD cycle26 sky130_fd_sc_hd__dfrtp_1
+x26 clk cycle26 reset_b VSS VSS VDD VDD cycle27 sky130_fd_sc_hd__dfrtp_1
+x27 clk cycle27 reset_b VSS VSS VDD VDD cycle28 sky130_fd_sc_hd__dfrtp_1
+x28 clk cycle28 reset_b VSS VSS VDD VDD cycle29 sky130_fd_sc_hd__dfrtp_1
+x29 clk cycle29 reset_b VSS VSS VDD VDD cycle30 sky130_fd_sc_hd__dfrtp_1
+x30 clk cycle30 reset_b VSS VSS VDD VDD cycle31 sky130_fd_sc_hd__dfrtp_1
+x31 clk VDD reset_b VSS VSS VDD VDD cycle0 sky130_fd_sc_hd__dfrtp_1
+x37 net1 VSS VSS VDD VDD reset_b sky130_fd_sc_hd__buf_16
+x35 reset_cycle reset VSS VSS VDD VDD net1 sky130_fd_sc_hd__and2_4
+x33 clk cycle31 reset_b VSS VSS VDD VDD half_cycle sky130_fd_sc_hd__dfrtn_1
+x38 half_cycle cycle31 VSS VSS VDD VDD reset_cycle sky130_fd_sc_hd__nand2_1
+.ends
+
+
+* expanding   symbol:  src/demux2/demux2.sym # of pins=6
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/demux2/demux2.sch
+.subckt demux2  S VDD VSS OUT_0 IN OUT_1
+*.PININFO S:I OUT_0:O IN:I OUT_1:O VDD:B VSS:B
+x1 net1 IN VSS VSS VDD VDD OUT_0 sky130_fd_sc_hd__and2_0
+x2 S IN VSS VSS VDD VDD OUT_1 sky130_fd_sc_hd__and2_0
+x3 S VSS VSS VDD VDD net1 sky130_fd_sc_hd__inv_1
+.ends
+
+.end
