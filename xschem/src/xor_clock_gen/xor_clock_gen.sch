@@ -10,21 +10,15 @@ N 420 -290 450 -290 {
 lab=Vin_p}
 N 420 -250 450 -250 {
 lab=Vin_n}
-N 700 -350 740 -350 {
-lab=Reset}
-N 700 -370 740 -370 {
+N 1340 -390 1380 -390 {
 lab=Vin_p}
-N 920 -390 950 -390 {
+N 1560 -410 1590 -410 {
 lab=#net1}
 N 2670 -270 2700 -270 {
 lab=Gen_clk}
-N 1220 -390 1250 -390 {
+N 1860 -410 1890 -410 {
 lab=Vin_q}
 N 570 -270 590 -270 {
-lab=#net2}
-N 590 -390 590 -270 {
-lab=#net2}
-N 590 -390 740 -390 {
 lab=#net2}
 N 590 -270 640 -270 {
 lab=#net2}
@@ -40,9 +34,9 @@ N 1940 -270 1960 -270 {
 lab=#net7}
 N 2550 -270 2590 -270 {
 lab=#net8}
-N 1030 -390 1050 -390 {
+N 1670 -410 1690 -410 {
 lab=#net9}
-N 1130 -390 1140 -390 {
+N 1770 -410 1780 -410 {
 lab=#net10}
 N 2450 -270 2470 -270 {
 lab=#net11}
@@ -78,6 +72,12 @@ N 1220 -270 1240 -270 {
 lab=#net23}
 N 1520 -270 1540 -270 {
 lab=#net3}
+N 1140 -410 1140 -270 {
+lab=#net20}
+N 1140 -410 1180 -410 {
+lab=#net20}
+N 1260 -410 1380 -410 {
+lab=#net24}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/ipin.sym} 80 -100 0 0 {name=p1 lab=Vin_p
@@ -102,17 +102,17 @@ C {devices/lab_pin.sym} 420 -250 0 0 {name=l3 sig_type=std_logic lab=Vin_n
 }
 C {devices/opin.sym} 130 -40 0 0 {name=p8 lab=Vin_q
 }
-C {sky130_stdcells/dfrtp_1.sym} 830 -370 0 0 {name=x14 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/dfrtp_1.sym} 1470 -390 0 0 {name=x14 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 700 -350 0 0 {name=l9 sig_type=std_logic lab=Reset
+C {devices/lab_pin.sym} 1380 -370 0 0 {name=l9 sig_type=std_logic lab=Reset
 }
-C {devices/lab_pin.sym} 700 -370 0 0 {name=l12 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 1340 -390 0 0 {name=l12 sig_type=std_logic lab=Vin_p
 }
-C {devices/lab_pin.sym} 1250 -390 2 0 {name=l13 sig_type=std_logic lab=Vin_q
+C {devices/lab_pin.sym} 1890 -410 2 0 {name=l13 sig_type=std_logic lab=Vin_q
 }
 C {devices/lab_pin.sym} 2700 -270 2 0 {name=l16 sig_type=std_logic lab=Gen_clk
 }
-C {sky130_stdcells/buf_16.sym} 1180 -390 0 0 {name=x19 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_16.sym} 1820 -410 0 0 {name=x19 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/clkdlybuf4s50_1.sym} 680 -270 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
@@ -128,9 +128,9 @@ C {sky130_stdcells/clkdlybuf4s50_1.sym} 2000 -270 0 0 {name=x7 VGND=VSS VNB=VSS 
 }
 C {sky130_stdcells/buf_16.sym} 2630 -270 0 0 {name=x8 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_4.sym} 990 -390 0 0 {name=x9 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_4.sym} 1630 -410 0 0 {name=x9 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_8.sym} 1090 -390 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_8.sym} 1730 -410 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/buf_4.sym} 2410 -270 0 0 {name=x11 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
@@ -161,4 +161,6 @@ C {sky130_stdcells/clkdlybuf4s50_1.sym} 1280 -270 0 0 {name=x23 VGND=VSS VNB=VSS
 C {sky130_stdcells/clkdlybuf4s50_1.sym} 1380 -270 0 0 {name=x24 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/clkdlybuf4s50_1.sym} 1480 -270 0 0 {name=x25 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/buf_1.sym} 1220 -410 0 0 {name=x26 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }

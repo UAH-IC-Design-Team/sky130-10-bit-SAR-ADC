@@ -50,12 +50,12 @@ C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} 390 -160 0 0 {name=V1 value="PULSE 0 1.8V 1.05n 0.1ps 0.1ps 5us 10us"
+C {devices/vsource.sym} 390 -160 0 0 {name=V1 value="PULSE 0 1.8V 0.529n 0.1ps 0.1ps 5us 10us"
 }
 C {devices/gnd.sym} 390 -110 0 0 {name=l4 lab=GND}
 C {devices/lab_pin.sym} 390 -190 0 0 {name=l5 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 640 -160 0 0 {name=V2 value="PULSE 0 1.8V 1ns 0.1ps 0.1ps 1ns 20us"
+C {devices/vsource.sym} 640 -160 0 0 {name=V2 value="PULSE 0 1.8V 0.5ns 0.1ps 0.1ps 1ns 20us"
 }
 C {devices/gnd.sym} 640 -110 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 640 -190 0 0 {name=l11 sig_type=std_logic lab=D

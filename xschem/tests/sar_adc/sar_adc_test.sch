@@ -48,12 +48,17 @@ value=".options acct list
 .temp 25
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
-.ic v(x1.vsampled_p)=0.9V v(x1.vsampled_n)=0.9V
+*.ic v(x1.vsampled_p)=0.9V v(x1.vsampled_n)=0.9V
 .control
-tran 0.05u 400u
+tran 0.025u 400u
 *plot RST_PLS clk+2 Pulse+4
+plot x1.sw_n_sp1 x1.sw_n_sp2+2 x1.sw_n_sp3+4 x1.sw_n_sp4+6 x1.sw_n_sp5+8 x1.sw_n_sp6+10 x1.sw_n_sp7+12 x1.sw_n_sp8+14 x1.sw_n_sp9+16 
+plot x1.sw_p_sp1 x1.sw_p_sp2+2 x1.sw_p_sp3+4 x1.sw_p_sp4+6 x1.sw_p_sp5+8 x1.sw_p_sp6+10 x1.sw_p_sp7+12 x1.sw_p_sp8+14 x1.sw_p_sp9+16 
+plot x1.sw_n1 x1.sw_n2+2 x1.sw_n3+4 x1.sw_n4+6 x1.sw_n5+8 x1.sw_n6+10 x1.sw_n7+12 x1.sw_n8+14 
+plot x1.sw_p1 x1.sw_p2+2 x1.sw_p3+4 x1.sw_p4+6 x1.sw_p5+8 x1.sw_p6+10 x1.sw_p7+12 x1.sw_p8+14 
 plot Done-4 Vin_p-Vin_n-2 bits1 bits2+2 bits3+4 bits4+6 bits5+8 bits6+10 bits7+12 bits8+14 bits9+16 bits10+18
 plot x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2
+plot x1.vcomp_q x1.comp_out_p x1.x5.net24
 write sar_adc_test.raw
 .endc
 "}
@@ -111,3 +116,7 @@ C {devices/lab_pin.sym} 350 -210 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 340 -140 0 0 {name=l2 sig_type=std_logic lab=Vbias
 }
+C {devices/noconn.sym} 720 -380 1 0 {name=l23}
+C {devices/noconn.sym} 720 -360 1 0 {name=l24}
+C {devices/noconn.sym} 720 -340 1 0 {name=l25}
+C {devices/noconn.sym} 720 -320 1 0 {name=l26}
