@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -50,6 +51,6 @@ C {devices/iopin.sym} 40 -430 0 0 {name=p6 lab=VSS
 C {devices/code.sym} 650 -200 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+value="*.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}

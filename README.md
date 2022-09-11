@@ -14,6 +14,7 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 | dec | complete | 😁 |
 | demux2 | complete | 😁 |
 | raw_bit_calculator | functional | needs verification with full design timing |
+| sample_clock | functional | simple design, but number of ffs could be reduced |
 | shifted_clock_generator | functional | needs clock tree |
 | xor_clock_gen | functional | needs prop delay to be tuned a little |
 

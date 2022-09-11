@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -380,8 +381,6 @@ C {devices/lab_pin.sym} 1290 -710 2 0 {name=l12 sig_type=std_logic lab=Vout_p
 }
 C {devices/lab_pin.sym} 1110 -620 0 0 {name=l13 sig_type=std_logic lab=Vin_p
 }
-C {devices/lab_pin.sym} 780 -890 2 0 {name=l14 sig_type=std_logic lab=VDD
-}
 C {devices/lab_pin.sym} 780 -890 2 0 {name=l15 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 880 -660 2 0 {name=l16 sig_type=std_logic lab=VSS
@@ -559,8 +558,6 @@ C {devices/lab_pin.sym} 760 -470 0 0 {name=l30 sig_type=std_logic lab=VDD
 C {devices/lab_pin.sym} 1290 -240 2 0 {name=l31 sig_type=std_logic lab=Vout_n
 }
 C {devices/lab_pin.sym} 1110 -150 0 0 {name=l32 sig_type=std_logic lab=Vin_n
-}
-C {devices/lab_pin.sym} 780 -420 2 0 {name=l33 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 780 -420 2 0 {name=l34 sig_type=std_logic lab=VDD
 }

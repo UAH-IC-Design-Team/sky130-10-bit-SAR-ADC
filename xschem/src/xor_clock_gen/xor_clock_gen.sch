@@ -90,8 +90,6 @@ C {devices/iopin.sym} 130 -80 0 0 {name=p4 lab=VDD
 }
 C {devices/ipin.sym} 80 -80 0 0 {name=p5 lab=Vin_n
 }
-C {devices/ipin.sym} 80 -60 0 0 {name=p6 lab=Clk
-}
 C {sky130_stdcells/xor2_1.sym} 510 -270 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {devices/ipin.sym} 80 -40 0 0 {name=p7 lab=Reset

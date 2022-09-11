@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -67,6 +68,30 @@ N 1240 -740 1260 -740 {
 lab=sw_sample}
 N 1240 -720 1260 -720 {
 lab=comparator_clk}
+N 1580 -760 1580 -680 {
+lab=cycle0}
+N 1580 -990 1580 -940 {
+lab=test_sw_n1}
+N 1670 -990 1680 -990 {
+lab=test_sw_p1}
+N 1670 -990 1670 -940 {
+lab=test_sw_p1}
+N 1580 -680 1670 -680 {
+lab=cycle0}
+N 1670 -760 1670 -680 {
+lab=cycle0}
+N 1600 -760 1600 -620 {
+lab=Vcmp_buff}
+N 1600 -620 1690 -620 {
+lab=Vcmp_buff}
+N 1640 -620 1640 -590 {
+lab=Vcmp_buff}
+N 1690 -760 1690 -700 {
+lab=#net8}
+N 1580 -1010 1580 -990 {
+lab=test_sw_n1}
+N 1580 -1010 1590 -1010 {
+lab=test_sw_n1}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
 C {src/dec/dec.sym} 1120 -620 0 0 {name=x3}
 C {src/raw_bit_calculator/raw_bit_calculator.sym} 1210 -390 0 0 {name=x4}
@@ -159,8 +184,6 @@ C {sky130_stdcells/buf_8.sym} 700 -140 0 0 {name=x27 VGND=VSS VNB=VSS VPB=VDD VP
 }
 C {devices/lab_pin.sym} 530 -140 0 0 {name=l63 sig_type=std_logic lab=Vcmp
 }
-C {devices/lab_pin.sym} 870 -140 2 0 {name=l64 sig_type=std_logic lab=Vcmp_buff
-}
 C {devices/lab_pin.sym} 870 -140 2 0 {name=l65 sig_type=std_logic lab=Vcmp_buff
 }
 C {sky130_stdcells/buf_16.sym} 960 -410 0 0 {name=x28 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
@@ -181,4 +204,25 @@ C {devices/lab_pin.sym} 1260 -720 2 0 {name=l24 sig_type=std_logic lab=comparato
 C {devices/lab_pin.sym} 940 -780 0 0 {name=l27 sig_type=std_logic lab=clk
 }
 C {devices/lab_pin.sym} 940 -760 0 0 {name=l28 sig_type=std_logic lab=reset
+}
+C {devices/lab_pin.sym} 1640 -590 2 0 {name=l55 sig_type=std_logic lab=Vcmp_buff
+}
+C {devices/lab_pin.sym} 1620 -760 3 0 {name=l56 sig_type=std_logic lab=reset
+
+}
+C {devices/lab_pin.sym} 1680 -990 2 0 {name=l58 sig_type=std_logic lab=test_sw_p1
+}
+C {devices/lab_pin.sym} 1590 -1010 2 0 {name=l59 sig_type=std_logic lab=test_sw_n1
+}
+C {sky130_stdcells/inv_1.sym} 1690 -660 3 0 {name=x105 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {devices/lab_pin.sym} 1710 -760 3 0 {name=l33 sig_type=std_logic lab=reset
+
+}
+C {devices/lab_pin.sym} 1580 -680 3 0 {name=l36 sig_type=std_logic lab=cycle0
+
+}
+C {sky130_stdcells/dfrtp_1.sym} 1600 -850 3 0 {name=x122 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/dfrtp_1.sym} 1690 -850 3 0 {name=x7 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }

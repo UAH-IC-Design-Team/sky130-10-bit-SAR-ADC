@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -13,8 +14,6 @@ lab=GND}
 N 750 -100 750 -80 {
 lab=GND}
 N 510 -400 530 -400 {
-lab=clk}
-N 510 -380 530 -380 {
 lab=reset_b}
 N 1030 -100 1030 -80 {
 lab=GND}
@@ -78,14 +77,12 @@ C {devices/vsource.sym} 460 -120 0 0 {name=V5 value="PULSE 1.8V 0 2us 1ns 1ns 2u
 C {devices/gnd.sym} 460 -70 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 460 -150 0 0 {name=l11 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 510 -380 0 0 {name=l1 sig_type=std_logic lab=reset_b
+C {devices/lab_pin.sym} 510 -400 0 0 {name=l1 sig_type=std_logic lab=reset_b
 }
 C {devices/vsource.sym} 750 -130 0 0 {name=V1 value="PULSE 0 1.8V 10us 10ps 10ps 5us 10us"
 }
 C {devices/gnd.sym} 750 -80 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 750 -160 0 0 {name=l6 sig_type=std_logic lab=clk
-}
-C {devices/lab_pin.sym} 510 -400 0 0 {name=l2 sig_type=std_logic lab=clk
 }
 C {devices/vsource.sym} 1030 -130 0 0 {name=V2 value="PULSE 0 1.8V 10.1us 10ps 10ps 5us 20us"
 }
@@ -103,8 +100,6 @@ C {devices/lab_pin.sym} 510 -420 0 0 {name=l12 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 850 -420 2 0 {name=l18 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 850 -440 2 0 {name=l19 sig_type=std_logic lab=VSS
-}
 C {devices/lab_pin.sym} 850 -400 2 0 {name=l20 sig_type=std_logic lab=Gen_clk
 }
 C {sky130_stdcells/dfrtp_1.sym} 1170 -420 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
@@ -118,4 +113,6 @@ C {devices/lab_pin.sym} 1060 -400 0 0 {name=l26 sig_type=std_logic lab=reset_b
 C {devices/lab_pin.sym} 1300 -440 2 0 {name=l27 sig_type=std_logic lab=Q2
 }
 C {devices/lab_pin.sym} 850 -380 2 0 {name=l21 sig_type=std_logic lab=Vin_q
+}
+C {devices/lab_pin.sym} 850 -440 2 0 {name=l19 sig_type=std_logic lab=VSS
 }

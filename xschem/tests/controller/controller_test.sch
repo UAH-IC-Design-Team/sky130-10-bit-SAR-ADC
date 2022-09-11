@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -40,7 +41,7 @@ lab=controller_comparator_clk}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -83,7 +84,7 @@ C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/controller/controller.sym} 530 -430 0 0 {name=x1}
-C {devices/vsource.sym} 380 -130 0 0 {name=V1 value="PULSE 0 1.8V 10.15us 1ns 1ns 5us 10us"
+C {devices/vsource.sym} 380 -130 0 0 {name=V1 value="PULSE 0 1.8V 10.015us 1ns 1ns 5us 10us"
 }
 C {devices/gnd.sym} 380 -80 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 380 -160 0 0 {name=l6 sig_type=std_logic lab=clk
@@ -136,3 +137,4 @@ C {devices/lab_pin.sym} 700 -340 2 0 {name=l22 sig_type=std_logic lab=controller
 C {devices/noconn.sym} 690 -340 1 0 {name=l25}
 C {devices/lab_pin.sym} 380 -520 0 0 {name=l32 sig_type=std_logic lab=controller_comparator_clk
 }
+C {sky130_fd_pr/corner.sym} 980 -510 0 0 {name=CORNER only_toplevel=false corner=tt}
