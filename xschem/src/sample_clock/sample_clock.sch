@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -204,8 +205,16 @@ N 670 -200 690 -200 {
 lab=clk}
 N 580 -160 590 -160 {
 lab=sw_sample}
-N 810 -180 850 -180 {
+N 990 -180 1010 -180 {
+lab=#net17}
+N 1090 -180 1100 -180 {
+lab=#net18}
+N 1180 -180 1220 -180 {
 lab=comparator_clk}
+N 810 -180 820 -180 {
+lab=#net19}
+N 900 -180 910 -180 {
+lab=#net20}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/lab_pin.sym} 710 -270 2 0 {name=l217 sig_type=std_logic lab=sw_sample
@@ -322,7 +331,7 @@ C {sky130_stdcells/inv_1.sym} 630 -160 0 0 {name=x24 VGND=VSS VNB=VSS VPB=VDD VP
 }
 C {devices/lab_pin.sym} 580 -160 0 0 {name=l61 sig_type=std_logic lab=sw_sample
 }
-C {devices/lab_pin.sym} 850 -180 2 0 {name=l62 sig_type=std_logic lab=comparator_clk
+C {devices/lab_pin.sym} 1220 -180 2 0 {name=l62 sig_type=std_logic lab=comparator_clk
 }
 C {devices/iopin.sym} 120 -130 0 0 {name=p1 lab=VDD
 }
@@ -335,4 +344,12 @@ C {devices/iopin.sym} 120 -110 0 0 {name=p4 lab=VSS
 C {devices/opin.sym} 120 -50 0 0 {name=p5 lab=comparator_clk
 }
 C {devices/ipin.sym} 60 -110 0 0 {name=p6 lab=reset
+}
+C {sky130_stdcells/buf_16.sym} 1140 -180 0 0 {name=x25 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/buf_4.sym} 950 -180 0 0 {name=x26 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/buf_8.sym} 1050 -180 0 0 {name=x27 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/buf_2.sym} 860 -180 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
