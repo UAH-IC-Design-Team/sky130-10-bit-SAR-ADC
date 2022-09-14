@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -68,20 +69,18 @@ N 400 -530 430 -530 {
 lab=sw_n[8..1]}
 N 400 -510 430 -510 {
 lab=sw_p[8..1]}
-N 730 -340 760 -340 {
+N 730 -330 760 -330 {
 lab=VSS}
-N 730 -320 760 -320 {
+N 730 -310 760 -310 {
 lab=VDD}
-N 400 -340 430 -340 {
+N 400 -330 430 -330 {
 lab=comp_out_p}
-N 400 -320 430 -320 {
+N 400 -310 430 -310 {
 lab=comp_out_n}
-N 400 -300 430 -300 {
+N 400 -290 430 -290 {
 lab=RESET}
-N 730 -300 760 -300 {
+N 730 -290 760 -290 {
 lab=Controller_clk}
-N 730 -280 760 -280 {
-lab=Vcomp_q}
 N 400 -220 430 -220 {
 lab=Clk}
 N 730 -440 760 -440 {
@@ -179,19 +178,17 @@ C {devices/lab_pin.sym} 400 -200 0 0 {name=l40 sig_type=std_logic lab=RESET
 C {devices/ipin.sym} 110 -270 0 0 {name=p2 lab=RESET
 }
 C {src/xor_clock_gen/xor_clock_gen.sym} 580 -310 0 0 {name=x5}
-C {devices/lab_pin.sym} 760 -340 2 0 {name=l21 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 760 -330 2 0 {name=l21 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 760 -320 2 0 {name=l22 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 760 -310 2 0 {name=l22 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 400 -320 0 0 {name=l25 sig_type=std_logic lab=comp_out_n
+C {devices/lab_pin.sym} 400 -310 0 0 {name=l25 sig_type=std_logic lab=comp_out_n
 }
-C {devices/lab_pin.sym} 400 -340 0 0 {name=l26 sig_type=std_logic lab=comp_out_p
+C {devices/lab_pin.sym} 400 -330 0 0 {name=l26 sig_type=std_logic lab=comp_out_p
 }
-C {devices/lab_pin.sym} 400 -300 0 0 {name=l41 sig_type=std_logic lab=RESET
+C {devices/lab_pin.sym} 400 -290 0 0 {name=l41 sig_type=std_logic lab=RESET
 }
-C {devices/lab_pin.sym} 760 -300 2 0 {name=l42 sig_type=std_logic lab=Controller_clk
-}
-C {devices/lab_pin.sym} 760 -280 2 0 {name=l43 sig_type=std_logic lab=Vcomp_q
+C {devices/lab_pin.sym} 760 -290 2 0 {name=l42 sig_type=std_logic lab=Controller_clk
 }
 C {devices/lab_pin.sym} 400 -220 0 0 {name=l44 sig_type=std_logic lab=Clk
 }

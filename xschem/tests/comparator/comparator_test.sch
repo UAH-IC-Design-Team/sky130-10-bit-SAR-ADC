@@ -50,7 +50,7 @@ lab=Out_p}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -137,3 +137,4 @@ C {devices/lab_pin.sym} 1030 -250 2 0 {name=l25 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 1040 -350 2 0 {name=l26 sig_type=std_logic lab=Out_p
 }
+C {sky130_fd_pr/corner.sym} 20 -470 0 0 {name=CORNER only_toplevel=false corner=tt}

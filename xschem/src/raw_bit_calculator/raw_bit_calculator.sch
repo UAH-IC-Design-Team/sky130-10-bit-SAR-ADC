@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -991,30 +992,6 @@ N 2930 -840 2930 -830 {
 lab=RESET}
 N 370 -1920 370 -1900 {
 lab=cycle1}
-N 210 -920 210 -840 {
-lab=cycle1}
-N 210 -1150 210 -1100 {
-lab=test_sw_n1_raw}
-N 300 -1150 310 -1150 {
-lab=test_sw_p1_raw}
-N 300 -1150 300 -1100 {
-lab=test_sw_p1_raw}
-N 210 -840 300 -840 {
-lab=cycle1}
-N 300 -920 300 -840 {
-lab=cycle1}
-N 230 -920 230 -780 {
-lab=Vcmp}
-N 230 -780 320 -780 {
-lab=Vcmp}
-N 270 -780 270 -750 {
-lab=Vcmp}
-N 320 -920 320 -860 {
-lab=#net82}
-N 210 -1170 210 -1150 {
-lab=test_sw_n1_raw}
-N 210 -1170 220 -1170 {
-lab=test_sw_n1_raw}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/lab_pin.sym} 240 -1760 2 0 {name=l43 sig_type=std_logic lab=Vcmp
@@ -1683,25 +1660,4 @@ C {sky130_stdcells/clkdlybuf4s50_1.sym} 3210 -1030 3 0 {name=x97 VGND=VSS VNB=VS
 C {sky130_stdcells/clkdlybuf4s50_1.sym} 3210 -930 3 0 {name=x98 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {devices/lab_pin.sym} 370 -1900 3 0 {name=l134 sig_type=std_logic lab=cycle1
-}
-C {devices/lab_pin.sym} 270 -750 2 0 {name=l51 sig_type=std_logic lab=Vcmp
-}
-C {devices/lab_pin.sym} 250 -920 3 0 {name=l135 sig_type=std_logic lab=RESET
-
-}
-C {devices/lab_pin.sym} 310 -1150 2 0 {name=l138 sig_type=std_logic lab=test_sw_p1_raw
-}
-C {devices/lab_pin.sym} 220 -1170 2 0 {name=l141 sig_type=std_logic lab=test_sw_n1_raw
-}
-C {sky130_stdcells/inv_1.sym} 320 -820 3 0 {name=x121 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
-}
-C {devices/lab_pin.sym} 340 -920 3 0 {name=l142 sig_type=std_logic lab=RESET
-
-}
-C {devices/lab_pin.sym} 210 -840 3 0 {name=l143 sig_type=std_logic lab=cycle1
-
-}
-C {sky130_stdcells/dfrtp_1.sym} 230 -1010 3 0 {name=x122 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
-}
-C {sky130_stdcells/dfrtp_1.sym} 320 -1010 3 0 {name=x101 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
