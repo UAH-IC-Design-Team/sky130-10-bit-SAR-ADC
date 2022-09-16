@@ -5,7 +5,7 @@ K {}
 V {}
 S {}
 E {}
-T {This reset is active LOW!!!} 650 -190 0 0 0.4 0.4 {}
+T {This reset is active LOW!!!} 660 -170 0 0 0.4 0.4 {}
 N 50 -250 50 -230 {
 lab=GND}
 N 260 -250 260 -230 {
@@ -26,15 +26,15 @@ N 420 -400 440 -400 {
 lab=Vin_n}
 N 420 -460 440 -460 {
 lab=reset_b}
-N 550 -100 550 -80 {
+N 560 -80 560 -60 {
 lab=GND}
-N 820 -100 820 -80 {
+N 830 -80 830 -60 {
 lab=GND}
 N 360 -250 360 -230 {
 lab=GND}
-N 350 -150 350 -130 {
+N 360 -130 360 -110 {
 lab=Vbias}
-N 340 -140 350 -140 {
+N 350 -120 360 -120 {
 lab=Vbias}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -81,9 +81,9 @@ C {devices/gnd.sym} 260 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 260 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/sar_adc/sar_adc.sym} 590 -430 0 0 {name=x1}
-C {devices/vsource.sym} 350 -100 0 0 {name=V2 value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -80 0 0 {name=V2 value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
 }
-C {devices/lab_pin.sym} 350 -70 0 0 {name=l1 sig_type=std_logic lab=Vin_n
+C {devices/lab_pin.sym} 360 -50 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 770 -460 2 0 {name=l3 sig_type=std_logic lab=VDD
 }
@@ -101,26 +101,26 @@ C {devices/lab_pin.sym} 420 -400 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 420 -460 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 550 -130 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
+C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
 }
-C {devices/gnd.sym} 550 -80 0 0 {name=l18 lab=GND}
-C {devices/lab_pin.sym} 550 -160 0 0 {name=l19 sig_type=std_logic lab=clk
+C {devices/gnd.sym} 560 -60 0 0 {name=l18 lab=GND}
+C {devices/lab_pin.sym} 560 -140 0 0 {name=l19 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 820 -130 0 0 {name=V6 value="PULSE 0 1.8V 5us 0.1ns 0.1ns 1s 1s"
+C {devices/vsource.sym} 830 -110 0 0 {name=V6 value="PULSE 0 1.8V 5us 0.1ns 0.1ns 1s 1s"
 }
-C {devices/gnd.sym} 820 -80 0 0 {name=l20 lab=GND}
-C {devices/lab_pin.sym} 820 -160 0 0 {name=l21 sig_type=std_logic lab=reset_b
+C {devices/gnd.sym} 830 -60 0 0 {name=l20 lab=GND}
+C {devices/lab_pin.sym} 830 -140 0 0 {name=l21 sig_type=std_logic lab=reset_b
 }
 C {devices/vsource.sym} 360 -280 0 0 {name=V1 value="PULSE 0 0.9V 1ns 1us 1ns 1s 1s"
 }
 C {devices/gnd.sym} 360 -230 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 360 -310 0 0 {name=l6 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 350 -180 0 0 {name=V7 value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -160 0 0 {name=V7 value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
 }
-C {devices/lab_pin.sym} 350 -210 0 0 {name=l22 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 360 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
-C {devices/lab_pin.sym} 340 -140 0 0 {name=l2 sig_type=std_logic lab=Vbias
+C {devices/lab_pin.sym} 350 -120 0 0 {name=l2 sig_type=std_logic lab=Vbias
 }
 C {devices/noconn.sym} 760 -460 1 0 {name=l23}
 C {devices/noconn.sym} 760 -440 1 0 {name=l24}
@@ -156,4 +156,4 @@ value="
 * xyce commands
 .tran 0.025u 400u uic
 "}
-C {sky130_fd_pr/corner.sym} 1010 -400 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {sky130_fd_pr/corner.sym} 920 -460 0 0 {name=CORNER only_toplevel=false corner=tt}

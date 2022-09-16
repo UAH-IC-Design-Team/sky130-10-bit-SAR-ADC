@@ -54,20 +54,16 @@ N 2610 -330 2630 -330 {
 lab=#net19}
 N 2710 -330 2730 -330 {
 lab=#net20}
-N 2410 -130 2420 -130 {
-lab=VSS}
-N 2420 -150 2420 -130 {
-lab=VSS}
-N 2420 -330 2420 -300 {
-lab=#net17}
-N 2420 -220 2420 -210 {
-lab=#net17}
-N 2420 -300 2420 -220 {
-lab=#net17}
 N 1480 -330 1520 -330 {
 lab=#net21}
 N 1600 -330 1620 -330 {
 lab=#net22}
+N 560 -260 560 -240 {
+lab=VSS}
+N 560 -330 560 -320 {
+lab=#net5}
+N 560 -260 560 -240 {
+lab=VSS}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/ipin.sym} 80 -100 0 0 {name=p1 lab=Vin_p
@@ -134,7 +130,7 @@ C {sky130_stdcells/clkbuf_8.sym} 2670 -330 0 0 {name=x26 VGND=VSS VNB=VSS VPB=VD
 }
 C {sky130_stdcells/clkbuf_16.sym} 2770 -330 0 0 {name=x27 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 2420 -180 0 0 {name=C2 model=cap_mim_m3_1 W=10 L=10 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 560 -290 0 0 {name=C3 model=cap_mim_m3_1 W=3 L=3 MF=1 spiceprefix=X
 }
-C {devices/lab_pin.sym} 2410 -130 0 0 {name=l4 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 560 -240 0 0 {name=l25 sig_type=std_logic lab=VSS
 }
