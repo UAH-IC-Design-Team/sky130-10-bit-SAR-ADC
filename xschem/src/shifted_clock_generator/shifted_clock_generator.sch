@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -509,18 +510,6 @@ C {devices/lab_pin.sym} 80 -330 0 0 {name=l39 sig_type=std_logic lab=VDD
 C {devices/lab_pin.sym} 6330 -390 0 0 {name=l40 sig_type=std_logic lab=clk
 
 }
-C {devices/lab_pin.sym} 510 -390 0 0 {name=l215 sig_type=std_logic lab=clk
-
-}
-C {devices/lab_pin.sym} 710 -390 0 0 {name=l216 sig_type=std_logic lab=clk
-
-}
-C {devices/lab_pin.sym} 910 -390 0 0 {name=l219 sig_type=std_logic lab=clk
-
-}
-C {devices/lab_pin.sym} 1110 -390 0 0 {name=l220 sig_type=std_logic lab=clk
-
-}
 C {devices/lab_pin.sym} 1310 -390 0 0 {name=l223 sig_type=std_logic lab=clk
 
 }
@@ -640,8 +629,6 @@ C {devices/lab_pin.sym} 2320 -280 2 0 {name=l81 sig_type=std_logic lab=reset_b
 C {devices/lab_pin.sym} 2520 -280 2 0 {name=l85 sig_type=std_logic lab=reset_b
 }
 C {devices/lab_pin.sym} 2740 -280 2 0 {name=l89 sig_type=std_logic lab=reset_b
-}
-C {devices/lab_pin.sym} 3140 -280 2 0 {name=l92 sig_type=std_logic lab=reset_b
 }
 C {devices/lab_pin.sym} 3140 -280 2 0 {name=l93 sig_type=std_logic lab=reset_b
 }

@@ -62,7 +62,7 @@ C {devices/vsource.sym} 430 -140 0 0 {name=V1 value="PULSE 1.8V 0 0 1ns 1ns 5us 
 C {devices/gnd.sym} 430 -90 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 430 -170 0 0 {name=l4 sig_type=std_logic lab=Clk
 }
-C {devices/vsource.sym} 710 -140 0 0 {name=V2 value="SIN 0 0.9V 1e6"
+C {devices/vsource.sym} 710 -140 0 0 {name=V2 value="SIN 0 0.9V 2.5e6"
 }
 C {devices/lab_pin.sym} 710 -170 0 0 {name=l6 sig_type=std_logic lab=Vin_p
 }
@@ -70,7 +70,7 @@ C {devices/lab_pin.sym} 390 -380 0 0 {name=l7 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 390 -360 0 0 {name=l8 sig_type=std_logic lab=Vin_n
 }
-C {devices/lab_pin.sym} 390 -340 0 0 {name=l9 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 390 -340 0 0 {name=l9 sig_type=std_logic lab=Clk
 }
 C {devices/lab_pin.sym} 720 -340 2 0 {name=l10 sig_type=std_logic lab=Vout_p
 }
@@ -83,7 +83,7 @@ C {devices/vsource.sym} 240 -280 0 0 {name=V5 value="0.9V"
 C {devices/gnd.sym} 240 -230 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} 240 -310 0 0 {name=l20 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 710 -60 0 0 {name=V6 value="SIN 0 0.9V 1e6"
+C {devices/vsource.sym} 710 -60 0 0 {name=V6 value="SIN 0 0.9V 2.5e6"
 }
 C {devices/lab_pin.sym} 710 -30 0 0 {name=l22 sig_type=std_logic lab=Vin_n
 }
@@ -97,8 +97,9 @@ value="* ngspice commands
 .options acct list
 .temp 25
 .control
-tran 0.1u 100u
-plot Vout_p
+tran 0.01u 100u 10u
+save all
+plot Vout_p clk+4
 setplot tran1
 linearize V(Vout_p)
 set specwindow=blackman
