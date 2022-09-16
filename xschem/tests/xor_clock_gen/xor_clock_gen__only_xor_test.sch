@@ -65,8 +65,8 @@ value=".options acct list
 .control
 tran 0.01u 80u
 *plot RST_PLS clk+2 Pulse+4
-plot Vin_p-Vin_n reset_b-2 Gen_clk Q2+2
-write xor_clock_gen_test.raw
+plot Vin_p-Vin_n reset_b-2 Gen_clk+2 Q2+4
+write xor_clock_gen_only_xor_test.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -81,7 +81,6 @@ C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/xor_clock_gen/xor_clock_gen.sym} 680 -420 0 0 {name=x1}
 C {devices/vsource.sym} 460 -120 0 0 {name=V5 value="PULSE 1.8V 0 2us 1ns 1ns 2us 1s"
 }
 C {devices/gnd.sym} 460 -70 0 0 {name=l10 lab=GND}
@@ -120,3 +119,4 @@ C {devices/lab_pin.sym} 850 -440 2 0 {name=l19 sig_type=std_logic lab=VSS
 C {sky130_stdcells/inv_1.sym} 1340 -440 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_fd_pr/corner.sym} 40 -490 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {src/xor_clock_gen/xor_clock_gen_only_xor.sym} 680 -420 0 0 {name=x4}

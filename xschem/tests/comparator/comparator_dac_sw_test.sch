@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -166,8 +167,6 @@ C {devices/lab_pin.sym} 410 -420 0 0 {name=l7 sig_type=std_logic lab=Vsampled_p
 C {devices/lab_pin.sym} 410 -400 0 0 {name=l8 sig_type=std_logic lab=Vsampled_n
 }
 C {devices/lab_pin.sym} 410 -380 0 0 {name=l9 sig_type=std_logic lab=Clk
-}
-C {devices/lab_pin.sym} 730 -380 2 0 {name=l10 sig_type=std_logic lab=Out_n
 }
 C {devices/lab_pin.sym} 730 -360 2 0 {name=l11 sig_type=std_logic lab=Out_p
 }

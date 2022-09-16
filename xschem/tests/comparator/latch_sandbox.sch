@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -260,8 +261,6 @@ C {devices/lab_pin.sym} 80 -590 0 0 {name=l2 sig_type=std_logic lab=VDD
 C {devices/vsource.sym} 180 -560 0 0 {name=V4 value=0
 }
 C {devices/gnd.sym} 180 -510 0 0 {name=l3 lab=GND}
-C {devices/lab_pin.sym} 180 -590 0 0 {name=l4 sig_type=std_logic lab=VSS
-}
 C {devices/lab_pin.sym} 180 -590 0 0 {name=l5 sig_type=std_logic lab=VSS
 }
 C {devices/vsource.sym} 270 -560 0 0 {name=V6 value="0.9V"

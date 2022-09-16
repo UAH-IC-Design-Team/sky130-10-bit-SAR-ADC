@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -27,12 +28,14 @@ lab=out_1}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="
+.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
 C {devices/code.sym} 150 -160 0 0 {name=SPICE 
 only_toplevel=true
+spice_ignore=true
 value=".options acct list
 .temp 25
 *vvcc VDD 0 dc 1.8
@@ -80,3 +83,26 @@ C {devices/lab_pin.sym} 720 -250 2 0 {name=l10 sig_type=std_logic lab=out_1
 }
 C {devices/noconn.sym} 710 -270 1 0 {name=l18}
 C {devices/noconn.sym} 710 -250 1 0 {name=l19}
+C {devices/simulator_commands.sym} 0 -470 0 0 {name=COMMANDS
+simulator=ngspice
+only_toplevel=false 
+value="
+* ngspice commands
+.options acct list
+.temp 25
+*vvcc VDD 0 dc 1.8
+*vvss VSS 0 0
+.control
+tran 0.1u 100u
+plot select v_in+2 out_0+4 out_1+6
+write pulse_generator_test.raw
+.endc
+"}
+C {devices/simulator_commands.sym} 130 -470 0 0 {name=COMMANDS1
+simulator=xyce
+only_toplevel=false 
+value="
+* xyce commands
+.tran 0.1u 100u
+.endc
+"}

@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -33,10 +34,14 @@ N 680 -380 700 -380 {
 lab=done}
 N 680 -360 700 -360 {
 lab=sw_sample}
+N 680 -360 700 -360 {
+lab=sw_sample}
+N 680 -340 700 -340 {
+lab=controller_comparator_clk}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -78,8 +83,8 @@ C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/controller/controller.sym} 530 -440 0 0 {name=x1}
-C {devices/vsource.sym} 380 -130 0 0 {name=V1 value="PULSE 0 1.8V 10.15us 1ns 1ns 5us 10us"
+C {src/controller/controller.sym} 530 -430 0 0 {name=x1}
+C {devices/vsource.sym} 380 -130 0 0 {name=V1 value="PULSE 0 1.8V 10.015us 1ns 1ns 5us 10us"
 }
 C {devices/gnd.sym} 380 -80 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 380 -160 0 0 {name=l6 sig_type=std_logic lab=clk
@@ -89,11 +94,11 @@ C {devices/vsource.sym} 650 -130 0 0 {name=V5 value="PULSE 1.8V 0 5us 1ns 1ns 5u
 C {devices/gnd.sym} 650 -80 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 650 -160 0 0 {name=l11 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 380 -500 0 0 {name=l1 sig_type=std_logic lab=reset_b
+C {devices/lab_pin.sym} 380 -480 0 0 {name=l1 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 380 -520 0 0 {name=l2 sig_type=std_logic lab=clk
+C {devices/lab_pin.sym} 380 -500 0 0 {name=l2 sig_type=std_logic lab=clk
 }
-C {devices/lab_pin.sym} 380 -480 0 0 {name=l3 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 380 -460 0 0 {name=l3 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 700 -520 2 0 {name=l4 sig_type=std_logic lab=VDD
 }
@@ -127,3 +132,9 @@ C {devices/noconn.sym} 690 -420 1 0 {name=l24}
 C {devices/noconn.sym} 690 -400 1 0 {name=l39}
 C {devices/noconn.sym} 690 -380 1 0 {name=l40}
 C {devices/noconn.sym} 690 -360 1 0 {name=l41}
+C {devices/lab_pin.sym} 700 -340 2 0 {name=l22 sig_type=std_logic lab=controller_comparator_clk
+}
+C {devices/noconn.sym} 690 -340 1 0 {name=l25}
+C {devices/lab_pin.sym} 380 -520 0 0 {name=l32 sig_type=std_logic lab=controller_comparator_clk
+}
+C {sky130_fd_pr/corner.sym} 980 -510 0 0 {name=CORNER only_toplevel=false corner=tt}

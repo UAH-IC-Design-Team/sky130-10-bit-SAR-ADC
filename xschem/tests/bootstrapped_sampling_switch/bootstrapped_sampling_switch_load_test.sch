@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -77,8 +78,6 @@ C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip 
 C {devices/vsource.sym} 50 -280 0 0 {name=V3 value="1.8V"
 }
 C {devices/gnd.sym} 50 -230 0 0 {name=l14 lab=GND}
-C {devices/lab_pin.sym} 50 -310 0 0 {name=l15 sig_type=std_logic lab=VDD
-}
 C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 }
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
