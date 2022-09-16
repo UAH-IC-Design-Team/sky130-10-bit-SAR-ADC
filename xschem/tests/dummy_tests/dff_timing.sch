@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -35,7 +36,7 @@ value=".options acct list
 tran 0.001n 1.5n
 *plot RST_PLS clk+2 Pulse+4
 plot clk D+2 Q+4
-write dummy.raw
+write dff_timing.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"

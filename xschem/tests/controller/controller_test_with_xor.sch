@@ -14,8 +14,6 @@ lab=GND}
 N 650 -100 650 -80 {
 lab=GND}
 N 360 -610 380 -610 {
-lab=clk}
-N 360 -590 380 -590 {
 lab=reset_b}
 N 920 -90 920 -70 {
 lab=GND}
@@ -30,27 +28,29 @@ lab=VSS}
 N 680 -630 700 -630 {
 lab=VDD}
 N 680 -610 700 -610 {
-lab=Gen_clk}
-N 680 -520 700 -520 {
+lab=controller_clk}
+N 680 -530 700 -530 {
 lab=VDD}
-N 680 -500 700 -500 {
+N 680 -510 700 -510 {
 lab=VSS}
-N 680 -480 700 -480 {
+N 680 -490 700 -490 {
 lab=sw_n_sp[9..1]}
-N 680 -460 700 -460 {
+N 680 -470 700 -470 {
 lab=sw_n[8..1]}
-N 680 -440 700 -440 {
+N 680 -450 700 -450 {
 lab=sw_p_sp[9..1]}
-N 680 -420 700 -420 {
+N 680 -430 700 -430 {
 lab=sw_p[8..1]}
-N 680 -400 700 -400 {
+N 680 -410 700 -410 {
 lab=bit[10..1]}
-N 680 -380 700 -380 {
+N 680 -390 700 -390 {
 lab=done}
-N 680 -360 700 -360 {
+N 680 -370 700 -370 {
 lab=sw_sample}
 N 680 -590 700 -590 {
 lab=Vin_q}
+N 680 -350 700 -350 {
+lab=comparator_clk}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -81,7 +81,7 @@ plot clk reset_b+2 x1.cycle0+4 x1.cycle1+6 x1.cycle2+8 x1.cycle16+10 x1.cycle17+
 
 plot reset_b-2 clk vin_p vin_n gen_clk
 
-write controller_test.raw
+write controller_test_with_xor.raw
 .endc
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
@@ -107,41 +107,39 @@ C {devices/vsource.sym} 650 -130 0 0 {name=V5 value="PULSE 1.8V 0 5us 1ns 1ns 5u
 C {devices/gnd.sym} 650 -80 0 0 {name=l10 lab=GND}
 C {devices/lab_pin.sym} 650 -160 0 0 {name=l11 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 380 -500 0 0 {name=l1 sig_type=std_logic lab=reset_b
+C {devices/lab_pin.sym} 380 -490 0 0 {name=l1 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 380 -520 0 0 {name=l2 sig_type=std_logic lab=Gen_clk
+C {devices/lab_pin.sym} 380 -530 0 0 {name=l2 sig_type=std_logic lab=controller_clk
 }
-C {devices/lab_pin.sym} 380 -480 0 0 {name=l3 sig_type=std_logic lab=Vin_q
+C {devices/lab_pin.sym} 380 -470 0 0 {name=l3 sig_type=std_logic lab=Vin_p
 }
-C {devices/lab_pin.sym} 700 -520 2 0 {name=l4 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 700 -530 2 0 {name=l4 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 700 -500 2 0 {name=l7 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 700 -510 2 0 {name=l7 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 700 -480 2 0 {name=l28 sig_type=std_logic lab=sw_n_sp[9..1]
+C {devices/lab_pin.sym} 700 -490 2 0 {name=l28 sig_type=std_logic lab=sw_n_sp[9..1]
 }
-C {devices/lab_pin.sym} 700 -440 2 0 {name=l29 sig_type=std_logic lab=sw_p_sp[9..1]
+C {devices/lab_pin.sym} 700 -450 2 0 {name=l29 sig_type=std_logic lab=sw_p_sp[9..1]
 }
-C {devices/lab_pin.sym} 700 -460 2 0 {name=l30 sig_type=std_logic lab=sw_n[8..1]
+C {devices/lab_pin.sym} 700 -470 2 0 {name=l30 sig_type=std_logic lab=sw_n[8..1]
 }
-C {devices/lab_pin.sym} 700 -420 2 0 {name=l31 sig_type=std_logic lab=sw_p[8..1]
+C {devices/lab_pin.sym} 700 -430 2 0 {name=l31 sig_type=std_logic lab=sw_p[8..1]
 }
-C {devices/lab_pin.sym} 700 -400 2 0 {name=l8 sig_type=std_logic lab=bit[10..1]
+C {devices/lab_pin.sym} 700 -410 2 0 {name=l8 sig_type=std_logic lab=bit[10..1]
 }
-C {devices/lab_pin.sym} 700 -380 2 0 {name=l9 sig_type=std_logic lab=done
+C {devices/lab_pin.sym} 700 -390 2 0 {name=l9 sig_type=std_logic lab=done
 }
-C {devices/lab_pin.sym} 700 -360 2 0 {name=l12 sig_type=std_logic lab=sw_sample
+C {devices/lab_pin.sym} 700 -370 2 0 {name=l12 sig_type=std_logic lab=sw_sample
 }
 C {src/xor_clock_gen/xor_clock_gen.sym} 530 -620 0 0 {name=x2}
-C {devices/lab_pin.sym} 360 -590 0 0 {name=l22 sig_type=std_logic lab=reset_b
+C {devices/lab_pin.sym} 360 -610 0 0 {name=l22 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 360 -610 0 0 {name=l25 sig_type=std_logic lab=clk
-}
-C {devices/vsource.sym} 920 -120 0 0 {name=V8 value="PULSE 0 1.8V 10.1us 1ns 1ns 5us 20us"
+C {devices/vsource.sym} 920 -120 0 0 {name=V8 value="PULSE 0 1.8V 180us 1ns 1ns 5us 20us"
 }
 C {devices/gnd.sym} 920 -70 0 0 {name=l26 lab=GND}
 C {devices/lab_pin.sym} 920 -150 0 0 {name=l27 sig_type=std_logic lab=Vin_p
 }
-C {devices/vsource.sym} 1210 -120 0 0 {name=V9 value="PULSE 0 1.8V 20.1us 1ns 1ns 5us 20us"
+C {devices/vsource.sym} 1210 -120 0 0 {name=V9 value="PULSE 0 1.8V 190us 1ns 1ns 5us 20us"
 }
 C {devices/gnd.sym} 1210 -70 0 0 {name=l32 lab=GND}
 C {devices/lab_pin.sym} 1210 -150 0 0 {name=l33 sig_type=std_logic lab=Vin_n
@@ -154,16 +152,20 @@ C {devices/lab_pin.sym} 700 -630 2 0 {name=l36 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 700 -650 2 0 {name=l37 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 700 -610 2 0 {name=l38 sig_type=std_logic lab=Gen_clk
+C {devices/lab_pin.sym} 700 -610 2 0 {name=l38 sig_type=std_logic lab=controller_clk
 }
-C {devices/noconn.sym} 690 -520 1 0 {name=l18}
-C {devices/noconn.sym} 690 -500 1 0 {name=l19}
-C {devices/noconn.sym} 690 -480 1 0 {name=l20}
-C {devices/noconn.sym} 690 -460 1 0 {name=l21}
-C {devices/noconn.sym} 690 -440 1 0 {name=l23}
-C {devices/noconn.sym} 690 -420 1 0 {name=l24}
-C {devices/noconn.sym} 690 -400 1 0 {name=l39}
-C {devices/noconn.sym} 690 -380 1 0 {name=l40}
-C {devices/noconn.sym} 690 -360 1 0 {name=l41}
+C {devices/noconn.sym} 690 -530 1 0 {name=l18}
+C {devices/noconn.sym} 690 -510 1 0 {name=l19}
+C {devices/noconn.sym} 690 -490 1 0 {name=l20}
+C {devices/noconn.sym} 690 -470 1 0 {name=l21}
+C {devices/noconn.sym} 690 -450 1 0 {name=l23}
+C {devices/noconn.sym} 690 -430 1 0 {name=l24}
+C {devices/noconn.sym} 690 -410 1 0 {name=l39}
+C {devices/noconn.sym} 690 -390 1 0 {name=l40}
+C {devices/noconn.sym} 690 -370 1 0 {name=l41}
 C {devices/lab_pin.sym} 700 -590 2 0 {name=l42 sig_type=std_logic lab=Vin_q
+}
+C {devices/lab_pin.sym} 380 -510 0 0 {name=l43 sig_type=std_logic lab=clk
+}
+C {devices/lab_pin.sym} 700 -350 2 0 {name=l44 sig_type=std_logic lab=comparator_clk
 }

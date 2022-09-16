@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -31,7 +32,7 @@ lab=Vsampled_p}
 N 400 -420 430 -420 {
 lab=Vsampled_n}
 N 400 -400 430 -400 {
-lab=Clk}
+lab=comparator_clk}
 N 400 -240 430 -240 {
 lab=Controller_clk}
 N 730 -400 760 -400 {
@@ -45,7 +46,7 @@ lab=VDD}
 N 730 -220 760 -220 {
 lab=VSS}
 N 400 -200 430 -200 {
-lab=Vcomp_q}
+lab=RESET}
 N 730 -120 760 -120 {
 lab=Bit[10..1]}
 N 730 -80 760 -80 {
@@ -68,25 +69,26 @@ N 400 -530 430 -530 {
 lab=sw_n[8..1]}
 N 400 -510 430 -510 {
 lab=sw_p[8..1]}
-N 730 -340 760 -340 {
+N 730 -330 760 -330 {
 lab=VSS}
-N 730 -320 760 -320 {
+N 730 -310 760 -310 {
 lab=VDD}
-N 400 -340 430 -340 {
+N 400 -330 430 -330 {
 lab=comp_out_p}
-N 400 -320 430 -320 {
+N 400 -310 430 -310 {
 lab=comp_out_n}
-N 400 -300 430 -300 {
-lab=Clk}
-N 400 -280 430 -280 {
+N 400 -290 430 -290 {
 lab=RESET}
-N 730 -300 760 -300 {
+N 730 -290 760 -290 {
 lab=Controller_clk}
-N 730 -280 760 -280 {
-lab=Vcomp_q}
 N 400 -220 430 -220 {
-lab=RESET}
-N 730 -440 760 -440 {}
+lab=Clk}
+N 730 -440 760 -440 {
+lab=VDD}
+N 400 -180 430 -180 {
+lab=comp_out_p}
+N 730 -60 760 -60 {
+lab=comparator_clk}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/iopin.sym} 40 -320 0 0 {name=p4 lab=VDD
@@ -101,7 +103,7 @@ C {devices/ipin.sym} 110 -210 0 0 {name=p8 lab=V_in_n
 }
 C {devices/ipin.sym} 110 -250 0 0 {name=p9 lab=Clk
 }
-C {src/controller/controller.sym} 580 -160 0 0 {name=x1}
+C {src/controller/controller.sym} 580 -150 0 0 {name=x1}
 C {src/comparator/comparator.sym} 580 -410 0 0 {name=x2}
 C {src/dac/dac.sym} 580 -540 0 0 {name=x3}
 C {src/bootstrapped_sampling_switch/bootstrapped_sampling_switch.sym} 580 -650 0 0 {name=x4}
@@ -129,8 +131,6 @@ C {devices/lab_pin.sym} 400 -440 0 0 {name=l13 sig_type=std_logic lab=Vsampled_p
 }
 C {devices/lab_pin.sym} 400 -420 0 0 {name=l14 sig_type=std_logic lab=Vsampled_n
 }
-C {devices/lab_pin.sym} 400 -400 0 0 {name=l15 sig_type=std_logic lab=Clk
-}
 C {devices/lab_pin.sym} 400 -240 0 0 {name=l16 sig_type=std_logic lab=Controller_clk
 }
 C {devices/lab_pin.sym} 760 -400 2 0 {name=l17 sig_type=std_logic lab=comp_out_n
@@ -145,7 +145,7 @@ C {devices/lab_pin.sym} 760 -240 2 0 {name=l23 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 760 -220 2 0 {name=l24 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 400 -200 0 0 {name=l28 sig_type=std_logic lab=Vcomp_q
+C {devices/lab_pin.sym} 400 -180 0 0 {name=l28 sig_type=std_logic lab=comp_out_p
 }
 C {devices/opin.sym} 40 -150 0 0 {name=p1 lab=Bit[10..1]
 }
@@ -173,24 +173,26 @@ C {devices/lab_pin.sym} 400 -530 2 1 {name=l38 sig_type=std_logic lab=sw_n[8..1]
 }
 C {devices/lab_pin.sym} 400 -510 2 1 {name=l39 sig_type=std_logic lab=sw_p[8..1]
 }
-C {devices/lab_pin.sym} 400 -220 0 0 {name=l40 sig_type=std_logic lab=RESET
+C {devices/lab_pin.sym} 400 -200 0 0 {name=l40 sig_type=std_logic lab=RESET
 }
 C {devices/ipin.sym} 110 -270 0 0 {name=p2 lab=RESET
 }
 C {src/xor_clock_gen/xor_clock_gen.sym} 580 -310 0 0 {name=x5}
-C {devices/lab_pin.sym} 760 -340 2 0 {name=l21 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 760 -330 2 0 {name=l21 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 760 -320 2 0 {name=l22 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 760 -310 2 0 {name=l22 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 400 -320 0 0 {name=l25 sig_type=std_logic lab=comp_out_n
+C {devices/lab_pin.sym} 400 -310 0 0 {name=l25 sig_type=std_logic lab=comp_out_n
 }
-C {devices/lab_pin.sym} 400 -340 0 0 {name=l26 sig_type=std_logic lab=comp_out_p
+C {devices/lab_pin.sym} 400 -330 0 0 {name=l26 sig_type=std_logic lab=comp_out_p
 }
-C {devices/lab_pin.sym} 400 -300 0 0 {name=l27 sig_type=std_logic lab=Clk
+C {devices/lab_pin.sym} 400 -290 0 0 {name=l41 sig_type=std_logic lab=RESET
 }
-C {devices/lab_pin.sym} 400 -280 0 0 {name=l41 sig_type=std_logic lab=RESET
+C {devices/lab_pin.sym} 760 -290 2 0 {name=l42 sig_type=std_logic lab=Controller_clk
 }
-C {devices/lab_pin.sym} 760 -300 2 0 {name=l42 sig_type=std_logic lab=Controller_clk
+C {devices/lab_pin.sym} 400 -220 0 0 {name=l44 sig_type=std_logic lab=Clk
 }
-C {devices/lab_pin.sym} 760 -280 2 0 {name=l43 sig_type=std_logic lab=Vcomp_q
+C {devices/lab_pin.sym} 400 -400 0 0 {name=l15 sig_type=std_logic lab=comparator_clk
+}
+C {devices/lab_pin.sym} 760 -60 2 0 {name=l45 sig_type=std_logic lab=comparator_clk
 }
