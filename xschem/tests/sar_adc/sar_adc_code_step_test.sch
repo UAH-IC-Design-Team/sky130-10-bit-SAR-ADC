@@ -136,9 +136,9 @@ value="
 * Go to the const plot
 setplot const
 
-let vdiff = -0.9V
-let vmax = 0.9V
-let vdelta = 0.6;
+let vdiff = -0.34V
+let vmax = 0.34V
+let vdelta = 0.04;
 let runs = 0
 
 * Insert vector names and set only one scale
@@ -151,7 +151,9 @@ set hcopydevtype=svg
 let total_runs = ceil(($&vmax - $&vdiff) / $&vdelta)
 let out_bits = vector($&total_runs*10)
 reshape out_bits[10][$&total_runs]
-let in_volts = vector($&total_runs) 
+let in_diff_v= vector($&total_runs) 
+let vsampled_p = vector($&total_runs) 
+let vsampled_n = vector($&total_runs) 
 
 while vdiff le $&vmax
 	* Alter the voltages
@@ -160,12 +162,17 @@ while vdiff le $&vmax
 
 	* Run the tran
 	* tran creates a new plot starting with tran1
-	tran 0.1u 325u uic
+	tran 0.1u 340u uic
 
-	set pltfile1 = plot_converg_\{$&runs\}.svg
-	set pltfile2 = plot_input_v_\{$&runs\}.svg
-	hardcopy $pltfile1 x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2
-	hardcopy $pltfile2 vin_p vin_n vss vdd vbias
+	set pltfile1 = plot_converg_\{$&runs\}_\{$&vdiff\}.svg
+	set pltfile2 = plot_input_v_\{$&runs\}_\{$&vdiff\}.svg
+	set pltfile3 = plot_clks_\{$&runs\}_\{$&vdiff\}.svg
+	set plttitle = run\{$&runs\}_vin\{$&vdiff\}
+	hardcopy $pltfile1 x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2 x1.comp_out_n-2 title $plttitle
+	*hardcopy $pltfile2 vin_p vin_n vss vdd vbias title $plttitle
+	hardcopy $pltfile3 x1.x1.cycle0 x1.x1.cycle1 x1.x1.cycle2 x1.x1.cycle3 x1.x1.cycle4 x1.x1.cycle5 x1.x1.cycle6 x1.x1.cycle7 x1.x1.cycle8 x1.x1.cycle9 x1.x1.cycle10 x1.x1.cycle11 x1.x1.cycle12 x1.x1.cycle13 x1.x1.cycle14 x1.x1.cycle15 x1.controller_clk+2 title $plttitle
+
+
 
 	* Measure the max to find the output
 	meas tran max_bit0 MAX v(bits1) from=305u to=320u
@@ -178,6 +185,8 @@ while vdiff le $&vmax
 	meas tran max_bit7 MAX v(bits8) from=305u to=320u
 	meas tran max_bit8 MAX v(bits9) from=305u to=320u
 	meas tran max_bit9 MAX v(bits10) from=305u to=320u
+	meas tran avg_vsampled_p AVG v(x1.vsampled_p) from=290u to=295u
+	meas tran avg_vsampled_n AVG v(x1.vsampled_n) from=290u to=295u
 
 
 	* Create variables
@@ -192,11 +201,15 @@ while vdiff le $&vmax
 	set max_bit8 = $&max_bit8
 	set max_bit9 = $&max_bit9
 	set vdiff = $&vdiff
+	set vsampled_p = $&avg_vsampled_p
+	set vsampled_n = $&avg_vsampled_n
 
 	* Switch to constants plot
 	setplot const
 	*compose out_bits values $&out_bits $p_max $n_max
-	let in_volts[$&runs] = $vdiff
+	let in_diff_v[$&runs] = $vdiff
+	let vsampled_p[$&runs] = $vsampled_p
+	let vsampled_n[$&runs] = $vsampled_n
 	let out_bits[0][$&runs] = $max_bit0
 	let out_bits[1][$&runs] = $max_bit1
 	let out_bits[2][$&runs] = $max_bit2
@@ -223,7 +236,7 @@ setplot const
 compose def_scale start=1 stop=$&total_runs step=1
 setscale def_scale
 echo Writing out_bits.txt
-wrdata out_bits.txt in_volts out_bits
+wrdata out_bits.txt vsampled_p vsampled_n in_diff_v out_bits
 
 echo
 echo Total Runs = $&runs

@@ -81,7 +81,7 @@ C {devices/gnd.sym} 260 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 260 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/sar_adc/sar_adc.sym} 590 -430 0 0 {name=x1}
-C {devices/vsource.sym} 360 -80 0 0 {name=V2 value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -80 0 0 {name=V2 value="PULSE 0 0.9V 1ns 1us 1ns 1s 1s"
 }
 C {devices/lab_pin.sym} 360 -50 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
@@ -116,7 +116,7 @@ C {devices/vsource.sym} 360 -280 0 0 {name=V1 value="PULSE 0 0.9V 1ns 1us 1ns 1s
 C {devices/gnd.sym} 360 -230 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 360 -310 0 0 {name=l6 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 360 -160 0 0 {name=V7 value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -160 0 0 {name=V7 value="PULSE 0 0.9V 1ns 1us 1ns 1s 1s"
 }
 C {devices/lab_pin.sym} 360 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
