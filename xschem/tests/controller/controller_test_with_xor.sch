@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -47,14 +48,12 @@ N 680 -390 700 -390 {
 lab=done}
 N 680 -370 700 -370 {
 lab=sw_sample}
-N 680 -590 700 -590 {
-lab=Vin_q}
 N 680 -350 700 -350 {
 lab=comparator_clk}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -131,7 +130,7 @@ C {devices/lab_pin.sym} 700 -390 2 0 {name=l9 sig_type=std_logic lab=done
 }
 C {devices/lab_pin.sym} 700 -370 2 0 {name=l12 sig_type=std_logic lab=sw_sample
 }
-C {src/xor_clock_gen/xor_clock_gen.sym} 530 -620 0 0 {name=x2}
+C {src/xor_clock_gen/xor_clock_gen.sym} 530 -630 0 0 {name=x2}
 C {devices/lab_pin.sym} 360 -610 0 0 {name=l22 sig_type=std_logic lab=reset_b
 }
 C {devices/vsource.sym} 920 -120 0 0 {name=V8 value="PULSE 0 1.8V 180us 1ns 1ns 5us 20us"
@@ -163,9 +162,8 @@ C {devices/noconn.sym} 690 -430 1 0 {name=l24}
 C {devices/noconn.sym} 690 -410 1 0 {name=l39}
 C {devices/noconn.sym} 690 -390 1 0 {name=l40}
 C {devices/noconn.sym} 690 -370 1 0 {name=l41}
-C {devices/lab_pin.sym} 700 -590 2 0 {name=l42 sig_type=std_logic lab=Vin_q
-}
 C {devices/lab_pin.sym} 380 -510 0 0 {name=l43 sig_type=std_logic lab=clk
 }
 C {devices/lab_pin.sym} 700 -350 2 0 {name=l44 sig_type=std_logic lab=comparator_clk
 }
+C {sky130_fd_pr/corner.sym} 10 -490 0 0 {name=CORNER only_toplevel=false corner=tt}
