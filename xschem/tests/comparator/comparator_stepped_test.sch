@@ -71,7 +71,7 @@ C {devices/vsource.sym} 370 -270 0 0 {name=Vp value=0
 }
 C {devices/lab_pin.sym} 370 -300 0 0 {name=l2 sig_type=std_logic lab=Vin_p
 }
-C {devices/vsource.sym} 460 -270 0 0 {name=V2 value="PULSE 0 1.8V 1us 0.1ns 0.1ns 1us 4us"
+C {devices/vsource.sym} 460 -270 0 0 {name=V2 value="PULSE 0 1.8V 1us 0.1ns 0.1ns 1us 2us"
 }
 C {devices/gnd.sym} 460 -220 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 460 -300 0 0 {name=l6 sig_type=std_logic lab=Clk
@@ -132,9 +132,9 @@ value="
 * Go to the const plot
 setplot const
 
-let vdiff = -0.1V
-let vmax = 0.1V
-let vdelta = 0.03;
+let vdiff = -0.005V
+let vmax = 0.005V
+let vdelta = 0.001;
 let runs = 0
 
 * Insert vector names and set only one scale
@@ -163,7 +163,7 @@ while vdiff le $&vmax
 	meas tran n_max MAX v(out_n) from=0u to=3u
 
 	set plotfile = plot\{$&runs\}.svg
-	hardcopy $plotfile vin_p-vin_n out_n+4 out_p+6
+	hardcopy $plotfile clk-4 vin_p-vin_n out_n+4 out_p+6
 
 	* Create variables
 	set p_max = $&p_max

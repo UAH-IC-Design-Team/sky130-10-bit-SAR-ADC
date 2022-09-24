@@ -146,23 +146,23 @@ N 780 -810 780 -750 {
 lab=Pre_Amp_n}
 N 950 -810 950 -750 {
 lab=Pre_Amp_p}
-N 440 -200 440 -180 {
+N 460 -90 460 -70 {
 lab=VSS}
-N 440 -270 440 -260 {
+N 460 -160 460 -150 {
 lab=#net5}
 N 410 -270 610 -270 {
 lab=#net5}
-N 440 -200 440 -180 {
+N 460 -90 460 -70 {
 lab=VSS}
-N 1260 -190 1260 -170 {
+N 1260 -130 1260 -110 {
 lab=VSS}
-N 1260 -260 1260 -250 {
+N 1260 -200 1260 -190 {
 lab=#net4}
-N 1260 -190 1260 -170 {
+N 1260 -130 1260 -110 {
 lab=VSS}
 N 1120 -270 1290 -270 {
 lab=#net4}
-N 1260 -270 1260 -260 {
+N 1260 -210 1260 -200 {
 lab=#net4}
 N 260 -400 280 -400 {
 lab=#net10}
@@ -186,6 +186,12 @@ N 460 -400 470 -400 {
 lab=Clk}
 N 570 -460 580 -460 {
 lab=Clk_latch_n}
+N 460 -170 460 -160 {
+lab=#net5}
+N 460 -270 460 -170 {
+lab=#net5}
+N 1260 -270 1260 -210 {
+lab=#net4}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {sky130_fd_pr/pfet_01v8.sym} 930 -850 0 0 {name=M1
@@ -248,7 +254,7 @@ C {sky130_fd_pr/pfet_01v8.sym} 930 -420 0 0 {name=M5
 L=0.15
 W=1.605
 nf=1
-mult=16
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -262,7 +268,7 @@ C {sky130_fd_pr/pfet_01v8.sym} 800 -420 0 1 {name=M6
 L=0.15
 W=1.605
 nf=1
-mult=16
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -306,7 +312,7 @@ C {sky130_fd_pr/nfet_01v8.sym} 1120 -220 0 1 {name=M11
 L=0.15
 W=0.91
 nf=1 
-mult=16
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -320,7 +326,7 @@ C {sky130_fd_pr/nfet_01v8.sym} 930 -220 0 0 {name=M12
 L=0.15
 W=0.91
 nf=1 
-mult=16
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -334,7 +340,7 @@ C {sky130_fd_pr/nfet_01v8.sym} 800 -220 0 1 {name=M13
 L=0.15
 W=0.91
 nf=1 
-mult=16
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -348,7 +354,7 @@ C {sky130_fd_pr/nfet_01v8.sym} 610 -220 0 0 {name=M14
 L=0.15
 W=0.91
 nf=1 
-mult=16
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -450,11 +456,11 @@ C {devices/lab_pin.sym} 780 -680 2 0 {name=l10 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 950 -680 0 0 {name=l11 sig_type=std_logic lab=VSS
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1100 -690 0 0 {name=C1 model=cap_mim_m3_1 W=5 L=5 MF=2 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1100 -690 0 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 1100 -640 2 0 {name=l24 sig_type=std_logic lab=VSS
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 620 -690 0 0 {name=C2 model=cap_mim_m3_1 W=5 L=5 MF=2 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 620 -690 0 0 {name=C2 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 620 -640 2 0 {name=l26 sig_type=std_logic lab=VSS
 }
@@ -470,13 +476,13 @@ C {sky130_stdcells/buf_4.sym} 270 -270 0 1 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPW
 }
 C {sky130_stdcells/buf_8.sym} 170 -270 0 1 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 440 -230 0 0 {name=C3 model=cap_mim_m3_1 W=3 L=3 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 460 -120 0 0 {name=C3 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1260 -220 0 0 {name=C4 model=cap_mim_m3_1 W=3 L=3 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1260 -160 0 0 {name=C4 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
-C {devices/lab_pin.sym} 1260 -170 0 0 {name=l25 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 1260 -110 0 0 {name=l25 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 440 -180 0 0 {name=l25 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 460 -70 0 0 {name=l25 sig_type=std_logic lab=VSS
 }
 C {sky130_stdcells/buf_1.sym} 220 -400 2 1 {name=x7 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
