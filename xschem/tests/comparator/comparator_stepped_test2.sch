@@ -71,7 +71,7 @@ C {devices/vsource.sym} 370 -270 0 0 {name=Vp value=0
 }
 C {devices/lab_pin.sym} 370 -300 0 0 {name=l2 sig_type=std_logic lab=Vin_p
 }
-C {devices/vsource.sym} 460 -270 0 0 {name=V2 value="PULSE 0 1.8V 1us 0.1ns 0.1ns 1us 2us"
+C {devices/vsource.sym} 460 -270 0 0 {name=V2 value="PULSE 0 1.8V 1us 0.1ns 0.1ns 1us 4us"
 }
 C {devices/gnd.sym} 460 -220 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 460 -300 0 0 {name=l6 sig_type=std_logic lab=Clk
@@ -124,78 +124,104 @@ C {devices/lab_pin.sym} 690 -50 2 0 {name=l25 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 700 -150 2 0 {name=l26 sig_type=std_logic lab=Out_p
 }
 C {sky130_fd_pr/corner.sym} 130 -160 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {devices/simulator_commands.sym} 20 -480 0 0 {
+C {devices/simulator_commands.sym} 20 -480 0 0 {name=COMMANDS1
+simulator=ngspice
+only_toplevel=false 
 value="
 * ngspice commands
+
+
 .control
 
-* Go to the const plot
-setplot const
-
-let vdiff = -0.005V
-let vmax = 0.005V
-let vdelta = 0.001;
+let vdiff = -0.1V
+let vmax = 0.1V
+let vdelta = 1.8e-2;
 let runs = 0
-
-* Insert vector names and set only one scale
+let bad = 0
+set sum_file = comparator_test_issues.txt
+let bad_vdiffs = 0
 set wr_vecnames
-set wr_singlescale
-* Set the hardcopy plot type
-set hcopydevtype=svg
-
-let total_runs = ceil(($&vmax - $&vdiff) / $&vdelta)
-let out_bits = vector($&total_runs*2)
-let in_volts = vector($&total_runs)
-reshape out_bits[2][$&total_runs]
-
 
 while vdiff le $&vmax
-	* Alter the voltages
 	alter vp vdiff
 	alter vn vdiff
-
-	* Run the tran
-	* tran creates a new plot starting with tran1
 	tran 0.01u 3u
-
-	* Measure the max to find the output
+	*plot vin_p-vin_n out_p+4 out_n+4
 	meas tran p_max MAX v(out_p) from=0u to=3u
 	meas tran n_max MAX v(out_n) from=0u to=3u
 
-	set plotfile = plot\{$&runs\}.svg
-	hardcopy $plotfile clk-4 vin_p-vin_n out_n+4 out_p+6
+	if $&vdiff > 0
+		if $&p_max > 0.9
+			if $&n_max < 0.9
+				echo Good: $&vdiff
+			else
+				*compose bad_vdiffs values $&bad_vdiffs $&vdiff
 
-	* Create variables
-	set p_max = $&p_max
-	set n_max = $&n_max
-	set vdiff = $&vdiff
+				set fn = test_comparator_step_\{$&vdiff\}.txt
+				echo Writing $fn
+				wrdata $fn out_n out_p
 
-	* Switch to constants plot
-	setplot const
-	*compose out_bits values $&out_bits $p_max $n_max
-	let in_volts[$&runs] = $vdiff
-	let out_bits[0][$&runs] = $p_max
-	let out_bits[1][$&runs] = $n_max
+				let bad = bad + 1
 
-	* set the iterators
+				echo Bad: $&vdiff
+			end
+		else
+			*compose bad_vdiffs values $&bad_vdiffs $&vdiff
+			set fn = test_comparator_step_\{$&vdiff\}.txt
+			echo Writing $fn
+			wrdata $fn out_n out_p
+				
+			let bad = bad + 1
+
+			echo Bad: $&vdiff
+		end
+	else 
+		if $&p_max < 0.9 
+			if $&n_max > 0.9
+				echo Good: $&vdiff
+			else
+				compose bad_vdiffs values $&bad_vdiffs $&vdiff
+				
+				set fn = test_comparator_step_\{$&vdiff\}.txt
+				echo Writing $fn
+				wrdata $fn out_n out_p
+				
+				let bad = bad + 1
+
+				echo Bad: $&vdiff
+			end
+		else
+			compose bad_vdiffs values $&bad_vdiffs $&vdiff
+			
+			set fn = test_comparator_step_\{$&vdiff\}.txt
+			echo Writing $fn
+			wrdata $fn out_n out_p
+				
+			let bad = bad + 1
+
+			echo Bad: $&vdiff
+		end
+
+	end		
+
+
+	* set fn = test_comparator_step_\{$&vdiff\}.txt
+	* echo Writing $fn
+	* wrdata $fn out_n out_p
+
 	echo run $&runs
 	let vdiff = vdiff + vdelta
 	let runs = runs + 1
 
-	* Destroy the transient plot to release memory
-	destroy tran1
+	destroy all
 
 end
 
-* switch to the const plot
-setplot const
-compose def_scale start=1 stop=$&total_runs step=1
-setscale def_scale
-echo Writing out_bits.txt
-wrdata out_bits.txt in_volts out_bits
+*wrdata \{$sum_file\} bad_vdiffs
 
 echo
 echo Total Runs = $&runs
+echo Total Bad = $&bad
 echo
 .endc
 "}

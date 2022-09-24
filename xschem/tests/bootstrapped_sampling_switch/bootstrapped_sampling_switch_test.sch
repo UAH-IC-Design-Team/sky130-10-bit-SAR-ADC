@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -73,12 +74,12 @@ C {devices/lab_pin.sym} 720 -380 2 0 {name=l1 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 720 -360 2 0 {name=l2 sig_type=std_logic lab=VSS
 }
-C {devices/vsource.sym} 430 -140 0 0 {name=V1 value="PULSE 0 1.8V 0 1ns 1ns 5us 10us"
+C {devices/vsource.sym} 430 -140 0 0 {name=V1 value="PULSE 0 1.8V 10u 0.1ns 0.1ns 5us 10us"
 }
 C {devices/gnd.sym} 430 -90 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 430 -170 0 0 {name=l4 sig_type=std_logic lab=Clk
 }
-C {devices/vsource.sym} 710 -140 0 0 {name=V2 value="PULSE -0.9V 0.9V 0 100us 1ns 5us 200us"
+C {devices/vsource.sym} 710 -140 0 0 {name=V2 value="PULSE -0.9V 0.9V 10u 100us 1ns 5us 200us"
 }
 C {devices/lab_pin.sym} 710 -170 0 0 {name=l6 sig_type=std_logic lab=Vin_p
 }
@@ -99,7 +100,7 @@ C {devices/vsource.sym} 240 -280 0 0 {name=V5 value="0.9V"
 C {devices/gnd.sym} 240 -230 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} 240 -310 0 0 {name=l20 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 710 -60 0 0 {name=V6 value="PULSE -0.9V 0.9V 0 100us 1ns 5us 200us"
+C {devices/vsource.sym} 710 -60 0 0 {name=V6 value="PULSE -0.9V 0.9V 10u 100us 1ns 5us 200us"
 }
 C {devices/lab_pin.sym} 710 -30 0 0 {name=l22 sig_type=std_logic lab=Vin_n
 }

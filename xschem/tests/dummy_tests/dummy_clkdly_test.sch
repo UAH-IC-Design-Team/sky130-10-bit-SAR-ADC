@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -50,6 +51,10 @@ N 980 -330 990 -330 {
 lab=Qmet4}
 N 980 -390 990 -390 {
 lab=Qmet2}
+N 430 -450 440 -450 {
+lab=Q15}
+N 520 -450 530 -450 {
+lab=Q15_buf}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -67,7 +72,7 @@ value=".options acct list
 tran 0.005n 3n
 *dc v1 0 1.8V 0.1
 *plot RST_PLS clk+2 Pulse+4
-plot clk Q50 clk+2 Q25+2 clk=4 Q18+4 clk+6 Q15+6 
+plot clk Q50 clk+2 Q25+2 clk=4 Q18+4 clk+6 Q15+6 Q15_buf+8
 plot clk Qgate3 clk+2 Qgate2+2 clk+4 Qgate1+4
 plot clk Qmet6 clk+2 Qmet4+2 clk+4 Qmet2+4
 write dummy_clkdly_test.raw
@@ -145,4 +150,10 @@ C {devices/lab_pin.sym} 990 -270 2 0 {name=l25 sig_type=std_logic lab=Qmet6
 C {devices/lab_pin.sym} 990 -330 2 0 {name=l26 sig_type=std_logic lab=Qmet4
 }
 C {devices/lab_pin.sym} 990 -390 2 0 {name=l27 sig_type=std_logic lab=Qmet2
+}
+C {sky130_stdcells/buf_1.sym} 480 -450 0 0 {name=x11 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {devices/lab_pin.sym} 430 -450 0 0 {name=l10 sig_type=std_logic lab=Q15
+}
+C {devices/lab_pin.sym} 530 -450 2 0 {name=l10 sig_type=std_logic lab=Q15_buf
 }

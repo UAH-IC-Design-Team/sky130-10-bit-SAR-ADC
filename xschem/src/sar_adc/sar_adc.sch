@@ -77,8 +77,6 @@ N 400 -330 430 -330 {
 lab=comp_out_p}
 N 400 -310 430 -310 {
 lab=comp_out_n}
-N 400 -290 430 -290 {
-lab=RESET}
 N 730 -290 760 -290 {
 lab=Controller_clk}
 N 400 -220 430 -220 {
@@ -185,8 +183,6 @@ C {devices/lab_pin.sym} 760 -310 2 0 {name=l22 sig_type=std_logic lab=VDD
 C {devices/lab_pin.sym} 400 -310 0 0 {name=l25 sig_type=std_logic lab=comp_out_n
 }
 C {devices/lab_pin.sym} 400 -330 0 0 {name=l26 sig_type=std_logic lab=comp_out_p
-}
-C {devices/lab_pin.sym} 400 -290 0 0 {name=l41 sig_type=std_logic lab=RESET
 }
 C {devices/lab_pin.sym} 760 -290 2 0 {name=l42 sig_type=std_logic lab=Controller_clk
 }

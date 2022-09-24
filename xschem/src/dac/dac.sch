@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -217,7 +218,7 @@ lab=VSS}
 N 2410 -410 2430 -410 {
 lab=sw_p7}
 N 2730 -270 2750 -270 {
-lab=cap_sp_p8}
+lab=cap_p8}
 N 2730 -310 2750 -310 {
 lab=VDD}
 N 2730 -290 2750 -290 {
@@ -225,72 +226,73 @@ lab=VSS}
 N 2410 -310 2430 -310 {
 lab=sw_p8}
 N 2180 -920 2200 -920 {
-lab=cap_sp_n1}
+lab=cap_n1}
 N 2180 -960 2200 -960 {
 lab=VDD}
 N 2180 -940 2200 -940 {
 lab=VSS}
 N 1860 -960 1880 -960 {
-lab=sw_sp_n1}
+lab=sw_n1}
 N 2180 -830 2200 -830 {
-lab=cap_sp_n2}
+lab=cap_n2}
 N 2180 -870 2200 -870 {
 lab=VDD}
 N 2180 -850 2200 -850 {
 lab=VSS}
 N 1860 -870 1880 -870 {
-lab=sw_sp_n2}
+lab=sw_n2}
 N 2180 -740 2200 -740 {
-lab=cap_sp_n3}
+lab=cap_n3}
 N 2180 -780 2200 -780 {
 lab=VDD}
 N 2180 -760 2200 -760 {
 lab=VSS}
 N 1860 -780 1880 -780 {
-lab=sw_sp_n3}
+lab=sw_n3}
 N 2180 -650 2200 -650 {
-lab=cap_sp_n4}
+lab=cap_n4}
 N 2180 -690 2200 -690 {
 lab=VDD}
 N 2180 -670 2200 -670 {
 lab=VSS}
 N 1860 -690 1880 -690 {
-lab=sw_sp_n4}
+lab=sw_n4}
 N 2180 -560 2200 -560 {
-lab=cap_sp_n5}
+lab=cap_n5}
 N 2180 -600 2200 -600 {
 lab=VDD}
 N 2180 -580 2200 -580 {
 lab=VSS}
 N 1860 -600 1880 -600 {
-lab=sw_sp_n5}
+lab=sw_n5}
 N 2180 -470 2200 -470 {
-lab=cap_sp_n6}
+lab=cap_n6}
 N 2180 -510 2200 -510 {
 lab=VDD}
 N 2180 -490 2200 -490 {
 lab=VSS}
 N 1860 -510 1880 -510 {
-lab=sw_sp_n6}
+lab=sw_n6}
 N 2180 -380 2200 -380 {
-lab=cap_sp_n7}
+lab=cap_n7}
 N 2180 -420 2200 -420 {
 lab=VDD}
 N 2180 -400 2200 -400 {
 lab=VSS}
 N 1860 -420 1880 -420 {
-lab=sw_sp_n7}
+lab=sw_n7}
 N 2180 -280 2200 -280 {
-lab=cap_sp_n8}
+lab=cap_n8}
 N 2180 -320 2200 -320 {
 lab=VDD}
 N 2180 -300 2200 -300 {
 lab=VSS}
 N 1860 -320 1880 -320 {
-lab=sw_sp_n8}
+lab=sw_n8}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
-C {src/capacitor_array/capacitor_array.sym} 300 -190 0 0 {name=x1 unit_cap_w=25 unit_cap_l=25}
+C {src/capacitor_array/capacitor_array.sym} 300 -190 0 0 {name=x1 unit_cap_w=5 unit_cap_l=5
+}
 C {devices/iopin.sym} 210 -390 0 0 {name=p1 lab=VDD
 }
 C {devices/ipin.sym} 150 -390 0 0 {name=p3 lab=sw_sp_n[9..1]

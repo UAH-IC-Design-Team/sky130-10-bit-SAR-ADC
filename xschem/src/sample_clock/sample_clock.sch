@@ -16,19 +16,19 @@ lab=clk}
 N 790 -370 790 -350 {
 lab=clk}
 N 690 -350 710 -350 {
-lab=sw_sample}
+lab=#net1}
 N 710 -350 710 -330 {
-lab=sw_sample}
+lab=#net1}
 N 710 -330 790 -330 {
-lab=sw_sample}
+lab=#net1}
 N 770 -310 790 -310 {
 lab=reset}
 N 970 -350 990 -350 {
-lab=#net1}
+lab=#net2}
 N 990 -350 990 -330 {
-lab=#net1}
+lab=#net2}
 N 990 -330 1030 -330 {
-lab=#net1}
+lab=#net2}
 N 1010 -370 1030 -370 {
 lab=clk}
 N 1030 -370 1030 -350 {
@@ -40,19 +40,19 @@ lab=clk}
 N 1270 -370 1270 -350 {
 lab=clk}
 N 1210 -350 1230 -350 {
-lab=#net2}
+lab=#net3}
 N 1230 -350 1230 -330 {
-lab=#net2}
+lab=#net3}
 N 1230 -330 1270 -330 {
-lab=#net2}
+lab=#net3}
 N 1250 -310 1270 -310 {
 lab=reset}
 N 1450 -350 1470 -350 {
-lab=#net3}
+lab=#net4}
 N 1470 -350 1470 -330 {
-lab=#net3}
+lab=#net4}
 N 1470 -330 1510 -330 {
-lab=#net3}
+lab=#net4}
 N 1490 -370 1510 -370 {
 lab=clk}
 N 1510 -370 1510 -350 {
@@ -64,19 +64,19 @@ lab=clk}
 N 1750 -370 1750 -350 {
 lab=clk}
 N 1690 -350 1710 -350 {
-lab=#net4}
+lab=#net5}
 N 1710 -350 1710 -330 {
-lab=#net4}
+lab=#net5}
 N 1710 -330 1750 -330 {
-lab=#net4}
+lab=#net5}
 N 1730 -310 1750 -310 {
 lab=reset}
 N 1930 -350 1950 -350 {
-lab=#net5}
+lab=#net6}
 N 1950 -350 1950 -330 {
-lab=#net5}
+lab=#net6}
 N 1950 -330 1990 -330 {
-lab=#net5}
+lab=#net6}
 N 1970 -370 1990 -370 {
 lab=clk}
 N 1990 -370 1990 -350 {
@@ -88,19 +88,19 @@ lab=clk}
 N 2230 -370 2230 -350 {
 lab=clk}
 N 2170 -350 2190 -350 {
-lab=#net6}
+lab=#net7}
 N 2190 -350 2190 -330 {
-lab=#net6}
+lab=#net7}
 N 2190 -330 2230 -330 {
-lab=#net6}
+lab=#net7}
 N 2210 -310 2230 -310 {
 lab=reset}
 N 2410 -350 2430 -350 {
-lab=#net7}
+lab=#net8}
 N 2430 -350 2430 -330 {
-lab=#net7}
+lab=#net8}
 N 2430 -330 2470 -330 {
-lab=#net7}
+lab=#net8}
 N 2450 -370 2470 -370 {
 lab=clk}
 N 2470 -370 2470 -350 {
@@ -112,19 +112,19 @@ lab=clk}
 N 2710 -370 2710 -350 {
 lab=clk}
 N 2650 -350 2670 -350 {
-lab=#net8}
+lab=#net9}
 N 2670 -350 2670 -330 {
-lab=#net8}
+lab=#net9}
 N 2670 -330 2710 -330 {
-lab=#net8}
+lab=#net9}
 N 2690 -310 2710 -310 {
 lab=reset}
 N 2890 -350 2910 -350 {
-lab=#net9}
+lab=#net10}
 N 2910 -350 2910 -330 {
-lab=#net9}
+lab=#net10}
 N 2910 -330 2950 -330 {
-lab=#net9}
+lab=#net10}
 N 2930 -370 2950 -370 {
 lab=clk}
 N 2950 -370 2950 -350 {
@@ -136,19 +136,19 @@ lab=clk}
 N 3190 -370 3190 -350 {
 lab=clk}
 N 3130 -350 3150 -350 {
-lab=#net10}
+lab=#net11}
 N 3150 -350 3150 -330 {
-lab=#net10}
+lab=#net11}
 N 3150 -330 3190 -330 {
-lab=#net10}
+lab=#net11}
 N 3170 -310 3190 -310 {
 lab=reset}
 N 3370 -350 3390 -350 {
-lab=#net11}
+lab=#net12}
 N 3390 -350 3390 -330 {
-lab=#net11}
+lab=#net12}
 N 3390 -330 3430 -330 {
-lab=#net11}
+lab=#net12}
 N 3410 -370 3430 -370 {
 lab=clk}
 N 3430 -370 3430 -350 {
@@ -160,19 +160,19 @@ lab=clk}
 N 3670 -370 3670 -350 {
 lab=clk}
 N 3610 -350 3630 -350 {
-lab=#net12}
+lab=#net13}
 N 3630 -350 3630 -330 {
-lab=#net12}
+lab=#net13}
 N 3630 -330 3670 -330 {
-lab=#net12}
+lab=#net13}
 N 3650 -310 3670 -310 {
 lab=reset}
 N 3850 -350 3870 -350 {
-lab=#net13}
+lab=#net14}
 N 3870 -350 3870 -330 {
-lab=#net13}
+lab=#net14}
 N 3870 -330 3910 -330 {
-lab=#net13}
+lab=#net14}
 N 3890 -370 3910 -370 {
 lab=clk}
 N 3910 -370 3910 -350 {
@@ -184,11 +184,11 @@ lab=clk}
 N 4150 -370 4150 -350 {
 lab=clk}
 N 4090 -350 4110 -350 {
-lab=#net14}
+lab=#net15}
 N 4110 -350 4110 -330 {
-lab=#net14}
+lab=#net15}
 N 4110 -330 4150 -330 {
-lab=#net14}
+lab=#net15}
 N 4130 -310 4150 -310 {
 lab=reset}
 N 480 -330 510 -330 {
@@ -196,28 +196,38 @@ lab=johnson_counter_loop}
 N 4430 -350 4470 -350 {
 lab=johnson_counter_loop}
 N 4330 -350 4350 -350 {
-lab=#net15}
-N 710 -330 710 -270 {
-lab=sw_sample}
-N 670 -160 690 -160 {
 lab=#net16}
-N 670 -200 690 -200 {
-lab=clk}
-N 580 -160 590 -160 {
-lab=sw_sample}
-N 990 -180 1010 -180 {
+N 710 -330 710 -270 {
+lab=#net1}
+N 670 -70 690 -70 {
 lab=#net17}
-N 1090 -180 1100 -180 {
+N 670 -110 690 -110 {
+lab=clk}
+N 580 -70 590 -70 {
+lab=sw_sample}
+N 990 -90 1010 -90 {
 lab=#net18}
-N 1180 -180 1220 -180 {
-lab=comparator_clk}
-N 810 -180 820 -180 {
+N 1090 -90 1100 -90 {
 lab=#net19}
-N 900 -180 910 -180 {
+N 1180 -90 1220 -90 {
+lab=comparator_clk}
+N 810 -90 820 -90 {
 lab=#net20}
+N 900 -90 910 -90 {
+lab=#net21}
+N 910 -250 930 -250 {
+lab=#net22}
+N 1010 -250 1020 -250 {
+lab=#net23}
+N 730 -250 740 -250 {
+lab=#net24}
+N 820 -250 830 -250 {
+lab=#net25}
+N 710 -270 710 -250 {}
+N 710 -250 730 -250 {}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
-C {devices/lab_pin.sym} 710 -270 2 0 {name=l217 sig_type=std_logic lab=sw_sample
+C {devices/lab_pin.sym} 1020 -250 2 0 {name=l217 sig_type=std_logic lab=sw_sample
 }
 C {sky130_stdcells/dfrtp_1.sym} 600 -330 0 0 {name=x5 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
@@ -323,15 +333,15 @@ C {sky130_stdcells/dfrtp_1.sym} 4240 -330 0 0 {name=x21 VGND=VSS VNB=VSS VPB=VDD
 }
 C {sky130_stdcells/inv_1.sym} 4390 -350 0 0 {name=x22 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 670 -200 0 0 {name=l31 sig_type=std_logic lab=clk
+C {devices/lab_pin.sym} 670 -110 0 0 {name=l31 sig_type=std_logic lab=clk
 }
-C {sky130_stdcells/and2_1.sym} 750 -180 0 0 {name=x23 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/and2_1.sym} 750 -90 0 0 {name=x23 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/inv_1.sym} 630 -160 0 0 {name=x24 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/inv_1.sym} 630 -70 0 0 {name=x24 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 580 -160 0 0 {name=l61 sig_type=std_logic lab=sw_sample
+C {devices/lab_pin.sym} 580 -70 0 0 {name=l61 sig_type=std_logic lab=sw_sample
 }
-C {devices/lab_pin.sym} 1220 -180 2 0 {name=l62 sig_type=std_logic lab=comparator_clk
+C {devices/lab_pin.sym} 1220 -90 2 0 {name=l62 sig_type=std_logic lab=comparator_clk
 }
 C {devices/iopin.sym} 120 -130 0 0 {name=p1 lab=VDD
 }
@@ -345,11 +355,17 @@ C {devices/opin.sym} 120 -50 0 0 {name=p5 lab=comparator_clk
 }
 C {devices/ipin.sym} 60 -110 0 0 {name=p6 lab=reset
 }
-C {sky130_stdcells/buf_16.sym} 1140 -180 0 0 {name=x25 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_16.sym} 1140 -90 0 0 {name=x25 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_4.sym} 950 -180 0 0 {name=x26 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_4.sym} 950 -90 0 0 {name=x26 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_8.sym} 1050 -180 0 0 {name=x27 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_8.sym} 1050 -90 0 0 {name=x27 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_2.sym} 860 -180 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_2.sym} 860 -90 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/buf_4.sym} 870 -250 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/buf_8.sym} 970 -250 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/buf_2.sym} 780 -250 0 0 {name=x4 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }

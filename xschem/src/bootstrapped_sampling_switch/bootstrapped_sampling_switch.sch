@@ -255,11 +255,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 880 -790 0 0 {name=C1 model=cap_mim_m3_1 W=50 L=50 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 880 -790 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 900 -960 0 1 {name=M4
 L=0.15
-W=0.91
+W=5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -439,11 +439,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 880 -320 0 0 {name=C2 model=cap_mim_m3_1 W=50 L=50 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 880 -320 0 0 {name=C2 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 900 -490 0 1 {name=M14
 L=0.15
-W=0.91
+W=5
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

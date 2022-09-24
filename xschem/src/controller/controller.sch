@@ -106,7 +106,7 @@ C {devices/lab_pin.sym} 1060 -270 0 0 {name=l21 sig_type=std_logic lab=controlle
 }
 C {devices/lab_pin.sym} 1060 -560 0 0 {name=l25 sig_type=std_logic lab=reset
 }
-C {devices/lab_pin.sym} 1060 -250 0 0 {name=l26 sig_type=std_logic lab=reset
+C {devices/lab_pin.sym} 1060 -230 0 0 {name=l26 sig_type=std_logic lab=reset
 }
 C {devices/ipin.sym} 130 -580 0 0 {name=p1 lab=clk
 }
@@ -179,4 +179,6 @@ C {devices/lab_pin.sym} 1380 -630 2 0 {name=l24 sig_type=std_logic lab=comparato
 C {devices/lab_pin.sym} 1060 -690 0 0 {name=l27 sig_type=std_logic lab=clk
 }
 C {devices/lab_pin.sym} 1060 -670 0 0 {name=l28 sig_type=std_logic lab=reset
+}
+C {devices/lab_pin.sym} 1060 -250 0 0 {name=l23 sig_type=std_logic lab=sw_sample
 }
