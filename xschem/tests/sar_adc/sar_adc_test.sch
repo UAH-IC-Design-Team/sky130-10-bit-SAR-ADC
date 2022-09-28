@@ -81,7 +81,7 @@ C {devices/gnd.sym} 260 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 260 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/sar_adc/sar_adc.sym} 590 -430 0 0 {name=x1}
-C {devices/vsource.sym} 360 -80 0 0 {name=V2 value="PULSE 0 0.9V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -80 0 0 {name=V2 value="PULSE 0 -0.16128 1ns 1us 1ns 1s 1s"
 }
 C {devices/lab_pin.sym} 360 -50 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
@@ -116,7 +116,7 @@ C {devices/vsource.sym} 360 -280 0 0 {name=V1 value="PULSE 0 0.9V 1ns 1us 1ns 1s
 C {devices/gnd.sym} 360 -230 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 360 -310 0 0 {name=l6 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 360 -160 0 0 {name=V7 value="PULSE 0 0.9V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -160 0 0 {name=V7 value="PULSE 0 -0.16128 1ns 1us 1ns 1s 1s"
 }
 C {devices/lab_pin.sym} 360 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
@@ -136,7 +136,7 @@ value="
 *vvss VSS 0 0
 *.ic v(x1.vsampled_p)=0.9V v(x1.vsampled_n)=0.9V
 .control
-tran 0.1u 400u uic
+tran 0.1u 340u uic
 *plot RST_PLS clk+2 Pulse+4
 plot x1.sw_n_sp1 x1.sw_n_sp2+2 x1.sw_n_sp3+4 x1.sw_n_sp4+6 x1.sw_n_sp5+8 x1.sw_n_sp6+10 x1.sw_n_sp7+12 x1.sw_n_sp8+14 x1.sw_n_sp9+16 
 plot x1.sw_p_sp1 x1.sw_p_sp2+2 x1.sw_p_sp3+4 x1.sw_p_sp4+6 x1.sw_p_sp5+8 x1.sw_p_sp6+10 x1.sw_p_sp7+12 x1.sw_p_sp8+14 x1.sw_p_sp9+16 
@@ -146,6 +146,13 @@ plot Done-4 Vin_p-Vin_n-2 bits1 bits2+2 bits3+4 bits4+6 bits5+8 bits6+10 bits7+1
 plot x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2
 plot x1.vcomp_q x1.comp_out_p x1.x5.net24
 plot x1.x1.cycle0 x1.x1.cycle1 x1.x1.cycle2 x1.x1.cycle3 x1.x1.cycle4 x1.x1.cycle5 x1.x1.cycle6 x1.x1.cycle7 x1.x1.cycle8 x1.x1.cycle9 x1.x1.cycle10 x1.x1.cycle11 x1.x1.cycle12 x1.x1.cycle13 x1.x1.cycle14 x1.x1.cycle15 x1.controller_clk+2
+plot x1.comp_out_p-2 x1.comp_out_n-4 x1.x1.raw_bit1 x1.x1.raw_bit2+2 x1.x1.raw_bit3+4 x1.x1.raw_bit4+6 x1.x1.raw_bit5+8 x1.x1.raw_bit6+10 x1.x1.raw_bit7+12 x1.x1.raw_bit8+14 x1.x1.raw_bit9+16 x1.x1.raw_bit10+18 x1.x1.raw_bit11+20 x1.x1.raw_bit12+22 x1.x1.raw_bit13+24
+
+
+
+
+
+
 * write sar_adc_test.raw
 .endc* ngspice commands
 "}

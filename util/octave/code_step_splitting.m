@@ -10,6 +10,8 @@ second_diff_lsb_v = diff_lsb_v/2
 
 fourth_diff_lsb_v = diff_lsb_v/4
 
+iter_offset = 8*second_diff_lsb_v
+
 bit0_v = -0.9 + fourth_diff_lsb_v
 bit1_v = bit0_v + second_diff_lsb_v
 bit2_v = bit0_v + 2*second_diff_lsb_v

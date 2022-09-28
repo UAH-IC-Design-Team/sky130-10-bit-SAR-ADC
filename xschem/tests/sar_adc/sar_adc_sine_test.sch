@@ -101,7 +101,7 @@ C {devices/lab_pin.sym} 420 -400 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 420 -460 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
+C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5.0029us 10.0058us"
 }
 C {devices/gnd.sym} 560 -60 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 560 -140 0 0 {name=l19 sig_type=std_logic lab=clk
@@ -130,6 +130,13 @@ C {sky130_fd_pr/corner.sym} 920 -460 0 0 {name=CORNER only_toplevel=false corner
 C {devices/simulator_commands.sym} 30 -480 0 0 {name="ngspice"
 value="
 * Requires an iterator variable to be passed in!
+* Simulation calculates (steps_per_iter) bits of 
+* a sine wave at times shifted by (iterator)
+
+* Coherent sampling Set for
+* 4 Sigfigs
+* 3.125e3 sample rate
+* 1e3 input freq
 
 * ngspice commands
 .options list acct opts
@@ -138,36 +145,32 @@ value="
 * Go to the const plot
 setplot const
 
-let diff_lsb = 1.8 / 1024
-let diff_step = $&diff_lsb / 2
-let steps_per_iter = 8
-let iter_offset = $&steps_per_iter * diff_step
-
-let vdiff = -0.9 + diff_step / 2 + $&iter_offset * $iterator
-let vstart = $&vdiff
-let vmax = $&vdiff + $&iter_offset 
-let vdelta = $&diff_step;
-
-let total_runs = ceil(($&vmax - $&vdiff) / $&vdelta)
+let steps_per_iter = 4
+let total_runs = $&steps_per_iter
 let runs = 0
 let all_runs = $iterator * $&total_runs
-let runs_start = $&runs
+let runs_start = $&all_runs
+let phase_offset = 0.1
+
+* These are the coherent values
+let sample_period = 320.1844e-6
+let source_freq = 1.0126e3
+
+let vdiff = 0.9 * sin(2 * $&pi * $&source_freq * $&sample_period * $&all_runs + $&phase_offset)
+let vstart = $&vdiff
+
 
 let out_bits = vector($&total_runs*10)
 reshape out_bits[10][$&total_runs]
 let in_diff_v= vector($&total_runs) 
 let vsampled_p = vector($&total_runs) 
 let vsampled_n = vector($&total_runs) 
+let sample_times = vector($&total_runs)
 
 echo
 echo AWS iterator = $iterator
-echo vstart = $&vstart
-echo vmax = $&vmax
 echo vdiff = $&vdiff
-echo diff_lsb = $&diff_lsb
-echo diff_step = $&diff_step
 echo steps_per_iter = $&steps_per_iter
-echo iter_offset = $&iter_offset
 echo total_runs = $&total_runs
 echo runs = $&runs
 echo
@@ -196,12 +199,10 @@ while $&runs lt $&total_runs
 	set pltfile1 = plot_converg_\{$&all_runs\}_\{$&vdiff\}.svg
 	set pltfile2 = plot_input_v_\{$&all_runs\}_\{$&vdiff\}.svg
 	set pltfile3 = plot_clks_\{$&all_runs\}_\{$&vdiff\}.svg
-	set pltfile4 = plot_raw_bits_\{$&all_runs\}_\{$&vdiff\}.svg
 	set plttitle = run\{$&all_runs\}_vin\{$&vdiff\}
 	hardcopy $pltfile1 x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2 x1.comp_out_n-2 title $plttitle
 	*hardcopy $pltfile2 vin_p vin_n vss vdd vbias title $plttitle
 	hardcopy $pltfile3 x1.x1.cycle0 x1.x1.cycle1 x1.x1.cycle2 x1.x1.cycle3 x1.x1.cycle4 x1.x1.cycle5 x1.x1.cycle6 x1.x1.cycle7 x1.x1.cycle8 x1.x1.cycle9 x1.x1.cycle10 x1.x1.cycle11 x1.x1.cycle12 x1.x1.cycle13 x1.x1.cycle14 x1.x1.cycle15 x1.controller_clk+2 title $plttitle
-	hardcopy $pltfile4 x1.comp_out_p-2 x1.comp_out_n-4 x1.x1.raw_bit1 x1.x1.raw_bit2+2 x1.x1.raw_bit3+4 x1.x1.raw_bit4+6 x1.x1.raw_bit5+8 x1.x1.raw_bit6+10 x1.x1.raw_bit7+12 x1.x1.raw_bit8+14 x1.x1.raw_bit9+16 x1.x1.raw_bit10+18 x1.x1.raw_bit11+20 x1.x1.raw_bit12+22 x1.x1.raw_bit13+24 title $plttitle
 
 
 
@@ -234,6 +235,8 @@ while $&runs lt $&total_runs
 	set vdiff = $&vdiff
 	set vsampled_p = $&avg_vsampled_p
 	set vsampled_n = $&avg_vsampled_n
+	let this_sample_time = $&sample_period * $&all_runs
+	set this_sample_time = $&this_sample_time
 
 	* Switch to constants plot
 	setplot const
@@ -241,6 +244,7 @@ while $&runs lt $&total_runs
 	let in_diff_v[$&runs] = $vdiff
 	let vsampled_p[$&runs] = $vsampled_p
 	let vsampled_n[$&runs] = $vsampled_n
+	let sample_times[$&runs] = $this_sample_time
 	let out_bits[0][$&runs] = $max_bit0
 	let out_bits[1][$&runs] = $max_bit1
 	let out_bits[2][$&runs] = $max_bit2
@@ -254,9 +258,9 @@ while $&runs lt $&total_runs
 
 	* set the iterators
 	echo run $&runs
-	let vdiff = vdiff + vdelta
 	let runs = runs + 1
 	let all_runs = all_runs + 1
+	let vdiff = 0.9 * sin(2 * $&pi * $&source_freq * $&sample_period * $&all_runs + $&phase_offset)
 
 	* Destroy the transient plot to release memory
 	destroy tran1
@@ -268,12 +272,11 @@ setplot const
 compose def_scale start=1 stop=$&total_runs step=1
 setscale def_scale
 echo Writing out_bits.txt
-wrdata out_bits.txt vsampled_p vsampled_n in_diff_v out_bits
+wrdata out_bits.txt vsampled_p vsampled_n in_diff_v out_bits sample_times
 
 echo
 echo Total Runs = $&runs
-echo Run from = $&runs_start to = $&runs
-echo Vdiff from = $&vstart to $&vdiff - $&vdelta
+echo Run from = $&runs_start to = $&all_runs
 echo
 .endc
 "}
