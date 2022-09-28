@@ -101,12 +101,12 @@ C {devices/lab_pin.sym} 400 -420 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 400 -480 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 500ns 0.1ns 0.1ns 320ns 640ns"
+C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 50ns 0.1ns 0.1ns 10ns 20ns"
 }
 C {devices/gnd.sym} 560 -60 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 560 -140 0 0 {name=l19 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 830 -110 0 0 {name=V6 value="PULSE 0 1.8V 500ns 0.1ns 0.1ns 1s 1s"
+C {devices/vsource.sym} 830 -110 0 0 {name=V6 value="PULSE 0 1.8V 50ns 0.1ns 0.1ns 1s 1s"
 }
 C {devices/gnd.sym} 830 -60 0 0 {name=l20 lab=GND}
 C {devices/lab_pin.sym} 830 -140 0 0 {name=l21 sig_type=std_logic lab=reset_b
@@ -133,7 +133,7 @@ value="
 .options list acct opts
 .control
 
-tran 10n 22us uic
+tran 0.5n 700ns uic
 
 write sar_adc_max_sample_rate_test.raw
 
