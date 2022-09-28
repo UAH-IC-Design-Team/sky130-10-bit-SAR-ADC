@@ -83,9 +83,13 @@ noise(1) = [];
 
 [noise_max, noise_max_loc] = max(noise)
 
-SINAD = 20*log10(signal) - mean(noise_log)
+% Do we divide by two here?!?!
+noise_sss = sqrt(sum((noise.^2)));
 
-enob = (SINAD - 1.76)/6.02
+fprintf("\nMetrics:\n")
+SINAD = 20*log10((signal/sqrt(2))/noise_sss)
 
-sfdr = max(P1_log)-max(P1_log(P1_log<max(P1_log)))
+ENOB = (SINAD - 1.76)/6.02
+
 SFDR = 20*log10(signal) - 20*log10(noise_max)
+fprintf("\n")
