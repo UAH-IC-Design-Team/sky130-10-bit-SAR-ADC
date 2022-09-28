@@ -6,6 +6,10 @@ V {}
 S {}
 E {}
 T {Remove cap before layout.} 30 -40 0 0 0.4 0.4 {}
+T {NOTE: The capacitors C1-C4 are 
+for simulation convergence ONLY!
+They will not be taped out.
+} 10 -850 0 0 0.4 0.4 {}
 N 820 -850 910 -850 {
 lab=Clk_n}
 N 730 -680 740 -680 {
@@ -82,7 +86,7 @@ N 630 -270 780 -270 {
 lab=#net5}
 N 630 -270 630 -250 {
 lab=#net5}
-N 160 -540 180 -540 {
+N 90 -500 110 -500 {
 lab=Clk}
 N 1140 -220 1160 -220 {
 lab=Clk_latch_n}
@@ -118,9 +122,9 @@ N 780 -820 780 -810 {
 lab=Pre_Amp_n}
 N 950 -820 950 -810 {
 lab=Pre_Amp_p}
-N 1100 -730 1100 -720 {
+N 1130 -730 1130 -720 {
 lab=Pre_Amp_p}
-N 1100 -660 1100 -640 {
+N 1130 -660 1130 -640 {
 lab=VSS}
 N 620 -730 620 -720 {
 lab=Pre_Amp_n}
@@ -164,27 +168,23 @@ N 1120 -270 1290 -270 {
 lab=#net4}
 N 1260 -210 1260 -200 {
 lab=#net4}
-N 260 -400 280 -400 {
+N 190 -560 210 -560 {
 lab=#net10}
-N 170 -400 180 -400 {
+N 100 -560 110 -560 {
 lab=ext_clk}
-N 160 -460 180 -460 {
+N 90 -440 110 -440 {
 lab=Clk_n}
-N 380 -460 390 -460 {
+N 400 -440 410 -440 {
 lab=#net11}
-N 470 -460 480 -460 {
-lab=#net12}
-N 560 -460 570 -460 {
+N 490 -440 500 -440 {
 lab=Clk_latch_n}
-N 260 -460 300 -460 {
-lab=#net13}
-N 260 -540 280 -540 {
+N 190 -500 210 -500 {
 lab=Clk_n}
-N 360 -400 380 -400 {
-lab=#net14}
-N 460 -400 470 -400 {
+N 290 -560 310 -560 {
+lab=#net12}
+N 390 -560 400 -560 {
 lab=Clk}
-N 570 -460 580 -460 {
+N 500 -440 510 -440 {
 lab=Clk_latch_n}
 N 460 -170 460 -160 {
 lab=#net5}
@@ -192,11 +192,17 @@ N 460 -270 460 -170 {
 lab=#net5}
 N 1260 -270 1260 -210 {
 lab=#net4}
+N 190 -440 210 -440 {
+lab=#net13}
+N 290 -440 310 -440 {
+lab=#net14}
+N 390 -440 400 -440 {
+lab=#net11}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {sky130_fd_pr/pfet_01v8.sym} 930 -850 0 0 {name=M1
 L=0.15
-W=25
+W=8
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -210,7 +216,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 800 -850 0 1 {name=M2
 L=0.15
-W=25
+W=8
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -280,7 +286,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 840 -580 0 0 {name=M9
 L=0.15
-W=100
+W=50
 nf=5
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -406,9 +412,9 @@ C {devices/lab_pin.sym} 870 -160 0 0 {name=l25 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 860 -580 2 0 {name=l28 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 160 -540 0 0 {name=l33 sig_type=std_logic lab=Clk
+C {devices/lab_pin.sym} 90 -500 0 0 {name=l33 sig_type=std_logic lab=Clk
 }
-C {devices/lab_pin.sym} 280 -540 2 0 {name=l34 sig_type=std_logic lab=Clk_n
+C {devices/lab_pin.sym} 210 -500 2 0 {name=l34 sig_type=std_logic lab=Clk_n
 }
 C {devices/lab_pin.sym} 1160 -220 2 0 {name=l35 sig_type=std_logic lab=Clk_latch_n
 }
@@ -456,9 +462,9 @@ C {devices/lab_pin.sym} 780 -680 2 0 {name=l10 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 950 -680 0 0 {name=l11 sig_type=std_logic lab=VSS
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1100 -690 0 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1130 -690 0 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
-C {devices/lab_pin.sym} 1100 -640 2 0 {name=l24 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 1130 -640 2 0 {name=l24 sig_type=std_logic lab=VSS
 }
 C {sky130_fd_pr/cap_mim_m3_1.sym} 620 -690 0 0 {name=C2 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
@@ -484,27 +490,27 @@ C {devices/lab_pin.sym} 1260 -110 0 0 {name=l25 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 460 -70 0 0 {name=l25 sig_type=std_logic lab=VSS
 }
-C {sky130_stdcells/buf_1.sym} 220 -400 2 1 {name=x7 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_1.sym} 150 -560 2 1 {name=x7 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 170 -400 0 0 {name=l1 sig_type=std_logic lab=ext_clk
+C {devices/lab_pin.sym} 100 -560 0 0 {name=l1 sig_type=std_logic lab=ext_clk
 }
-C {devices/lab_pin.sym} 470 -400 2 0 {name=l1 sig_type=std_logic lab=Clk
+C {devices/lab_pin.sym} 400 -560 2 0 {name=l1 sig_type=std_logic lab=Clk
 }
-C {devices/lab_pin.sym} 160 -460 0 0 {name=l34 sig_type=std_logic lab=Clk_n
+C {devices/lab_pin.sym} 90 -440 0 0 {name=l34 sig_type=std_logic lab=Clk_n
 }
-C {devices/lab_pin.sym} 580 -460 2 0 {name=l34 sig_type=std_logic lab=Clk_latch_n
+C {devices/lab_pin.sym} 510 -440 2 0 {name=l34 sig_type=std_logic lab=Clk_latch_n
 }
-C {sky130_stdcells/clkdlybuf4s15_1.sym} 220 -460 0 0 {name=x8 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/clkdlybuf4s15_1.sym} 150 -440 0 0 {name=x8 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_2.sym} 520 -460 0 0 {name=x9 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_2.sym} 450 -440 0 0 {name=x9 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/clkdlybuf4s15_1.sym} 340 -460 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/clkdlybuf4s15_1.sym} 250 -440 0 0 {name=x10 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/clkdlybuf4s50_1.sym} 430 -460 0 0 {name=x11 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/clkdlybuf4s50_1.sym} 350 -440 0 0 {name=x11 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/inv_2.sym} 220 -540 0 0 {name=x13 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/inv_2.sym} 150 -500 0 0 {name=x13 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_2.sym} 320 -400 0 0 {name=x12 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_2.sym} 250 -560 2 1 {name=x12 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {sky130_stdcells/buf_4.sym} 420 -400 2 1 {name=x14 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+C {sky130_stdcells/buf_4.sym} 350 -560 2 1 {name=x14 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
