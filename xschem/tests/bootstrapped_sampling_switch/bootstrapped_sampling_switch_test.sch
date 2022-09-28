@@ -36,7 +36,7 @@ lab=Vbias}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -106,3 +106,4 @@ C {devices/lab_pin.sym} 710 -30 0 0 {name=l22 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 700 -100 0 0 {name=l5 sig_type=std_logic lab=Vbias
 }
+C {sky130_fd_pr/corner.sym} 0 -460 0 0 {name=CORNER only_toplevel=false corner=tt}

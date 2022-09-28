@@ -52,7 +52,7 @@ lab=Vout_n}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -63,7 +63,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
-tran 0.1u 100u
+tran 0.1u 110u
 *plot RST_PLS clk+2 Pulse+4
 plot Vin_p-Vin_n Vout_p-Vout_n clk-4
 plot Vout_p-Vout_n clk-4
@@ -142,3 +142,4 @@ C {devices/lab_pin.sym} 50 -310 0 0 {name=l9 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 390 -340 0 0 {name=l26 sig_type=std_logic lab=Clk
 }
+C {sky130_fd_pr/corner.sym} 10 -460 0 0 {name=CORNER only_toplevel=false corner=tt}
