@@ -5,6 +5,9 @@ K {}
 V {}
 S {}
 E {}
+T {Cap C1 is for simulation
+convergance ONLY.
+It will not be taped out.} 270 -110 0 0 0.4 0.4 {}
 N 80 -350 110 -350 {
 lab=Vin_p}
 N 80 -310 110 -310 {
