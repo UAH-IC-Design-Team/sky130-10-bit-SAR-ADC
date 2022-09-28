@@ -84,8 +84,10 @@ value="* ngspice commands
 .control
 
 let vg_val = 0
+let runs = 0
+let total_runs = 8
 
-while vg_val le 1.9
+while $&runs lt $&total_runs
 	alter vg vg_val
 	dc vd 0 1.8 10e-3
 
@@ -94,6 +96,7 @@ while vg_val le 1.9
 	wrdata $fn i(vids)
 
 	let vg_val = vg_val + 0.2
+	let runs = runs + 1
 
 end
 

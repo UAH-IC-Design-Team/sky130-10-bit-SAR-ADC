@@ -129,8 +129,6 @@ C {devices/noconn.sym} 760 -400 1 0 {name=l26}
 C {sky130_fd_pr/corner.sym} 920 -460 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/simulator_commands.sym} 30 -480 0 0 {name="ngspice"
 value="
-* Requires an iterator variable to be passed in!
-
 * ngspice commands
 .options list acct opts
 .control
@@ -138,39 +136,14 @@ value="
 * Go to the const plot
 setplot const
 
-let diff_lsb = 1.8 / 1024
-let diff_step = $&diff_lsb / 2
-let steps_per_iter = 8
-let iter_offset = $&steps_per_iter * diff_step
+let iterator = 1
 
-let vdiff = -0.9 + diff_step / 2 + $&iter_offset * $iterator
-let vstart = $&vdiff
-let vmax = $&vdiff + $&iter_offset 
-let vdelta = $&diff_step;
+* let vdiff = -899.5605e-3 + 7.0312e-3
+* let vmax = -892.5292e-3 + 7.0312e-3
+let vdiff = -892.5293e-3
+let vmax = -885.4980e-003
 
-let total_runs = ceil(($&vmax - $&vdiff) / $&vdelta)
-let runs = 0
-let all_runs = $iterator * $&total_runs
-let runs_start = $&runs
-
-let out_bits = vector($&total_runs*10)
-reshape out_bits[10][$&total_runs]
-let in_diff_v= vector($&total_runs) 
-let vsampled_p = vector($&total_runs) 
-let vsampled_n = vector($&total_runs) 
-
-echo
-echo AWS iterator = $iterator
-echo vstart = $&vstart
-echo vmax = $&vmax
-echo vdiff = $&vdiff
-echo diff_lsb = $&diff_lsb
-echo diff_step = $&diff_step
-echo steps_per_iter = $&steps_per_iter
-echo iter_offset = $&iter_offset
-echo total_runs = $&total_runs
-echo runs = $&runs
-echo
+let vdelta = 878.9063e-6
 
 * Insert vector names and set only one scale
 set wr_vecnames
@@ -179,12 +152,17 @@ set wr_singlescale
 * set the hcopy type
 set hcopydevtype=svg
 
+let total_runs = ceil(($&vmax - $&vdiff) / $&vdelta)
+*let runs = 0 + total_runs 
+let full_runs = total_runs
+let runs = 0
+let out_bits = vector($&total_runs*10)
+reshape out_bits[10][$&total_runs]
+let in_diff_v= vector($&total_runs) 
+let vsampled_p = vector($&total_runs) 
+let vsampled_n = vector($&total_runs) 
 
-while $&runs lt $&total_runs
-	echo
-	echo run = $&runs
-	echo Vdiff = $&vdiff
-	echo
+while vdiff le $&vmax
 	* Alter the voltages
 	alter \\\\@Vp[pulse] = [ 0 $&vdiff 1n 1u 1n 1 1 ] $ vector
 	alter \\\\@Vn[pulse] = [ 0 $&vdiff 1n 1u 1n 1 1 ] $ vector
@@ -193,15 +171,13 @@ while $&runs lt $&total_runs
 	* tran creates a new plot starting with tran1
 	tran 0.1u 340u uic
 
-	set pltfile1 = plot_converg_\{$&all_runs\}_\{$&vdiff\}.svg
-	set pltfile2 = plot_input_v_\{$&all_runs\}_\{$&vdiff\}.svg
-	set pltfile3 = plot_clks_\{$&all_runs\}_\{$&vdiff\}.svg
-	set pltfile4 = plot_raw_bits_\{$&all_runs\}_\{$&vdiff\}.svg
-	set plttitle = run\{$&all_runs\}_vin\{$&vdiff\}
+	set pltfile1 = plot_converg_\{$&full_runs\}_\{$&vdiff\}.svg
+	set pltfile2 = plot_input_v_\{$&full_runs\}_\{$&vdiff\}.svg
+	set pltfile3 = plot_clks_\{$&full_runs\}_\{$&vdiff\}.svg
+	set plttitle = run\{$&full_runs\}_vin\{$&vdiff\}
 	hardcopy $pltfile1 x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2 x1.comp_out_n-2 title $plttitle
 	*hardcopy $pltfile2 vin_p vin_n vss vdd vbias title $plttitle
 	hardcopy $pltfile3 x1.x1.cycle0 x1.x1.cycle1 x1.x1.cycle2 x1.x1.cycle3 x1.x1.cycle4 x1.x1.cycle5 x1.x1.cycle6 x1.x1.cycle7 x1.x1.cycle8 x1.x1.cycle9 x1.x1.cycle10 x1.x1.cycle11 x1.x1.cycle12 x1.x1.cycle13 x1.x1.cycle14 x1.x1.cycle15 x1.controller_clk+2 title $plttitle
-	hardcopy $pltfile4 x1.comp_out_p-2 x1.comp_out_n-4 x1.x1.raw_bit1 x1.x1.raw_bit2+2 x1.x1.raw_bit3+4 x1.x1.raw_bit4+6 x1.x1.raw_bit5+8 x1.x1.raw_bit6+10 x1.x1.raw_bit7+12 x1.x1.raw_bit8+14 x1.x1.raw_bit9+16 x1.x1.raw_bit10+18 x1.x1.raw_bit11+20 x1.x1.raw_bit12+22 x1.x1.raw_bit13+24 title $plttitle
 
 
 
@@ -256,7 +232,7 @@ while $&runs lt $&total_runs
 	echo run $&runs
 	let vdiff = vdiff + vdelta
 	let runs = runs + 1
-	let all_runs = all_runs + 1
+	let full_runs = full_runs + 1
 
 	* Destroy the transient plot to release memory
 	destroy tran1
@@ -272,8 +248,6 @@ wrdata out_bits.txt vsampled_p vsampled_n in_diff_v out_bits
 
 echo
 echo Total Runs = $&runs
-echo Run from = $&runs_start to = $&runs
-echo Vdiff from = $&vstart to $&vdiff - $&vdelta
 echo
 .endc
 "}
