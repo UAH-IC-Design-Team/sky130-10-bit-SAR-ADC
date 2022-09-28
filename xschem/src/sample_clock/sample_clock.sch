@@ -202,29 +202,37 @@ lab=#net1}
 N 670 -70 690 -70 {
 lab=#net17}
 N 670 -110 690 -110 {
-lab=clk}
+lab=#net18}
 N 580 -70 590 -70 {
 lab=sw_sample}
 N 990 -90 1010 -90 {
-lab=#net18}
-N 1090 -90 1100 -90 {
 lab=#net19}
+N 1090 -90 1100 -90 {
+lab=#net20}
 N 1180 -90 1220 -90 {
 lab=comparator_clk}
 N 810 -90 820 -90 {
-lab=#net20}
-N 900 -90 910 -90 {
 lab=#net21}
-N 910 -250 930 -250 {
+N 900 -90 910 -90 {
 lab=#net22}
-N 1010 -250 1020 -250 {
+N 910 -250 930 -250 {
 lab=#net23}
+N 1010 -250 1020 -250 {
+lab=sw_sample}
 N 730 -250 740 -250 {
-lab=#net24}
+lab=#net1}
 N 820 -250 830 -250 {
+lab=#net24}
+N 710 -270 710 -250 {
+lab=#net1}
+N 710 -250 730 -250 {
+lab=#net1}
+N 630 -110 670 -110 {
+lab=#net18}
+N 540 -110 550 -110 {
 lab=#net25}
-N 710 -270 710 -250 {}
-N 710 -250 730 -250 {}
+N 450 -110 460 -110 {
+lab=#net26}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/lab_pin.sym} 1020 -250 2 0 {name=l217 sig_type=std_logic lab=sw_sample
@@ -333,7 +341,7 @@ C {sky130_stdcells/dfrtp_1.sym} 4240 -330 0 0 {name=x21 VGND=VSS VNB=VSS VPB=VDD
 }
 C {sky130_stdcells/inv_1.sym} 4390 -350 0 0 {name=x22 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 670 -110 0 0 {name=l31 sig_type=std_logic lab=clk
+C {devices/lab_pin.sym} 450 -110 0 0 {name=l31 sig_type=std_logic lab=clk
 }
 C {sky130_stdcells/and2_1.sym} 750 -90 0 0 {name=x23 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
@@ -368,4 +376,8 @@ C {sky130_stdcells/buf_4.sym} 870 -250 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPW
 C {sky130_stdcells/buf_8.sym} 970 -250 0 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/buf_2.sym} 780 -250 0 0 {name=x4 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/clkdlybuf4s50_1.sym} 590 -110 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_stdcells/clkdlybuf4s50_1.sym} 500 -110 0 0 {name=x28 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
