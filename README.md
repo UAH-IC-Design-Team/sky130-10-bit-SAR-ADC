@@ -24,6 +24,53 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 - **inprogress:** started, but not functional
 - **notstarted:** nothing done yet
 
+
+# Tests
+
+## Unit Tests
+All unit tests are located in the `xschem/tests` directory.
+
+| Component | Test | Status | Purpose | Notes |
+| sar_adc | sar_adc_test | Passing | Tests a single input value to the sar adc |  |
+| bootstrapped sw | bootstrapped_sampling_switch_load_test | Passing | Test a resistive load |  |
+| bootstrapped sw | bootstrapped_sampling_switch_test.sch | Passing | Test with no loadd |  |
+| bootstrapped sw | bootstrapped_sampling_switch_w_caps_test.sch | Passing | Test with cap array loading |  |
+| cap array | capacitor_array_test | Passing | Make sure that the caps switch and are the correct value |  |
+| cap sw 2 | capacitor_switch2_test | Passing | Make sure it switches |  |
+| cap sw 4 | capacitor_switch4_test | Passing | Make sure it switches |  |
+| cap sw 8 | capacitor_switch8_test | Passing | Make sure it switches |  |
+| cap sw 16 | capacitor_switch16_test | Passing | Make sure it switches |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| comparator |  |  |  |  |
+| controller | controller_corner_ff_test | Passing | Testing the ff corner | Clock rate = ???? |
+| controller | controller_corner_ff_test | Passing |  |  |
+| controller | controller_corner_ff_test | Passing |  |  |
+| controller | controller_corner_fs_test | Passing |  |  |
+| controller | controller_corner_sf_test |  |  |  |
+| controller | controller_corner_ss_test |  |  |  |
+| controller | |  |  |  |
+| controller | |  |  |  |
+| controller | |  |  |  |
+| dac | dac_test | Passing | Ensure switches can switch caps |  |
+| dec | dec_test | Passing | Check a code and make sure it calculates correctly |  |
+| demux2 | demux2_test | Passing | It's a demux |  |
+| raw bit calc | raw_bit_calc_test | Passing | Make sure the bits calculate correctly |  |
+| sample clock | sample_clock_test | Passing |  |  |
+| shifted clock gen | shifted_clock_generator_test | Passing | Test generation of 15 pulses |  |
+| xor clock gen | xor_clock_gen_test | Passing | Generate a clock from the comparator output |  |
+
+## Large End-to-End Batched Tests
+The large end-to-end tests were completed using batching on AWS Batch to allow timely completion. Each bit takes about 4 minuetes and 1.5Gbs of memory to calculate, so the tests were separated into small chunks where the input values were iteratively shifted using environment variables. Thus by containerizing the tests, we could run hundreds of docker containers in parallel to complete the simulation quickly. 
+
+The set up for these tests can be found in the [ngspice-batch-runner](https://github.com/UAH-IC-Design-Team/ngspice-batch-runner) repository.
+
 # Tool Notes
 
 ### Xschem

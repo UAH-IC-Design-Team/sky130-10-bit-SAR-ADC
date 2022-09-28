@@ -29,7 +29,7 @@ C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="
-.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -106,3 +106,4 @@ value="
 .tran 0.1u 100u
 .endc
 "}
+C {sky130_fd_pr/corner.sym} 270 -470 0 0 {name=CORNER only_toplevel=false corner=tt}

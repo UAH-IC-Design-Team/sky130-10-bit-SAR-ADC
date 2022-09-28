@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -29,7 +30,7 @@ lab=VSS}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -121,3 +122,4 @@ C {devices/noconn.sym} 390 -260 1 0 {name=l11}
 C {devices/noconn.sym} 390 -240 1 0 {name=l12}
 C {devices/noconn.sym} 710 -260 1 0 {name=l18}
 C {devices/noconn.sym} 710 -240 1 0 {name=l19}
+C {sky130_fd_pr/corner.sym} 10 -460 0 0 {name=CORNER only_toplevel=false corner=tt}
