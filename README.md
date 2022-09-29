@@ -31,6 +31,7 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 All unit tests are located in the `xschem/tests` directory.
 
 | Component | Test | Status | Purpose | Notes |
+| :--- | :--- | :--- | :--- | :--- | 
 | sar_adc | sar_adc_test | Passing | Tests a single input value to the sar adc |  |
 | bootstrapped sw | bootstrapped_sampling_switch_load_test | Passing | Test a resistive load |  |
 | bootstrapped sw | bootstrapped_sampling_switch_test.sch | Passing | Test with no loadd |  |
