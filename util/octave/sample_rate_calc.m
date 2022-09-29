@@ -11,6 +11,7 @@ external_clock_freq = sample_freq*over_sample
 external_clock_period = 1/external_clock_freq
 external_clock_half_period = external_clock_period*0.5
 
+fprintf("\nMax Possible due to pad limit\n")
 max_clock_freq = 50e6
 max_clock_period = 1/max_clock_freq
 max_sample_freq = max_clock_freq/over_sample
