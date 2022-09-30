@@ -3,6 +3,8 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 
 ### [Design Review Slides](https://docs.google.com/presentation/d/1juSLcSnNzZwW7p3vPfRFYqCnhqgyADESatKdXP75LvY/edit?usp=sharing)
 
+### [Wrapper Repository](https://github.com/UAH-IC-Design-Team/sscs-22-project-wrapper)
+
 # Status
 | Component | Status | TODO |
 | :--- | :--- | :--- | 
