@@ -81,7 +81,7 @@ C {devices/gnd.sym} 260 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 260 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/sar_adc/sar_adc.sym} 570 -450 0 0 {name=x1}
-C {devices/vsource.sym} 360 -80 0 0 {name=Vn value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -80 0 0 {name=Vn value="PULSE 0 0.129637V 1ns 2.5ns 1ns 1s 1s"
 }
 C {devices/lab_pin.sym} 360 -50 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
@@ -101,12 +101,12 @@ C {devices/lab_pin.sym} 400 -420 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 400 -480 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 500ns 0.1ns 0.1ns 320ns 640ns"
+C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 50ns 0.1ns 0.1ns 10ns 20ns"
 }
 C {devices/gnd.sym} 560 -60 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 560 -140 0 0 {name=l19 sig_type=std_logic lab=clk
 }
-C {devices/vsource.sym} 830 -110 0 0 {name=V6 value="PULSE 0 1.8V 500ns 0.1ns 0.1ns 1s 1s"
+C {devices/vsource.sym} 830 -110 0 0 {name=V6 value="PULSE 0 1.8V 50ns 0.1ns 0.1ns 1s 1s"
 }
 C {devices/gnd.sym} 830 -60 0 0 {name=l20 lab=GND}
 C {devices/lab_pin.sym} 830 -140 0 0 {name=l21 sig_type=std_logic lab=reset_b
@@ -116,7 +116,7 @@ C {devices/vsource.sym} 360 -280 0 0 {name=V1 value="PULSE 0 0.9V 1ns 2.5ns 1ns 
 C {devices/gnd.sym} 360 -230 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 360 -310 0 0 {name=l6 sig_type=std_logic lab=Vbias
 }
-C {devices/vsource.sym} 360 -160 0 0 {name=Vp value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -160 0 0 {name=Vp value="PULSE 0 0.129637V 1ns 2.5ns 1ns 1s 1s"
 }
 C {devices/lab_pin.sym} 360 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
@@ -133,7 +133,7 @@ value="
 .options list acct opts
 .control
 
-tran 10n 22us uic
+tran 0.5n 700ns uic
 
 write sar_adc_max_sample_rate_test.raw
 
@@ -144,7 +144,7 @@ plot x1.sw_p_sp1 x1.sw_p_sp2+2 x1.sw_p_sp3+4 x1.sw_p_sp4+6 x1.sw_p_sp5+8 x1.sw_p
 plot x1.sw_n1 x1.sw_n2+2 x1.sw_n3+4 x1.sw_n4+6 x1.sw_n5+8 x1.sw_n6+10 x1.sw_n7+12 x1.sw_n8+14 
 plot x1.sw_p1 x1.sw_p2+2 x1.sw_p3+4 x1.sw_p4+6 x1.sw_p5+8 x1.sw_p6+10 x1.sw_p7+12 x1.sw_p8+14 
 plot Done-4 Vin_p-Vin_n-2 bits1 bits2+2 bits3+4 bits4+6 bits5+8 bits6+10 bits7+12 bits8+14 bits9+16 bits10+18
-plot x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2
+plot x1.vsampled_p x1.vsampled_n x1.vsampled_p-x1.vsampled_n x1.sw_sample-2 x1.comp_out_p+2 x1.comp_out_n-2
 plot x1.vcomp_q x1.comp_out_p x1.x5.net24
 plot x1.x1.cycle0 x1.x1.cycle1 x1.x1.cycle2 x1.x1.cycle3 x1.x1.cycle4 x1.x1.cycle5 x1.x1.cycle6 x1.x1.cycle7 x1.x1.cycle8 x1.x1.cycle9 x1.x1.cycle10 x1.x1.cycle11 x1.x1.cycle12 x1.x1.cycle13 x1.x1.cycle14 x1.x1.cycle15 x1.controller_clk+2
 * write sar_adc_test.raw

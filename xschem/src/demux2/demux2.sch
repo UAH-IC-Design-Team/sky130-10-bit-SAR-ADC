@@ -5,52 +5,46 @@ K {}
 V {}
 S {}
 E {}
-N 280 -350 280 -320 {
+N 340 -320 340 -290 {
 lab=#net1}
-N 280 -320 310 -320 {
+N 340 -290 370 -290 {
 lab=#net1}
-N 240 -460 240 -440 {
+N 300 -430 300 -410 {
 lab=S}
-N 240 -440 280 -440 {
+N 300 -410 340 -410 {
 lab=S}
-N 280 -440 280 -430 {
+N 340 -410 340 -400 {
 lab=S}
-N 210 -440 240 -440 {
+N 270 -410 300 -410 {
 lab=S}
-N 210 -440 210 -220 {
+N 270 -410 270 -190 {
 lab=S}
-N 210 -220 310 -220 {
+N 270 -190 370 -190 {
 lab=S}
-N 170 -260 190 -260 {
+N 230 -230 250 -230 {
 lab=IN}
-N 190 -280 190 -260 {
+N 250 -250 250 -230 {
 lab=IN}
-N 190 -280 310 -280 {
+N 250 -250 370 -250 {
 lab=IN}
-N 190 -180 310 -180 {
+N 250 -150 370 -150 {
 lab=IN}
-N 190 -260 190 -180 {
+N 250 -230 250 -150 {
 lab=IN}
-N 430 -300 450 -300 {
+N 490 -270 510 -270 {
 lab=OUT_0}
-N 430 -200 450 -200 {
+N 490 -170 510 -170 {
 lab=OUT_1}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
-C {sky130_stdcells/and2_0.sym} 370 -300 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/and2_0.sym} 370 -200 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {sky130_stdcells/inv_1.sym} 280 -390 1 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {devices/ipin.sym} 240 -460 1 0 {name=p1 lab=S}
-C {devices/opin.sym} 450 -300 0 0 {name=p2 lab=OUT_0}
-C {devices/ipin.sym} 170 -260 0 0 {name=p3 lab=IN
+C {sky130_stdcells/and2_0.sym} 430 -270 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/and2_0.sym} 430 -170 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/inv_1.sym} 340 -360 1 0 {name=x3 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {devices/ipin.sym} 300 -430 1 0 {name=p1 lab=S}
+C {devices/opin.sym} 510 -270 0 0 {name=p2 lab=OUT_0}
+C {devices/ipin.sym} 230 -230 0 0 {name=p3 lab=IN
 }
-C {devices/opin.sym} 450 -200 0 0 {name=p4 lab=OUT_1}
-C {devices/iopin.sym} 40 -460 0 0 {name=p5 lab=VDD
+C {devices/opin.sym} 510 -170 0 0 {name=p4 lab=OUT_1}
+C {devices/iopin.sym} 20 -70 0 0 {name=p5 lab=VDD
 }
-C {devices/iopin.sym} 40 -430 0 0 {name=p6 lab=VSS
+C {devices/iopin.sym} 20 -40 0 0 {name=p6 lab=VSS
 }
-C {devices/code.sym} 650 -200 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="*.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
-"
-spice_ignore=false}

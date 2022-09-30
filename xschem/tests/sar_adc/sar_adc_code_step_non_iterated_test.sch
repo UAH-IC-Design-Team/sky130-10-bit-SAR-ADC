@@ -5,7 +5,7 @@ K {}
 V {}
 S {}
 E {}
-T {This reset is active LOW!!!} 660 -170 0 0 0.4 0.4 {}
+T {This reset is active LOW!!!} 670 -160 0 0 0.4 0.4 {}
 N 50 -250 50 -230 {
 lab=GND}
 N 260 -250 260 -230 {
@@ -26,15 +26,15 @@ N 420 -400 440 -400 {
 lab=Vin_n}
 N 420 -460 440 -460 {
 lab=reset_b}
-N 560 -80 560 -60 {
-lab=GND}
-N 830 -80 830 -60 {
-lab=GND}
 N 360 -250 360 -230 {
 lab=GND}
-N 360 -130 360 -110 {
+N 570 -70 570 -50 {
+lab=GND}
+N 840 -70 840 -50 {
+lab=GND}
+N 370 -120 370 -100 {
 lab=Vbias}
-N 350 -120 360 -120 {
+N 360 -110 370 -110 {
 lab=Vbias}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -70,7 +70,7 @@ write sar_adc_test.raw
 "}
 C {devices/title.sym} 160 30 0 0 {name=l13 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
-C {devices/vsource.sym} 50 -280 0 0 {name=V3 value="PULSE 0 1.8V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 50 -280 0 0 {name=V3 value="PULSE 0 1.8V 1ns 2.5ns 1ns 1s 1s"
 }
 C {devices/gnd.sym} 50 -230 0 0 {name=l14 lab=GND}
 C {devices/lab_pin.sym} 50 -310 0 0 {name=l15 sig_type=std_logic lab=VDD
@@ -81,10 +81,6 @@ C {devices/gnd.sym} 260 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 260 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
 C {src/sar_adc/sar_adc.sym} 590 -430 0 0 {name=x1}
-C {devices/vsource.sym} 360 -80 0 0 {name=Vn value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
-}
-C {devices/lab_pin.sym} 360 -50 0 0 {name=l1 sig_type=std_logic lab=Vin_n
-}
 C {devices/lab_pin.sym} 770 -460 2 0 {name=l3 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 770 -440 2 0 {name=l4 sig_type=std_logic lab=VSS
@@ -101,33 +97,17 @@ C {devices/lab_pin.sym} 420 -400 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
 C {devices/lab_pin.sym} 420 -460 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
-C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
-}
-C {devices/gnd.sym} 560 -60 0 0 {name=l18 lab=GND}
-C {devices/lab_pin.sym} 560 -140 0 0 {name=l19 sig_type=std_logic lab=clk
-}
-C {devices/vsource.sym} 830 -110 0 0 {name=V6 value="PULSE 0 1.8V 5us 0.1ns 0.1ns 1s 1s"
-}
-C {devices/gnd.sym} 830 -60 0 0 {name=l20 lab=GND}
-C {devices/lab_pin.sym} 830 -140 0 0 {name=l21 sig_type=std_logic lab=reset_b
-}
-C {devices/vsource.sym} 360 -280 0 0 {name=V1 value="PULSE 0 0.9V 1ns 1us 1ns 1s 1s"
+C {devices/vsource.sym} 360 -280 0 0 {name=V1 value="PULSE 0 0.9V 1ns 2.5ns 1ns 1s 1s"
 }
 C {devices/gnd.sym} 360 -230 0 0 {name=l5 lab=GND}
 C {devices/lab_pin.sym} 360 -310 0 0 {name=l6 sig_type=std_logic lab=Vbias
-}
-C {devices/vsource.sym} 360 -160 0 0 {name=Vp value="PULSE 0 0.7V 1ns 1us 1ns 1s 1s"
-}
-C {devices/lab_pin.sym} 360 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
-}
-C {devices/lab_pin.sym} 350 -120 0 0 {name=l2 sig_type=std_logic lab=Vbias
 }
 C {devices/noconn.sym} 760 -460 1 0 {name=l23}
 C {devices/noconn.sym} 760 -440 1 0 {name=l24}
 C {devices/noconn.sym} 760 -420 1 0 {name=l25}
 C {devices/noconn.sym} 760 -400 1 0 {name=l26}
-C {sky130_fd_pr/corner.sym} 920 -460 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {devices/simulator_commands.sym} 30 -480 0 0 {name="ngspice"
+C {sky130_fd_pr/corner.sym} 150 -480 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {devices/simulator_commands.sym} 10 -480 0 0 {name="ngspice"
 value="
 * ngspice commands
 .options list acct opts
@@ -136,9 +116,9 @@ value="
 * Go to the const plot
 setplot const
 
-let vdiff = -892.5293e-3
-let vmax = -885.4980e-3
-let vdelta = 878.9063e-6
+let vdiff = -0.9
+let vmax = 0.9
+let vdelta = 0.2
 let runs = 0
 
 * Insert vector names and set only one scale
@@ -155,14 +135,14 @@ let in_diff_v= vector($&total_runs)
 let vsampled_p = vector($&total_runs) 
 let vsampled_n = vector($&total_runs) 
 
-while vdiff le $&vmax
+while $&runs lt $&total_runs
 	* Alter the voltages
-	alter \\\\@Vp[pulse] = [ 0 $&vdiff 1n 1u 1n 1 1 ] $ vector
-	alter \\\\@Vn[pulse] = [ 0 $&vdiff 1n 1u 1n 1 1 ] $ vector
+	alter \\\\@Vp[pulse] = [ 0 $&vdiff 1n 2.5n 1n 1 1 ] $ vector
+	alter \\\\@Vn[pulse] = [ 0 $&vdiff 1n 2.5n 1n 1 1 ] $ vector
 
 	* Run the tran
 	* tran creates a new plot starting with tran1
-	tran 0.1u 340u uic
+	tran 0.5n 700n uic
 
 	set pltfile1 = plot_converg_\{$&runs\}_\{$&vdiff\}.svg
 	set pltfile2 = plot_input_v_\{$&runs\}_\{$&vdiff\}.svg
@@ -243,3 +223,23 @@ echo Total Runs = $&runs
 echo
 .endc
 "}
+C {devices/vsource.sym} 370 -70 0 0 {name=Vn value="PULSE 0 -0.217095V 1ns 2.5ns 1ns 1s 1s"
+}
+C {devices/lab_pin.sym} 370 -40 0 0 {name=l1 sig_type=std_logic lab=Vin_n
+}
+C {devices/vsource.sym} 570 -100 0 0 {name=V5 value="PULSE 0 1.8V 50ns 0.1ns 0.1ns 10ns 20ns"
+}
+C {devices/gnd.sym} 570 -50 0 0 {name=l18 lab=GND}
+C {devices/lab_pin.sym} 570 -130 0 0 {name=l19 sig_type=std_logic lab=clk
+}
+C {devices/vsource.sym} 840 -100 0 0 {name=V6 value="PULSE 0 1.8V 50ns 0.1ns 0.1ns 1s 1s"
+}
+C {devices/gnd.sym} 840 -50 0 0 {name=l20 lab=GND}
+C {devices/lab_pin.sym} 840 -130 0 0 {name=l21 sig_type=std_logic lab=reset_b
+}
+C {devices/vsource.sym} 370 -150 0 0 {name=Vp value="PULSE 0 -0.217095V 1ns 2.5ns 1ns 1s 1s"
+}
+C {devices/lab_pin.sym} 370 -180 0 0 {name=l22 sig_type=std_logic lab=Vin_p
+}
+C {devices/lab_pin.sym} 360 -110 0 0 {name=l2 sig_type=std_logic lab=Vbias
+}

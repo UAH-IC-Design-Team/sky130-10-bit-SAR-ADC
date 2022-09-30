@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -29,7 +30,7 @@ lab=VSS}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -52,12 +53,12 @@ v_sp_n9 sw_sp_n9 gnd  PULSE(0 1.8V 0 1ns 1ns 50us 200us)
 
 v_n1 sw_n1 gnd  PULSE(0 1.8V 0 1ns 1ns 55us 200us)
 v_n2 sw_n2 gnd  PULSE(0 1.8V 0 1ns 1ns 60us 200us)
-v_n3 sw_n3 gnd  PULSE(0 1.8V 0 1ns 1ns 75us 200us)
-v_n4 sw_n4 gnd  PULSE(0 1.8V 0 1ns 1ns 80us 200us)
-v_n5 sw_n5 gnd  PULSE(0 1.8V 0 1ns 1ns 85us 200us)
-v_n6 sw_n6 gnd  PULSE(0 1.8V 0 1ns 1ns 90us 200us)
-v_n7 sw_n7 gnd  PULSE(0 1.8V 0 1ns 1ns 95us 200us)
-v_n8 sw_n8 gnd  PULSE(0 1.8V 0 1ns 1ns 100us 200us)
+v_n3 sw_n3 gnd  PULSE(0 1.8V 0 1ns 1ns 65us 200us)
+v_n4 sw_n4 gnd  PULSE(0 1.8V 0 1ns 1ns 70us 200us)
+v_n5 sw_n5 gnd  PULSE(0 1.8V 0 1ns 1ns 75us 200us)
+v_n6 sw_n6 gnd  PULSE(0 1.8V 0 1ns 1ns 80us 200us)
+v_n7 sw_n7 gnd  PULSE(0 1.8V 0 1ns 1ns 85us 200us)
+v_n8 sw_n8 gnd  PULSE(0 1.8V 0 1ns 1ns 90us 200us)
 
 v_sp_p1 sw_sp_p1 gnd  PULSE(0 1.8V 0 1ns 1ns 5us 200us)
 v_sp_p2 sw_sp_p2 gnd  PULSE(0 1.8V 0 1ns 1ns 10us 200us)
@@ -71,12 +72,12 @@ v_sp_p9 sw_sp_p9 gnd  PULSE(0 1.8V 0 1ns 1ns 50us 200us)
 
 v_p1 sw_p1 gnd  PULSE(0 1.8V 0 1ns 1ns 55us 200us)
 v_p2 sw_p2 gnd  PULSE(0 1.8V 0 1ns 1ns 60us 200us)
-v_p3 sw_p3 gnd  PULSE(0 1.8V 0 1ns 1ns 75us 200us)
-v_p4 sw_p4 gnd  PULSE(0 1.8V 0 1ns 1ns 80us 200us)
-v_p5 sw_p5 gnd  PULSE(0 1.8V 0 1ns 1ns 85us 200us)
-v_p6 sw_p6 gnd  PULSE(0 1.8V 0 1ns 1ns 90us 200us)
-v_p7 sw_p7 gnd  PULSE(0 1.8V 0 1ns 1ns 95us 200us)
-v_p8 sw_p8 gnd  PULSE(0 1.8V 0 1ns 1ns 100us 200us)
+v_p3 sw_p3 gnd  PULSE(0 1.8V 0 1ns 1ns 65us 200us)
+v_p4 sw_p4 gnd  PULSE(0 1.8V 0 1ns 1ns 70us 200us)
+v_p5 sw_p5 gnd  PULSE(0 1.8V 0 1ns 1ns 75us 200us)
+v_p6 sw_p6 gnd  PULSE(0 1.8V 0 1ns 1ns 80us 200us)
+v_p7 sw_p7 gnd  PULSE(0 1.8V 0 1ns 1ns 85us 200us)
+v_p8 sw_p8 gnd  PULSE(0 1.8V 0 1ns 1ns 90us 200us)
 
 .control
 ic v(vin_p)=1.8V
@@ -121,3 +122,4 @@ C {devices/noconn.sym} 390 -260 1 0 {name=l11}
 C {devices/noconn.sym} 390 -240 1 0 {name=l12}
 C {devices/noconn.sym} 710 -260 1 0 {name=l18}
 C {devices/noconn.sym} 710 -240 1 0 {name=l19}
+C {sky130_fd_pr/corner.sym} 10 -460 0 0 {name=CORNER only_toplevel=false corner=tt}

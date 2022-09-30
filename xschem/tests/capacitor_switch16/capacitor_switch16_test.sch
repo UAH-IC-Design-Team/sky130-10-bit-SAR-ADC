@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -21,7 +22,7 @@ lab=GND}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
 .include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
 "
 spice_ignore=false}
@@ -65,3 +66,4 @@ C {devices/lab_pin.sym} 420 -180 0 0 {name=l6 sig_type=std_logic lab=Vin
 }
 C {devices/noconn.sym} 700 -300 3 0 {name=l7}
 C {src/capacitor_switch16/capacitor_switch16.sym} 530 -320 0 0 {name=x1}
+C {sky130_fd_pr/corner.sym} 10 -480 0 0 {name=CORNER only_toplevel=false corner=tt}

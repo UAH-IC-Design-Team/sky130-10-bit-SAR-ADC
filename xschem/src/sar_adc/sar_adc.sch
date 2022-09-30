@@ -102,7 +102,6 @@ C {devices/ipin.sym} 110 -210 0 0 {name=p8 lab=V_in_n
 C {devices/ipin.sym} 110 -250 0 0 {name=p9 lab=Clk
 }
 C {src/controller/controller.sym} 580 -150 0 0 {name=x1}
-C {src/comparator/comparator.sym} 580 -410 0 0 {name=x2}
 C {src/dac/dac.sym} 580 -540 0 0 {name=x3}
 C {src/bootstrapped_sampling_switch/bootstrapped_sampling_switch.sym} 580 -650 0 0 {name=x4}
 C {devices/lab_pin.sym} 400 -680 0 0 {name=l2 sig_type=std_logic lab=V_in_p
@@ -192,3 +191,4 @@ C {devices/lab_pin.sym} 400 -400 0 0 {name=l15 sig_type=std_logic lab=comparator
 }
 C {devices/lab_pin.sym} 760 -60 2 0 {name=l45 sig_type=std_logic lab=comparator_clk
 }
+C {src/comparator/comparator.sym} 580 -410 0 0 {name=x2}
