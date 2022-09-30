@@ -71,6 +71,10 @@ f = sample_freq*(0:(L/2))/L;
 %f = (1/(sample_period))*(0:1:L/2-1);
 figure 
 plot(f,P1_log)
+title("SAR ADC FFT")
+xlabel("F [Hz]")
+ylabel("Amplitude [dB]")
+axis([0 1/sample_period/2 -100 10])
 
 
 

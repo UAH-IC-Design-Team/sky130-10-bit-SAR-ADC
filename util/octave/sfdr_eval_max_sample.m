@@ -2,10 +2,11 @@ clear
 clc
 clf
 
-%top_data_dir = "/Users/micahtseng/Personal/eda/ngspice-batch-runner/docker_volume/New_run"
-%top_data_dir = "/Users/micahtseng/Personal/s3-data/20220927_sine"
-top_data_dir = "/Users/micahtseng/Personal/eda/ngspice-batch-runner/docker_volume/20220928_sine"
+% top_data_dir = "/Users/micahtseng/Personal/eda/ngspice-batch-runner/docker_volume/New_run"
+% top_data_dir = "/Users/micahtseng/Personal/s3-data/20220927_sine"
+% top_data_dir = "/Users/micahtseng/Personal/eda/ngspice-batch-runner/docker_volume/20220928_sine"
 % top_data_dir = "/Users/micahtseng/Personal/eda/sky130-10-bit-SAR-ADC/xschem/tests/sar_adc/simulation/20220926_spfdr_1"
+top_data_dir = "/Users/micahtseng/Personal/s3-data/20220928/sine"
 current_dir = pwd
 sample_period = 640.3689e-9
 sample_freq = 1/sample_period
@@ -20,7 +21,12 @@ data = zeros(1,15);
 
 for i = 1:1:length(data_runs(:,1))
    cd(strcat(data_runs(i,:)));
-   temp_data = importdata("out_bits.txt", " ", 1);
+   try
+      temp_data = importdata("out_bits.txt", " ", 1);
+   catch err
+      disp(err.message)
+      disp(data_runs(i,:))
+   end
    data = vertcat(data, temp_data.data);
    cd ..
 end
