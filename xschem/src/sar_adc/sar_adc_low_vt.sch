@@ -191,4 +191,4 @@ C {devices/lab_pin.sym} 400 -400 0 0 {name=l15 sig_type=std_logic lab=comparator
 }
 C {devices/lab_pin.sym} 760 -60 2 0 {name=l45 sig_type=std_logic lab=comparator_clk
 }
-C {src/comparator/comparator.sym} 580 -410 0 0 {name=x2}
+C {src/comparator/comparator_low_vt.sym} 580 -410 0 0 {name=x2}

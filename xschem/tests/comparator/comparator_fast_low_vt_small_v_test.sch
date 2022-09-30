@@ -59,10 +59,12 @@ only_toplevel=true
 value=".options acct list
 .temp 25
 .control
-tran 0.1n 2u
+tran 0.1n 1u
 *dc V1 0 1.8V 0.1
 plot Vin_p-Vin_n Out_p-Out_n Clk-4
 plot Vin_p-Vin_n x1.pre_amp_p-x1.pre_amp_n Clk-4
+plot Vin_p-Vin_n x1.pre_amp_p-x1.pre_amp_n 
+plot x1.pre_amp_p x1.pre_amp_n
 *write comparator_fast_test.raw
 .endc
 "}
@@ -78,8 +80,7 @@ C {devices/vsource.sym} 150 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/comparator/comparator.sym} 570 -390 0 0 {name=x1}
-C {devices/vsource.sym} 450 -200 0 0 {name=V1 value="PULSE -0.005V 0.005V 0 2us 1ns 1ns 200us"
+C {devices/vsource.sym} 450 -200 0 0 {name=V1 value="PULSE -0.005V 0.005V 0 1us 1ns 1ns 200us"
 }
 C {devices/lab_pin.sym} 450 -230 0 0 {name=l2 sig_type=std_logic lab=Vin_p
 }
@@ -104,7 +105,7 @@ C {devices/noconn.sym} 730 -360 3 0 {name=l12}
 C {devices/lab_pin.sym} 730 -380 2 0 {name=l18 sig_type=std_logic lab=Out_n
 }
 C {devices/noconn.sym} 730 -380 3 0 {name=l19}
-C {devices/vsource.sym} 450 -120 0 0 {name=V5 value="PULSE -0.005V 0.005V 0 2us 1ns 1ns 200us"
+C {devices/vsource.sym} 450 -120 0 0 {name=V5 value="PULSE -0.005V 0.005V 0 1us 1ns 1ns 200us"
 }
 C {devices/lab_pin.sym} 450 -90 0 0 {name=l21 sig_type=std_logic lab=Vin_n
 }
@@ -136,3 +137,4 @@ C {devices/lab_pin.sym} 1030 -250 2 0 {name=l25 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 1040 -350 2 0 {name=l26 sig_type=std_logic lab=Out_p
 }
 C {sky130_fd_pr/corner.sym} 20 -470 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {src/comparator/comparator_low_vt.sym} 570 -390 0 0 {name=x1}

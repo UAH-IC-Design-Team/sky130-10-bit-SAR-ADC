@@ -34,7 +34,7 @@ All unit tests are located in the `xschem/tests` directory.
 | :--- | :--- | :--- | :--- | :--- | 
 | sar_adc | sar_adc_test | Passing | Tests a single input value to the sar adc |  |
 | bootstrapped sw | bootstrapped_sampling_switch_load_test | Passing | Test a resistive load |  |
-| bootstrapped sw | bootstrapped_sampling_switch_test.sch | Passing | Test with no loadd |  |
+| bootstrapped sw | bootstrapped_sampling_switch_test.sch | Passing | Test with no load |  |
 | bootstrapped sw | bootstrapped_sampling_switch_w_caps_test.sch | Passing | Test with cap array loading |  |
 | cap array | capacitor_array_test | Passing | Make sure that the caps switch and are the correct value |  |
 | cap sw 2 | capacitor_switch2_test | Passing | Make sure it switches |  |
@@ -50,12 +50,10 @@ All unit tests are located in the `xschem/tests` directory.
 | comparator |  |  |  |  |
 | comparator |  |  |  |  |
 | comparator |  |  |  |  |
-| controller | controller_corner_ff_test | Passing | Testing the ff corner | Clock rate = ???? |
-| controller | controller_corner_ff_test | Passing |  |  |
-| controller | controller_corner_ff_test | Passing |  |  |
-| controller | controller_corner_fs_test | Passing |  |  |
-| controller | controller_corner_sf_test |  |  |  |
-| controller | controller_corner_ss_test |  |  |  |
+| controller | controller_corner_ff_test | Passing | Testing the ff corner | ext clk = 50MHz, 60C |
+| controller | controller_corner_fs_test | Passing | Testing the fs corner | ext clk = 50MHz, 60C |
+| controller | controller_corner_sf_test | Passing | Testing the sf corner | ext clk = 50MHz, 60C |
+| controller | controller_corner_ss_test | Passing | Testing the ss corner | ext clk = 50MHz, 60C |
 | controller | |  |  |  |
 | controller | |  |  |  |
 | controller | |  |  |  |

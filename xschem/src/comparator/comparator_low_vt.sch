@@ -213,7 +213,7 @@ C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip B
 }
 C {sky130_fd_pr/pfet_01v8.sym} 780 -830 0 0 {name=M1
 L=0.15
-W=10
+W=20
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -227,7 +227,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 650 -830 0 1 {name=M2
 L=0.15
-W=10
+W=20
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -237,34 +237,6 @@ ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
 model=pfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8.sym} 610 -710 0 0 {name=M3
-L=0.15
-W=50
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8.sym} 820 -710 0 1 {name=M4
-L=0.15
-W=50
-nf=1 
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 780 -510 0 0 {name=M5
@@ -298,7 +270,7 @@ spiceprefix=X
 C {sky130_fd_pr/nfet_01v8.sym} 690 -610 0 0 {name=M9
 L=0.15
 W=50
-nf=5
+nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
@@ -533,7 +505,7 @@ C {devices/lab_pin.sym} 490 -540 2 0 {name=l24 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 490 -630 0 0 {name=l6 sig_type=std_logic lab=Clk
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 310 -590 0 0 {name=C6 model=cap_mim_m3_1 W=3 L=3 MF=1 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 310 -590 0 0 {name=C6 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X
 }
 C {devices/lab_pin.sym} 310 -540 2 0 {name=l24 sig_type=std_logic lab=VSS
 }
@@ -546,4 +518,32 @@ C {devices/lab_pin.sym} 160 -540 2 0 {name=l24 sig_type=std_logic lab=VSS
 C {devices/lab_pin.sym} 160 -630 0 0 {name=l6 sig_type=std_logic lab=Clk_latch_n
 }
 C {sky130_stdcells/buf_4.sym} 570 -120 2 1 {name=x16 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 610 -710 0 0 {name=M10
+L=0.15
+W=40
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 820 -710 0 1 {name=M3
+L=0.15
+W=40
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
 }

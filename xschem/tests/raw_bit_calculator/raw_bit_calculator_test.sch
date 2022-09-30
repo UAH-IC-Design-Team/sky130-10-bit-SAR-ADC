@@ -19,23 +19,25 @@ N 400 -60 400 -40 {
 lab=GND}
 N 670 -70 670 -50 {
 lab=GND}
-N 830 -550 870 -550 {
+N 830 -410 870 -410 {
 lab=raw_bit[13..1]}
-N 830 -530 870 -530 {
+N 830 -390 870 -390 {
 lab=sw_p[8..1]}
 N 940 -70 940 -50 {
 lab=GND}
-N 830 -510 870 -510 {
+N 830 -370 870 -370 {
 lab=VDD}
-N 830 -490 870 -490 {
+N 830 -350 870 -350 {
 lab=VSS}
-N 830 -470 870 -470 {
+N 830 -330 870 -330 {
 lab=sw_n_sp[9..1]}
-N 830 -450 870 -450 {
+N 830 -310 870 -310 {
 lab=sw_n[8..1]}
-N 830 -430 870 -430 {
+N 830 -290 870 -290 {
 lab=sw_p_sp[9..1]}
 N 120 -60 120 -40 {
+lab=GND}
+N 430 -510 430 -490 {
 lab=GND}
 C {devices/code.sym} 0 -280 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -74,7 +76,7 @@ C {devices/vsource.sym} 150 -400 0 0 {name=V4 value=0
 C {devices/gnd.sym} 150 -350 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 150 -430 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/raw_bit_calculator/raw_bit_calculator.sym} 680 -490 0 0 {name=x1}
+C {src/raw_bit_calculator/raw_bit_calculator.sym} 680 -350 0 0 {name=x1}
 C {devices/lab_pin.sym} 860 -260 2 0 {name=l1 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 860 -240 2 0 {name=l2 sig_type=std_logic lab=VSS
@@ -96,34 +98,34 @@ C {devices/lab_pin.sym} 670 -130 0 0 {name=l11 sig_type=std_logic lab=reset_b
 }
 C {devices/lab_pin.sym} 530 -220 0 0 {name=l18 sig_type=std_logic lab=reset_b
 }
-C {devices/lab_pin.sym} 870 -510 2 0 {name=l9 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 870 -370 2 0 {name=l9 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 870 -490 2 0 {name=l27 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 870 -350 2 0 {name=l27 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 870 -470 2 0 {name=l28 sig_type=std_logic lab=sw_n_sp[9..1]
+C {devices/lab_pin.sym} 870 -330 2 0 {name=l28 sig_type=std_logic lab=sw_n_sp[9..1]
 }
-C {devices/lab_pin.sym} 870 -430 2 0 {name=l29 sig_type=std_logic lab=sw_p_sp[9..1]
+C {devices/lab_pin.sym} 870 -290 2 0 {name=l29 sig_type=std_logic lab=sw_p_sp[9..1]
 }
-C {devices/lab_pin.sym} 870 -450 2 0 {name=l30 sig_type=std_logic lab=sw_n[8..1]
+C {devices/lab_pin.sym} 870 -310 2 0 {name=l30 sig_type=std_logic lab=sw_n[8..1]
 }
-C {devices/lab_pin.sym} 870 -530 2 0 {name=l31 sig_type=std_logic lab=sw_p[8..1]
+C {devices/lab_pin.sym} 870 -390 2 0 {name=l31 sig_type=std_logic lab=sw_p[8..1]
 }
-C {devices/lab_pin.sym} 530 -510 0 0 {name=l33 sig_type=std_logic lab=cycle0
+C {devices/lab_pin.sym} 530 -370 0 0 {name=l33 sig_type=std_logic lab=cycle0
 }
 C {devices/vsource.sym} 940 -100 0 0 {name=V2 value=1.8V
 }
 C {devices/gnd.sym} 940 -50 0 0 {name=l34 lab=GND}
 C {devices/lab_pin.sym} 940 -130 0 0 {name=l35 sig_type=std_logic lab=Vcmp
 }
-C {devices/lab_pin.sym} 530 -530 0 0 {name=l36 sig_type=std_logic lab=Vcmp
+C {devices/lab_pin.sym} 530 -390 0 0 {name=l36 sig_type=std_logic lab=Vin_p
 }
-C {devices/noconn.sym} 850 -510 1 0 {name=l37}
-C {devices/noconn.sym} 850 -490 1 0 {name=l38}
-C {devices/noconn.sym} 850 -470 1 0 {name=l39}
-C {devices/noconn.sym} 850 -450 1 0 {name=l40}
-C {devices/noconn.sym} 850 -430 1 0 {name=l41}
+C {devices/noconn.sym} 850 -370 1 0 {name=l37}
+C {devices/noconn.sym} 850 -350 1 0 {name=l38}
+C {devices/noconn.sym} 850 -330 1 0 {name=l39}
+C {devices/noconn.sym} 850 -310 1 0 {name=l40}
+C {devices/noconn.sym} 850 -290 1 0 {name=l41}
 C {src/shifted_clock_generator/shifted_clock_generator.sym} 680 -240 0 0 {name=x2}
-C {devices/lab_pin.sym} 870 -550 2 0 {name=l12 sig_type=std_logic lab=raw_bit[13..1]
+C {devices/lab_pin.sym} 870 -410 2 0 {name=l12 sig_type=std_logic lab=raw_bit[13..1]
 }
 C {devices/vsource.sym} 120 -90 0 0 {name=V6 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 160us 320us"
 }
@@ -133,8 +135,13 @@ C {devices/lab_pin.sym} 120 -120 0 0 {name=l6 sig_type=std_logic lab=sw_sample
 C {devices/lab_pin.sym} 530 -240 0 0 {name=l6 sig_type=std_logic lab=sw_sample
 }
 C {sky130_fd_pr/corner.sym} 260 -280 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {devices/noconn.sym} 850 -530 1 0 {name=l1}
-C {devices/noconn.sym} 850 -550 1 0 {name=l2}
-C {devices/noconn.sym} 530 -550 1 0 {name=l3}
-C {devices/lab_pin.sym} 530 -550 0 0 {name=l17 sig_type=std_logic lab=cycle[12..0]
+C {devices/noconn.sym} 850 -390 1 0 {name=l1}
+C {devices/noconn.sym} 850 -410 1 0 {name=l2}
+C {devices/noconn.sym} 530 -410 1 0 {name=l3}
+C {devices/lab_pin.sym} 530 -410 0 0 {name=l17 sig_type=std_logic lab=cycle[12..0]
+}
+C {devices/vsource.sym} 430 -540 0 0 {name=V8 value="PULSE 0 1.8V 9.99us 0.1ns 0.1ns 5u 20us"
+}
+C {devices/gnd.sym} 430 -490 0 0 {name=l26 lab=GND}
+C {devices/lab_pin.sym} 430 -570 0 0 {name=l27 sig_type=std_logic lab=Vin_p
 }

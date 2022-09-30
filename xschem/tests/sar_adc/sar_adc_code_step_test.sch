@@ -126,7 +126,7 @@ C {devices/noconn.sym} 760 -460 1 0 {name=l23}
 C {devices/noconn.sym} 760 -440 1 0 {name=l24}
 C {devices/noconn.sym} 760 -420 1 0 {name=l25}
 C {devices/noconn.sym} 760 -400 1 0 {name=l26}
-C {sky130_fd_pr/corner.sym} 920 -460 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {sky130_fd_pr/corner.sym} 160 -480 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/simulator_commands.sym} 30 -480 0 0 {name="ngspice"
 value="
 * Requires an iterator variable to be passed in!

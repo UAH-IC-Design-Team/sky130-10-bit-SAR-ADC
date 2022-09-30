@@ -80,7 +80,6 @@ C {devices/vsource.sym} 280 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 280 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 280 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/sar_adc/sar_adc.sym} 590 -430 0 0 {name=x1}
 C {devices/lab_pin.sym} 770 -460 2 0 {name=l3 sig_type=std_logic lab=VDD
 }
 C {devices/lab_pin.sym} 770 -440 2 0 {name=l4 sig_type=std_logic lab=VSS
@@ -277,3 +276,4 @@ C {devices/lab_pin.sym} 390 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 380 -120 0 0 {name=l2 sig_type=std_logic lab=Vbias
 }
+C {src/sar_adc/sar_adc_low_vt.sym} 590 -430 0 0 {name=x1}
