@@ -1,0 +1,41 @@
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/capacitor_array/capacitor_array.sch
+.subckt capacitor_array sw_sp_n9 sw_sp_n8 sw_sp_n7 sw_sp_n6 sw_sp_n5 sw_sp_n4 sw_sp_n3 sw_sp_n2
++ sw_sp_n1 Vin_p Vin_n sw_sp_p9 sw_sp_p8 sw_sp_p7 sw_sp_p6 sw_sp_p5 sw_sp_p4 sw_sp_p3 sw_sp_p2 sw_sp_p1 sw_p8
++ sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2 sw_n1
+*.PININFO sw_sp_n[9..1]:I Vin_p:B Vin_n:B sw_sp_p[9..1]:I sw_p[8..1]:I sw_n[8..1]:I
+XC1 Vin_n sw_sp_n1 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=128 m=128
+XC2 Vin_n sw_sp_n2 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=64 m=64
+XC3 Vin_n sw_n1 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=128 m=128
+XC4 Vin_n sw_n2 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=64 m=64
+XC5 Vin_n sw_sp_n3 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=32 m=32
+XC6 Vin_n sw_sp_n4 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=16 m=16
+XC7 Vin_n sw_sp_n5 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=8 m=8
+XC8 Vin_n sw_n3 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=32 m=32
+XC9 Vin_n sw_n4 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=16 m=16
+XC10 Vin_n sw_n5 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=8 m=8
+XC11 Vin_n sw_sp_n6 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=4 m=4
+XC12 Vin_n sw_sp_n7 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=2 m=2
+XC13 Vin_n sw_sp_n8 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=1 m=1
+XC14 Vin_n sw_n6 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=4 m=4
+XC15 Vin_n sw_n7 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=2 m=2
+XC16 Vin_n sw_n8 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=1 m=1
+XC17 Vin_n sw_sp_n9 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=1 m=1
+XC18 Vin_p sw_sp_p1 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=128 m=128
+XC19 Vin_p sw_sp_p2 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=64 m=64
+XC20 Vin_p sw_p1 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=128 m=128
+XC21 Vin_p sw_p2 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=64 m=64
+XC22 Vin_p sw_sp_p3 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=32 m=32
+XC23 Vin_p sw_sp_p4 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=16 m=16
+XC24 Vin_p sw_sp_p5 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=8 m=8
+XC25 Vin_p sw_p3 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=32 m=32
+XC26 Vin_p sw_p4 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=16 m=16
+XC27 Vin_p sw_p5 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=8 m=8
+XC28 Vin_p sw_sp_p6 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=4 m=4
+XC29 Vin_p sw_sp_p7 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=2 m=2
+XC30 Vin_p sw_sp_p8 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=1 m=1
+XC31 Vin_p sw_p6 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=4 m=4
+XC32 Vin_p sw_p7 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=2 m=2
+XC33 Vin_p sw_p8 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=1 m=1
+XC34 Vin_p sw_sp_p9 sky130_fd_pr__cap_mim_m3_1 W=unit_cap_w L=unit_cap_l MF=1 m=1
+.ends
+.end
