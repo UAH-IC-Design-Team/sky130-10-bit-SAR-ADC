@@ -38,6 +38,15 @@ ifndef component
 endif
 	cd ./xschem; xschem -n -s -q --no_x --tcl 'set top_subckt 1' ./src/$(component)/$(component).sch -o ./src/$(component)/
 
+# Extract the Verilog netlist from xschem
+.PHONY: extract_xschem_verilog
+extract_xschem_verilog:
+ifndef component
+	$(error component is not set)
+endif
+	cd ./xschem; xschem -n -w -q --no_x  ./src/$(component)/$(component).sch -o ./src/$(component)/
+	cp ./xschem/src/$(component)/$(component).v ./OpenLane/designs/$(component)/src/
+
 
 # run lvs between xschem and magic
 .PHONY: netgen_lvs
