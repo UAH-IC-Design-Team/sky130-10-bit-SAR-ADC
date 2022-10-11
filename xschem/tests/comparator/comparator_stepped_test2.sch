@@ -132,7 +132,7 @@ value="
 
 
 .control
-
+save all
 let vdiff = -0.1V
 let vmax = 0.1V
 let vdelta = 1.8e-2;

@@ -132,7 +132,7 @@ value="
 * ngspice commands
 .options list acct opts
 .control
-
+save all
 tran 0.5n 2.61us uic
 let pow = -i(v3)*vdd
 

@@ -59,6 +59,7 @@ only_toplevel=true
 value=".options acct list
 .temp 25
 .control
+save all
 tran 0.1n 1u
 *dc V1 0 1.8V 0.1
 plot Vin_p-Vin_n Out_p-Out_n Clk-4

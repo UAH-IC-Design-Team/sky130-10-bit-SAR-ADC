@@ -35,6 +35,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
+save all
 tran 0.1u 400u
 *plot RST_PLS clk+2 Pulse+4
 plot reset_b-6 clk-4 sw_sample-2 cycle0 cycle1+2 cycle2+4 cycle3+6 cycle4+8 cycle5+10 cycle6+12 cycle7+14 cycle8+16 cycle9+18 cycle10+20 cycle11+22 cycle12+24 cycle13+26 cycle14+28 cycle15+30 
