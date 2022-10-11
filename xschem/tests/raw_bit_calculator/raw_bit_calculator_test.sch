@@ -53,6 +53,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
+save all
 tran 0.1u 400u
 plot cycle0-2 sw_n_sp1 sw_n_sp2+2 sw_n_sp3+4 sw_n_sp4+6 sw_n_sp5+8 sw_n_sp6+10 sw_n_sp7+12 sw_n_sp8+14 sw_n_sp9+16
 plot cycle0-2 sw_p_sp1 sw_p_sp2+2 sw_p_sp3+4 sw_p_sp4+6 sw_p_sp5+8 sw_p_sp6+10 sw_p_sp7+12 sw_p_sp8+14 sw_p_sp9+16

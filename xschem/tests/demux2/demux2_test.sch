@@ -93,6 +93,7 @@ value="
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
+save all
 tran 0.1u 100u
 plot select v_in+2 out_0+4 out_1+6
 write pulse_generator_test.raw

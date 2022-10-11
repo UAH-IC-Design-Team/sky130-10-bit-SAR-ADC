@@ -85,6 +85,7 @@ v_ref13 raw_bit13 0 dc 1.8
 
 *vvss VSS 0 0
 .control
+save all
 tran 0.1u 50u
 plot reset_b dump_bus+2 done+4 bit10+6 bit9+8 bit8+10
 plot bit10 bit9+2 bit8+4 bit7+6 bit6+8 bit5+10 bit4+12 bit3+14 bit2+16 bit1+18

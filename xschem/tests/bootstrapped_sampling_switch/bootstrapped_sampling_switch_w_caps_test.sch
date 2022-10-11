@@ -95,6 +95,7 @@ v_p6 sw_p6 gnd 0
 v_p7 sw_p7 gnd 0 
 v_p8 sw_p8 gnd 0 
 .control
+save all
 tran 0.5n 0.3u
 *plot RST_PLS clk+2 Pulse+4
 plot Vout_p-Vout_n clk-4

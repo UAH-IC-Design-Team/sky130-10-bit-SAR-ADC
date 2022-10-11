@@ -116,6 +116,7 @@ v_p8 sw_p8 gnd  1.8V
 
 .temp 25
 .control
+save all
 tran 0.1n 50n uic
 ic v(vin_p)=0.7 v(vin_n)=1.1
 *dc V1 0 1.8V 0.1
