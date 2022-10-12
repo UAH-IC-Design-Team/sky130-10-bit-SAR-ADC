@@ -131,6 +131,7 @@ value="
 
 * Go to the const plot
 setplot const
+save all
 
 let vdiff = -0.005V
 let vmax = 0.005V

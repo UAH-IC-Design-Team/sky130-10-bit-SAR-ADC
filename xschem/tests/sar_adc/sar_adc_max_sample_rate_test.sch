@@ -132,7 +132,7 @@ value="
 * ngspice commands
 .options list acct opts
 .control
-
+save all
 tran 0.5n 700ns uic
 
 write sar_adc_max_sample_rate_test.raw

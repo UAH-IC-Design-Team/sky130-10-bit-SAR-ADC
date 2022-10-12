@@ -129,6 +129,7 @@ v_p6 sw_p6 gnd 0
 v_p7 sw_p7 gnd 0 
 v_p8 sw_p8 gnd 0 
 .control
+save all
 tran 0.1u 200u
 *dc V1 0 1.8V 0.1
 plot Vin_p-Vin_n Out_p-Out_n Clk-4

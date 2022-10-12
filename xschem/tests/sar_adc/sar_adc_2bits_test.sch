@@ -136,6 +136,7 @@ value="
 *vvss VSS 0 0
 *.ic v(x1.vsampled_p)=0.9V v(x1.vsampled_n)=0.9V
 .control
+save all
 tran 0.1u 340u uic
 *plot RST_PLS clk+2 Pulse+4
 plot x1.sw_n_sp1 x1.sw_n_sp2+2 x1.sw_n_sp3+4 x1.sw_n_sp4+6 x1.sw_n_sp5+8 x1.sw_n_sp6+10 x1.sw_n_sp7+12 x1.sw_n_sp8+14 x1.sw_n_sp9+16 

@@ -37,6 +37,7 @@ only_toplevel=true
 value=".options acct list
 .temp 25
 .control
+save all
 tran 0.1u 400u
 plot reset_b-2 clk sw_sample+2 comparator_clk+4
 write sample_clock_test.raw

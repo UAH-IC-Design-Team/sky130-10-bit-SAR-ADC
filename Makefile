@@ -38,6 +38,28 @@ ifndef component
 endif
 	cd ./xschem; xschem -n -s -q --no_x --tcl 'set top_subckt 1' ./src/$(component)/$(component).sch -o ./src/$(component)/
 
+# Extract the Verilog netlist from xschem
+.PHONY: extract_xschem_verilog
+extract_xschem_verilog:
+ifndef component
+	$(error component is not set)
+endif
+	cd ./xschem; xschem -n -w -q --no_x  ./src/$(component)/$(component).sch -o ./src/$(component)/
+	touch ./xschem/src/$(component)/$(component)_clean.v
+	python3 ./util/verilog_parameter_strip.py ./xschem/src/$(component)/$(component).v ./xschem/src/$(component)/$(component)_clean.v
+	cp ./xschem/src/$(component)/$(component)_clean.v ./OpenLane/designs/$(component)/src/$(component).v
+
+# Extract the Verilog netlist from xschem for old version of Xschem
+.PHONY: extract_xschem_verilog_old
+extract_xschem_verilog_old:
+ifndef component
+	$(error component is not set)
+endif
+	cd ./xschem; xschem -n -w -q --no_x  ./src/$(component)/$(component).sch -o ./src/$(component)/
+	touch ./xschem/src/$(component)/$(component)_clean.v
+	python3 ./util/verilog_parameter_strip2.py ./xschem/src/$(component)/$(component).v ./xschem/src/$(component)/$(component)_clean.v
+	cp ./xschem/src/$(component)/$(component)_clean.v ./OpenLane/designs/$(component)/src/$(component).v
+
 
 # run lvs between xschem and magic
 .PHONY: netgen_lvs

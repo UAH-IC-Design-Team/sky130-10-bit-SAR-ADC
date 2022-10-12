@@ -112,7 +112,7 @@ value="
 * ngspice commands
 .options list acct opts
 .control
-
+save all
 * Go to the const plot
 setplot const
 

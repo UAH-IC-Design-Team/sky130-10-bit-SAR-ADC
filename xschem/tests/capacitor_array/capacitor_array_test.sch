@@ -72,6 +72,7 @@ v_p8 sw_p8 gnd  PULSE(0 1.8V 0 1ns 1ns 90us 200us)
 .control
 ic v(vin_p)=1.8V
 ic v(vin_n)=1.8V
+save all
 tran 0.1u 110u
 write capacitor_array_test.raw
 plot Vin_n Vin_p+2

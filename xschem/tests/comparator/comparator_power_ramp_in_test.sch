@@ -61,6 +61,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
+save all
 tran 0.1u 200u uic
 *dc V1 0 1.8V 0.1
 plot Vin_p-Vin_n Out_p-Out_n Clk-4

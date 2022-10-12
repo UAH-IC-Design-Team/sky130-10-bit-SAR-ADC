@@ -1,4 +1,5 @@
-v {xschem version=3.0.0 file_version=1.2 }
+v {xschem version=3.1.0 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -54,6 +55,7 @@ value=".options acct list
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
 .control
+save all
 tran 0.01u 11u
 *plot RST_PLS clk+2 Pulse+4
 plot Vin_p-Vin_n clk reset_b-2 Gen_clk Q+2
