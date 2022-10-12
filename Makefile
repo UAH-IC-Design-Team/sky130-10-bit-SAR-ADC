@@ -12,13 +12,30 @@ endif
 
 # Extract the LVS netlist from magic
 # Running commands in magic requires EOF bits which is easy in a sh script.
+.PHONY: extract_magic_component_lvs
+extract_magic_component_lvs:
+ifndef component
+	$(error component is not set)
+endif
+	cd ./mag; ./extract_component_lvs.sh $(component)
+
+# Extract the LVS netlist from magic
+# Running commands in magic requires EOF bits which is easy in a sh script.
+.PHONY: extract_magic_component_c_para
+extract_magic_component_c_para:
+ifndef component
+	$(error component is not set)
+endif
+	cd ./mag; ./extract_component_c_para.sh $(component)
+
+# Extract the LVS netlist from magic
+# Running commands in magic requires EOF bits which is easy in a sh script.
 .PHONY: extract_magic_lvs
 extract_magic_lvs:
 ifndef component
 	$(error component is not set)
 endif
 	cd ./mag; ./extract_lvs.sh $(component)
-
 
 # Extract the gds from magic
 # Running commands in magic requires EOF bits which is easy in a sh script.
