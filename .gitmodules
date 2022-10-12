@@ -1,0 +1,4 @@
+[submodule "OpenLane"]
+	path = OpenLane
+	url = https://github.com/UAH-IC-Design-Team/OpenLane.git
+	shallow = true
