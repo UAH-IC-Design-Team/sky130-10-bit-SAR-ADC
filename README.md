@@ -80,6 +80,35 @@ The set up for these tests can be found in the [ngspice-batch-runner](https://gi
 | sar_adc_sine_max_sample_test.sch | Passing | Coherent sampling of a sine wave | ext clk = 50MHz |
 
 
+## Hardening Controller
+A OpenLane Fork is linked through a submodules to harden the controller. We chose to version control the OpenLane configurations and versioning through a simple fork. This might not be the best method, but it works for now.
+1. Init submodule 
+```
+git submodule init
+```
+2. Install OpenLane (only need to do this once)
+```
+cd OpenLane
+make
+make test    # to verify installation
+```
+3. Extract Verilog Netlist
+```
+# cd back to sky130-10-bit-SAR-ADC directory
+# The following command extracts the verilog netlist, converts the netlist
+# to an OpenLane readable standard and then places it in the correct directory for OpenLane
+make extract_xschem_verilog component=controller
+```
+If running an old version of xschem, use `make extract_xschem_verilog_old component=controller` since the Verilog netlist exportation changed. 
+4. Run the Flow
+```
+cd OpenLane
+./flow.tcl -design controller
+```
+
+The results will be located in `/OpenLane/designs/controller/runs/<run name>/results/final`. 
+
+
 # Tool Notes
 
 ### Xschem
