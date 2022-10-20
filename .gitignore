@@ -9,5 +9,9 @@
 *.spice
 
 *.raw
+*.cif
+*.ext
+*.nodes
+*.sim
 
 .DS_STORE

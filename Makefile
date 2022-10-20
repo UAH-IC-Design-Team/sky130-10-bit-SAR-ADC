@@ -1,11 +1,18 @@
 
+klayout_start:
+	klayout
+
+magic_start:
+	magic
+
 # Run klayout drc. Note that the counted number of DRC errors is a little over twice as high as reality.
 .PHONY: klayout_drc
 klayout_drc: extract_gds
 ifndef component
 	$(error component is not set)
 endif
-	klayout -b -r ./klayout/sky130A_mr.drc -rd input=./gds/$(component).gds -rd report=../klayout/drc_reports/$(component).xml -rd feol=true -rd beol=true -rd offgrid=true
+	touch ./klayout/drc_reports/$(component).xml
+	klayout -ne -b -r ./klayout/sky130A_mr.drc -rd input=./gds/$(component).gds -rd report=../klayout/drc_reports/$(component).xml -rd feol=true -rd beol=true -rd offgrid=true
 	@echo "Number of drc errors:"
 	@grep -o 'item' ./klayout/drc_reports/$(component).xml | wc -l | xargs -n 1 bash -c 'echo $$((($$1-2)/2))' args
 
@@ -86,9 +93,20 @@ ifndef component
 endif
 	netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out
 
+# run lvs between xschem and magic
+.PHONY: netgen_lvs
+netgen_component_lvs:
+ifndef component
+	$(error component is not set)
+endif
+	netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/components/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out
+
 
 # Extract and run LVS for a given componet
 extract_and_run_lvs: extract_magic_lvs extract_xschem_lvs netgen_lvs 
+
+# Extract and run LVS for a given componet
+extract_and_run_component_lvs: extract_magic_component_lvs extract_xschem_lvs netgen_component_lvs 
 
 
 # Starts all the tools

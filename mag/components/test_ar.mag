@@ -1,0 +1,27 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1665969785
+<< error_p >>
+rect 5485 2678 5525 3278
+rect 5545 2678 5585 3278
+rect 6204 2678 6244 3278
+rect 6264 2678 6304 3278
+rect 5485 1978 5525 2578
+rect 5545 1978 5585 2578
+rect 6204 1978 6244 2578
+rect 6264 1978 6304 2578
+rect 5485 1278 5525 1878
+rect 5545 1278 5585 1878
+rect 6204 1278 6244 1878
+rect 6264 1278 6304 1878
+use sky130_fd_pr__cap_mim_m3_1_F6NAMD  sky130_fd_pr__cap_mim_m3_1_F6NAMD_0
+timestamp 1665969785
+transform 1 0 5895 0 1 2278
+box -1069 -1050 1068 1050
+use sky130_fd_pr__cap_mim_m3_1_FJFAMD  sky130_fd_pr__cap_mim_m3_1_FJFAMD_0
+array 0 2 -999 0 2 -900
+timestamp 1665964736
+transform -1 0 349 0 -1 300
+box -350 -300 349 300
+<< end >>

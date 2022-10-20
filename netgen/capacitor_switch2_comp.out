@@ -1,0 +1,53 @@
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_568KHN in circuit capacitor_switch2 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_9CME3F in circuit capacitor_switch2 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_Z2KSNR in circuit capacitor_switch2 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_5AWN3K in circuit capacitor_switch2 (1)(1 instance)
+
+Subcircuit summary:
+Circuit 1: capacitor_switch2               |Circuit 2: capacitor_switch2               
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (3->2)             |sky130_fd_pr__nfet_01v8 (2)                
+sky130_fd_pr__pfet_01v8 (3->2)             |sky130_fd_pr__pfet_01v8 (2)                
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: capacitor_switch2               |Circuit 2: capacitor_switch2               
+-------------------------------------------|-------------------------------------------
+Vout                                       |(no matching pin)                          
+Vin                                        |Vin                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+Vout                                       |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for capacitor_switch2 and capacitor_switch2 altered to match.
+Cells failed matching, or top level cell failed pin matching.
