@@ -1,0 +1,12 @@
+magic
+tech sky130A
+timestamp 1666291486
+use sky130_fd_pr__cap_mim_m3_1_F6VAMD  sky130_fd_pr__cap_mim_m3_1_F6VAMD_0
+timestamp 1666291166
+transform 1 0 -566 0 1 -240
+box -952 -540 952 540
+use sky130_fd_pr__cap_mim_m3_2_F6VAMD  sky130_fd_pr__cap_mim_m3_2_F6VAMD_0
+timestamp 1666291486
+transform 1 0 2077 0 1 -109
+box -1398 -600 1409 600
+<< end >>

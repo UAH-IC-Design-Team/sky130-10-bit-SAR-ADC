@@ -1,0 +1,12 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1666367459
+<< metal4 >>
+rect 200 0 300 4500
+rect 600 0 700 4400
+use sky130_fd_pr__cap_mim_m3_1_LQSHR5  sky130_fd_pr__cap_mim_m3_1_LQSHR5_0
+timestamp 1666311151
+transform 1 0 350 0 1 2205
+box -350 -2205 349 2205
+<< end >>

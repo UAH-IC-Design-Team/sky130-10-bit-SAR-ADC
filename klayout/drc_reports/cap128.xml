@@ -3,7 +3,7 @@
  <description>SKY130 DRC runset</description>
  <original-file/>
  <generator>drc: script='./klayout/sky130A_mr.drc'</generator>
- <top-cell>capacitor_array</top-cell>
+ <top-cell>cap128</top-cell>
  <tags>
  </tags>
  <categories>
@@ -1252,7 +1252,7 @@
  </categories>
  <cells>
   <cell>
-   <name>capacitor_array</name>
+   <name>cap128</name>
    <variant/>
    <references>
    </references>
