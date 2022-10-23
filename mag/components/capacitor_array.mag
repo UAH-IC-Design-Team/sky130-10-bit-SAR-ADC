@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1666368973
+timestamp 1666485801
 << metal4 >>
 rect 100 19050 7650 19200
 rect 100 19000 150 19050
@@ -102,7 +102,6 @@ rect 10000 -50 10050 0
 rect 10500 -50 10550 0
 rect 11000 -50 11050 0
 rect 11500 -50 11550 0
-rect 11800 -50 11850 0
 rect 12000 -50 12050 0
 rect 12700 -50 12750 0
 rect 13200 -50 13250 0
@@ -182,7 +181,6 @@ rect 10000 -1000 10050 -950
 rect 10500 -1000 10550 -950
 rect 11000 -1000 11050 -950
 rect 11500 -1000 11550 -950
-rect 11800 -1000 11850 -950
 rect 12000 -1000 12050 -950
 rect 12700 -1000 12750 -950
 rect 13200 -1000 13250 -950
@@ -450,4 +448,77 @@ use cap128  cap128_3
 timestamp 1666311401
 transform 1 0 0 0 -1 -995
 box 0 0 7850 19005
+<< labels >>
+rlabel metal4 41300 -3395 41350 -3245 1 sw_sp_n9
+port 1 n
+rlabel metal4 36500 -3395 36550 -3245 1 sw_sp_n8
+port 2 n
+rlabel metal4 35300 -3395 35850 -3245 1 sw_sp_n7
+port 3 n
+rlabel metal4 33100 -3395 34650 -3245 1 sw_sp_n6
+port 4 n
+rlabel metal4 28300 -20200 28350 -19950 1 sw_sp_n5
+port 5 n
+rlabel metal4 27100 -20200 27650 -20050 1 sw_sp_n4
+port 6 n
+rlabel metal4 24900 -20200 26450 -20050 1 sw_sp_n3
+port 7 n
+rlabel metal4 8300 -20200 11850 -20050 1 sw_sp_n2
+port 8 n
+rlabel metal4 100 -20200 7650 -20050 1 sw_sp_n1
+port 9 n
+rlabel metal4 300 -200 41550 -50 1 Vin_p
+port 10 n
+rlabel metal4 300 -950 41550 -800 1 Vin_n
+port 11 n
+rlabel metal4 41300 2250 41350 2400 1 sw_sp_p9
+port 12 n
+rlabel metal4 36500 2250 36550 2400 1 sw_sp_p8
+port 13 n
+rlabel metal4 35300 2250 35850 2400 1 sw_sp_p7
+port 14 n
+rlabel metal4 33100 2250 34650 2400 1 sw_sp_p6
+port 15 n
+rlabel metal4 28300 19000 28350 19200 1 sw_sp_p5
+port 16 n
+rlabel metal4 27100 19050 27650 19200 1 sw_sp_p4
+port 17 n
+rlabel metal4 24900 19050 26450 19200 1 sw_sp_p3
+port 18 n
+rlabel metal4 8300 19050 11850 19200 1 sw_sp_p2
+port 19 n
+rlabel metal4 100 19050 7650 19200 1 sw_sp_p1
+port 20 n
+rlabel metal4 40600 2250 40650 2400 1 sw_p8
+port 21 n
+rlabel metal4 39400 2250 39950 2400 1 sw_p7
+port 22 n
+rlabel metal4 37200 2250 38750 2400 1 sw_p6
+port 23 n
+rlabel metal4 32400 19000 32450 19200 1 sw_p5
+port 24 n
+rlabel metal4 31200 19050 31750 19200 1 sw_p4
+port 25 n
+rlabel metal4 29000 19050 30550 19200 1 sw_p3
+port 26 n
+rlabel metal4 20700 19050 24250 19200 1 sw_p2
+port 27 n
+rlabel metal4 12500 19050 20050 19200 1 sw_p1
+port 28 n
+rlabel metal4 40600 -3395 40650 -3245 1 sw_n8
+port 29 n
+rlabel metal4 39400 -3395 39950 -3245 1 sw_n7
+port 30 n
+rlabel metal4 37200 -3395 38750 -3245 1 sw_n6
+port 31 n
+rlabel metal4 32400 -20200 32450 -19950 1 sw_n5
+port 32 n
+rlabel metal4 31200 -20200 31750 -20050 1 sw_n4
+port 33 n
+rlabel metal4 29000 -20200 30550 -20050 1 sw_n3
+port 34 n
+rlabel metal4 20700 -20200 24250 -20050 1 sw_n2
+port 35 n
+rlabel metal4 12500 -20200 20050 -20050 1 sw_n1
+port 36 n
 << end >>

@@ -1,0 +1,24 @@
+magic
+tech sky130A
+timestamp 1666555748
+use capacitor_array  capacitor_array_0
+timestamp 1666485801
+transform 1 0 0 0 1 20200
+box 0 -20200 41550 19200
+use capacitor_switch2  capacitor_switch2_0
+timestamp 1666484611
+transform 0 1 40155 -1 0 23065
+box -150 325 365 620
+use capacitor_switch2  capacitor_switch2_1
+timestamp 1666484611
+transform 0 1 40865 -1 0 23095
+box -150 325 365 620
+use capacitor_switch4  capacitor_switch4_0
+timestamp 1666492449
+transform 0 1 39145 -1 0 23410
+box 100 265 650 785
+use capacitor_switch8  capacitor_switch8_0
+timestamp 1666551745
+transform 0 -1 34930 -1 0 24025
+box -10 45 990 1030
+<< end >>

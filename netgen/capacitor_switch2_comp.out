@@ -24,16 +24,17 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
-Flattening unmatched subcell sky130_fd_pr__pfet_01v8_568KHN in circuit capacitor_switch2 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_S6MTYS in circuit capacitor_switch2 (1)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_9CME3F in circuit capacitor_switch2 (1)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_Z2KSNR in circuit capacitor_switch2 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_Z2KCLS in circuit capacitor_switch2 (1)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_5AWN3K in circuit capacitor_switch2 (1)(1 instance)
 
+Class capacitor_switch2 (1):  Merged 1 parallel devices.
 Subcircuit summary:
 Circuit 1: capacitor_switch2               |Circuit 2: capacitor_switch2               
 -------------------------------------------|-------------------------------------------
 sky130_fd_pr__nfet_01v8 (3->2)             |sky130_fd_pr__nfet_01v8 (2)                
-sky130_fd_pr__pfet_01v8 (3->2)             |sky130_fd_pr__pfet_01v8 (2)                
+sky130_fd_pr__pfet_01v8 (3->2)             |sky130_fd_pr__pfet_01v8 (3->2)             
 Number of devices: 4                       |Number of devices: 4                       
 Number of nets: 5                          |Number of nets: 5                          
 ---------------------------------------------------------------------------------------
@@ -43,11 +44,11 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: capacitor_switch2               |Circuit 2: capacitor_switch2               
 -------------------------------------------|-------------------------------------------
-Vout                                       |(no matching pin)                          
+Vout                                       |Vout                                       
 Vin                                        |Vin                                        
 VDD                                        |VDD                                        
 VSS                                        |VSS                                        
-Vout                                       |(no matching pin)                          
 ---------------------------------------------------------------------------------------
-Cell pin lists for capacitor_switch2 and capacitor_switch2 altered to match.
-Cells failed matching, or top level cell failed pin matching.
+Cell pin lists are equivalent.
+Device classes capacitor_switch2 and capacitor_switch2 are equivalent.
+Circuits match uniquely.

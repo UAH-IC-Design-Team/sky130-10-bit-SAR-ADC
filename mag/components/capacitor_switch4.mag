@@ -1,0 +1,98 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1666492449
+<< nwell >>
+rect 200 1040 1300 1570
+<< psubdiff >>
+rect 600 920 710 944
+rect 600 776 710 800
+<< nsubdiff >>
+rect 300 1280 330 1340
+rect 410 1280 440 1340
+rect 500 1280 530 1340
+rect 610 1280 640 1340
+<< psubdiffcont >>
+rect 600 800 710 920
+<< nsubdiffcont >>
+rect 330 1280 410 1340
+rect 530 1280 610 1340
+<< locali >>
+rect 310 1280 330 1340
+rect 410 1280 430 1340
+rect 510 1280 530 1340
+rect 610 1280 630 1340
+rect 330 1170 410 1280
+rect 530 1170 610 1280
+rect 600 920 710 936
+rect 600 784 710 800
+<< viali >>
+rect 620 820 680 880
+<< metal1 >>
+rect 300 1222 730 1230
+rect 210 864 260 1180
+rect 300 1170 660 1222
+rect 720 1170 730 1222
+rect 300 1160 730 1170
+rect 310 1030 470 1130
+rect 770 1030 820 1490
+rect 870 1222 1010 1530
+rect 870 1170 890 1222
+rect 980 1170 1010 1222
+rect 870 1090 1010 1170
+rect 1040 1060 1180 1430
+rect 310 980 820 1030
+rect 950 1000 1180 1060
+rect 310 910 470 980
+rect 610 880 700 890
+rect 290 820 620 880
+rect 680 820 700 880
+rect 610 810 700 820
+rect 770 560 820 980
+rect 865 880 923 956
+rect 865 820 870 880
+rect 922 820 923 880
+rect 865 536 923 820
+rect 955 632 1013 1000
+<< via1 >>
+rect 660 1170 720 1222
+rect 890 1170 980 1222
+rect 620 820 680 880
+rect 870 820 922 880
+<< metal2 >>
+rect 650 1222 1000 1230
+rect 650 1170 660 1222
+rect 720 1170 890 1222
+rect 980 1170 1000 1222
+rect 650 1160 1000 1170
+rect 610 880 930 890
+rect 610 820 620 880
+rect 680 820 870 880
+rect 922 820 930 880
+rect 610 810 930 820
+use sky130_fd_pr__pfet_01v8_C7DZJH  XM4
+timestamp 1666381551
+transform 0 1 1025 -1 0 1307
+box -263 -295 267 275
+use sky130_fd_pr__nfet_01v8_9CGS2F  sky130_fd_pr__nfet_01v8_9CGS2F_0
+timestamp 1666487809
+transform 0 1 348 -1 0 893
+box -73 -148 73 148
+use sky130_fd_pr__nfet_01v8_ZZU2YL  sky130_fd_pr__nfet_01v8_ZZU2YL_0
+timestamp 1666381262
+transform 0 1 939 -1 0 751
+box -221 -179 221 121
+use sky130_fd_pr__pfet_01v8_46WN3R  sky130_fd_pr__pfet_01v8_46WN3R_0
+timestamp 1666487809
+transform 0 1 429 1 0 1149
+box -109 -229 109 263
+<< labels >>
+rlabel metal1 300 1160 660 1230 1 VDD
+port 1 n
+rlabel metal1 210 864 260 1180 1 Vin
+port 2 n
+rlabel metal1 950 1000 1180 1060 1 Vout
+port 3 n
+rlabel metal1 290 820 620 880 1 VSS
+port 4 n
+<< end >>

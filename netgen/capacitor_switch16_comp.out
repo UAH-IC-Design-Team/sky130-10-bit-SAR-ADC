@@ -1,0 +1,63 @@
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_46WN3R in circuit capacitor_switch16 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_9CGS2F in circuit capacitor_switch16 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BBAHKR in circuit capacitor_switch16 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_HRFJZU in circuit capacitor_switch16 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_BBSRKR in circuit capacitor_switch16 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_5EDJZL in circuit capacitor_switch16 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_29RM5N in circuit capacitor_switch16 (1)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_2FR7QD in circuit capacitor_switch16 (1)(1 instance)
+
+Class capacitor_switch16 (1):  Merged 50 parallel devices.
+Subcircuit summary:
+Circuit 1: capacitor_switch16              |Circuit 2: capacitor_switch16              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (29->4)            |sky130_fd_pr__nfet_01v8 (29->4)            
+sky130_fd_pr__pfet_01v8 (29->4)            |sky130_fd_pr__pfet_01v8 (29->4)            
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: capacitor_switch16              |Circuit 2: capacitor_switch16              
+-------------------------------------------|-------------------------------------------
+VDD                                        |(no matching pin)                          
+VSS                                        |(no matching pin)                          
+Vin                                        |(no matching pin)                          
+Vout                                       |(no matching pin)                          
+VDD                                        |(no matching pin)                          
+Vin                                        |(no matching pin)                          
+Vout                                       |(no matching pin)                          
+VSS                                        |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Error:  Connected pin (no pins) (node -2) did not get ordered!
+Ports of capacitor_switch16 are unordered.  Ordering will be arbitrary.
+Cell pin lists for capacitor_switch16 and capacitor_switch16 altered to match.
+Cells failed matching, or top level cell failed pin matching.

@@ -1,0 +1,190 @@
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+Flattening unmatched subcell cap32 in circuit capacitor_array (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(128 instances)
+Flattening unmatched subcell cap8 in circuit capacitor_array (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(32 instances)
+Flattening unmatched subcell cap64 in circuit capacitor_array (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(256 instances)
+Flattening unmatched subcell cap4 in circuit capacitor_array (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(16 instances)
+Flattening unmatched subcell cap16 in circuit capacitor_array (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(64 instances)
+Flattening unmatched subcell cap2 in circuit capacitor_array (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(8 instances)
+Flattening unmatched subcell cap1 in circuit capacitor_array (1)(6 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(6 instances)
+Flattening unmatched subcell cap128 in circuit capacitor_array (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LQSHR5 in circuit capacitor_array (1)(512 instances)
+
+Class capacitor_array (1):  Merged 988 parallel devices.
+Subcircuit summary:
+Circuit 1: capacitor_array                 |Circuit 2: capacitor_array                 
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__cap_mim_m3_1 (1022->34)      |sky130_fd_pr__cap_mim_m3_1 (1022->34)      
+Number of devices: 34                      |Number of devices: 34                      
+Number of nets: 36                         |Number of nets: 36                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+There were property errors.
+sky130_fd_pr__cap_mim_m3_1:C34 vs. cap1_4//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C33 vs. cap1_5//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C32 vs. cap2_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C31 vs. cap4_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C30 vs. cap1_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C29 vs. cap2_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C28 vs. cap4_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C27 vs. cap8_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C26 vs. cap16_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C25 vs. cap32_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C24 vs. cap8_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C23 vs. cap16_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C22 vs. cap32_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C21 vs. cap64_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C20 vs. cap128_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C19 vs. cap64_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C18 vs. cap128_0//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C17 vs. cap1_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C16 vs. cap1_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C15 vs. cap2_1//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C14 vs. cap4_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C13 vs. cap1_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C12 vs. cap2_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C11 vs. cap4_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C10 vs. cap8_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C9 vs. cap16_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C8 vs. cap32_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C7 vs. cap8_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C6 vs. cap16_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C5 vs. cap32_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C4 vs. cap64_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C3 vs. cap128_2//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C2 vs. cap64_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+sky130_fd_pr__cap_mim_m3_1:C1 vs. cap128_3//sky130_fd_pr__cap_mim_m3_1_LQSHR5_0[0|0]/sky130_fd_pr__cap_mim_m3_1:0:
+ L circuit1: "unit_cap_l"   21.05  (property type mismatch)
+ W circuit1: "unit_cap_w"   2  (property type mismatch)
+
+Subcircuit pins:
+Circuit 1: capacitor_array                 |Circuit 2: capacitor_array                 
+-------------------------------------------|-------------------------------------------
+Vin_p                                      |Vin_p                                      
+Vin_n                                      |Vin_n                                      
+sw_p3                                      |sw_p3                                      
+sw_sp_n5                                   |sw_sp_n5                                   
+sw_sp_n2                                   |sw_sp_n2                                   
+sw_n3                                      |sw_n3                                      
+sw_sp_n3                                   |sw_sp_n3                                   
+sw_sp_p6                                   |sw_sp_p6                                   
+sw_p6                                      |sw_p6                                      
+sw_sp_p4                                   |sw_sp_p4                                   
+sw_p4                                      |sw_p4                                      
+sw_n6                                      |sw_n6                                      
+sw_n4                                      |sw_n4                                      
+sw_sp_p7                                   |sw_sp_p7                                   
+sw_sp_n6                                   |sw_sp_n6                                   
+sw_sp_n4                                   |sw_sp_n4                                   
+sw_n7                                      |sw_n7                                      
+sw_sp_n7                                   |sw_sp_n7                                   
+sw_p7                                      |sw_p7                                      
+sw_sp_p8                                   |sw_sp_p8                                   
+sw_n8                                      |sw_n8                                      
+sw_sp_n9                                   |sw_sp_n9                                   
+sw_sp_p1                                   |sw_sp_p1                                   
+sw_sp_n8                                   |sw_sp_n8                                   
+sw_sp_p9                                   |sw_sp_p9                                   
+sw_p1                                      |sw_p1                                      
+sw_n1                                      |sw_n1                                      
+sw_p8                                      |sw_p8                                      
+sw_sp_n1                                   |sw_sp_n1                                   
+sw_p2                                      |sw_p2                                      
+sw_sp_p5                                   |sw_sp_p5                                   
+sw_sp_p2                                   |sw_sp_p2                                   
+sw_p5                                      |sw_p5                                      
+sw_sp_p3                                   |sw_sp_p3                                   
+sw_n5                                      |sw_n5                                      
+sw_n2                                      |sw_n2                                      
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes capacitor_array and capacitor_array are equivalent.
+Circuits match uniquely.
+Property errors were found.
+The following cells had property errors:
+ capacitor_array
