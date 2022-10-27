@@ -16,6 +16,16 @@ endif
 	@echo "Number of drc errors:"
 	@grep -o 'item' ./klayout/drc_reports/$(component).xml | wc -l | xargs -n 1 bash -c 'echo $$((($$1-2)/2))' args
 
+.PHONY: klayout_density
+klayout_density: extract_gds
+ifndef component
+	$(error component is not set)
+endif
+	touch ./klayout/drc_reports/$(component)_density.xml
+	klayout -ne -b -r ./klayout/sky130A_density.drc -rd input=./gds/$(component).gds -rd report=../klayout/drc_reports/$(component)_density.xml -rd feol=true -rd beol=true -rd offgrid=true
+	@echo "Number of drc errors:"
+	@grep -o 'item' ./klayout/drc_reports/$(component)_density.xml | wc -l | xargs -n 1 bash -c 'echo $$((($$1-2)/2))' args
+
 
 # Extract the LVS netlist from magic
 # Running commands in magic requires EOF bits which is easy in a sh script.

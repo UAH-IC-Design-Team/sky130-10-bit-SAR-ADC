@@ -131,6 +131,7 @@ simulator=ngspice
 only_toplevel=false 
 value="
 .options acct list
+.options method=gear
 .temp 25
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0

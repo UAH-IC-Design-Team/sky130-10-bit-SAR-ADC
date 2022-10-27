@@ -120,6 +120,7 @@ value="
 
 * ngspice commands
 .options list acct opts
+.options method=gear
 .control
 save all
 * Go to the const plot

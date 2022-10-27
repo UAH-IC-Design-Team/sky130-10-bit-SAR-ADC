@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>SKY130 DRC Density</description>
+ <original-file/>
+ <generator>drc: script='./klayout/sky130A_density.drc'</generator>
+ <top-cell>capacitor_switch8</top-cell>
+ <tags>
+ </tags>
+ <categories>
+  <category>
+   <name>m1 dens</name>
+   <description>Metal 1 density between 0% and 77%</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>m2 dens</name>
+   <description>Metal 2 density between 0% and 77%</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>m3 dens</name>
+   <description>Metal 3 density between 0% and 77%</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>m4 dens</name>
+   <description>Metal 4 density between 0% and 77%</description>
+   <categories>
+   </categories>
+  </category>
+  <category>
+   <name>m1 width</name>
+   <description>width violation</description>
+   <categories>
+   </categories>
+  </category>
+ </categories>
+ <cells>
+  <cell>
+   <name>capacitor_switch8</name>
+   <variant/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+ </items>
+</report-database>
