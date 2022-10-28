@@ -55,26 +55,22 @@ sky130_fd_pr__cap_mim_m3_1 (18->2)         |sky130_fd_pr__cap_mim_m3_1 (18->2)
 Number of devices: 26                      |Number of devices: 26                      
 Number of nets: 19                         |Number of nets: 19                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
 Circuit 1: bootstrapped_sampling_switch    |Circuit 2: bootstrapped_sampling_switch    
-
+-------------------------------------------|-------------------------------------------
+Vout_n                                     |Vout_n                                     
+Vout_p                                     |Vout_p                                     
+Vin_n                                      |Vin_n                                      
+Vin_p                                      |Vin_p                                      
+VDD                                        |VDD                                        
+Clk                                        |Clk                                        
+VSS                                        |VSS                                        
 ---------------------------------------------------------------------------------------
-Net: VDD                                   |Net: VDD                                   
-  sky130_fd_pr__pfet_01v8/(1|3) = 6        |  sky130_fd_pr__pfet_01v8/(1|3) = 6        
-  sky130_fd_pr__pfet_01v8/4 = 4            |  sky130_fd_pr__pfet_01v8/4 = 4            
-  sky130_fd_pr__nfet_01v8/2 = 2            |  sky130_fd_pr__nfet_01v8/2 = 2            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: Clk                                   |Net: Clk                                   
-  sky130_fd_pr__pfet_01v8/2 = 4            |  sky130_fd_pr__pfet_01v8/2 = 4            
-  sky130_fd_pr__nfet_01v8/2 = 4            |  sky130_fd_pr__nfet_01v8/2 = 4            
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: VSS                                   |Net: VSS                                   
-  sky130_fd_pr__nfet_01v8/(1|3) = 6        |  sky130_fd_pr__nfet_01v8/(1|3) = 6        
-  sky130_fd_pr__nfet_01v8/4 = 16           |  sky130_fd_pr__nfet_01v8/4 = 16           
----------------------------------------------------------------------------------------
-Netlists do not match.
-Netlists do not match.
+Cell pin lists are equivalent.
+Device classes bootstrapped_sampling_switch and bootstrapped_sampling_switch are equivalent.
+Circuits match uniquely.

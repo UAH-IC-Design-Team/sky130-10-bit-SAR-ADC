@@ -170,9 +170,9 @@ lab=VSS}
 N 670 -50 670 -30 {
 lab=VSS}
 N 1030 -390 1030 -360 {
-lab=Clk_n}
+lab=Clk_n_n}
 N 1030 -390 1050 -390 {
-lab=Clk_n}
+lab=Clk_n_n}
 N 950 -390 960 -390 {
 lab=VDD}
 N 950 -390 950 -360 {
@@ -291,7 +291,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 670 -640 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=10 MF=9 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 670 -640 2 1 {name=C1 model=cap_mim_m3_1 W=10 L=10 MF=9 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 690 -810 0 1 {name=M4
 L=0.15
@@ -471,7 +471,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 670 -210 0 0 {name=C2 model=cap_mim_m3_1 W=10 L=10 MF=9 spiceprefix=X
+C {sky130_fd_pr/cap_mim_m3_1.sym} 670 -210 2 1 {name=C2 model=cap_mim_m3_1 W=10 L=10 MF=9 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 690 -380 0 1 {name=M14
 L=0.15
