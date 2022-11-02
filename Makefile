@@ -1,9 +1,12 @@
 
-klayout_start:
-	klayout
+antenna_check:
+	touch ./mag/drc_reports/$(component)_antenna.text
+	cd ./util/temp_files; ../check_antenna.py ../../mag/components/$(component).mag ../../mag/drc_reports/$(component)_antenna.text
 
-magic_start:
-	magic
+density_check: extract_gds
+	touch ./mag/drc_reports/$(component)_density.text
+	cd ./util/temp_files; ../check_density.py ../../gds/$(component).gds 
+
 
 # Run klayout drc. Note that the counted number of DRC errors is a little over twice as high as reality.
 .PHONY: klayout_drc

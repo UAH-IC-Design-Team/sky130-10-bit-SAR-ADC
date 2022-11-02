@@ -45,6 +45,7 @@ spice_ignore=false}
 C {devices/code.sym} 150 -160 0 0 {name=SPICE 
 only_toplevel=true
 value=".options acct list
+.options method=gear
 .temp 25
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
