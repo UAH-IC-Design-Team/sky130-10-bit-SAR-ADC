@@ -39,7 +39,7 @@ lab=#net2}
 N 690 -50 700 -50 {
 lab=#net3}
 N 480 -50 510 -50 {
-lab=Vcmp}
+lab=comp_out_p}
 N 780 -50 820 -50 {
 lab=Vcmp_buff}
 N 950 -130 960 -130 {
@@ -58,6 +58,16 @@ N 490 -330 510 -330 {
 lab=comparator_clk}
 N 1040 -130 1060 -130 {
 lab=raw_bit_calc_reset}
+N 490 -830 520 -830 {
+lab=VSS}
+N 490 -810 520 -810 {
+lab=VDD}
+N 160 -830 190 -830 {
+lab=comp_out_p}
+N 160 -810 190 -810 {
+lab=comp_out_n}
+N 490 -790 520 -790 {
+lab=controller_clk}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"}
 C {src/dec/dec.sym} 340 -710 0 0 {name=x3}
 C {src/raw_bit_calculator/raw_bit_calculator.sym} 340 -580 0 0 {name=x4}
@@ -99,7 +109,7 @@ C {devices/lab_pin.sym} 190 -720 0 0 {name=l25 sig_type=std_logic lab=reset
 }
 C {devices/lab_pin.sym} 190 -440 0 0 {name=l26 sig_type=std_logic lab=reset
 }
-C {devices/ipin.sym} 150 -80 0 0 {name=p1 lab=clk
+C {devices/ipin.sym} 150 -100 0 0 {name=p1 lab=clk
 }
 C {devices/opin.sym} 190 -180 0 0 {name=p2 lab=sw_n_sp[9..1]
 }
@@ -107,9 +117,7 @@ C {devices/iopin.sym} 190 -240 0 0 {name=p4 lab=VSS
 }
 C {devices/iopin.sym} 190 -260 0 0 {name=p5 lab=VDD
 }
-C {devices/ipin.sym} 150 -60 0 0 {name=p6 lab=reset
-}
-C {devices/ipin.sym} 150 -40 0 0 {name=p7 lab=Vcmp
+C {devices/ipin.sym} 150 -80 0 0 {name=p6 lab=reset
 }
 C {devices/opin.sym} 190 -160 0 0 {name=p8 lab=sw_n[8..1]
 }
@@ -134,8 +142,6 @@ C {sky130_stdcells/and2_1.sym} 710 -130 0 0 {name=x2 VGND=VSS VNB=VSS VPB=VDD VP
 }
 C {devices/lab_pin.sym} 630 -110 0 0 {name=l9 sig_type=std_logic lab=reset
 }
-C {devices/ipin.sym} 150 -100 0 0 {name=p3 lab=controller_clk
-}
 C {sky130_stdcells/xnor2_1.sym} 570 -150 0 0 {name=x6 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {devices/lab_pin.sym} 490 -130 0 0 {name=l5 sig_type=std_logic lab=cycle15
@@ -148,7 +154,7 @@ C {sky130_stdcells/buf_4.sym} 550 -50 0 0 {name=x26 VGND=VSS VNB=VSS VPB=VDD VPW
 }
 C {sky130_stdcells/buf_8.sym} 650 -50 0 0 {name=x27 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
-C {devices/lab_pin.sym} 480 -50 0 0 {name=l63 sig_type=std_logic lab=Vcmp
+C {devices/lab_pin.sym} 480 -50 0 0 {name=l63 sig_type=std_logic lab=comp_out_p
 }
 C {devices/lab_pin.sym} 820 -50 2 0 {name=l65 sig_type=std_logic lab=Vcmp_buff
 }
@@ -176,4 +182,19 @@ C {devices/lab_pin.sym} 190 -460 0 0 {name=l23 sig_type=std_logic lab=sw_sample
 C {devices/lab_pin.sym} 1060 -130 2 0 {name=l1 sig_type=std_logic lab=raw_bit_calc_reset
 }
 C {devices/lab_pin.sym} 190 -600 0 0 {name=l1 sig_type=std_logic lab=raw_bit_calc_reset
+}
+C {src/xor_clock_gen/xor_clock_gen.sym} 340 -810 0 0 {name=x7}
+C {devices/lab_pin.sym} 520 -830 2 0 {name=l21 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 520 -810 2 0 {name=l22 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 160 -810 0 0 {name=l25 sig_type=std_logic lab=comp_out_n
+}
+C {devices/lab_pin.sym} 160 -830 0 0 {name=l26 sig_type=std_logic lab=comp_out_p
+}
+C {devices/lab_pin.sym} 520 -790 2 0 {name=l42 sig_type=std_logic lab=controller_clk
+}
+C {devices/ipin.sym} 150 -60 0 0 {name=p7 lab=comp_out_p
+}
+C {devices/ipin.sym} 150 -40 0 0 {name=p7 lab=comp_out_n
 }
