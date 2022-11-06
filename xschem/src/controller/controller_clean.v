@@ -14,14 +14,15 @@ inout wire VSS,
 inout wire VDD,
 input wire clk,
 input wire reset,
-input wire Vcmp,
-input wire controller_clk
+input wire comp_out_p,
+input wire comp_out_n
 );
 wire raw_bit10 ;
 wire raw_bit11 ;
 wire raw_bit12 ;
 wire raw_bit13 ;
 wire raw_bit_calc_reset ;
+wire controller_clk ;
 wire raw_bit1 ;
 wire raw_bit2 ;
 wire raw_bit3 ;
@@ -114,7 +115,7 @@ sky130_fd_sc_hd__buf_16 x25 (
 
 
 sky130_fd_sc_hd__buf_4 x26 (
-.A( Vcmp ),
+.A( comp_out_p ),
 .X( net2 )
 );
 
@@ -151,6 +152,16 @@ x5 (
 .VSS( VSS ),
 .sw_sample( sw_sample ),
 .comparator_clk( comparator_clk )
+);
+
+
+xor_clock_gen
+x7 (
+.VSS( VSS ),
+.Vin_p( comp_out_p ),
+.VDD( VDD ),
+.Vin_n( comp_out_n ),
+.Gen_clk( controller_clk )
 );
 
 endmodule
@@ -2147,6 +2158,118 @@ sky130_fd_sc_hd__clkdlybuf4s50_1 x6 (
 sky130_fd_sc_hd__clkdlybuf4s50_1 x28 (
 .A( clk ),
 .X( net24 )
+);
+
+endmodule
+
+// expanding   symbol:  src/xor_clock_gen/xor_clock_gen.sym # of pins=5
+// sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sym
+// sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sch
+module xor_clock_gen
+(
+inout wire VSS,
+input wire Vin_p,
+inout wire VDD,
+input wire Vin_n,
+output wire Gen_clk
+);
+wire net10 ;
+wire net11 ;
+wire net1 ;
+wire net2 ;
+wire net3 ;
+wire net4 ;
+wire net5 ;
+wire net6 ;
+wire net7 ;
+wire net8 ;
+wire net9 ;
+
+
+sky130_fd_sc_hd__xor2_1 x2 (
+.A( Vin_p ),
+.B( Vin_n ),
+.X( net1 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x3 (
+.A( net1 ),
+.X( net2 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x17 (
+.A( net2 ),
+.X( net3 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_1 x9 (
+.A( net11 ),
+.X( net4 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_2 x14 (
+.A( net4 ),
+.X( net5 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_4 x19 (
+.A( net5 ),
+.X( net6 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_8 x26 (
+.A( net6 ),
+.X( net7 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_16 x27 (
+.A( net7 ),
+.X( Gen_clk )
+);
+
+
+cap_mim_m3_1
+#(
+.model ( cap_mim_m3_1 ) ,
+.W ( 5 ) ,
+.L ( 5 ) ,
+.MF ( 3 ) ,
+.spiceprefix ( X )
+)
+C1 (
+.c0( VSS ),
+.c1( VSS )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x1 (
+.A( net3 ),
+.X( net9 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x4 (
+.A( net9 ),
+.X( net8 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x5 (
+.A( net8 ),
+.X( net10 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x6 (
+.A( net10 ),
+.X( net11 )
 );
 
 endmodule
