@@ -1,15 +1,14 @@
 magic
 tech sky130A
-magscale 1 2
-timestamp 1666367418
+timestamp 1667663783
 << metal4 >>
-rect 200 0 300 4500
-rect 600 0 700 4400
-rect 1200 0 1300 4500
-rect 1600 0 1700 4400
-use sky130_fd_pr__cap_mim_m3_1_LQSHR5  sky130_fd_pr__cap_mim_m3_1_LQSHR5_0
-array 0 1 1000 0 0 4400
-timestamp 1666311151
-transform 1 0 350 0 1 2205
-box -350 -2205 349 2205
+rect 250 0 300 600
+rect 600 0 650 600
+rect 1050 0 1100 600
+rect 1400 0 1450 600
+use sky130_fd_pr__cap_mim_m3_1_H9XL9H  sky130_fd_pr__cap_mim_m3_1_H9XL9H_0
+array 0 1 800 0 0 600
+timestamp 1667663783
+transform 1 0 325 0 1 300
+box -325 -300 325 300
 << end >>

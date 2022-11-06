@@ -104,7 +104,7 @@ netgen_lvs:
 ifndef component
 	$(error component is not set)
 endif
-	netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out
+	export NETGEN_COLUMNS=80; netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out
 
 # run lvs between xschem and magic
 .PHONY: netgen_component_lvs
@@ -112,7 +112,7 @@ netgen_component_lvs:
 ifndef component
 	$(error component is not set)
 endif
-	netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/components/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out
+	export NETGEN_COLUMNS=80; netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/components/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out
 
 
 # Extract and run LVS for a given componet

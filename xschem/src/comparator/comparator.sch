@@ -149,8 +149,8 @@ N 510 -180 530 -180 {
 lab=#net10}
 N 410 -180 430 -180 {
 lab=ext_clk}
-N 410 -60 430 -60 {
-lab=Clk_n}
+N 310 -60 330 -60 {
+lab=Clk}
 N 720 -60 730 -60 {
 lab=#net11}
 N 810 -60 820 -60 {
@@ -173,6 +173,8 @@ N 710 -180 730 -180 {
 lab=#net16}
 N 610 -120 630 -120 {
 lab=Clk_n}
+N 410 -60 430 -60 {
+lab=#net17}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {sky130_fd_pr/pfet_01v8.sym} 780 -830 0 0 {name=M1
@@ -455,7 +457,7 @@ C {devices/lab_pin.sym} 410 -180 0 0 {name=l1 sig_type=std_logic lab=ext_clk
 }
 C {devices/lab_pin.sym} 820 -180 2 0 {name=l1 sig_type=std_logic lab=Clk
 }
-C {devices/lab_pin.sym} 410 -60 0 0 {name=l34 sig_type=std_logic lab=Clk_n
+C {devices/lab_pin.sym} 310 -60 0 0 {name=l34 sig_type=std_logic lab=Clk
 }
 C {devices/lab_pin.sym} 830 -60 2 0 {name=l34 sig_type=std_logic lab=Clk_latch_n
 }
@@ -476,4 +478,13 @@ C {sky130_stdcells/buf_4.sym} 670 -180 2 1 {name=x14 VGND=VSS VNB=VSS VPB=VDD VP
 C {sky130_stdcells/buf_8.sym} 770 -180 2 1 {name=x15 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/buf_4.sym} 570 -120 2 1 {name=x16 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
+}
+C {devices/code.sym} 30 -600 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}
+C {sky130_stdcells/inv_2.sym} 370 -60 0 0 {name=x17 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
