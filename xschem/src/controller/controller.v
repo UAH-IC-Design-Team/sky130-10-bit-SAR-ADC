@@ -2487,20 +2487,6 @@ x27 (
 );
 
 
-cap_mim_m3_1
-#(
-.model ( cap_mim_m3_1 ) ,
-.W ( 5 ) ,
-.L ( 5 ) ,
-.MF ( 3 ) ,
-.spiceprefix ( X )
-)
-C1 ( 
- .c0( VSS ),
- .c1( VSS )
-);
-
-
 clkdlybuf4s50_1
 x1 ( 
  .A( net3 ),

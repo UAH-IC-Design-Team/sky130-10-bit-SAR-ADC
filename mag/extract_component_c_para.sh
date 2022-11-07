@@ -10,6 +10,6 @@ ext2sim labels on
 ext2sim
 ext2spice lvs
 ext2spice cthresh 0
-ext2spice -o ./components/$1_c_para.spice
+ext2spice -o ./components/$1_para.spice
 quit -noprompt
 EOF

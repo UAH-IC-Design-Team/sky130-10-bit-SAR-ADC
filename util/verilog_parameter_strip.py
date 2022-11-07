@@ -13,6 +13,8 @@ if __name__ == '__main__':
     verilog_param_end_rex = re.compile('^\)$', re.IGNORECASE)
     x_rex = re.compile('^[ \t]*X[0-9]*[ (\t]*$', re.IGNORECASE)
     module_rex = re.compile('^module', re.IGNORECASE)
+    double_dot_rex = re.compile('.*[0-9]+\.\.[0-9]+.*', re.IGNORECASE)
+
 
     with open(in_file, 'r') as ifile:
         bad_verilog  = ifile.readlines()
@@ -49,7 +51,18 @@ if __name__ == '__main__':
                 prev_line = cur_line
                 continue
 
-            print(prev_line.replace("..", ":").strip(), file=ofile)
+            double_dot = double_dot_rex.match(prev_line)
+            if double_dot:
+                array_nums = re.findall('[0-9]+.{2}[0-9]+', prev_line)[0].split("..")
+                array_nums.sort()
+                net_names = prev_line.strip().strip(',').split(" ")
+
+                for n in range(int(array_nums[0]), int(array_nums[1])+1):
+                    print(net_names[0]+" "+net_names[1]+" "+net_names[-1]+str(n)+",", file=ofile)
+
+            else:
+                print(prev_line.strip(), file=ofile)
+
             prev_line = cur_line
 
 
