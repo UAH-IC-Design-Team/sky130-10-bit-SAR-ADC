@@ -9,11 +9,16 @@ if __name__ == '__main__':
     in_file = sys.argv[1]
     out_file = sys.argv[2]
 
+    # Define all of the regex matchers
     verilog_param_start_rex = re.compile('^\#\(*', re.IGNORECASE)
     verilog_param_end_rex = re.compile('^\)$', re.IGNORECASE)
     x_rex = re.compile('^[ \t]*X[0-9]*[ (\t]*$', re.IGNORECASE)
     module_rex = re.compile('^module', re.IGNORECASE)
     double_dot_rex = re.compile('.*[0-9]+\.\.[0-9]+.*', re.IGNORECASE)
+    colon_rex = re.compile('.*[0-9]+:[0-9]+.*', re.IGNORECASE)
+    vdd_rex = re.compile('.*VDD.*', re.IGNORECASE)
+    vss_rex = re.compile('.*VSS.*', re.IGNORECASE)
+    conb_lo_rex = re.compile('^\s*\.LO.*', re.IGNORECASE)
 
 
     with open(in_file, 'r') as ifile:
@@ -22,8 +27,8 @@ if __name__ == '__main__':
     skip = 0
     prev_line = ""
 
+    # Collect all the modules into an array
     modules = []
-
     for line in bad_verilog:
         module_match = module_rex.match(line)
         if module_match:
@@ -34,6 +39,7 @@ if __name__ == '__main__':
     with open(out_file, 'w') as ofile:
         for cur_line in bad_verilog:
 
+            # strip out the weird extra parameters
             param_start_match = verilog_param_start_rex.match(cur_line)
             param_end_match = verilog_param_end_rex.match(cur_line)
             x_match = x_rex.match(cur_line)
@@ -51,17 +57,26 @@ if __name__ == '__main__':
                 prev_line = cur_line
                 continue
 
+
+            # Before printing out the line, check to make sure that 
+            # there are no arrays (spice or verilog)
+            # And also strip out the low connection in conb since OpenLane 
+            # can't handle that...
             double_dot = double_dot_rex.match(prev_line)
+            colon = colon_rex.match(prev_line)
+            conb_lo = conb_lo_rex.match(prev_line)
+
             if double_dot:
-                array_nums = re.findall('[0-9]+.{2}[0-9]+', prev_line)[0].split("..")
-                array_nums.sort()
-                net_names = prev_line.strip().strip(',').split(" ")
-
-                for n in range(int(array_nums[0]), int(array_nums[1])+1):
-                    print(net_names[0]+" "+net_names[1]+" "+net_names[-1]+str(n)+",", file=ofile)
-
+                raise Exception("double dot .. array found!")
+            elif colon:
+                raise Exception("colon : array found!")
+            elif conb_lo:
+                print('.LO( )', file=ofile)
+                prev_line = cur_line
+                continue
             else:
                 print(prev_line.strip(), file=ofile)
+
 
             prev_line = cur_line
 

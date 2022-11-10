@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1666484611
+timestamp 1668018737
 << nwell >>
 rect -300 910 730 1240
 rect -300 900 240 910
@@ -59,11 +59,11 @@ rect 70 720 80 770
 rect 50 690 80 720
 rect 120 720 130 770
 rect 200 720 260 850
-rect 480 780 620 1180
+rect 480 780 640 1180
 rect 120 690 150 720
 rect -200 650 650 690
 use sky130_fd_pr__nfet_01v8_9CME3F  XM1
-timestamp 1665779562
+timestamp 1666651042
 transform 0 -1 -152 1 0 753
 box -73 -148 73 148
 use sky130_fd_pr__nfet_01v8_Z2KCLS  XM3

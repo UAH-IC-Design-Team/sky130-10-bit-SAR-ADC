@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1666555662
+timestamp 1668016263
 << nwell >>
 rect -300 1100 1690 2810
 << psubdiff >>
@@ -129,7 +129,7 @@ rect 840 1240 950 1990
 rect 1020 1100 1130 1950
 rect 1230 1100 1280 2690
 rect 1340 1240 1450 2740
-rect 1520 1100 1630 2730
+rect 1520 1100 1730 2730
 rect -190 1060 280 1100
 rect -190 980 -40 1060
 rect -140 790 -30 930
@@ -161,9 +161,10 @@ rect 800 -110 810 10
 rect 860 -110 870 10
 rect 800 -580 870 -110
 rect 1230 -540 1280 1060
-rect 1430 1030 1650 1100
+rect 1430 1090 1730 1100
+rect 1430 1030 1650 1090
 rect 1310 -580 1370 920
-rect 1430 -570 1510 1030
+rect 1430 -570 1630 1030
 rect 800 -590 1370 -580
 rect 800 -640 950 -590
 rect 1140 -640 1370 -590
@@ -181,7 +182,7 @@ timestamp 1666553528
 transform 0 1 985 -1 0 1549
 box -451 -265 449 205
 use sky130_fd_pr__nfet_01v8_29RM5N  XM7
-timestamp 1666553123
+timestamp 1667868113
 transform 0 1 1399 -1 0 227
 box -797 -179 797 121
 use sky130_fd_pr__pfet_01v8_2FR7QD  XM8
@@ -193,7 +194,7 @@ timestamp 1666555252
 transform 0 1 399 -1 0 811
 box -221 -179 221 121
 use sky130_fd_pr__nfet_01v8_9CGS2F  sky130_fd_pr__nfet_01v8_9CGS2F_0
-timestamp 1666487809
+timestamp 1666651042
 transform 0 1 -152 -1 0 953
 box -73 -148 73 148
 use sky130_fd_pr__pfet_01v8_46WN3R  sky130_fd_pr__pfet_01v8_46WN3R_0

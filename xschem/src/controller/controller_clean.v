@@ -2142,7 +2142,7 @@ sky130_fd_sc_hd__buf_4 x78 (
 
 sky130_fd_sc_hd__conb_1 x79 (
 .HI( net50 ),
-.LO( net63 )
+.LO( )
 );
 
 endmodule

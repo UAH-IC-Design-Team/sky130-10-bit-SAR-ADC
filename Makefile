@@ -9,8 +9,8 @@ density_check: extract_gds
 
 
 # Run klayout drc. Note that the counted number of DRC errors is a little over twice as high as reality.
-.PHONY: klayout_drc
-klayout_drc: extract_gds
+.PHONY: klayout_extract_drc
+klayout_extract_drc: extract_gds
 ifndef component
 	$(error component is not set)
 endif
@@ -18,6 +18,17 @@ endif
 	klayout -ne -b -r ./klayout/sky130A_mr.drc -rd input=./gds/$(component).gds -rd report=../klayout/drc_reports/$(component).xml -rd feol=true -rd beol=true -rd offgrid=true
 	@echo "Number of drc errors:"
 	@grep -o 'item' ./klayout/drc_reports/$(component).xml | wc -l | xargs -n 1 bash -c 'echo $$((($$1-2)/2))' args
+
+.PHONY: klayout_gds_drc
+klayout_gds_drc: 
+ifndef component
+	$(error component is not set)
+endif
+	touch ./klayout/drc_reports/$(component).xml
+	klayout -ne -b -r ./klayout/sky130A_mr.drc -rd input=./gds/$(component).gds -rd report=../klayout/drc_reports/$(component).xml -rd feol=true -rd beol=true -rd offgrid=true
+	@echo "Number of drc errors:"
+	@grep -o 'item' ./klayout/drc_reports/$(component).xml | wc -l | xargs -n 1 bash -c 'echo $$((($$1-2)/2))' args
+
 
 .PHONY: klayout_density
 klayout_density: extract_gds
