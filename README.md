@@ -8,10 +8,10 @@ The following repository contains the ECAD files for a sky130-10-bit-SAR-ADC.
 # Status
 | Component | Status | TODO |
 | :--- | :--- | :--- | 
-| sar_adc | functional | just small tune ups for better performance |
+| sar_adc | complete |  |
 | bootstrapped_sampling_switch | complete | 😁 |
-| capacitor_array | functional | unit capacitor will be chosen at layout |
-| capacitor_switch | functional | w/l will be tuned after unit cap is chosen |
+| capacitor_array | complete |  |
+| capacitor_switch | complete | complete |
 | comparator | complete | 😁 |
 | controller | complete | 😁 |
 | dac | complete| 😁 |
