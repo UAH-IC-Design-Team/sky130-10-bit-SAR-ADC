@@ -27,13 +27,13 @@ C {devices/iopin.sym} 110 -180 0 0 {name=p1 lab=VSS
 }
 C {sky130_fd_pr/diode.sym} 430 -350 0 0 {name=D1
 model=diode_pw2nd_05v5
-area=10e6
-pj=4e6
+area=16
+pj=16
 }
 C {sky130_fd_pr/diode.sym} 430 -260 0 0 {name=D2
 model=diode_pw2nd_05v5
-area=10e6
-pj=4e6
+area=16
+pj=16
 }
 C {devices/lab_pin.sym} 370 -400 0 0 {name=l1 sig_type=std_logic lab=VDD
 }

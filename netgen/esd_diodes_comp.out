@@ -1,0 +1,22 @@
+Flattening unmatched subcell sky130_fd_pr__diode_pw2nd_05v5_EUY57X in circuit esd_diodes (1)(2 instances)
+
+Subcircuit summary:
+Circuit 1: esd_diodes                                                             |Circuit 2: esd_diodes                                                             
+----------------------------------------------------------------------------------|----------------------------------------------------------------------------------
+sky130_fd_pr__diode_pw2nd_05v5 (2)                                                |sky130_fd_pr__diode_pw2nd_05v5 (2)                                                
+Number of devices: 2                                                              |Number of devices: 2                                                              
+Number of nets: 3                                                                 |Number of nets: 3                                                                 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Circuits match uniquely.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: esd_diodes                                                             |Circuit 2: esd_diodes                                                             
+----------------------------------------------------------------------------------|----------------------------------------------------------------------------------
+VDD                                                                               |VDD                                                                               
+VSS                                                                               |VSS                                                                               
+in                                                                                |in                                                                                
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes esd_diodes and esd_diodes are equivalent.
+Circuits match uniquely.
