@@ -1,10 +1,10 @@
 ** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/controller/controller.sch
 .subckt controller clk sw_n_sp9 sw_n_sp8 sw_n_sp7 sw_n_sp6 sw_n_sp5 sw_n_sp4 sw_n_sp3 sw_n_sp2
-+ sw_n_sp1 VSS VDD reset Vcmp sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7
-+ sw_p_sp6 sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 bit10
-+ bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1 done sw_sample controller_clk comparator_clk
-*.PININFO clk:I sw_n_sp[9..1]:O VSS:B VDD:B reset:I Vcmp:I sw_n[8..1]:O sw_p_sp[9..1]:O sw_p[8..1]:O
-*+ bit[10..1]:O done:O sw_sample:O controller_clk:I comparator_clk:O
++ sw_n_sp1 VSS VDD reset sw_n8 sw_n7 sw_n6 sw_n5 sw_n4 sw_n3 sw_n2 sw_n1 sw_p_sp9 sw_p_sp8 sw_p_sp7 sw_p_sp6
++ sw_p_sp5 sw_p_sp4 sw_p_sp3 sw_p_sp2 sw_p_sp1 sw_p8 sw_p7 sw_p6 sw_p5 sw_p4 sw_p3 sw_p2 sw_p1 bit10 bit9 bit8
++ bit7 bit6 bit5 bit4 bit3 bit2 bit1 done sw_sample comparator_clk comp_out_p comp_out_n
+*.PININFO clk:I sw_n_sp[9..1]:O VSS:B VDD:B reset:I sw_n[8..1]:O sw_p_sp[9..1]:O sw_p[8..1]:O
+*+ bit[10..1]:O done:O sw_sample:O comparator_clk:O comp_out_p:I comp_out_n:I
 x3 VDD raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6 raw_bit5 raw_bit4
 + raw_bit3 raw_bit2 raw_bit1 VSS reset bit10 bit9 bit8 bit7 bit6 bit5 bit4 bit3 bit2 bit1 done cycle13 dec
 x4 raw_bit13 raw_bit12 raw_bit11 raw_bit10 raw_bit9 raw_bit8 raw_bit7 raw_bit6 raw_bit5 raw_bit4
@@ -18,12 +18,13 @@ x1 VDD controller_clk sw_sample VSS reset cycle15 cycle14 cycle13 cycle12 cycle1
 x2 net1 reset VSS VSS VDD VDD net6 sky130_fd_sc_hd__and2_1
 x6 cycle14 cycle15 VSS VSS VDD VDD net1 sky130_fd_sc_hd__xnor2_1
 x25 net3 VSS VSS VDD VDD Vcmp_buff sky130_fd_sc_hd__buf_16
-x26 Vcmp VSS VSS VDD VDD net2 sky130_fd_sc_hd__buf_4
+x26 comp_out_p VSS VSS VDD VDD net2 sky130_fd_sc_hd__buf_4
 x27 net2 VSS VSS VDD VDD net3 sky130_fd_sc_hd__buf_8
 x28 net4 VSS VSS VDD VDD raw_bit_calc_reset sky130_fd_sc_hd__buf_16
 x29 net6 VSS VSS VDD VDD net5 sky130_fd_sc_hd__buf_4
 x30 net5 VSS VSS VDD VDD net4 sky130_fd_sc_hd__buf_8
 x5 VDD clk reset VSS sw_sample comparator_clk sample_clock
+x7 VSS comp_out_p VDD comp_out_n controller_clk xor_clock_gen
 .ends
 
 * expanding   symbol:  src/dec/dec.sym # of pins=7
@@ -313,6 +314,27 @@ x3 net22 VSS VSS VDD VDD sw_sample sky130_fd_sc_hd__buf_8
 x4 net1 VSS VSS VDD VDD net23 sky130_fd_sc_hd__buf_2
 x6 net24 VSS VSS VDD VDD net17 sky130_fd_sc_hd__clkdlybuf4s50_1
 x28 clk VSS VSS VDD VDD net24 sky130_fd_sc_hd__clkdlybuf4s50_1
+.ends
+
+
+* expanding   symbol:  src/xor_clock_gen/xor_clock_gen.sym # of pins=5
+** sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sym
+** sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sch
+.subckt xor_clock_gen VSS Vin_p VDD Vin_n Gen_clk
+*.PININFO Vin_p:I VSS:B Gen_clk:O VDD:B Vin_n:I
+x2 Vin_p Vin_n VSS VSS VDD VDD net1 sky130_fd_sc_hd__xor2_1
+x3 net1 VSS VSS VDD VDD net2 sky130_fd_sc_hd__clkdlybuf4s50_1
+x17 net2 VSS VSS VDD VDD net3 sky130_fd_sc_hd__clkdlybuf4s50_1
+x9 net11 VSS VSS VDD VDD net4 sky130_fd_sc_hd__clkbuf_1
+x14 net4 VSS VSS VDD VDD net5 sky130_fd_sc_hd__clkbuf_2
+x19 net5 VSS VSS VDD VDD net6 sky130_fd_sc_hd__clkbuf_4
+x26 net6 VSS VSS VDD VDD net7 sky130_fd_sc_hd__clkbuf_8
+x27 net7 VSS VSS VDD VDD Gen_clk sky130_fd_sc_hd__clkbuf_16
+XC1 VSS VSS sky130_fd_pr__cap_mim_m3_1 W=5 L=5 MF=3 m=3
+x1 net3 VSS VSS VDD VDD net9 sky130_fd_sc_hd__clkdlybuf4s50_1
+x4 net9 VSS VSS VDD VDD net8 sky130_fd_sc_hd__clkdlybuf4s50_1
+x5 net8 VSS VSS VDD VDD net10 sky130_fd_sc_hd__clkdlybuf4s50_1
+x6 net10 VSS VSS VDD VDD net11 sky130_fd_sc_hd__clkdlybuf4s50_1
 .ends
 
 

@@ -6,7 +6,8 @@ clf
 % top_data_dir = "/Users/micahtseng/Personal/s3-data/20220927_sine"
 % top_data_dir = "/Users/micahtseng/Personal/eda/ngspice-batch-runner/docker_volume/20220928_sine"
 % top_data_dir = "/Users/micahtseng/Personal/eda/sky130-10-bit-SAR-ADC/xschem/tests/sar_adc/simulation/20220926_spfdr_1"
-top_data_dir = "/Users/micahtseng/Personal/s3-data/20220928/sine"
+% top_data_dir = "/Users/micahtseng/Personal/s3-data/20220928/sine"
+top_data_dir = "/Users/micahtseng/Personal/s3-data/20221026_sine_gear"
 current_dir = pwd
 sample_period = 640.3689e-9
 sample_freq = 1/sample_period

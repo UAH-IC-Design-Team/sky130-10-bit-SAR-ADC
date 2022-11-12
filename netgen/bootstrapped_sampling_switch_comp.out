@@ -1,0 +1,76 @@
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__cap_mim_m3_1 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_9CME3F in circuit bootstrapped_sampling_switch (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_MRUJZ4 in circuit bootstrapped_sampling_switch (1)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_9CGS2F in circuit bootstrapped_sampling_switch (1)(6 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_6ZNTNB in circuit bootstrapped_sampling_switch (1)(18 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_E9NJWS in circuit bootstrapped_sampling_switch (1)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_SKSN8V in circuit bootstrapped_sampling_switch (1)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_ZWFJZ8 in circuit bootstrapped_sampling_switch (1)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_P7BBP7 in circuit bootstrapped_sampling_switch (1)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_RQ978N in circuit bootstrapped_sampling_switch (1)(2 instances)
+
+Class bootstrapped_sampling_switch (1):  Merged 68 parallel devices.
+Subcircuit summary:
+Circuit 1: bootstrapped_sampling_switch    |Circuit 2: bootstrapped_sampling_switch    
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (60->16)           |sky130_fd_pr__nfet_01v8 (60->16)           
+sky130_fd_pr__pfet_01v8 (16->8)            |sky130_fd_pr__pfet_01v8 (16->8)            
+sky130_fd_pr__cap_mim_m3_1 (18->2)         |sky130_fd_pr__cap_mim_m3_1 (18->2)         
+Number of devices: 26                      |Number of devices: 26                      
+Number of nets: 19                         |Number of nets: 19                         
+---------------------------------------------------------------------------------------
+Resolving automorphisms by property value.
+Resolving automorphisms by pin name.
+Netlists match uniquely.
+Circuits match correctly.
+
+Subcircuit pins:
+Circuit 1: bootstrapped_sampling_switch    |Circuit 2: bootstrapped_sampling_switch    
+-------------------------------------------|-------------------------------------------
+Vout_n                                     |Vout_n                                     
+Vout_p                                     |Vout_p                                     
+Vin_n                                      |Vin_n                                      
+Vin_p                                      |Vin_p                                      
+VDD                                        |VDD                                        
+Clk                                        |Clk                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes bootstrapped_sampling_switch and bootstrapped_sampling_switch are equivalent.
+Circuits match uniquely.

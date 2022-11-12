@@ -1,0 +1,13 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1667685513
+use sky130_fd_pr__diode_pw2nd_05v5_FT76RJ  sky130_fd_pr__diode_pw2nd_05v5_FT76RJ_0
+timestamp 1667685513
+transform 1 0 464 0 1 94
+box -183 -183 183 183
+use sky130_fd_sc_hd__diode_2  sky130_fd_sc_hd__diode_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+timestamp 1662439860
+transform 1 0 0 0 1 0
+box -38 -48 222 592
+<< end >>

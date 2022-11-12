@@ -1,0 +1,23 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1665617364
+<< metal3 >>
+rect -800 -800 618 600
+<< metal4 >>
+rect -560 680 280 760
+rect -560 600 -440 680
+rect 160 600 280 680
+rect -240 -920 -120 -800
+rect 480 -920 600 -800
+rect -240 -1000 600 -920
+use sky130_fd_pr__cap_mim_m3_1_F4FAMD  sky130_fd_pr__cap_mim_m3_1_F4FAMD_0
+timestamp 1665617364
+transform 1 0 -91 0 1 -100
+box -709 -700 709 700
+<< labels >>
+rlabel metal4 160 -1000 280 -920 1 net_btm
+port 1 n
+rlabel metal4 -220 680 -100 760 1 net_top
+port 2 n
+<< end >>

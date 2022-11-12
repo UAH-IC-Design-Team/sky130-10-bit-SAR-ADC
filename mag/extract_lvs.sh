@@ -3,9 +3,9 @@
 # There is one commandline argument, the name of the file.
 
 magic  -noconsole -dnull << EOF
-load ./$1/$1.mag
+load ./$1.mag
 extract all
 ext2spice lvs
-ext2spice -o ./$1/$1.spice
+ext2spice -o ./$1.spice
 quit -noprompt
 EOF

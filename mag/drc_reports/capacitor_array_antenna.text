@@ -1,0 +1,33 @@
+Antenna violation checks on cell ../../mag/components/capacitor_array
+--------------------------------------------
+
+Magic 8.3 revision 324 - Compiled on Mon Oct  3 12:30:19 UTC 2022.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Sourcing design .magicrc for technology sky130A ...
+2 Magic internal units = 1 Lambda
+Input style sky130(vendor): scaleFactor=2, multiplier=2
+The following types are not handled by extraction and will be treated as non-electrical types:
+    ubm 
+Scaled tech values by 2 / 1 to match internal grid scaling
+Loading sky130A Device Generator Menu ...
+Loading "run_magic_antenna.tcl" from command line.
+File <../../mag/components/capacitor_array.mag> is already locked by another process.  Opening read-only.
+Scaled magic input cell capacitor_array geometry by factor of 2
+Extracting sky130_fd_pr__cap_mim_m3_1_LQSHR5 into sky130_fd_pr__cap_mim_m3_1_LQSHR5.ext:
+Extracting cap128 into cap128.ext:
+Extracting cap64 into cap64.ext:
+Extracting cap8 into cap8.ext:
+Extracting cap16 into cap16.ext:
+Extracting cap32 into cap32.ext:
+Extracting cap1 into cap1.ext:
+Extracting cap2 into cap2.ext:
+Extracting cap4 into cap4.ext:
+Extracting capacitor_array into capacitor_array.ext:
+Reading extract file.
+Building flattened netlist.
+Running antenna checks.
+antennacheck finished.
+Using technology "sky130A", version 1.0.291-82-gfa87f8f

@@ -112,6 +112,7 @@ value="
 
 * ngspice commands
 .options list acct opts
+.options method=gear
 .control
 save all
 * Go to the const plot
@@ -276,4 +277,4 @@ C {devices/lab_pin.sym} 390 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 380 -120 0 0 {name=l2 sig_type=std_logic lab=Vbias
 }
-C {src/sar_adc/sar_adc_low_vt.sym} 590 -430 0 0 {name=x1}
+C {src/sar_adc/sar_adc.sym} 590 -430 0 0 {name=x1}

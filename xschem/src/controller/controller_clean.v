@@ -2,26 +2,66 @@
 // sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/controller/controller.sch
 module controller
 (
-output wire [9:1] sw_n_sp,
-output wire [8:1] sw_n,
-output wire [9:1] sw_p_sp,
-output wire [8:1] sw_p,
-output wire [10:1] bit,
+output wire sw_p8,
+output wire bit10,
 output wire done,
 output wire sw_sample,
 output wire comparator_clk,
+output wire sw_p_sp9,
+output wire sw_p_sp8,
+output wire sw_p_sp7,
+output wire sw_p_sp6,
+output wire sw_p_sp5,
+output wire sw_p_sp4,
+output wire sw_p_sp3,
+output wire sw_p_sp2,
+output wire sw_p_sp1,
+output wire sw_p7,
+output wire sw_p6,
+output wire sw_p5,
+output wire sw_p4,
+output wire sw_p3,
+output wire sw_p2,
+output wire sw_p1,
+output wire sw_n8,
+output wire sw_n_sp9,
+output wire sw_n_sp8,
+output wire sw_n_sp7,
+output wire sw_n_sp6,
+output wire sw_n_sp5,
+output wire sw_n_sp4,
+output wire sw_n_sp3,
+output wire sw_n_sp2,
+output wire sw_n_sp1,
+output wire sw_n7,
+output wire sw_n6,
+output wire sw_n5,
+output wire sw_n4,
+output wire sw_n3,
+output wire sw_n2,
+output wire sw_n1,
+output wire bit9,
+output wire bit8,
+output wire bit7,
+output wire bit6,
+output wire bit5,
+output wire bit4,
+output wire bit3,
+output wire bit2,
+output wire bit1,
 inout wire VSS,
 inout wire VDD,
 input wire clk,
 input wire reset,
-input wire Vcmp,
-input wire controller_clk
+input wire comp_out_p,
+input wire comp_out_n
 );
 wire raw_bit10 ;
 wire raw_bit11 ;
 wire raw_bit12 ;
 wire raw_bit13 ;
 wire raw_bit_calc_reset ;
+wire controller_clk ;
 wire raw_bit1 ;
 wire raw_bit2 ;
 wire raw_bit3 ;
@@ -58,38 +98,128 @@ wire cycle9 ;
 dec
 x3 (
 .VDD( VDD ),
-.raw_bit( {raw_bit13,raw_bit12,raw_bit11,raw_bit10,raw_bit9,raw_bit8,raw_bit7,raw_bit6,raw_bit5,raw_bit4,raw_bit3,raw_bit2,raw_bit1} ),
 .VSS( VSS ),
-.reset_b( reset ),
-.bit( {bit10,bit9,bit8,bit7,bit6,bit5,bit4,bit3,bit2,bit1} ),
+.raw_bit13( raw_bit13 ),
+.raw_bit12( raw_bit12 ),
+.raw_bit11( raw_bit11 ),
+.bit10( bit10 ),
+.raw_bit10( raw_bit10 ),
+.raw_bit9( raw_bit9 ),
+.bit9( bit9 ),
+.bit8( bit8 ),
+.raw_bit8( raw_bit8 ),
+.raw_bit7( raw_bit7 ),
+.bit7( bit7 ),
+.raw_bit6( raw_bit6 ),
+.bit6( bit6 ),
+.raw_bit5( raw_bit5 ),
+.bit5( bit5 ),
+.raw_bit4( raw_bit4 ),
+.bit4( bit4 ),
+.bit3( bit3 ),
+.raw_bit3( raw_bit3 ),
+.bit2( bit2 ),
+.raw_bit2( raw_bit2 ),
+.bit1( bit1 ),
+.raw_bit1( raw_bit1 ),
 .done( done ),
+.reset_b( reset ),
 .dump_bus( cycle13 )
 );
 
 
 raw_bit_calculator
 x4 (
-.raw_bit( {raw_bit13,raw_bit12,raw_bit11,raw_bit10,raw_bit9,raw_bit8,raw_bit7,raw_bit6,raw_bit5,raw_bit4,raw_bit3,raw_bit2,raw_bit1} ),
-.cycle( {cycle12,cycle11,cycle10,cycle9,cycle8,cycle7,cycle6,cycle5,cycle4,cycle3,cycle2,cycle1,cycle0} ),
-.sw_p( {sw_p8,sw_p7,sw_p6,sw_p5,sw_p4,sw_p3,sw_p2,sw_p1} ),
+.cycle13( cycle12 ),
+.raw_bit13( raw_bit13 ),
+.raw_bit12( raw_bit12 ),
+.cycle12( cycle11 ),
+.raw_bit11( raw_bit11 ),
+.cycle11( cycle10 ),
+.cycle10( cycle9 ),
+.raw_bit10( raw_bit10 ),
+.raw_bit9( raw_bit9 ),
+.cycle9( cycle8 ),
+.cycle8( cycle7 ),
+.raw_bit8( raw_bit8 ),
+.cycle7( cycle6 ),
+.raw_bit7( raw_bit7 ),
+.cycle6( cycle5 ),
+.raw_bit6( raw_bit6 ),
+.cycle5( cycle4 ),
+.raw_bit5( raw_bit5 ),
+.raw_bit4( raw_bit4 ),
+.cycle4( cycle3 ),
+.raw_bit3( raw_bit3 ),
+.cycle3( cycle2 ),
+.raw_bit2( raw_bit2 ),
+.cycle2( cycle1 ),
+.cycle1( cycle0 ),
+.raw_bit1( raw_bit1 ),
+.sw_p8( sw_p8 ),
+.sw_p7( sw_p7 ),
+.sw_p6( sw_p6 ),
+.sw_p5( sw_p5 ),
+.sw_p4( sw_p4 ),
+.sw_p3( sw_p3 ),
+.sw_p2( sw_p2 ),
+.sw_p1( sw_p1 ),
+.sw_p_sp9( sw_p_sp9 ),
+.sw_p_sp8( sw_p_sp8 ),
+.sw_p_sp7( sw_p_sp7 ),
+.sw_p_sp6( sw_p_sp6 ),
+.sw_p_sp5( sw_p_sp5 ),
+.sw_p_sp4( sw_p_sp4 ),
+.sw_p_sp3( sw_p_sp3 ),
+.sw_p_sp2( sw_p_sp2 ),
+.sw_p_sp1( sw_p_sp1 ),
+.sw_n8( sw_n8 ),
+.sw_n7( sw_n7 ),
+.sw_n6( sw_n6 ),
+.sw_n5( sw_n5 ),
+.sw_n4( sw_n4 ),
+.sw_n3( sw_n3 ),
+.sw_n2( sw_n2 ),
+.sw_n1( sw_n1 ),
+.sw_n_sp9( sw_n_sp9 ),
+.sw_n_sp8( sw_n_sp8 ),
+.sw_n_sp7( sw_n_sp7 ),
+.sw_n_sp6( sw_n_sp6 ),
+.sw_n_sp5( sw_n_sp5 ),
+.sw_n_sp4( sw_n_sp4 ),
+.sw_n_sp3( sw_n_sp3 ),
+.sw_n_sp2( sw_n_sp2 ),
+.sw_n_sp1( sw_n_sp1 ),
+.VDD( VDD ),
 .Vcmp( Vcmp_buff ),
 .RESET( raw_bit_calc_reset ),
-.VDD( VDD ),
-.VSS( VSS ),
-.sw_n_sp( {sw_n_sp9,sw_n_sp8,sw_n_sp7,sw_n_sp6,sw_n_sp5,sw_n_sp4,sw_n_sp3,sw_n_sp2,sw_n_sp1} ),
-.sw_n( {sw_n8,sw_n7,sw_n6,sw_n5,sw_n4,sw_n3,sw_n2,sw_n1} ),
-.sw_p_sp( {sw_p_sp9,sw_p_sp8,sw_p_sp7,sw_p_sp6,sw_p_sp5,sw_p_sp4,sw_p_sp3,sw_p_sp2,sw_p_sp1} )
+.VSS( VSS )
 );
 
 
 shifted_clock_generator
 x1 (
 .VDD( VDD ),
+.VSS( VSS ),
+.cycle15( cycle15 ),
+.cycle14( cycle14 ),
+.cycle13( cycle13 ),
+.cycle12( cycle12 ),
+.cycle11( cycle11 ),
+.cycle10( cycle10 ),
+.cycle9( cycle9 ),
+.cycle8( cycle8 ),
+.cycle7( cycle7 ),
+.cycle6( cycle6 ),
+.cycle5( cycle5 ),
+.cycle4( cycle4 ),
+.cycle3( cycle3 ),
 .clk( controller_clk ),
 .sw_sample( sw_sample ),
-.VSS( VSS ),
-.reset( reset ),
-.cycle( {cycle15,cycle14,cycle13,cycle12,cycle11,cycle10,cycle9,cycle8,cycle7,cycle6,cycle5,cycle4,cycle3,cycle2,cycle1,cycle0} )
+.cycle2( cycle2 ),
+.cycle1( cycle1 ),
+.cycle0( cycle0 ),
+.reset( reset )
 );
 
 
@@ -114,7 +244,7 @@ sky130_fd_sc_hd__buf_16 x25 (
 
 
 sky130_fd_sc_hd__buf_4 x26 (
-.A( Vcmp ),
+.A( comp_out_p ),
 .X( net2 )
 );
 
@@ -153,19 +283,50 @@ x5 (
 .comparator_clk( comparator_clk )
 );
 
+
+xor_clock_gen
+x7 (
+.VSS( VSS ),
+.Vin_p( comp_out_p ),
+.VDD( VDD ),
+.Vin_n( comp_out_n ),
+.Gen_clk( controller_clk )
+);
+
 endmodule
 
-// expanding   symbol:  src/dec/dec.sym # of pins=7
+// expanding   symbol:  src/dec/dec.sym # of pins=28
 // sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sym
 // sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/dec/dec.sch
 module dec
 (
 inout wire VDD,
-input wire [13:1] raw_bit,
 inout wire VSS,
-input wire reset_b,
-output wire [10:1] bit,
+input wire raw_bit13,
+input wire raw_bit12,
+input wire raw_bit11,
+output wire bit10,
+input wire raw_bit10,
+input wire raw_bit9,
+output wire bit9,
+output wire bit8,
+input wire raw_bit8,
+input wire raw_bit7,
+output wire bit7,
+input wire raw_bit6,
+output wire bit6,
+input wire raw_bit5,
+output wire bit5,
+input wire raw_bit4,
+output wire bit4,
+output wire bit3,
+input wire raw_bit3,
+output wire bit2,
+input wire raw_bit2,
+output wire bit1,
+input wire raw_bit1,
 output wire done,
+input wire reset_b,
 input wire dump_bus
 );
 wire net10 ;
@@ -345,21 +506,75 @@ sky130_fd_sc_hd__inv_1 x82 (
 
 endmodule
 
-// expanding   symbol:  src/raw_bit_calculator/raw_bit_calculator.sym # of pins=10
+// expanding   symbol:  src/raw_bit_calculator/raw_bit_calculator.sym # of pins=64
 // sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sym
 // sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/raw_bit_calculator/raw_bit_calculator.sch
 module raw_bit_calculator
 (
-output wire [13:1] raw_bit,
-input wire [13:1] cycle,
-output wire [8:1] sw_p,
+input wire cycle13,
+output wire raw_bit13,
+output wire raw_bit12,
+input wire cycle12,
+output wire raw_bit11,
+input wire cycle11,
+input wire cycle10,
+output wire raw_bit10,
+output wire raw_bit9,
+input wire cycle9,
+input wire cycle8,
+output wire raw_bit8,
+input wire cycle7,
+output wire raw_bit7,
+input wire cycle6,
+output wire raw_bit6,
+input wire cycle5,
+output wire raw_bit5,
+output wire raw_bit4,
+input wire cycle4,
+output wire raw_bit3,
+input wire cycle3,
+output wire raw_bit2,
+input wire cycle2,
+input wire cycle1,
+output wire raw_bit1,
+output wire sw_p8,
+output wire sw_p7,
+output wire sw_p6,
+output wire sw_p5,
+output wire sw_p4,
+output wire sw_p3,
+output wire sw_p2,
+output wire sw_p1,
+output wire sw_p_sp9,
+output wire sw_p_sp8,
+output wire sw_p_sp7,
+output wire sw_p_sp6,
+output wire sw_p_sp5,
+output wire sw_p_sp4,
+output wire sw_p_sp3,
+output wire sw_p_sp2,
+output wire sw_p_sp1,
+output wire sw_n8,
+output wire sw_n7,
+output wire sw_n6,
+output wire sw_n5,
+output wire sw_n4,
+output wire sw_n3,
+output wire sw_n2,
+output wire sw_n1,
+output wire sw_n_sp9,
+output wire sw_n_sp8,
+output wire sw_n_sp7,
+output wire sw_n_sp6,
+output wire sw_n_sp5,
+output wire sw_n_sp4,
+output wire sw_n_sp3,
+output wire sw_n_sp2,
+output wire sw_n_sp1,
+inout wire VDD,
 input wire Vcmp,
 input wire RESET,
-inout wire VDD,
-inout wire VSS,
-output wire [9:1] sw_n_sp,
-output wire [8:1] sw_n,
-output wire [9:1] sw_p_sp
+inout wire VSS
 );
 wire net10 ;
 wire net11 ;
@@ -1331,17 +1546,32 @@ sky130_fd_sc_hd__clkdlybuf4s50_1 x98 (
 
 endmodule
 
-// expanding   symbol:  src/shifted_clock_generator/shifted_clock_generator.sym # of pins=6
+// expanding   symbol:  src/shifted_clock_generator/shifted_clock_generator.sym # of pins=21
 // sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sym
 // sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/shifted_clock_generator/shifted_clock_generator.sch
 module shifted_clock_generator
 (
 inout wire VDD,
+inout wire VSS,
+output wire cycle15,
+output wire cycle14,
+output wire cycle13,
+output wire cycle12,
+output wire cycle11,
+output wire cycle10,
+output wire cycle9,
+output wire cycle8,
+output wire cycle7,
+output wire cycle6,
+output wire cycle5,
+output wire cycle4,
+output wire cycle3,
 input wire clk,
 input wire sw_sample,
-inout wire VSS,
-input wire reset,
-output wire [15:0] cycle
+output wire cycle2,
+output wire cycle1,
+output wire cycle0,
+input wire reset
 );
 wire net10 ;
 wire net11 ;
@@ -1395,6 +1625,8 @@ wire net58 ;
 wire net59 ;
 wire net60 ;
 wire net61 ;
+wire net62 ;
+wire net63 ;
 wire reset_b ;
 wire net1 ;
 wire net2 ;
@@ -1735,7 +1967,7 @@ sky130_fd_sc_hd__inv_1 x34 (
 
 
 sky130_fd_sc_hd__buf_1 x36 (
-.A( VDD ),
+.A( net50 ),
 .X( net33 )
 );
 
@@ -1766,145 +1998,151 @@ sky130_fd_sc_hd__buf_4 x41 (
 
 sky130_fd_sc_hd__buf_1 x42 (
 .A( net20 ),
-.X( net50 )
+.X( net51 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x43 (
 .A( net21 ),
-.X( net51 )
+.X( net52 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x44 (
 .A( net22 ),
-.X( net52 )
+.X( net53 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x45 (
 .A( net23 ),
-.X( net53 )
+.X( net54 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x46 (
-.A( net50 ),
+.A( net51 ),
 .X( cycle4 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x49 (
-.A( net51 ),
+.A( net52 ),
 .X( cycle5 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x50 (
-.A( net52 ),
+.A( net53 ),
 .X( cycle6 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x59 (
-.A( net53 ),
+.A( net54 ),
 .X( cycle7 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x60 (
 .A( net24 ),
-.X( net54 )
+.X( net55 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x61 (
 .A( net25 ),
-.X( net55 )
+.X( net56 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x63 (
 .A( net26 ),
-.X( net56 )
+.X( net57 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x64 (
 .A( net27 ),
-.X( net57 )
+.X( net58 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x65 (
-.A( net54 ),
+.A( net55 ),
 .X( cycle8 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x67 (
-.A( net55 ),
+.A( net56 ),
 .X( cycle9 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x68 (
-.A( net56 ),
+.A( net57 ),
 .X( cycle10 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x69 (
-.A( net57 ),
+.A( net58 ),
 .X( cycle11 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x71 (
 .A( net28 ),
-.X( net58 )
+.X( net59 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x72 (
 .A( net29 ),
-.X( net59 )
+.X( net60 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x73 (
 .A( net30 ),
-.X( net60 )
+.X( net61 )
 );
 
 
 sky130_fd_sc_hd__buf_1 x74 (
 .A( net31 ),
-.X( net61 )
+.X( net62 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x75 (
-.A( net58 ),
+.A( net59 ),
 .X( cycle12 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x76 (
-.A( net59 ),
+.A( net60 ),
 .X( cycle13 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x77 (
-.A( net60 ),
+.A( net61 ),
 .X( cycle14 )
 );
 
 
 sky130_fd_sc_hd__buf_4 x78 (
-.A( net61 ),
+.A( net62 ),
 .X( cycle15 )
+);
+
+
+sky130_fd_sc_hd__conb_1 x79 (
+.HI( net50 ),
+.LO( )
 );
 
 endmodule
@@ -2147,6 +2385,104 @@ sky130_fd_sc_hd__clkdlybuf4s50_1 x6 (
 sky130_fd_sc_hd__clkdlybuf4s50_1 x28 (
 .A( clk ),
 .X( net24 )
+);
+
+endmodule
+
+// expanding   symbol:  src/xor_clock_gen/xor_clock_gen.sym # of pins=5
+// sym_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sym
+// sch_path: /foss/designs/sky130-10-bit-SAR-ADC/xschem/src/xor_clock_gen/xor_clock_gen.sch
+module xor_clock_gen
+(
+inout wire VSS,
+input wire Vin_p,
+inout wire VDD,
+input wire Vin_n,
+output wire Gen_clk
+);
+wire net10 ;
+wire net11 ;
+wire net1 ;
+wire net2 ;
+wire net3 ;
+wire net4 ;
+wire net5 ;
+wire net6 ;
+wire net7 ;
+wire net8 ;
+wire net9 ;
+
+
+sky130_fd_sc_hd__xor2_1 x2 (
+.A( Vin_p ),
+.B( Vin_n ),
+.X( net1 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x3 (
+.A( net1 ),
+.X( net2 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x17 (
+.A( net2 ),
+.X( net3 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_1 x9 (
+.A( net11 ),
+.X( net4 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_2 x14 (
+.A( net4 ),
+.X( net5 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_4 x19 (
+.A( net5 ),
+.X( net6 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_8 x26 (
+.A( net6 ),
+.X( net7 )
+);
+
+
+sky130_fd_sc_hd__clkbuf_16 x27 (
+.A( net7 ),
+.X( Gen_clk )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x1 (
+.A( net3 ),
+.X( net9 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x4 (
+.A( net9 ),
+.X( net8 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x5 (
+.A( net8 ),
+.X( net10 )
+);
+
+
+sky130_fd_sc_hd__clkdlybuf4s50_1 x6 (
+.A( net10 ),
+.X( net11 )
 );
 
 endmodule

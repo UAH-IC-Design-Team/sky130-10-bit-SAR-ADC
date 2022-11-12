@@ -1,0 +1,257 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1666302571
+<< metal1 >>
+rect 47096 63752 47296 63952
+rect 47096 63352 47296 63552
+rect 47096 62952 47296 63152
+rect 47096 62552 47296 62752
+rect 47096 62152 47296 62352
+rect 47096 61752 47296 61952
+rect 47096 61352 47296 61552
+rect 47096 60952 47296 61152
+rect 47096 60552 47296 60752
+rect 47096 60152 47296 60352
+rect 47096 59752 47296 59952
+rect 47096 59352 47296 59552
+rect 47096 58952 47296 59152
+rect 47096 58552 47296 58752
+rect 47096 58152 47296 58352
+rect 47096 57752 47296 57952
+rect 47096 57352 47296 57552
+rect 47096 56952 47296 57152
+rect 47096 56552 47296 56752
+rect 47096 56152 47296 56352
+rect 47096 55752 47296 55952
+rect 47096 55352 47296 55552
+rect 47096 54952 47296 55152
+rect 47096 54552 47296 54752
+rect 47096 54152 47296 54352
+rect 47096 53752 47296 53952
+rect 47096 53352 47296 53552
+rect 47096 52952 47296 53152
+rect 47096 52552 47296 52752
+rect 47096 52152 47296 52352
+rect 47096 51752 47296 51952
+rect 47096 51352 47296 51552
+rect 47096 50952 47296 51152
+rect 47096 50552 47296 50752
+rect 47096 50152 47296 50352
+rect 47096 49752 47296 49952
+rect 47096 49352 47296 49552
+rect 47096 48952 47296 49152
+use sky130_fd_pr__cap_mim_m3_1_9SQ6B5  XC1
+timestamp 1666292354
+transform 1 0 -66024 0 1 78120
+box -7976 -18120 7976 18120
+use sky130_fd_pr__cap_mim_m3_1_LSFHR5  XC2
+timestamp 1666292354
+transform 1 0 -52072 0 1 78120
+box -3928 -18120 3928 18120
+use sky130_fd_pr__cap_mim_m3_1_9SQ6B5  XC3
+timestamp 1666292354
+transform 1 0 -38024 0 1 32120
+box -7976 -18120 7976 18120
+use sky130_fd_pr__cap_mim_m3_1_LSFHR5  XC4
+timestamp 1666292354
+transform 1 0 -52072 0 1 32120
+box -3928 -18120 3928 18120
+use sky130_fd_pr__cap_mim_m3_1_LS3JR5  XC5
+timestamp 1666292354
+transform 1 0 -16096 0 1 78120
+box -1904 -18120 1904 18120
+use sky130_fd_pr__cap_mim_m3_1_LSVHR5  XC6
+timestamp 1666292354
+transform 1 0 -11108 0 1 32120
+box -892 -18120 892 18120
+use sky130_fd_pr__cap_mim_m3_1_LSQHR5  XC7
+timestamp 1666292354
+transform 1 0 -7614 0 1 32120
+box -386 -18120 386 18120
+use sky130_fd_pr__cap_mim_m3_1_LS3JR5  XC8
+timestamp 1666292354
+transform 1 0 -16096 0 1 32120
+box -1904 -18120 1904 18120
+use sky130_fd_pr__cap_mim_m3_1_LSVHR5  XC9
+timestamp 1666292354
+transform 1 0 -11108 0 1 78120
+box -892 -18120 892 18120
+use sky130_fd_pr__cap_mim_m3_1_LSQHR5  XC10
+timestamp 1666292354
+transform 1 0 4386 0 1 32120
+box -386 -18120 386 18120
+use sky130_fd_pr__cap_mim_m3_1_LQ5JR5  XC11
+timestamp 1666292354
+transform 1 0 9904 0 1 62145
+box -1904 -2145 1904 2145
+use sky130_fd_pr__cap_mim_m3_1_LQPHR5  XC12
+timestamp 1666292354
+transform 1 0 14892 0 1 48145
+box -892 -2145 892 2145
+use sky130_fd_pr__cap_mim_m3_1_EXCB5V  XC13
+timestamp 1666292354
+transform 1 0 32386 0 1 62145
+box -386 -2145 386 2145
+use sky130_fd_pr__cap_mim_m3_1_LQ5JR5  XC14
+timestamp 1666292354
+transform 1 0 21904 0 1 48145
+box -1904 -2145 1904 2145
+use sky130_fd_pr__cap_mim_m3_1_LQPHR5  XC15
+timestamp 1666292354
+transform 1 0 28892 0 1 48145
+box -892 -2145 892 2145
+use sky130_fd_pr__cap_mim_m3_1_EXCB5V  XC16
+timestamp 1666292354
+transform 1 0 36386 0 1 62145
+box -386 -2145 386 2145
+use sky130_fd_pr__cap_mim_m3_1_EXCB5V  XC17
+timestamp 1666292354
+transform 1 0 36386 0 1 48145
+box -386 -2145 386 2145
+use sky130_fd_pr__cap_mim_m3_1_9SQ6B5  XC18
+timestamp 1666292354
+transform 1 0 -38024 0 1 78120
+box -7976 -18120 7976 18120
+use sky130_fd_pr__cap_mim_m3_1_LSFHR5  XC19
+timestamp 1666292354
+transform 1 0 -24072 0 1 32120
+box -3928 -18120 3928 18120
+use sky130_fd_pr__cap_mim_m3_1_LSVHR5  XC23
+timestamp 1666292354
+transform 1 0 892 0 1 32120
+box -892 -18120 892 18120
+use sky130_fd_pr__cap_mim_m3_1_LSQHR5  XC24
+timestamp 1666292354
+transform 1 0 4386 0 1 78120
+box -386 -18120 386 18120
+use sky130_fd_pr__cap_mim_m3_1_LQ5JR5  XC28
+timestamp 1666292354
+transform 1 0 21904 0 1 62145
+box -1904 -2145 1904 2145
+use sky130_fd_pr__cap_mim_m3_1_LQPHR5  XC29
+timestamp 1666292354
+transform 1 0 14892 0 1 62145
+box -892 -2145 892 2145
+use sky130_fd_pr__cap_mim_m3_1_EXCB5V  XC30
+timestamp 1666292354
+transform 1 0 18386 0 1 62145
+box -386 -2145 386 2145
+use sky130_fd_pr__cap_mim_m3_1_EXCB5V  XC33
+timestamp 1666292354
+transform 1 0 32386 0 1 48145
+box -386 -2145 386 2145
+use sky130_fd_pr__cap_mim_m3_1_EXCB5V  XC34
+timestamp 1666292354
+transform 1 0 18386 0 1 48145
+box -386 -2145 386 2145
+use sky130_fd_pr__cap_mim_m3_1_9SQ6B5  sky130_fd_pr__cap_mim_m3_1_9SQ6B5_0
+timestamp 1666292354
+transform 1 0 -66024 0 1 32120
+box -7976 -18120 7976 18120
+use sky130_fd_pr__cap_mim_m3_1_LQ5JR5  sky130_fd_pr__cap_mim_m3_1_LQ5JR5_0
+timestamp 1666292354
+transform 1 0 9904 0 1 48145
+box -1904 -2145 1904 2145
+use sky130_fd_pr__cap_mim_m3_1_LQPHR5  sky130_fd_pr__cap_mim_m3_1_LQPHR5_0
+timestamp 1666292354
+transform 1 0 28892 0 1 62145
+box -892 -2145 892 2145
+use sky130_fd_pr__cap_mim_m3_1_LS3JR5  sky130_fd_pr__cap_mim_m3_1_LS3JR5_0
+timestamp 1666292354
+transform 1 0 -4096 0 1 32120
+box -1904 -18120 1904 18120
+use sky130_fd_pr__cap_mim_m3_1_LS3JR5  sky130_fd_pr__cap_mim_m3_1_LS3JR5_1
+timestamp 1666292354
+transform 1 0 -4096 0 1 78120
+box -1904 -18120 1904 18120
+use sky130_fd_pr__cap_mim_m3_1_LSFKR5  sky130_fd_pr__cap_mim_m3_1_LSFKR5_0
+timestamp 1666302571
+transform 1 0 -24072 0 1 78120
+box -3928 -18120 3928 18120
+use sky130_fd_pr__cap_mim_m3_1_LSQHR5  sky130_fd_pr__cap_mim_m3_1_LSQHR5_0
+timestamp 1666292354
+transform 1 0 -7614 0 1 78120
+box -386 -18120 386 18120
+use sky130_fd_pr__cap_mim_m3_1_LSVHR5  sky130_fd_pr__cap_mim_m3_1_LSVHR5_0
+timestamp 1666292354
+transform 1 0 892 0 1 78120
+box -892 -18120 892 18120
+<< labels >>
+flabel metal1 47096 63752 47296 63952 0 FreeSans 256 0 0 0 sw_sp_n9
+port 0 nsew
+flabel metal1 47096 63352 47296 63552 0 FreeSans 256 0 0 0 sw_sp_n8
+port 1 nsew
+flabel metal1 47096 62952 47296 63152 0 FreeSans 256 0 0 0 sw_sp_n7
+port 2 nsew
+flabel metal1 47096 62552 47296 62752 0 FreeSans 256 0 0 0 sw_sp_n6
+port 3 nsew
+flabel metal1 47096 62152 47296 62352 0 FreeSans 256 0 0 0 sw_sp_n5
+port 4 nsew
+flabel metal1 47096 61752 47296 61952 0 FreeSans 256 0 0 0 sw_sp_n4
+port 5 nsew
+flabel metal1 47096 61352 47296 61552 0 FreeSans 256 0 0 0 sw_sp_n3
+port 6 nsew
+flabel metal1 47096 60952 47296 61152 0 FreeSans 256 0 0 0 sw_sp_n2
+port 7 nsew
+flabel metal1 47096 60552 47296 60752 0 FreeSans 256 0 0 0 {}
+port 8 nsew
+flabel metal1 47096 60152 47296 60352 0 FreeSans 256 0 0 0 sw_sp_n1
+port 9 nsew
+flabel metal1 47096 59752 47296 59952 0 FreeSans 256 0 0 0 Vin_p
+port 10 nsew
+flabel metal1 47096 59352 47296 59552 0 FreeSans 256 0 0 0 Vin_n
+port 11 nsew
+flabel metal1 47096 58952 47296 59152 0 FreeSans 256 0 0 0 sw_sp_p9
+port 12 nsew
+flabel metal1 47096 58552 47296 58752 0 FreeSans 256 0 0 0 sw_sp_p8
+port 13 nsew
+flabel metal1 47096 58152 47296 58352 0 FreeSans 256 0 0 0 sw_sp_p7
+port 14 nsew
+flabel metal1 47096 57752 47296 57952 0 FreeSans 256 0 0 0 sw_sp_p6
+port 15 nsew
+flabel metal1 47096 57352 47296 57552 0 FreeSans 256 0 0 0 sw_sp_p5
+port 16 nsew
+flabel metal1 47096 56952 47296 57152 0 FreeSans 256 0 0 0 sw_sp_p4
+port 17 nsew
+flabel metal1 47096 56552 47296 56752 0 FreeSans 256 0 0 0 sw_sp_p3
+port 18 nsew
+flabel metal1 47096 56152 47296 56352 0 FreeSans 256 0 0 0 sw_sp_p2
+port 19 nsew
+flabel metal1 47096 55752 47296 55952 0 FreeSans 256 0 0 0 sw_sp_p1
+port 20 nsew
+flabel metal1 47096 55352 47296 55552 0 FreeSans 256 0 0 0 sw_p8
+port 21 nsew
+flabel metal1 47096 54952 47296 55152 0 FreeSans 256 0 0 0 {}
+port 22 nsew
+flabel metal1 47096 54552 47296 54752 0 FreeSans 256 0 0 0 sw_p7
+port 23 nsew
+flabel metal1 47096 54152 47296 54352 0 FreeSans 256 0 0 0 sw_p6
+port 24 nsew
+flabel metal1 47096 53752 47296 53952 0 FreeSans 256 0 0 0 sw_p5
+port 25 nsew
+flabel metal1 47096 53352 47296 53552 0 FreeSans 256 0 0 0 sw_p4
+port 26 nsew
+flabel metal1 47096 52952 47296 53152 0 FreeSans 256 0 0 0 sw_p3
+port 27 nsew
+flabel metal1 47096 52552 47296 52752 0 FreeSans 256 0 0 0 sw_p2
+port 28 nsew
+flabel metal1 47096 52152 47296 52352 0 FreeSans 256 0 0 0 sw_p1
+port 29 nsew
+flabel metal1 47096 51752 47296 51952 0 FreeSans 256 0 0 0 sw_n8
+port 30 nsew
+flabel metal1 47096 51352 47296 51552 0 FreeSans 256 0 0 0 sw_n7
+port 31 nsew
+flabel metal1 47096 50952 47296 51152 0 FreeSans 256 0 0 0 sw_n6
+port 32 nsew
+flabel metal1 47096 50552 47296 50752 0 FreeSans 256 0 0 0 sw_n5
+port 33 nsew
+flabel metal1 47096 50152 47296 50352 0 FreeSans 256 0 0 0 sw_n4
+port 34 nsew
+flabel metal1 47096 49752 47296 49952 0 FreeSans 256 0 0 0 sw_n3
+port 35 nsew
+flabel metal1 47096 49352 47296 49552 0 FreeSans 256 0 0 0 sw_n2
+port 36 nsew
+flabel metal1 47096 48952 47296 49152 0 FreeSans 256 0 0 0 sw_n1
+port 37 nsew
+<< end >>

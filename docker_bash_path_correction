@@ -1,0 +1,2 @@
+export PATH=$PATH:$PATH:/foss/tools/klayout/428d0fe/:/foss/tools/magic/7905e15/bin/:/foss/tools/netgen/2056b37/bin/
+

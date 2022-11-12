@@ -10,21 +10,21 @@ N 50 -250 50 -230 {
 lab=GND}
 N 260 -250 260 -230 {
 lab=GND}
-N 740 -460 770 -460 {
+N 740 -500 770 -500 {
 lab=VDD}
-N 740 -440 770 -440 {
+N 740 -480 770 -480 {
 lab=VSS}
-N 740 -420 770 -420 {
+N 740 -460 770 -460 {
 lab=Done}
-N 740 -400 770 -400 {
+N 740 -440 770 -440 {
 lab=Bits[10..1]}
-N 420 -440 440 -440 {
+N 420 -480 440 -480 {
 lab=clk}
-N 420 -420 440 -420 {
-lab=Vin_p}
-N 420 -400 440 -400 {
-lab=Vin_n}
 N 420 -460 440 -460 {
+lab=Vin_p}
+N 420 -440 440 -440 {
+lab=Vin_n}
+N 420 -500 440 -500 {
 lab=reset_b}
 N 560 -80 560 -60 {
 lab=GND}
@@ -36,6 +36,18 @@ N 360 -130 360 -110 {
 lab=Vbias}
 N 350 -120 360 -120 {
 lab=Vbias}
+N 420 -400 440 -400 {
+lab=VSS}
+N 420 -350 440 -350 {
+lab=Vin_n}
+N 740 -400 770 -400 {
+lab=VDD}
+N 740 -380 770 -380 {
+lab=VSS}
+N 740 -350 770 -350 {
+lab=VDD}
+N 740 -330 770 -330 {
+lab=VSS}
 C {devices/code.sym} 0 -160 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -80,26 +92,26 @@ C {devices/vsource.sym} 260 -280 0 0 {name=V4 value=0
 C {devices/gnd.sym} 260 -230 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 260 -310 0 0 {name=l17 sig_type=std_logic lab=VSS
 }
-C {src/sar_adc/sar_adc.sym} 590 -430 0 0 {name=x1}
+C {src/sar_adc/sar_adc.sym} 590 -470 0 0 {name=x1}
 C {devices/vsource.sym} 360 -80 0 0 {name=V2 value="PULSE 0 0.129673 1ns 1us 1ns 1s 1s"
 }
 C {devices/lab_pin.sym} 360 -50 0 0 {name=l1 sig_type=std_logic lab=Vin_n
 }
-C {devices/lab_pin.sym} 770 -460 2 0 {name=l3 sig_type=std_logic lab=VDD
+C {devices/lab_pin.sym} 770 -500 2 0 {name=l3 sig_type=std_logic lab=VDD
 }
-C {devices/lab_pin.sym} 770 -440 2 0 {name=l4 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 770 -480 2 0 {name=l4 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 770 -420 2 0 {name=l7 sig_type=std_logic lab=Done
+C {devices/lab_pin.sym} 770 -460 2 0 {name=l7 sig_type=std_logic lab=Done
 }
-C {devices/lab_pin.sym} 770 -400 2 0 {name=l8 sig_type=std_logic lab=Bits[10..1]
+C {devices/lab_pin.sym} 770 -440 2 0 {name=l8 sig_type=std_logic lab=Bits[10..1]
 }
-C {devices/lab_pin.sym} 420 -440 0 0 {name=l9 sig_type=std_logic lab=clk
+C {devices/lab_pin.sym} 420 -480 0 0 {name=l9 sig_type=std_logic lab=clk
 }
-C {devices/lab_pin.sym} 420 -420 0 0 {name=l10 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 420 -460 0 0 {name=l10 sig_type=std_logic lab=Vin_p
 }
-C {devices/lab_pin.sym} 420 -400 0 0 {name=l11 sig_type=std_logic lab=Vin_n
+C {devices/lab_pin.sym} 420 -440 0 0 {name=l11 sig_type=std_logic lab=Vin_n
 }
-C {devices/lab_pin.sym} 420 -460 0 0 {name=l12 sig_type=std_logic lab=reset_b
+C {devices/lab_pin.sym} 420 -500 0 0 {name=l12 sig_type=std_logic lab=reset_b
 }
 C {devices/vsource.sym} 560 -110 0 0 {name=V5 value="PULSE 0 1.8V 10us 0.1ns 0.1ns 5us 10us"
 }
@@ -122,15 +134,16 @@ C {devices/lab_pin.sym} 360 -190 0 0 {name=l22 sig_type=std_logic lab=Vin_p
 }
 C {devices/lab_pin.sym} 350 -120 0 0 {name=l2 sig_type=std_logic lab=Vbias
 }
-C {devices/noconn.sym} 760 -460 1 0 {name=l23}
-C {devices/noconn.sym} 760 -440 1 0 {name=l24}
-C {devices/noconn.sym} 760 -420 1 0 {name=l25}
-C {devices/noconn.sym} 760 -400 1 0 {name=l26}
+C {devices/noconn.sym} 760 -500 1 0 {name=l23}
+C {devices/noconn.sym} 760 -480 1 0 {name=l24}
+C {devices/noconn.sym} 760 -460 1 0 {name=l25}
+C {devices/noconn.sym} 760 -440 1 0 {name=l26}
 C {devices/simulator_commands.sym} 20 -480 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value="
 .options acct list
+.options method=gear
 .temp 25
 *vvcc VDD 0 dc 1.8
 *vvss VSS 0 0
@@ -165,3 +178,21 @@ value="
 .tran 0.025u 400u uic
 "}
 C {sky130_fd_pr/corner.sym} 920 -460 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {devices/lab_pin.sym} 420 -400 0 0 {name=l10 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 420 -350 0 0 {name=l11 sig_type=std_logic lab=VSS
+}
+C {devices/lab_pin.sym} 770 -400 2 0 {name=l3 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 770 -380 2 0 {name=l4 sig_type=std_logic lab=VSS
+}
+C {devices/noconn.sym} 760 -400 1 0 {name=l1}
+C {devices/noconn.sym} 760 -380 1 0 {name=l2}
+C {devices/lab_pin.sym} 770 -350 2 0 {name=l3 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 770 -330 2 0 {name=l4 sig_type=std_logic lab=VSS
+}
+C {devices/noconn.sym} 760 -350 1 0 {name=l5}
+C {devices/noconn.sym} 760 -330 1 0 {name=l6}
+C {src/esd_diodes/esd_diodes.sym} 590 -390 0 0 {name=x2}
+C {src/esd_diodes/esd_diodes.sym} 590 -340 0 0 {name=x3}

@@ -1,0 +1,149 @@
+# A small DRC script to check the metal layer density of m1-m4 in the sky130A pdk.
+# Micah Tseng 
+# Original code sourced from: https://www.klayout.de/forum/discussion/1459/density-drc-checks
+require 'time'
+require "logger"
+
+logger = Logger.new(STDOUT)
+
+logger.formatter = proc do |severity, datetime, progname, msg|
+  "#{msg}
+"
+end
+
+if $input
+  source($input, $top_cell)
+end
+
+if $report
+  report("SKY130 DRC Density", $report)
+else
+  report("SKY130 DRC Density", File.join(File.dirname(RBA::CellView::active.filename), "sky130_density_drc.txt"))
+end
+
+
+def dens_check(output, input, tile_size, threads, min, max)
+
+  tp = RBA::TilingProcessor::new
+
+  tp.tile_size(tile_size, tile_size)
+  tp.output("res", output.data)
+  tp.input("input", input.data)
+  tp.dbu = 1.dbu  # establish the real database unit
+  tp.var("vmin", min)
+  tp.var("vmax", max)
+  tp.threads = threads
+  tp.queue("_tile && (var d = to_f(input.area(_tile.bbox)) / to_f(_tile.bbox.area); (d < vmin || d > vmax) && _output(res, _tile.bbox))")
+  tp.execute("Density check")
+
+end 
+
+def dens_check_overlap(output, input, tile_size, tile_overlap, threads, min, max)
+
+  tp = RBA::TilingProcessor::new
+
+  tp.tile_size(tile_size, tile_size) # -2.0*tile_overlap
+  tp.tile_border(tile_overlap, tile_overlap)
+  tp.output("res", output.data)
+  tp.input("input", input.data)
+  tp.dbu = 1.dbu # establish the real database unit
+  tp.var("vmin", min)
+  tp.var("vmax", max)
+  tp.var("overlap", tile_overlap / tp.dbu)
+  tp.threads = threads
+  tp.queue(<<"SCRIPT")
+    _tile && (
+      var bx = _tile.bbox.enlarged(overlap, overlap);
+      var d = to_f(input.area(bx)) / to_f(bx.area);
+      (d < vmin || d > vmax) && _output(res, bx, false)
+    )
+SCRIPT
+  tp.execute("Density check")
+
+end
+
+
+# Add info
+verbose(true)
+
+# Layer Definitions
+###################
+m1_wildcard = input(68, 20)
+m2_wildcard = input(69, 20)
+m3_wildcard = input(70, 20)
+m4_wildcard = input(71, 20)
+
+m1_dens = polygon_layer
+m2_dens = polygon_layer
+m3_dens = polygon_layer
+m4_dens = polygon_layer
+
+m1_dens_overlap = polygon_layer
+m2_dens_overlap = polygon_layer
+m3_dens_overlap = polygon_layer
+m4_dens_overlap = polygon_layer
+
+# Density Settings
+##################
+tile_size = 699.um
+tile_overlap = 350.um
+threads = 4
+min_dens = 0
+max_dens = 0.77
+
+
+# m1_dens.output("m1 dens", "Metal 1 density between 0% and 77%")
+# m2_dens.output("m2 dens", "Metal 2 density between 0% and 77%")
+# m3_dens.output("m3 dens", "Metal 3 density between 0% and 77%")
+# m4_dens.output("m4 dens", "Metal 4 density between 0% and 77%")
+
+log("START: m1 density")
+dens_check(m1_dens, m1_wildcard, tile_size, threads, min_dens, max_dens)
+m1_dens.output("m1 dens", "Metal 1 density between 0% and 77%")
+log("END: m1 density")
+
+log("START: m2 density")
+dens_check(m2_dens, m2_wildcard, tile_size, threads, min_dens, max_dens)
+m2_dens.output("m2 dens", "Metal 2 density between 0% and 77%")
+log("END: m2 density")
+
+log("START: m3 density")
+dens_check(m3_dens, m3_wildcard, tile_size, threads, min_dens, max_dens)
+m3_dens.output("m3 dens", "Metal 3 density between 0% and 77%")
+log("END: m3 density")
+
+log("START: m4 density")
+dens_check(m4_dens, m4_wildcard, tile_size, threads, min_dens, max_dens)
+m4_dens.output("m4 dens", "Metal 4 density between 0% and 77%")
+log("END: m4 density")
+
+
+
+log("START: m1 density")
+dens_check_overlap(m1_dens_overlap, m1_wildcard, tile_size, tile_overlap, threads, min_dens, max_dens)
+m1_dens.output("m1 dens overlap", "Metal 1 density between 0% and 77%")
+log("END: m1 density")
+
+log("START: m2 density")
+dens_check_overlap(m2_dens_overlap, m2_wildcard, tile_size, tile_overlap, threads, min_dens, max_dens)
+m2_dens.output("m2 dens overlap", "Metal 2 density between 0% and 77%")
+log("END: m2 density")
+
+log("START: m3 density")
+dens_check_overlap(m3_dens_overlap, m3_wildcard, tile_size, tile_overlap, threads, min_dens, max_dens)
+m3_dens.output("m3 dens overlap", "Metal 3 density between 0% and 77%")
+log("END: m3 density")
+
+log("START: m4 density")
+dens_check_overlap(m4_dens_overlap, m4_wildcard, tile_size, tile_overlap, threads, min_dens, max_dens)
+m4_dens.output("m4 dens overlap", "Metal 4 density between 0% and 77%")
+log("END: m4 density")
+
+
+# metal = input(1, 0)
+# 
+# # that is one use case. It checks between 10% and 90% on 30µm tiles and with 4 CPU's:
+# dens = polygon_layer
+# dens_check(dens, metal, 30.um, 4, 0.1, 0.9)
+# 
+# dens.output("Dens", "Metal density between 10 and 90%")

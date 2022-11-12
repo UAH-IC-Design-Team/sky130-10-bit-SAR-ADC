@@ -6,7 +6,8 @@ clc
 % Get the data
 % top_data_dir = "/Users/micahtseng/Personal/s3-data/20220925_complete_run"
 % top_data_dir = "/Users/micahtseng/Personal/s3-data/20220927_256_stepped"
-top_data_dir = "/Users/micahtseng/Personal/s3-data/20220928/full_256"
+% top_data_dir = "/Users/micahtseng/Personal/s3-data/20220928/full_256"
+top_data_dir = "/Users/micahtseng/Personal/s3-data/20221026_256_gear"
 current_dir = pwd
 
 cd(top_data_dir)

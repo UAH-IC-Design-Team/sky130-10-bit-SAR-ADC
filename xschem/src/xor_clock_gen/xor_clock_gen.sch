@@ -26,23 +26,16 @@ N 1110 -290 1130 -290 {
 lab=#net6}
 N 1210 -290 1230 -290 {
 lab=#net7}
-N 1220 -180 1220 -170 {
->>>>>>> Stashed changes
-lab=VSS}
-N 1220 -250 1220 -240 {
-lab=#net7}
 N 1220 -290 1220 -250 {
 lab=#net7}
 N 600 -290 630 -290 {
-lab=#net8}
-N 500 -290 520 -290 {
 lab=#net9}
-N 710 -290 730 -290 {
+N 500 -290 520 -290 {
 lab=#net10}
-N 810 -290 830 -290 {
+N 710 -290 730 -290 {
 lab=#net11}
-N 1210 -170 1220 -170 {
-lab=VSS}
+N 810 -290 830 -290 {
+lab=#net12}
 N 1320 -290 1330 -290 {
 lab=Gen_clk}
 N 1310 -290 1320 -290 {
@@ -80,10 +73,6 @@ C {sky130_stdcells/clkbuf_4.sym} 1070 -290 0 0 {name=x19 VGND=VSS VNB=VSS VPB=VD
 C {sky130_stdcells/clkbuf_8.sym} 1170 -290 0 0 {name=x26 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }
 C {sky130_stdcells/clkbuf_16.sym} 1270 -290 0 0 {name=x27 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
-}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1220 -210 0 0 {name=C1 model=cap_mim_m3_1 W=5 L=5 MF=3 spiceprefix=X
-}
-C {devices/lab_pin.sym} 1210 -170 0 0 {name=l1 sig_type=std_logic lab=VSS
 }
 C {sky130_stdcells/clkdlybuf4s50_1.sym} 460 -290 0 0 {name=x1 VGND=VSS VNB=VSS VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ 
 }

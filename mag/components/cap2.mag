@@ -1,0 +1,14 @@
+magic
+tech sky130A
+timestamp 1667663783
+<< metal4 >>
+rect 250 0 300 600
+rect 600 0 650 600
+rect 1050 0 1100 600
+rect 1400 0 1450 600
+use sky130_fd_pr__cap_mim_m3_1_H9XL9H  sky130_fd_pr__cap_mim_m3_1_H9XL9H_0
+array 0 1 800 0 0 600
+timestamp 1667663783
+transform 1 0 325 0 1 300
+box -325 -300 325 300
+<< end >>

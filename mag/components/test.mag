@@ -1,0 +1,9 @@
+magic
+tech sky130A
+timestamp 1668208468
+<< metal1 >>
+rect -100 -200 0 200
+<< labels >>
+rlabel metal1 -100 -200 0 200 1 test_label
+port 1 n
+<< end >>
