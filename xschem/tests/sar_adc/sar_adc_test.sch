@@ -37,7 +37,7 @@ lab=Vbias}
 N 350 -120 360 -120 {
 lab=Vbias}
 N 420 -400 440 -400 {
-lab=Vin_p}
+lab=VSS}
 N 420 -350 440 -350 {
 lab=Vin_n}
 N 740 -400 770 -400 {
@@ -178,9 +178,9 @@ value="
 .tran 0.025u 400u uic
 "}
 C {sky130_fd_pr/corner.sym} 920 -460 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {devices/lab_pin.sym} 420 -400 0 0 {name=l10 sig_type=std_logic lab=Vin_p
+C {devices/lab_pin.sym} 420 -400 0 0 {name=l10 sig_type=std_logic lab=VSS
 }
-C {devices/lab_pin.sym} 420 -350 0 0 {name=l11 sig_type=std_logic lab=Vin_n
+C {devices/lab_pin.sym} 420 -350 0 0 {name=l11 sig_type=std_logic lab=VSS
 }
 C {devices/lab_pin.sym} 770 -400 2 0 {name=l3 sig_type=std_logic lab=VDD
 }

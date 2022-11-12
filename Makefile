@@ -7,10 +7,22 @@ density_check: extract_gds
 	touch ./mag/drc_reports/$(component)_density.text
 	cd ./util/temp_files; ../check_density.py ../../gds/$(component).gds 
 
+# Run klayout drc. Note that the counted number of DRC errors is a little over twice as high as reality.
+.PHONY: klayout_root_drc
+klayout_root_drc: extract_gds
+ifndef component
+	$(error component is not set)
+endif
+	touch ./klayout/drc_reports/$(component).xml
+	klayout -ne -b -r ./klayout/sky130A_mr.drc -rd input=./gds/$(component).gds -rd report=../klayout/drc_reports/$(component).xml -rd feol=true -rd beol=true -rd offgrid=true
+	@echo "Number of drc errors:"
+	@grep -o 'item' ./klayout/drc_reports/$(component).xml | wc -l | xargs -n 1 bash -c 'echo $$((($$1-2)/2))' args
+
+
 
 # Run klayout drc. Note that the counted number of DRC errors is a little over twice as high as reality.
 .PHONY: klayout_extract_drc
-klayout_extract_drc: extract_gds
+klayout_extract_drc: extract_component_gds
 ifndef component
 	$(error component is not set)
 endif
@@ -70,6 +82,16 @@ endif
 
 # Extract the gds from magic
 # Running commands in magic requires EOF bits which is easy in a sh script.
+.PHONY: extract_component_gds
+extract_component_gds:
+ifndef component
+	$(error component is not set)
+endif
+	cd ./mag; pwd; ./extract_component_gds.sh $(component)
+	mv ./mag/$(component).gds ./gds
+
+# Extract the gds from magic
+# Running commands in magic requires EOF bits which is easy in a sh script.
 .PHONY: extract_gds
 extract_gds:
 ifndef component
@@ -115,7 +137,7 @@ netgen_lvs:
 ifndef component
 	$(error component is not set)
 endif
-	export NETGEN_COLUMNS=80; netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out
+	export NETGEN_COLUMNS=80; netgen -batch lvs "./xschem/src/$(component)/$(component).spice $(component)" "./mag/$(component).spice $(component)" ./netgen/sky130A_setup.tcl ./netgen/$(component)_comp.out -blackbox
 
 # run lvs between xschem and magic
 .PHONY: netgen_component_lvs

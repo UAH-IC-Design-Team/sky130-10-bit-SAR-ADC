@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1668016263
+timestamp 1668277856
 << nwell >>
 rect -300 1100 1690 2810
 << psubdiff >>
@@ -201,4 +201,13 @@ use sky130_fd_pr__pfet_01v8_46WN3R  sky130_fd_pr__pfet_01v8_46WN3R_0
 timestamp 1666487809
 transform 0 1 -71 1 0 1209
 box -109 -229 109 263
+<< labels >>
+rlabel metal1 340 1990 950 2060 1 VDD
+port 1 n
+rlabel metal1 -290 920 -240 1250 1 Vin
+port 2 n
+rlabel metal1 1430 -570 1630 1100 1 Vout
+port 3 n
+rlabel metal1 800 -650 870 -110 1 VSS
+port 4 n
 << end >>

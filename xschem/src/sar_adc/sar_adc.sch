@@ -5,58 +5,18 @@ K {}
 V {}
 S {}
 E {}
-N 400 -590 430 -590 {
+N 400 -820 430 -820 {
 lab=V_in_p}
-N 400 -570 430 -570 {
+N 400 -800 430 -800 {
 lab=V_in_n}
-N 400 -550 430 -550 {
-lab=sw_sample}
-N 730 -590 760 -590 {
-lab=VDD}
-N 730 -570 760 -570 {
-lab=VSS}
-N 730 -550 760 -550 {
-lab=Vsampled_p}
-N 730 -530 760 -530 {
-lab=Vsampled_n}
-N 730 -440 760 -440 {
-lab=Vsampled_p}
-N 730 -420 760 -420 {
-lab=Vsampled_n}
-N 730 -480 760 -480 {
-lab=VDD}
-N 730 -460 760 -460 {
-lab=VSS}
-N 400 -350 430 -350 {
-lab=Vsampled_p}
-N 400 -330 430 -330 {
-lab=Vsampled_n}
-N 400 -310 430 -310 {
-lab=comparator_clk}
-N 730 -310 760 -310 {
-lab=comp_out_n}
-N 730 -290 760 -290 {
-lab=comp_out_p}
-N 730 -330 760 -330 {
-lab=VSS}
 N 1030 -1010 1060 -1010 {
 lab=RESET}
 N 1360 -90 1390 -90 {
-lab=sw_sample}
+lab=sw_sample_unbuf}
 N 1360 -110 1390 -110 {
 lab=Done}
-N 400 -480 430 -480 {
-lab=sw_n_sp[9..1]}
-N 400 -460 430 -460 {
-lab=sw_p_sp[9..1]}
-N 400 -440 430 -440 {
-lab=sw_n[8..1]}
-N 400 -420 430 -420 {
-lab=sw_p[8..1]}
 N 1030 -1030 1060 -1030 {
 lab=Clk}
-N 730 -350 760 -350 {
-lab=VDD}
 N 1030 -990 1060 -990 {
 lab=comp_out_p}
 N 1360 -70 1390 -70 {
@@ -154,7 +114,27 @@ lab=Bit3}
 N 1360 -830 1390 -830 {
 lab=Bit2}
 N 1360 -810 1390 -810 {
-lab=bit1}
+lab=Bit1}
+N 400 -780 430 -780 {
+lab=sw_sample_unbuf}
+N 400 -740 430 -740 {
+lab=sw_n_sp[9..1]}
+N 400 -720 430 -720 {
+lab=sw_p_sp[9..1]}
+N 400 -700 430 -700 {
+lab=sw_n[8..1]}
+N 400 -680 430 -680 {
+lab=sw_p[8..1]}
+N 400 -760 430 -760 {
+lab=comparator_clk}
+N 730 -780 760 -780 {
+lab=#net1}
+N 730 -760 760 -760 {
+lab=comp_out_n}
+N 730 -800 760 -800 {
+lab=VSS}
+N 730 -820 760 -820 {
+lab=VDD}
 C {devices/title.sym} 160 30 0 0 {name=l1 author="Dr. Aubrey Beal, Dr. Phillip Bailey, Micah Tseng"
 }
 C {devices/iopin.sym} 40 -320 0 0 {name=p4 lab=VDD
@@ -170,57 +150,17 @@ C {devices/ipin.sym} 110 -210 0 0 {name=p8 lab=V_in_n
 C {devices/ipin.sym} 110 -250 0 0 {name=p9 lab=Clk
 }
 C {src/controller/controller.sym} 1210 -550 0 0 {name=x1}
-C {src/dac/dac.sym} 580 -450 0 0 {name=x3}
-C {src/bootstrapped_sampling_switch/bootstrapped_sampling_switch.sym} 580 -560 0 0 {name=x4}
-C {devices/lab_pin.sym} 400 -590 0 0 {name=l2 sig_type=std_logic lab=V_in_p
+C {devices/lab_pin.sym} 400 -820 0 0 {name=l2 sig_type=std_logic lab=V_in_p
 }
-C {devices/lab_pin.sym} 400 -570 0 0 {name=l3 sig_type=std_logic lab=V_in_n
-}
-C {devices/lab_pin.sym} 760 -590 2 0 {name=l5 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} 760 -570 2 0 {name=l6 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 760 -550 2 0 {name=l7 sig_type=std_logic lab=Vsampled_p
-}
-C {devices/lab_pin.sym} 760 -530 2 0 {name=l8 sig_type=std_logic lab=Vsampled_n
-}
-C {devices/lab_pin.sym} 760 -440 2 0 {name=l9 sig_type=std_logic lab=Vsampled_p
-}
-C {devices/lab_pin.sym} 760 -420 2 0 {name=l10 sig_type=std_logic lab=Vsampled_n
-}
-C {devices/lab_pin.sym} 760 -480 2 0 {name=l11 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} 760 -460 2 0 {name=l12 sig_type=std_logic lab=VSS
-}
-C {devices/lab_pin.sym} 400 -350 0 0 {name=l13 sig_type=std_logic lab=Vsampled_p
-}
-C {devices/lab_pin.sym} 400 -330 0 0 {name=l14 sig_type=std_logic lab=Vsampled_n
-}
-C {devices/lab_pin.sym} 760 -310 2 0 {name=l17 sig_type=std_logic lab=comp_out_n
-}
-C {devices/lab_pin.sym} 760 -290 2 0 {name=l18 sig_type=std_logic lab=comp_out_p
-}
-C {devices/lab_pin.sym} 760 -350 2 0 {name=l19 sig_type=std_logic lab=VDD
-}
-C {devices/lab_pin.sym} 760 -330 2 0 {name=l20 sig_type=std_logic lab=VSS
+C {devices/lab_pin.sym} 400 -800 0 0 {name=l3 sig_type=std_logic lab=V_in_n
 }
 C {devices/lab_pin.sym} 1030 -990 0 0 {name=l28 sig_type=std_logic lab=comp_out_p
 }
 C {devices/opin.sym} 40 -150 0 0 {name=p1 lab=Bit[10..1]
 }
-C {devices/lab_pin.sym} 1390 -90 2 0 {name=l4 sig_type=std_logic lab=sw_sample
-}
-C {devices/lab_pin.sym} 400 -550 0 0 {name=l30 sig_type=std_logic lab=sw_sample
+C {devices/lab_pin.sym} 1390 -90 2 0 {name=l4 sig_type=std_logic lab=sw_sample_unbuf
 }
 C {devices/lab_pin.sym} 1390 -110 2 0 {name=l31 sig_type=std_logic lab=Done
-}
-C {devices/lab_pin.sym} 400 -480 2 1 {name=l36 sig_type=std_logic lab=sw_n_sp[9..1]
-}
-C {devices/lab_pin.sym} 400 -460 2 1 {name=l37 sig_type=std_logic lab=sw_p_sp[9..1]
-}
-C {devices/lab_pin.sym} 400 -440 2 1 {name=l38 sig_type=std_logic lab=sw_n[8..1]
-}
-C {devices/lab_pin.sym} 400 -420 2 1 {name=l39 sig_type=std_logic lab=sw_p[8..1]
 }
 C {devices/lab_pin.sym} 1030 -1010 0 0 {name=l40 sig_type=std_logic lab=RESET
 }
@@ -228,11 +168,8 @@ C {devices/ipin.sym} 110 -270 0 0 {name=p2 lab=RESET
 }
 C {devices/lab_pin.sym} 1030 -1030 0 0 {name=l44 sig_type=std_logic lab=Clk
 }
-C {devices/lab_pin.sym} 400 -310 0 0 {name=l15 sig_type=std_logic lab=comparator_clk
-}
 C {devices/lab_pin.sym} 1390 -70 2 0 {name=l45 sig_type=std_logic lab=comparator_clk
 }
-C {src/comparator/comparator.sym} 580 -320 0 0 {name=x2}
 C {devices/lab_pin.sym} 1030 -970 0 0 {name=l28 sig_type=std_logic lab=comp_out_n
 }
 C {devices/lab_pin.sym} 1390 -1030 2 0 {name=l23 sig_type=std_logic lab=VDD
@@ -327,3 +264,31 @@ C {devices/lab_pin.sym} 1390 -830 2 0 {name=l9 sig_type=std_logic lab=Bit2
 }
 C {devices/lab_pin.sym} 1390 -810 2 0 {name=l10 sig_type=std_logic lab=Bit1
 }
+C {src/all_analog/all_analog.sym} 580 -750 0 0 {name=x5}
+C {devices/lab_pin.sym} 400 -780 0 0 {name=l4 sig_type=std_logic lab=sw_sample_unbuf
+}
+C {devices/lab_pin.sym} 400 -740 2 1 {name=l36 sig_type=std_logic lab=sw_n_sp[9..1]
+}
+C {devices/lab_pin.sym} 400 -720 2 1 {name=l37 sig_type=std_logic lab=sw_p_sp[9..1]
+}
+C {devices/lab_pin.sym} 400 -700 2 1 {name=l38 sig_type=std_logic lab=sw_n[8..1]
+}
+C {devices/lab_pin.sym} 400 -680 2 1 {name=l39 sig_type=std_logic lab=sw_p[8..1]
+}
+C {devices/lab_pin.sym} 400 -760 0 0 {name=l15 sig_type=std_logic lab=comparator_clk
+}
+C {devices/lab_pin.sym} 760 -760 2 0 {name=l17 sig_type=std_logic lab=comp_out_n
+}
+C {devices/lab_pin.sym} 760 -780 2 0 {name=l18 sig_type=std_logic lab=comp_out_p
+}
+C {devices/lab_pin.sym} 760 -820 2 0 {name=l19 sig_type=std_logic lab=VDD
+}
+C {devices/lab_pin.sym} 760 -800 2 0 {name=l20 sig_type=std_logic lab=VSS
+}
+C {devices/code.sym} 70 -480 0 0 {name=TT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="*.lib $::SKYWATER_MODELS/sky130.lib.spice tt
+.include $::SKYWATER_STDCELLS/sky130_fd_sc_hd.spice
+"
+spice_ignore=false}

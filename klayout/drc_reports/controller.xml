@@ -1259,5 +1259,60 @@
   </cell>
  </cells>
  <items>
+  <item>
+   <tags/>
+   <category>'nsd.2'</category>
+   <cell>controller</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (18.86,54.59;18.86,54.682)|(18.49,54.595;18.49,54.59)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'nsd.2'</category>
+   <cell>controller</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (57.375,16.125;57.375,16.13)|(57.04,16.13;57.04,15.946)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'nsd.2'</category>
+   <cell>controller</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (44.265,103.55;44.265,103.555)|(44.16,103.92;44.16,103.55)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'psd.2'</category>
+   <cell>controller</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (70.38,72.903;70.38,73.25)|(70.215,73.25;70.215,73.245)</value>
+   </values>
+  </item>
+  <item>
+   <tags/>
+   <category>'psd.2'</category>
+   <cell>controller</cell>
+   <visited>false</visited>
+   <multiplicity>1</multiplicity>
+   <image/>
+   <values>
+    <value>edge-pair: (31.435,35.55;31.435,35.555)|(31.28,35.902;31.28,35.55)</value>
+   </values>
+  </item>
  </items>
 </report-database>

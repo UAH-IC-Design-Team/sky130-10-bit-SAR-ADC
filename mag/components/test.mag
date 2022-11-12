@@ -1,13 +1,9 @@
 magic
 tech sky130A
-magscale 1 2
-timestamp 1667441377
+timestamp 1668208468
 << metal1 >>
-rect -16000 -27727 204000 -26000
-rect -16000 -27932 206206 -27727
-rect -16000 -28000 204000 -27932
-use sky130_fd_pr__nfet_01v8_CGR572  sky130_fd_pr__nfet_01v8_CGR572_0
-timestamp 1667441377
-transform 0 -1 206610 1 0 -27795
-box -73 -457 73 457
+rect -100 -200 0 200
+<< labels >>
+rlabel metal1 -100 -200 0 200 1 test_label
+port 1 n
 << end >>

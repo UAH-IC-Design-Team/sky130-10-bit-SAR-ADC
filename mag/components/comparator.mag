@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1668055187
+timestamp 1668204572
 << nwell >>
 rect 10520 8460 11520 8800
 rect 10660 7540 13070 8080
@@ -182,8 +182,6 @@ rect 9910 5870 10330 7020
 rect 10470 6630 11030 7130
 rect 11110 7400 12650 7410
 rect 11110 7280 11700 7400
-rect 11780 7280 11810 7400
-rect 11940 7280 11970 7400
 rect 12050 7280 12650 7400
 rect 11110 7270 12650 7280
 rect 11110 7070 11250 7270
@@ -424,9 +422,7 @@ rect 8480 6020 8550 6100
 rect 9460 6020 9530 6100
 rect 9560 6020 9630 6100
 rect 9660 6020 9730 6100
-rect 11700 7280 11780 7400
-rect 11810 7280 11940 7400
-rect 11970 7280 12050 7400
+rect 11700 7280 12050 7400
 rect 11940 7020 12010 7090
 rect 11940 6840 12010 6910
 rect 11590 6610 11650 6670
@@ -543,8 +539,6 @@ rect 9170 8160 10870 8170
 rect 9170 5580 9350 8160
 rect 11690 7400 12060 7410
 rect 11690 7280 11700 7400
-rect 11780 7280 11810 7400
-rect 11940 7280 11970 7400
 rect 12050 7280 12060 7400
 rect 11690 7270 12060 7280
 rect 11930 7090 12020 7120
@@ -677,9 +671,7 @@ rect 11980 4080 12010 4160
 rect 12080 4080 12090 4160
 rect 11670 4070 12090 4080
 << via2 >>
-rect 11700 7280 11780 7400
-rect 11810 7280 11940 7400
-rect 11970 7280 12050 7400
+rect 11700 7280 12050 7400
 rect 9460 6020 9530 6100
 rect 9560 6020 9630 6100
 rect 9660 6020 9730 6100
@@ -695,8 +687,6 @@ rect 14320 5480 14400 5560
 << metal3 >>
 rect 11690 7400 12060 7410
 rect 11690 7280 11700 7400
-rect 11780 7280 11810 7400
-rect 11940 7280 11970 7400
 rect 12050 7280 12060 7400
 rect 11690 7270 12060 7280
 rect 11810 6110 11940 7270
@@ -734,7 +724,7 @@ use sky130_fd_pr__nfet_01v8_ZCCU26  XM9
 timestamp 1667500205
 transform 0 1 12448 -1 0 4669
 box -269 -1088 269 1028
-use sky130_fd_pr__nfet_01v8_ZZU2YL  XM13 /foss/designs/sky130-10-bit-SAR-ADC/mag/components
+use sky130_fd_pr__nfet_01v8_ZZU2YL  XM13
 timestamp 1667436771
 transform 0 1 11279 -1 0 5511
 box -221 -179 221 119
@@ -770,11 +760,11 @@ use sky130_fd_pr__pfet_01v8_RPBXXN  sky130_fd_pr__pfet_01v8_RPBXXN_1
 timestamp 1666924247
 transform 0 1 11529 -1 0 6249
 box -451 -269 449 221
-use sky130_fd_sc_hd__inv_2  sky130_fd_sc_hd__inv_2_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__inv_2  sky130_fd_sc_hd__inv_2_0 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 6998 0 1 4818
 box -38 -48 314 592
-use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_0 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 10268 0 1 4818
 box -38 -48 130 592
@@ -794,15 +784,15 @@ use sky130_fd_sc_hd__tapvpwrvgnd_1  sky130_fd_sc_hd__tapvpwrvgnd_1_4
 timestamp 1662439860
 transform 1 0 11558 0 1 8208
 box -38 -48 130 592
-use sky130_fd_sc_hd__buf_1  x1 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__buf_1  x1 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 14258 0 1 5518
 box -38 -48 314 592
-use sky130_fd_sc_hd__buf_4  x2 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__buf_4  x2 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 14618 0 1 5518
 box -38 -48 590 592
-use sky130_fd_sc_hd__buf_8  x3 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__buf_8  x3 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 15258 0 1 5518
 box -38 -48 1142 592
@@ -822,11 +812,11 @@ use sky130_fd_sc_hd__buf_1  x7
 timestamp 1662439860
 transform 1 0 7458 0 1 4118
 box -38 -48 314 592
-use sky130_fd_sc_hd__clkdlybuf4s15_1  x8 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__clkdlybuf4s15_1  x8 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 7358 0 1 4818
 box -38 -48 774 592
-use sky130_fd_sc_hd__buf_2  x9 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__buf_2  x9 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 9818 0 1 4818
 box -38 -48 406 592
@@ -834,7 +824,7 @@ use sky130_fd_sc_hd__clkdlybuf4s15_1  x10
 timestamp 1662439860
 transform 1 0 8178 0 1 4818
 box -38 -48 774 592
-use sky130_fd_sc_hd__clkdlybuf4s50_1  x11 $PDKPATH/libs.ref/sky130_fd_sc_hd/mag
+use sky130_fd_sc_hd__clkdlybuf4s50_1  x11 pdk/sky130A/libs.ref/sky130_fd_sc_hd/mag
 timestamp 1662439860
 transform 1 0 8998 0 1 4818
 box -38 -48 774 592
@@ -863,13 +853,13 @@ rlabel metal3 9730 6000 14100 6110 1 VDD
 port 1 n
 rlabel metal1 12080 4070 12900 4170 1 VSS
 port 2 n
-rlabel metal1 9780 6120 9860 7080 1 Vin_p
+rlabel metal1 13870 6140 13950 7100 1 Vin_p
 port 3 n
-rlabel metal1 16110 5718 16180 5794 1 Out_n
+rlabel metal1 7650 5712 7710 5791 1 Out_n
 port 4 n
-rlabel metal1 13870 6140 13950 7100 1 Vin_n
+rlabel metal1 9780 6120 9860 7080 1 Vin_n
 port 5 n
-rlabel metal1 7650 5712 7710 5791 1 Out_p
+rlabel metal1 16110 5718 16180 5794 1 Out_p
 port 6 n
 rlabel metal1 7460 4290 7484 4410 1 ext_clk
 port 7 n
