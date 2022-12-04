@@ -7,7 +7,8 @@ clf
 % top_data_dir = "/Users/micahtseng/Personal/eda/ngspice-batch-runner/docker_volume/20220928_sine"
 % top_data_dir = "/Users/micahtseng/Personal/eda/sky130-10-bit-SAR-ADC/xschem/tests/sar_adc/simulation/20220926_spfdr_1"
 % top_data_dir = "/Users/micahtseng/Personal/s3-data/20220928/sine"
-top_data_dir = "/Users/micahtseng/Personal/s3-data/20221026_sine_gear"
+% top_data_dir = "/Users/micahtseng/Personal/s3-data/20221026_sine_gear"
+top_data_dir = "../../batch_simulation_data/20221026_sine_gear"
 current_dir = pwd
 sample_period = 640.3689e-9
 sample_freq = 1/sample_period
@@ -64,8 +65,10 @@ plot(data(:,15), 2.*data(:,4))
 hold on
 plot(data(:,15), data(:,16))
 plot(t_theo, sine_theo)
-
 legend("input voltage", "calculated bits", "theoreretical")
+title("Coherent Full Range Sine")
+xlabel("t")
+ylabel("V")
 
 
 Y = fft(data(:,16));
@@ -79,6 +82,9 @@ f = sample_freq*(0:(L/2))/L;
 %f = (1/(sample_period))*(0:1:L/2-1);
 figure 
 plot(f,P1_log)
+title("FFT on Coherent Full Range Sine")
+xlabel("Hz")
+ylabel("dB")
 
 
 

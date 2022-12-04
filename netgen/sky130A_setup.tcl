@@ -456,8 +456,8 @@ if {[model blackbox]} {
 
 #---------------------------------------------------------------
 # Black Box controller
-model { comparator ./xschem/src/sar_adc.spice } blackbox
-model { comparator ./mag/sar_adc.spice } blackbox
+model { controller ./xschem/src/sar_adc.spice } blackbox
+model { controller ./mag/sar_adc.spice } blackbox
 
 property "-circuit1 capacitor_array" delete unit_cap_w unit_cap_l 
 property "-circuit1 sky130_fd_pr__cap_mim_m3_1" delete unit_cap_w unit_cap_l 
