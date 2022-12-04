@@ -2,10 +2,10 @@
 The following repository contains the ECAD files for a 10b SAR ADC developed at the University of Alabama in Huntsville by Dr. Aubrey Beal, Dr. Phillip Bailey and Micah Tseng.
 
 # Table of Contents
-* [Design](#Design)
-* [Design Status](#Status)
 * [Related Repositories](#related-repositories)
+* [Design](#Design)
 * [Development](#Development)
+* [Design Status](#Status)
 * [Tests](#Tests)
 * [Tool Notes](#Tool-Notes)
 
