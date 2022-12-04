@@ -191,6 +191,7 @@ LVS on the full SAR ADC requires a little manual work.
 
 
 # Tests
+For simulation data from the large batched tests, please see `./batch_simulation_data` and `./util/octave` for code to analyze the simulation data.
 
 ## Unit Tests
 All unit tests are located in the `xschem/tests` directory.
